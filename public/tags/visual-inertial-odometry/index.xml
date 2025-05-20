@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual-Inertial Odometry | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/visual-inertial-odometry/</link>
+      <atom:link href="http://localhost:1313/tags/visual-inertial-odometry/index.xml" rel="self" type="application/rss+xml" />
+    <description>Visual-Inertial Odometry</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Visual-Inertial Odometry</title>
+      <link>http://localhost:1313/tags/visual-inertial-odometry/</link>
+    </image>
+    
+    <item>
+      <title>Kimera VIO on EuRoC and Custom Datasets</title>
+      <link>http://localhost:1313/project/kimera-vio/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/kimera-vio/</guid>
+      <description>&lt;p&gt;This project evaluates the &lt;strong&gt;Kimera Visual-Inertial Odometry (VIO)&lt;/strong&gt; framework on two datasets — the &lt;strong&gt;EuRoC MAV benchmark&lt;/strong&gt; and a &lt;strong&gt;custom indoor dataset&lt;/strong&gt; — to assess its accuracy, runtime efficiency, and adaptability.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-project-goals&#34;&gt;🧠 Project Goals&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up Kimera VIO in a ROS + Docker environment&lt;/li&gt;
+&lt;li&gt;Run it on benchmark and custom datasets&lt;/li&gt;
+&lt;li&gt;Evaluate using ATE RMSE, runtime, and qualitative analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-methodology&#34;&gt;🔍 Methodology&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;VIO Front-End:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature detection (Shi-Tomasi)&lt;/li&gt;
+&lt;li&gt;Optical flow tracking (Lucas-Kanade)&lt;/li&gt;
+&lt;li&gt;Depth estimation via stereo matching&lt;/li&gt;
+&lt;li&gt;Outlier filtering for robust constraints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;VIO Back-End:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Factor graph construction (GTSAM)&lt;/li&gt;
+&lt;li&gt;iSAM2 for incremental optimization&lt;/li&gt;
+&lt;li&gt;Pose, velocity, and landmark estimation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-evaluation&#34;&gt;🧪 Evaluation&lt;/h3&gt;
+&lt;h4 id=&#34;-dataset-1-euroc-mav&#34;&gt;✅ Dataset 1: EuRoC MAV&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Ran Kimera VIO on V1_01 to V1_03&lt;/li&gt;
+&lt;li&gt;Compared RMSE with VINS-Mono, OKVIS, MSCKF&lt;/li&gt;
+&lt;li&gt;Achieved best accuracy across all sequences&lt;/li&gt;
+&lt;li&gt;Average RMSE: 0.05–0.08&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-dataset-2-custom-d455-dataset&#34;&gt;🧪 Dataset 2: Custom D455 Dataset&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-world indoor environment&lt;/li&gt;
+&lt;li&gt;Feature-sparse and dynamically lit scenes&lt;/li&gt;
+&lt;li&gt;Maintained smooth and consistent trajectory&lt;/li&gt;
+&lt;li&gt;Minor drift in Z axis corrected by loop closures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tools--libraries&#34;&gt;⚙️ Tools &amp;amp; Libraries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Kimera VIO&lt;/strong&gt; from MIT-SPARK Lab&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GTSAM&lt;/strong&gt; for factor graph optimization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open3D&lt;/strong&gt;, &lt;strong&gt;Matplotlib&lt;/strong&gt; for visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intel Realsense D455&lt;/strong&gt;, ROS, Docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-resources&#34;&gt;🧾 Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/MR_Project_Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/MIT-SPARK/Kimera-VIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kimera VIO GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Kimera VIO proved to be a robust, modular SLAM framework capable of producing accurate trajectories under both structured (EuRoC) and challenging (custom indoor) conditions. Loop closure and factor graph smoothing allowed it to adapt well even with limited visual features.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Processing | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/image-processing/</link>
+      <atom:link href="http://localhost:1313/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Image Processing</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Image Processing</title>
+      <link>http://localhost:1313/tags/image-processing/</link>
+    </image>
+    
+    <item>
+      <title>Automated Insect Leg Labeling using DeepLabCut</title>
+      <link>http://localhost:1313/project/automated-insect-leg-labeling/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/automated-insect-leg-labeling/</guid>
+      <description>&lt;p&gt;This project proposes a robust and scalable method for automating insect leg labeling using &lt;strong&gt;image processing, feature detection, and clustering&lt;/strong&gt;, enabling seamless integration with &lt;strong&gt;DeepLabCut&lt;/strong&gt; for behavioral analysis.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;methodology-overview&#34;&gt;Methodology Overview&lt;/h2&gt;
+&lt;h3 id=&#34;1-data-collection&#34;&gt;1. Data Collection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Captured insect locomotion data using a &lt;strong&gt;ServoSphere&lt;/strong&gt; robot equipped with omni-wheels and a high-speed camera.&lt;/li&gt;
+&lt;li&gt;The camera tracked an insect (ant) placed atop the rotating sphere.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-preprocessing-pipeline&#34;&gt;2. Preprocessing Pipeline&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Grayscale conversion&lt;/strong&gt; and &lt;strong&gt;Gaussian blur&lt;/strong&gt; for noise reduction&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Canny Edge Detection&lt;/strong&gt; for edge enhancement&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Binary thresholding&lt;/strong&gt; and &lt;strong&gt;morphological operations&lt;/strong&gt; for skeletonization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Canny Edge Result&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp 400w,
+               /project/automated-insect-leg-labeling/canny_hu15745542599272552929.webp 760w,
+               /project/automated-insect-leg-labeling/canny_hu3473078471050911037.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp&#34;
+               width=&#34;555&#34;
+               height=&#34;350&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Output after applying Canny edge detection.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-feature-extraction&#34;&gt;3. Feature Extraction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied &lt;strong&gt;Shi-Tomasi Corner Detection&lt;/strong&gt; on Canny edges for precise joint detection&lt;/li&gt;
+&lt;li&gt;Robust to noise and sensitive to detailed motion features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Shi-Tomasi Detection&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp 400w,
+               /project/automated-insect-leg-labeling/shi_tomasi_hu14103565545081466617.webp 760w,
+               /project/automated-insect-leg-labeling/shi_tomasi_hu4890327641649225453.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp&#34;
+               width=&#34;555&#34;
+               height=&#34;350&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Shi-Tomasi corner detection highlights potential joint features.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-body-removal&#34;&gt;4. Body Removal&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used &lt;strong&gt;Zhang-Suen thinning&lt;/strong&gt; for skeleton extraction&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;connected component labeling&lt;/strong&gt; to segment body parts&lt;/li&gt;
+&lt;li&gt;Removed body via &lt;strong&gt;template matching&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Skeleton Extraction&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp 400w,
+               /project/automated-insect-leg-labeling/skeleton_extraction_hu1654188756838549732.webp 760w,
+               /project/automated-insect-leg-labeling/skeleton_extraction_hu4799263873215453537.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp&#34;
+               width=&#34;553&#34;
+               height=&#34;355&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Skeleton representation using Zhang-Suen thinning.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Connected Components&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp 400w,
+               /project/automated-insect-leg-labeling/connected_components_hu12195037151038958192.webp 760w,
+               /project/automated-insect-leg-labeling/connected_components_hu4918036970471170597.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp&#34;
+               width=&#34;545&#34;
+               height=&#34;378&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Connected component labeling for body part isolation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Body Template&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/template_hu11659726123555705027.webp 400w,
+               /project/automated-insect-leg-labeling/template_hu18209107862982516437.webp 760w,
+               /project/automated-insect-leg-labeling/template_hu2884419823242467532.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp&#34;
+               width=&#34;499&#34;
+               height=&#34;353&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Template matching used to isolate and remove the body region.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-leg-detection&#34;&gt;5. Leg Detection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remaining features correspond to legs&lt;/li&gt;
+&lt;li&gt;Calculated angles of features w.r.t. body centroid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Detected Leg Features&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp 400w,
+               /project/automated-insect-leg-labeling/leg_features_hu18101909398949920466.webp 760w,
+               /project/automated-insect-leg-labeling/leg_features_hu14108854493791996505.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp&#34;
+               width=&#34;489&#34;
+               height=&#34;320&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Extracted leg features post body removal.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Feature Angles&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/angles_hu911305775039293742.webp 400w,
+               /project/automated-insect-leg-labeling/angles_hu16264059692635278634.webp 760w,
+               /project/automated-insect-leg-labeling/angles_hu12389778951175088630.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp&#34;
+               width=&#34;496&#34;
+               height=&#34;338&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Angle estimation of each leg with respect to the centroid.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-clustering--tip-detection&#34;&gt;6. Clustering &amp;amp; Tip Detection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KMeans (K=6)&lt;/strong&gt; clusters features into 6 legs&lt;/li&gt;
+&lt;li&gt;Furthest feature in each cluster = leg tip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;KMeans Clustering&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp 400w,
+               /project/automated-insect-leg-labeling/kmeans_hu1537055730035741828.webp 760w,
+               /project/automated-insect-leg-labeling/kmeans_hu8003083638116927705.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp&#34;
+               width=&#34;556&#34;
+               height=&#34;406&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: KMeans clustering of features into 6 leg regions.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-integration-with-deeplabcut&#34;&gt;7. Integration with DeepLabCut&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Created &lt;code&gt;.h5&lt;/code&gt; files with clustered keypoints&lt;/li&gt;
+&lt;li&gt;Trained DeepLabCut on auto-labeled dataset&lt;/li&gt;
+&lt;li&gt;Achieved performance near manual labeling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;DLC Integration&#34; srcset=&#34;
+               /project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp 400w,
+               /project/automated-insect-leg-labeling/integration_hu5511305675759056958.webp 760w,
+               /project/automated-insect-leg-labeling/integration_hu10805202269737531730.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp&#34;
+               width=&#34;671&#34;
+               height=&#34;615&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;br&gt;
+&lt;em&gt;Figure: Final annotated labels used with DeepLabCut.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;experimental-results&#34;&gt;Experimental Results&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Leg&lt;/th&gt;
+          &lt;th&gt;TP (Auto)&lt;/th&gt;
+          &lt;th&gt;FP (Auto)&lt;/th&gt;
+          &lt;th&gt;TP (Manual)&lt;/th&gt;
+          &lt;th&gt;FP (Manual)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;95&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;98&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;90&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;95&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;85&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;90&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;80&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;85&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;75&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;80&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;70&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;75&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Confusion matrix comparing auto-labeled vs manually labeled results. Accuracy slightly lower, but performance is consistent and scalable.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-techniques&#34;&gt;Key Techniques&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Canny Edge Detection&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shi-Tomasi GFTT&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Template Matching&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KMeans Clustering&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zhang-Suen Thinning&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DeepLabCut integration&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;insights--future-work&#34;&gt;Insights &amp;amp; Future Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automation significantly reduced manual effort&lt;/li&gt;
+&lt;li&gt;High reproducibility across ant datasets&lt;/li&gt;
+&lt;li&gt;KMeans produced sharper clusters than Ensemble KMeans&lt;/li&gt;
+&lt;li&gt;Future work may explore deep learning-based leg segmentation and adaptive clustering strategies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/Pattern-Recognition-and-Computer-Vision/tree/main/Automated%20Insect%20Leg%20Labeling&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This approach provides a &lt;strong&gt;generalizable and scalable method&lt;/strong&gt; for anatomical labeling in biological research and can be extended to other multi-limbed species or anatomical joints.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DDPG | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/ddpg/</link>
+      <atom:link href="http://localhost:1313/tags/ddpg/index.xml" rel="self" type="application/rss+xml" />
+    <description>DDPG</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>DDPG</title>
+      <link>http://localhost:1313/tags/ddpg/</link>
+    </image>
+    
+    <item>
+      <title>Autonomous Race Driving with Action Mapping RL</title>
+      <link>http://localhost:1313/project/am-race-driving-rl/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/am-race-driving-rl/</guid>
+      <description>&lt;h2 id=&#34;-autonomous-race-driving-with-action-mapping-rl&#34;&gt;🏎️ Autonomous Race Driving with Action Mapping RL&lt;/h2&gt;
+&lt;p&gt;This project evaluates the impact of &lt;strong&gt;Action Mapping (AM)&lt;/strong&gt; on &lt;strong&gt;deep reinforcement learning (DRL)&lt;/strong&gt; algorithms for high-speed autonomous race driving. The primary goal was to enforce &lt;strong&gt;friction and vehicle dynamics constraints&lt;/strong&gt; while ensuring agents could learn to complete laps efficiently and safely.&lt;/p&gt;
+&lt;p&gt;We &lt;strong&gt;extended the GitHub framework from the AM-RL paper&lt;/strong&gt; (ISA Transactions 2024) that used TD3 + AM, and &lt;strong&gt;re-implemented the actor-critic models using DDPG and SAC&lt;/strong&gt; with Action Mapping. The experiments were conducted on &lt;strong&gt;Track A&lt;/strong&gt; in the custom race simulator.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand and replicate the Action Mapping Reinforcement Learning (AM-RL) framework&lt;/li&gt;
+&lt;li&gt;Implement DDPG and SAC as alternate agents within the same setup&lt;/li&gt;
+&lt;li&gt;Compare lap time, constraint satisfaction, and learning stability across methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;simulation--state-design&#34;&gt;Simulation &amp;amp; State Design&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Environment:&lt;/strong&gt; Custom Python-based simulator using bicycle model dynamics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Observations:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;12 future curvature points from the centerline&lt;/li&gt;
+&lt;li&gt;Velocity, yaw rate, orientation, steering angle, and track deviation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action Space:&lt;/strong&gt; Virtual actions ∈ [−1, 1]² → throttle &amp;amp; steering angle&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Constraints:&lt;/strong&gt; Friction cone and lateral acceleration safety bounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;neural-networks&#34;&gt;Neural Networks&lt;/h2&gt;
+&lt;h3 id=&#34;actor-networks&#34;&gt;Actor Networks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fully connected with 2 hidden layers (256–256 units)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Activation:&lt;/strong&gt; ReLU (hidden), Tanh (output)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; Unconstrained actions (steering, throttle) passed to AM module&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;critic-networks&#34;&gt;Critic Networks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Two Q-functions for SAC (double critic)&lt;/li&gt;
+&lt;li&gt;One Q-function for DDPG&lt;/li&gt;
+&lt;li&gt;Each accepts state-action pair and outputs scalar Q-value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;loss-functions&#34;&gt;Loss Functions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DDPG:&lt;/strong&gt; MSE loss on predicted Q-values&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SAC:&lt;/strong&gt; Adds entropy regularization and automatic temperature tuning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;action-mapping-am&#34;&gt;Action Mapping (AM)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;State-aware mapping transforms virtual actions to safe, real-world controls&lt;/li&gt;
+&lt;li&gt;Implemented as a lookup-based mapping based on track geometry and physics&lt;/li&gt;
+&lt;li&gt;Ensures compliance with dynamic tire-road constraints (Fₓ, Fᵧ within friction ellipse)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results-summary&#34;&gt;Results Summary&lt;/h2&gt;
+&lt;h3 id=&#34;ddpg-with-action-mapping-am&#34;&gt;DDPG with Action Mapping (AM)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Learned a stable and smooth racing policy&lt;/li&gt;
+&lt;li&gt;Consistently finished laps on Track A&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lap 1 Time:&lt;/strong&gt; 43.57s&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lap 2 Time:&lt;/strong&gt; 41.7s&lt;/li&gt;
+&lt;li&gt;Maintained safety constraints with no friction violations&lt;/li&gt;
+&lt;li&gt;Approached TD3-level performance from literature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;td3-vs-ddpg-lap-comparison&#34;&gt;TD3 vs DDPG Lap Comparison&lt;/h3&gt;
+&lt;p&gt;Below is a side-by-side comparison of &lt;strong&gt;TD3&lt;/strong&gt; (left) and &lt;strong&gt;DDPG&lt;/strong&gt; (right) for both Lap 1 and Lap 2 on Track A. Color encodes speed (m/s).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;TD3 vs DDPG Lap 1 &amp;amp; 2&#34; srcset=&#34;
+               /project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp 400w,
+               /project/am-race-driving-rl/TD3_DDPG_hu16877567874459994854.webp 760w,
+               /project/am-race-driving-rl/TD3_DDPG_hu9699183390352886908.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp&#34;
+               width=&#34;601&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure: Lap 1 and Lap 2 performance comparison — TD3 has tighter trajectories and better cornering speed than DDPG.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sac-with-action-mapping-am&#34;&gt;SAC with Action Mapping (AM)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Frequently failed to complete laps (DNF)&lt;/li&gt;
+&lt;li&gt;Produced two common failure modes:
+&lt;ul&gt;
+&lt;li&gt;Prioritizing speed → unstable cornering and off-track behavior&lt;/li&gt;
+&lt;li&gt;Prioritizing stability → very slow but accurate turns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Final policies were inconsistent and fragile&lt;/li&gt;
+&lt;li&gt;Highly sensitive to reward scaling and actor update frequency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SAC Lap 1 Intermediate Failures&#34; srcset=&#34;
+               /project/am-race-driving-rl/SAC_hu7060679015506459835.webp 400w,
+               /project/am-race-driving-rl/SAC_hu17451594598186353989.webp 760w,
+               /project/am-race-driving-rl/SAC_hu100650002741892404.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/am-race-driving-rl/SAC_hu7060679015506459835.webp&#34;
+               width=&#34;655&#34;
+               height=&#34;377&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure: SAC Lap 1 — Left: high speed, low stability; Right: better track alignment, very low velocity.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-comparison-table&#34;&gt;Key Comparison Table&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Metric&lt;/th&gt;
+          &lt;th&gt;TD3-AM (paper)&lt;/th&gt;
+          &lt;th&gt;DDPG-AM (ours)&lt;/th&gt;
+          &lt;th&gt;SAC-AM (ours)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Best Lap Time (s)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;36.94&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;41.7&lt;/td&gt;
+          &lt;td&gt;DNF (unstable)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Constraint Violations&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;Some (off-track)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Convergence Speed&lt;/td&gt;
+          &lt;td&gt;Fast&lt;/td&gt;
+          &lt;td&gt;Moderate&lt;/td&gt;
+          &lt;td&gt;Slow&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stability&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;Very Low&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;CS5180___Final_Report.pdf&#34;&gt;Final Report PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0019057824002143?via%3Dihub&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link to Original Paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/s-bray/CS5180-Final_Project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project demonstrates how &lt;strong&gt;Action Mapping serves as a universal safety wrapper&lt;/strong&gt; that can be applied across different DRL algorithms. Our experiments showed that DDPG performs competitively against TD3 in constrained driving, while SAC struggled to converge due to reward instability — emphasizing the importance of choosing the right policy architecture for safety-critical RL tasks.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Navigation | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/navigation/</link>
+      <atom:link href="http://localhost:1313/tags/navigation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Navigation</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Navigation</title>
+      <link>http://localhost:1313/tags/navigation/</link>
+    </image>
+    
+    <item>
+      <title>Dead Reckoning with IMU &amp; GPS in Vehicle Navigation</title>
+      <link>http://localhost:1313/project/dead-reckoning/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/dead-reckoning/</guid>
+      <description>&lt;p&gt;This project involved real-world testing of &lt;strong&gt;dead reckoning navigation&lt;/strong&gt; using an &lt;strong&gt;IMU (VectorNav 100)&lt;/strong&gt; and GPS data mounted in a car. We collected and fused sensor data to estimate vehicle trajectory and compared it against ground truth GPS tracks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-objective&#34;&gt;📍 Objective&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use IMU (accel, gyro, mag) for estimating yaw and velocity&lt;/li&gt;
+&lt;li&gt;Compare integrated dead reckoning trajectory with GPS&lt;/li&gt;
+&lt;li&gt;Apply calibration and filtering for high-speed vehicle navigation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-methodology&#34;&gt;🧪 Methodology&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sensor Mounting &amp;amp; Data Collection&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMU mounted flat, aligned to vehicle axis&lt;/li&gt;
+&lt;li&gt;GPS puck on roof&lt;/li&gt;
+&lt;li&gt;ROS bagged data over a 2–3 km drive around Boston&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Magnetometer Calibration&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied hard &amp;amp; soft iron corrections using ellipse fitting&lt;/li&gt;
+&lt;li&gt;Centered &amp;amp; scaled magnetometer output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Yaw Estimation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Used complementary filter combining:
+&lt;ul&gt;
+&lt;li&gt;Low-pass filtered magnetometer (0.5 Hz cutoff)&lt;/li&gt;
+&lt;li&gt;High-pass filtered gyro data (0.1 Hz cutoff)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fusion coefficient α = 0.98&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Velocity Estimation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acceleration filtered with high-pass Butterworth&lt;/li&gt;
+&lt;li&gt;Integrated over time&lt;/li&gt;
+&lt;li&gt;Clamped negative values to zero and capped outliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Trajectory Reconstruction&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrated filtered heading + velocity&lt;/li&gt;
+&lt;li&gt;Rotated &amp;amp; scaled to align IMU trajectory with GPS path&lt;/li&gt;
+&lt;li&gt;Best match scale: 2.25, rotation correction: 14–25°&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-results&#34;&gt;📊 Results&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial path tracking was highly accurate&lt;/li&gt;
+&lt;li&gt;IMU-based dead reckoning remained within &lt;strong&gt;2m&lt;/strong&gt; of GPS for &lt;strong&gt;150–200 seconds&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Final drift reached nearly &lt;strong&gt;400 meters&lt;/strong&gt; after extended driving&lt;/li&gt;
+&lt;li&gt;GPS helps correct IMU drift over long durations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-key-insights&#34;&gt;🔎 Key Insights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;IMU is accurate for short-term dead reckoning&lt;/li&gt;
+&lt;li&gt;Drift arises from gyroscope bias and sloped paths&lt;/li&gt;
+&lt;li&gt;Regular GPS re-calibration is essential for long-term navigation&lt;/li&gt;
+&lt;li&gt;Complementary filter effectively combines noisy sensors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-resources&#34;&gt;📁 Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/LAB%205%20report-1.pdf&#34;&gt;Lab 5 Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/dead-reckoning-imu-gps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project demonstrates real-world dead reckoning with consumer-grade sensors and sets the foundation for more robust SLAM and localization strategies in mobile robotics or autonomous vehicles.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

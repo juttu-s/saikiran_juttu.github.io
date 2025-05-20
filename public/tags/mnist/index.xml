@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MNIST | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/mnist/</link>
+      <atom:link href="http://localhost:1313/tags/mnist/index.xml" rel="self" type="application/rss+xml" />
+    <description>MNIST</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>MNIST</title>
+      <link>http://localhost:1313/tags/mnist/</link>
+    </image>
+    
+    <item>
+      <title>Digit Recognition &amp; Transfer Learning with CNNs</title>
+      <link>http://localhost:1313/project/digit-recognition/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/digit-recognition/</guid>
+      <description>&lt;p&gt;This project focused on &lt;strong&gt;designing, training, and analyzing convolutional neural networks (CNNs)&lt;/strong&gt; for digit recognition and then &lt;strong&gt;applying transfer learning&lt;/strong&gt; to recognize Greek characters using PyTorch.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;cnn-for-digit-recognition-mnist&#34;&gt;CNN for Digit Recognition (MNIST)&lt;/h2&gt;
+&lt;p&gt;We first built and trained a simple CNN model using the MNIST dataset:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two convolutional layers (5x5 filters)&lt;/li&gt;
+&lt;li&gt;Max pooling (2x2) and dropout (0.5)&lt;/li&gt;
+&lt;li&gt;Fully connected layer (50 nodes) + final FC with log-softmax (10 classes)&lt;/li&gt;
+&lt;li&gt;Achieved &lt;strong&gt;~98% test accuracy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Sample MNIST Digits&#34; srcset=&#34;
+               /project/digit-recognition/firstsix_hu15902310905350978628.webp 400w,
+               /project/digit-recognition/firstsix_hu10625707504812272563.webp 760w,
+               /project/digit-recognition/firstsix_hu9923025005567100836.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/firstsix_hu15902310905350978628.webp&#34;
+               width=&#34;708&#34;
+               height=&#34;400&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Example of first 6 MNIST test samples.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;network-architecture&#34;&gt;Network Architecture&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;CNN Diagram&#34; srcset=&#34;
+               /project/digit-recognition/NN_hu7544495459113416032.webp 400w,
+               /project/digit-recognition/NN_hu11458655653262536510.webp 760w,
+               /project/digit-recognition/NN_hu5398614519963812698.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/NN_hu7544495459113416032.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;509&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: End-to-end architecture used for digit recognition.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;training-performance&#34;&gt;Training Performance&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss decreased steadily over batches/epochs.&lt;/li&gt;
+&lt;li&gt;Test loss visualized periodically across training examples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Loss Curve&#34; srcset=&#34;
+               /project/digit-recognition/loss_hu2647141672864762400.webp 400w,
+               /project/digit-recognition/loss_hu14298867483472384218.webp 760w,
+               /project/digit-recognition/loss_hu3418306977125921203.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/loss_hu2647141672864762400.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;559&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Negative log-likelihood training and test loss.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;filter-visualization&#34;&gt;Filter Visualization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;First conv layer has 10 learned filters.&lt;/li&gt;
+&lt;li&gt;Visualized using matplotlib to show edge/orientation detection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Filter Maps&#34; srcset=&#34;
+               /project/digit-recognition/filter_maps1_hu6510234662074493762.webp 400w,
+               /project/digit-recognition/filter_maps1_hu11416344688562476833.webp 760w,
+               /project/digit-recognition/filter_maps1_hu16678790348298768722.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/filter_maps1_hu6510234662074493762.webp&#34;
+               width=&#34;638&#34;
+               height=&#34;469&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Learned 5x5 filters from first conv layer.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;transfer-learning-to-greek-letters&#34;&gt;Transfer Learning to Greek Letters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned MNIST CNN to classify Greek characters: α, β, γ.&lt;/li&gt;
+&lt;li&gt;Froze earlier layers, retrained final classifier head.&lt;/li&gt;
+&lt;li&gt;Achieved &lt;strong&gt;96–98% accuracy&lt;/strong&gt; on unseen test samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Greek Classification Output&#34; srcset=&#34;
+               /project/digit-recognition/greek_hu4305634218149458193.webp 400w,
+               /project/digit-recognition/greek_hu16620829909298196167.webp 760w,
+               /project/digit-recognition/greek_hu10198682355568399909.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/greek_hu4305634218149458193.webp&#34;
+               width=&#34;652&#34;
+               height=&#34;391&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Correct classification of Greek letters using transfer learning.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;transfer-learning-training-error&#34;&gt;Transfer Learning Training Error&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Convergence observed over 100+ epochs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Greek Training Error Curve&#34; srcset=&#34;
+               /project/digit-recognition/greek_training_hu10070426372364170428.webp 400w,
+               /project/digit-recognition/greek_training_hu13936645240799545862.webp 760w,
+               /project/digit-recognition/greek_training_hu10173284984926363065.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/greek_training_hu10070426372364170428.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;508&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Error vs epoch for Greek classification.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;live-webcam-digit-recognition&#34;&gt;Live Webcam Digit Recognition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built a webcam-based interface using OpenCV&lt;/li&gt;
+&lt;li&gt;Live input frames classified in real time using the trained CNN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;live webcam&#34; srcset=&#34;
+               /project/digit-recognition/live_hu16096523079256018570.webp 400w,
+               /project/digit-recognition/live_hu4232723163901620511.webp 760w,
+               /project/digit-recognition/live_hu8695550706911073452.webp 1200w&#34;
+               src=&#34;http://localhost:1313/project/digit-recognition/live_hu16096523079256018570.webp&#34;
+               width=&#34;580&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Figure: Live Webcam Digit Recognition&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Sometimes predictions were inaccurate due to motion blur or poor lighting, but most digits were correctly classified in real-time.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-takeaways&#34;&gt;Key Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;5x5 and 7x7 filters outperform 3x3 in MNIST CNNs&lt;/li&gt;
+&lt;li&gt;Dropout around &lt;strong&gt;0.1–0.3&lt;/strong&gt; provided best generalization&lt;/li&gt;
+&lt;li&gt;Smaller batch sizes (32) resulted in better accuracy&lt;/li&gt;
+&lt;li&gt;Greek letters transfer learning worked well with small data (~27 samples)&lt;/li&gt;
+&lt;li&gt;Real-time system demonstrates CNNs are efficient and deployable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python, PyTorch, OpenCV&lt;/li&gt;
+&lt;li&gt;Jupyter Notebooks&lt;/li&gt;
+&lt;li&gt;Matplotlib for visualization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;Project.pdf&#34;&gt;Project Report PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/Pattern-Recognition-and-Computer-Vision/tree/main/Recognition%20using%20Deep%20Networks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project deepened our understanding of CNN design, filter learning, transfer learning, and real-time deployment — showing the full lifecycle from dataset to deployment.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
