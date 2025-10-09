@@ -37,38 +37,53 @@ education:
     date_start: 2023-01-01
     date_end: 2025-12-31
     summary: |
-      GPA: 3.98/4.0  
-      Courses: Control Systems, CV, RL, Autonomous Field Robotics
+      GPA: 3.99/4.0  
+      Courses: Pattern Recognition and Computer Vision, Control Systems, Robotics Sensing and Navigation, Mobile Robotics,Autonomous Field Robotics, Robot Mechanics and Control, Reinforcement Learning
   - area: BTech Mechanical Engineering
     institution: NIT Jalandhar, India
     date_start: 2016-01-01
     date_end: 2020-05-31
     summary: |
-      Courses: Mechatronics, Machine Design, Electronics
+      Courses: Mechatronics, CAD, Material Science, Industrial Automation, Machine Design, Operations Research, Electronics
 
 work:
   - position: Graduate Research Assistant
-    company_name: Northeastern University
-    date_start: 2024-01-01
+    company_name: Multi-Agent Robotics and Autonomy Laboratory
+    date_start: 2024-04-01
     date_end: ""
     summary: |
-      - Control algorithms for manipulation
-      - EKF and map merging for multi-robot systems
-      - UAV-UGV-based energy-aware exploration
+      - Designing a heterogeneous UAV–UGV cooperative exploration framework in Gazebo (ROS/ROS2, C++), integrating exploration algorithms, path-planning strategies, sensor data fusion, and tracking controllers for multi-robot coordination.
+      - Developing a unified incremental PRM-based planner in C++/Python, improving exploration efficiency and scalability
+      - Designing and testing custom FPV drone hardware, tuning flight controllers and collecting flight data to improve performance in GPS-denied environments.
+      - Implemented vision-based object detection, IK solver, and motion planning in MATLAB, boosting robotic arm precision by 30%.
+      - Modeled a high-fidelity Simscape/MATLAB manipulator simulation and a physical robotic arm testbed, enabling remote-access experimentation and reducing hardware deployment time by 25%.
+
+  - position: Robotics Engineer Co-op
+    company_name: Northeastern University
+    date_start: 2025-01-15
+    date_end: 2025-06-01
+    summary: |
+      - Integrated 3D LiDAR and Intel RealSense sensors with the Scout Mini Rover via CAN protocol in ROS 2, deploying on embedded platforms (Jetson AGX Orin) to enable synchronized perception, sensor fusion, and reliable hardware–software communication.
+      - Implemented ROS 2-based SLAM solutions (RTAB-Map, LIO-SAM, VIO, SLAM Toolbox) in C++/Python, leveraging Nav2 to improve localization accuracy and enable robust autonomous navigation in GPS-denied environments.
+      - Developed waypoint navigation and motion planning pipelines for UAVs (Crazyflie, DJI Tello) using the OptiTrack motion capture system, automated takeoff, and precise landing systems.
+      - Exploring integration of Vision-Language Models (VLMs) with onboard perception to enhance semantic understanding and indoor navigation, targeting reduced localization errors and improved autonomy.
   - position: Design Engineer
     company_name: Technip Energies
     date_start: 2021-02-01
     date_end: 2023-07-31
     summary: |
-      - Designed process plant piping systems
-      - Built predictive maintenance and surveillance robots
-  - position: Product Development Intern
+      - Designed and optimized large-scale piping systems using Smart3D, Navisworks, SolidWorks, CATIA, gaining expertise in CAD modeling, system integration, and safety-compliant mechanical design.
+      - Developed a predictive Load Monitoring System with Python, reducing downtime by 20% and improving reliability.
+      - Gained expertise in large-scale system engineering and validation through EPC projects, building a foundation for developing robust, safety-critical robotic systems.
+  - position: Computer Vision Intern
     company_name: Robic Rufarm
     date_start: 2019-06-01
     date_end: 2019-08-01
     summary: |
-      - Built automated edge length measuring device
-      - Designed a pH sensing solution for aquaculture
+      - Built a real-time defect detection and classification system in Python/OpenCV, achieving 90% accuracy and significantly enhancing production throughput.
+      - Optimized live video analysis under variable lighting using image processing techniques, boosting detection accuracy to over 90% and reducing manual inspection time by 50%.
+      - Built automated edge length measuring device.
+      - Designed a pH sensing solution for aquaculture.
 
 skills:
   - name: Technical Skills
