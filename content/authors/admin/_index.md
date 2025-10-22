@@ -52,21 +52,25 @@ work:
     date_start: 2024-04-01
     date_end: ""
     summary: |
+      
       - Designing a heterogeneous UAV–UGV cooperative exploration framework in Gazebo (ROS/ROS2, C++), integrating exploration algorithms, path-planning strategies, sensor data fusion, and tracking controllers for multi-robot coordination.
       - Developing a unified incremental PRM-based planner in C++/Python, improving exploration efficiency and scalability
       - Designing and testing custom FPV drone hardware, tuning flight controllers and collecting flight data to improve performance in GPS-denied environments.
       - Implemented vision-based object detection, IK solver, and motion planning in MATLAB, boosting robotic arm precision by 30%.
       - Modeled a high-fidelity Simscape/MATLAB manipulator simulation and a physical robotic arm testbed, enabling remote-access experimentation and reducing hardware deployment time by 25%.
+      - [Click here for more details](/project/grad-research-assistant)
 
   - position: Robotics Engineer Co-op
     company_name: Northeastern University
     date_start: 2025-01-15
     date_end: 2025-06-01
+  
     summary: |
       - Integrated 3D LiDAR and Intel RealSense sensors with the Scout Mini Rover via CAN protocol in ROS 2, deploying on embedded platforms (Jetson AGX Orin) to enable synchronized perception, sensor fusion, and reliable hardware–software communication.
       - Implemented ROS 2-based SLAM solutions (RTAB-Map, LIO-SAM, VIO, SLAM Toolbox) in C++/Python, leveraging Nav2 to improve localization accuracy and enable robust autonomous navigation in GPS-denied environments.
       - Developed waypoint navigation and motion planning pipelines for UAVs (Crazyflie, DJI Tello) using the OptiTrack motion capture system, automated takeoff, and precise landing systems.
       - Exploring integration of Vision-Language Models (VLMs) with onboard perception to enhance semantic understanding and indoor navigation, targeting reduced localization errors and improved autonomy.
+      - [Click here for more details](/project/robotics-coop)
   - position: Design Engineer
     company_name: Technip Energies
     date_start: 2021-02-01
@@ -84,6 +88,16 @@ work:
       - Optimized live video analysis under variable lighting using image processing techniques, boosting detection accuracy to over 90% and reducing manual inspection time by 50%.
       - Built automated edge length measuring device.
       - Designed a pH sensing solution for aquaculture.
+  - position: Brakes and Testing Head
+    company_name: Off-Road Racing Team (NIT Jalandhar)
+    date_start: 2017-01-01
+    date_end: 2019-05-01
+    summary: |
+      - Built the lightest ATV ever built in the country for BAJA SAE INDIA 2019, achieved 4th fastest ATV in BAJA SAE Illinois 2017.
+      - Designed Floating Brake Caliper in Catia V5 using the parameters measured from hydraulic pressure sensors and tested it on ATV
+      - Employed FEA to optimize brake rotor structure, integrating aluminum with SS420 coating to enhance cooling capacity and hardness, reducing brake fading and achieving a remarkable 40% weight reduction through compact assembly.
+      - Validated braking pedal force using a load cell & developed a setup to measure acceleration using an LDR sensor and Arduino Uno.
+      - [Click here for more details](/project/brakes_testing_head)
 
 skills:
   - name: Technical Skills

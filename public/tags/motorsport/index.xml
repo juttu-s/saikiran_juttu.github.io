@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Motorsport | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/motorsport/</link>
+      <atom:link href="http://localhost:1313/tags/motorsport/index.xml" rel="self" type="application/rss+xml" />
+    <description>Motorsport</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Motorsport</title>
+      <link>http://localhost:1313/tags/motorsport/</link>
+    </image>
+    
+    <item>
+      <title>Brakes &amp; Testing Head</title>
+      <link>http://localhost:1313/project/brakes_testing_head/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/brakes_testing_head/</guid>
+      <description>&lt;h2 id=&#34;role&#34;&gt;Role&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Brakes and Testing Head&lt;/strong&gt;&lt;br&gt;
+Off-Road Racing Team, NIT Jalandhar&lt;br&gt;
+&lt;em&gt;Jan 2017 – May 2019&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;achievements&#34;&gt;Achievements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Built the lightest ATV ever in India&lt;/strong&gt; for &lt;strong&gt;BAJA SAE INDIA 2019&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4th Fastest ATV&lt;/strong&gt; at &lt;strong&gt;BAJA SAE Illinois 2017&lt;/strong&gt; (international ranking)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;technical-contributions&#34;&gt;Technical Contributions&lt;/h2&gt;
+&lt;h3 id=&#34;brake-system-design&#34;&gt;Brake System Design&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed a &lt;strong&gt;Floating Brake Caliper&lt;/strong&gt; in &lt;strong&gt;Catia V5&lt;/strong&gt; using real-world inputs from &lt;strong&gt;hydraulic pressure sensors&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Modeled and assembled brake system for custom suspension geometry and high-speed terrain response.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;finite-element-analysis-fea&#34;&gt;Finite Element Analysis (FEA)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimized &lt;strong&gt;brake rotor&lt;/strong&gt; design using &lt;strong&gt;FEA&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Integrated &lt;strong&gt;aluminum&lt;/strong&gt; with &lt;strong&gt;SS420 stainless coating&lt;/strong&gt; to:
+&lt;ul&gt;
+&lt;li&gt;Improve &lt;strong&gt;cooling capacity&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Boost &lt;strong&gt;hardness and durability&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Cut brake fade during endurance runs&lt;/li&gt;
+&lt;li&gt;Reduced brake system weight by &lt;strong&gt;40%&lt;/strong&gt; through a compact assembly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;validation--testing&#34;&gt;Validation &amp;amp; Testing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Validated &lt;strong&gt;braking pedal force&lt;/strong&gt; using a &lt;strong&gt;load cell&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Developed a custom test setup using &lt;strong&gt;Arduino Uno&lt;/strong&gt; and &lt;strong&gt;LDR sensors&lt;/strong&gt; to measure:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Acceleration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Response time&lt;/strong&gt; during brake actuation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;media-optional&#34;&gt;Media (Optional)&lt;/h2&gt;
+&lt;!-- Example to add photo/video later --&gt;
+&lt;!-- ![Brake Assembly](uploads/brake_assembly.jpg) --&gt;
+&lt;!--
+&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
+  &lt;source src=&#34;http://localhost:1313/uploads/baja_test_lap.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+--&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools--skills&#34;&gt;Tools &amp;amp; Skills&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Catia V5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ANSYS / FEA&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arduino&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Load Cell Calibration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hydraulic Brake Design&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Motorsports Engineering&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

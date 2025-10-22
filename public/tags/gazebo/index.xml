@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gazebo | Hugo Academic CV Theme</title>
+    <link>http://localhost:1313/tags/gazebo/</link>
+      <atom:link href="http://localhost:1313/tags/gazebo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gazebo</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Gazebo</title>
+      <link>http://localhost:1313/tags/gazebo/</link>
+    </image>
+    
+    <item>
+      <title>Graduate Research Assistant</title>
+      <link>http://localhost:1313/project/grad-research-assistant/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/grad-research-assistant/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Worked at the Multi-Agent Robotics and Autonomy Lab on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UAV–UGV exploration in Gazebo (ROS2, C++)&lt;/li&gt;
+&lt;li&gt;Incremental PRM planner (C++/Python)&lt;/li&gt;
+&lt;li&gt;Custom drone hardware for GPS-denied flight&lt;/li&gt;
+&lt;li&gt;MATLAB vision-based IK solver &amp;amp; motion planning&lt;/li&gt;
+&lt;li&gt;Simscape robotic arm with real+sim integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-exploration-video&#34;&gt;🎥 Exploration Video&lt;/h2&gt;
+&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
+  &lt;source src=&#34;http://localhost:1313/uploads/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
