@@ -58,7 +58,7 @@ work:
       - Designing and testing custom FPV drone hardware, tuning flight controllers and collecting flight data to improve performance in GPS-denied environments.
       - Implemented vision-based object detection, IK solver, and motion planning in MATLAB, boosting robotic arm precision by 30%.
       - Modeled a high-fidelity Simscape/MATLAB manipulator simulation and a physical robotic arm testbed, enabling remote-access experimentation and reducing hardware deployment time by 25%.
-      - [Click here for more details](/saikiran_juttu.github.io/details/start)
+      - [Click here for more details](/saikiran_juttu.github.io/details/grad-research-assistant)
 
   - position: Robotics Engineer Co-op
     company_name: Northeastern University
@@ -70,7 +70,7 @@ work:
       - Implemented ROS 2-based SLAM solutions (RTAB-Map, LIO-SAM, VIO, SLAM Toolbox) in C++/Python, leveraging Nav2 to improve localization accuracy and enable robust autonomous navigation in GPS-denied environments.
       - Developed waypoint navigation and motion planning pipelines for UAVs (Crazyflie, DJI Tello) using the OptiTrack motion capture system, automated takeoff, and precise landing systems.
       - Exploring integration of Vision-Language Models (VLMs) with onboard perception to enhance semantic understanding and indoor navigation, targeting reduced localization errors and improved autonomy.
-      - [Click here for more details](/project/robotics-coop)
+      - [Click here for more details](/saikiran_juttu.github.io/details/robotics-coop)
   - position: Design Engineer
     company_name: Technip Energies
     date_start: 2021-02-01
@@ -97,7 +97,7 @@ work:
       - Designed Floating Brake Caliper in Catia V5 using the parameters measured from hydraulic pressure sensors and tested it on ATV
       - Employed FEA to optimize brake rotor structure, integrating aluminum with SS420 coating to enhance cooling capacity and hardness, reducing brake fading and achieving a remarkable 40% weight reduction through compact assembly.
       - Validated braking pedal force using a load cell & developed a setup to measure acceleration using an LDR sensor and Arduino Uno.
-      - [Click here for more details](/project/brakes_testing_head)
+      - [Click here for more details](/saikiran_juttu.github.io/details/brakes_testing_head)
 
 skills:
   - name: Technical Skills
