@@ -58,7 +58,7 @@ work:
       - Designing and testing custom FPV drone hardware, tuning flight controllers and collecting flight data to improve performance in GPS-denied environments.
       - Implemented vision-based object detection, IK solver, and motion planning in MATLAB, boosting robotic arm precision by 30%.
       - Modeled a high-fidelity Simscape/MATLAB manipulator simulation and a physical robotic arm testbed, enabling remote-access experimentation and reducing hardware deployment time by 25%.
-      - [Click here for more details](/project/grad-research-assistant)
+      - [Click here for more details](/saikiran_juttu.github.io/project/grad-research-assistant)
 
   - position: Robotics Engineer Co-op
     company_name: Northeastern University
