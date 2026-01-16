@@ -18,7 +18,7 @@ This project focused on calibrating a camera and using it to overlay **virtual 3
 
 ---
 
-### 📌 Project Highlights
+### Project Highlights
 
 1. **Corner Detection & Calibration**  
    - Detected checkerboard corners using OpenCV  
@@ -37,7 +37,7 @@ This project focused on calibrating a camera and using it to overlay **virtual 3
 
 ---
 
-### 🧠 Extra Features
+### Extra Features
 
 - Harris corner detection to compare feature robustness  
 - Live insertion of objects via webcam  
@@ -46,7 +46,7 @@ This project focused on calibrating a camera and using it to overlay **virtual 3
 
 ---
 
-### 🔍 Extension Tasks
+### Extension Tasks
 
 - Compared calibrations of internal vs external webcams  
 - Added keyboard control to insert virtual objects from pre-recorded videos  
@@ -55,7 +55,7 @@ This project focused on calibrating a camera and using it to overlay **virtual 3
 
 ---
 
-### 📁 Resources
+### Resources
 
 - 📄 [Project Report (PDF)](/files/Project%204-Report.pdf)
 - 🎥 [Demo Video](https://drive.google.com/file/d/103mUiSgL6q1pJ2LhHZq8z1r2gVORhIdA/view?usp=sharing)

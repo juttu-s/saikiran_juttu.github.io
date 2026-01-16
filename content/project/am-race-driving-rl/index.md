@@ -16,7 +16,7 @@ image:
   preview_only: true
 ---
 
-## 🏎️ Autonomous Race Driving with Action Mapping RL
+## Autonomous Race Driving with Action Mapping RL
 
 This project evaluates the impact of **Action Mapping (AM)** on **deep reinforcement learning (DRL)** algorithms for high-speed autonomous race driving. The primary goal was to enforce **friction and vehicle dynamics constraints** while ensuring agents could learn to complete laps efficiently and safely.
 

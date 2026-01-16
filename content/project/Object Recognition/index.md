@@ -18,7 +18,7 @@ This project developed a **real-time webcam-based system** to detect and classif
 
 ---
 
-### 🧠 Workflow
+### Workflow
 
 1. **Thresholding Input Frames**  
    - Dynamic thresholding via simplified K-means clustering  
@@ -48,7 +48,7 @@ This project developed a **real-time webcam-based system** to detect and classif
 
 ---
 
-### 🔧 Extended Features
+### Extended Features
 
 - Recognizes **11 total object classes**  
 - Handles **multiple objects** simultaneously in a frame  
@@ -56,7 +56,7 @@ This project developed a **real-time webcam-based system** to detect and classif
 
 ---
 
-### 🔁 Demo Mode
+### Demo Mode
 
 - Press `'r'` to begin recording video  
 - Press `'p'` to stop and save to MP4
@@ -65,7 +65,7 @@ This project developed a **real-time webcam-based system** to detect and classif
 
 ---
 
-### 📁 Resources
+### Resources
 
 - 📄 [Project Report (PDF)](/files/Project%203-Report.pdf)
 - 🔗 [GitHub Repository](https://github.com/juttu-s/real-time-object-classifier)

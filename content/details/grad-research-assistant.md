@@ -21,6 +21,6 @@ Worked at the Multi-Agent Robotics and Autonomy Lab on:
 ## 🎥 Exploration Video
 
 <video controls width="100%" muted autoplay loop>
-  <source src="/uploads/demo.mp4" type="video/mp4">
+  <source src="/saikiran_juttu.github.io/uploads/demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

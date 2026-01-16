@@ -22,7 +22,7 @@ This project implements a full photo mosaicking and optimization pipeline using 
 
 ### Pipeline Breakdown
 
-#### 1️⃣ CLAHE Image Enhancement
+#### CLAHE Image Enhancement
 
 - Applies histogram equalization to improve contrast and enhance keypoints.
 - OpenCV CLAHE was used on each grayscale frame.
@@ -36,7 +36,7 @@ clahe_image = clahe.apply(gray_image)
 
 ---
 
-#### 2️⃣ SIFT Feature Detection
+#### SIFT Feature Detection
 
 - Detected keypoints using tuned SIFT settings:
   - `nfeatures=5000`, `contrastThreshold=0.025`, `nOctaveLayers=8`, `sigma=1.5`
@@ -50,7 +50,7 @@ kp, desc = sift.detectAndCompute(image, None)
 
 ---
 
-#### 3️⃣ Feature Matching + RANSAC Filtering
+#### Feature Matching + RANSAC Filtering
 
 - Matched descriptors using Brute-Force Matcher + Lowe’s ratio test.
 - Applied `cv2.estimateAffine2D` with RANSAC to compute and refine transformation.
@@ -65,7 +65,7 @@ H, mask = cv2.estimateAffine2D(pts1, pts2, method=cv2.RANSAC)
 
 ---
 
-#### 4️⃣ Pose Graph Construction (GTSAM)
+#### Pose Graph Construction (GTSAM)
 
 - Built a factor graph using all non-repeating image pairs.
 - Relative poses (affine transforms) were added as edges.
@@ -76,7 +76,7 @@ graph.add(BetweenFactorPose2(i1, i2, T_ij, noise_model))
 ![Initial Trajectory](plot_before.png)
 ---
 
-#### 5️⃣ Global Bundle Adjustment
+#### Global Bundle Adjustment
 
 - Used GTSAM’s Levenberg-Marquardt optimizer to refine global poses.
 - Corrects drift and adjusts poses to minimize total residual error.
@@ -119,7 +119,7 @@ result = optimizer.optimize()
 
 ---
 
-### 📖 References
+### References
 
 - Pizarro & Singh (2003): *Toward large-area mosaicing for underwater scientific applications.*
 - Ballard et al. (1998, 2000): *Roman shipwreck discovery using submersible tech.*

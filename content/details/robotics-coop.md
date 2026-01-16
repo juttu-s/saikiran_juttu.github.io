@@ -19,7 +19,7 @@ Worked at Northeastern University on:
 Integrated **3D LiDAR and Intel RealSense** sensors with the **Scout Mini Rover** via CAN protocol in ROS 2, deployed on **Jetson AGX Orin** for synchronized perception, sensor fusion, and reliable HW–SW communication.
 
 **Physical Setup**
-![Scout Mini Rover Setup](/uploads/Robot.jpeg)
+![Scout Mini Rover Setup](/saikiran_juttu.github.io/uploads/Robot.jpeg)
 
 
 ### SLAM Implementation
@@ -34,22 +34,22 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.
 
 **RTAB-Map Visualization:**
 
-![RTAB-Map Screenshot](/uploads/rtab_map.jpg)
+![RTAB-Map Screenshot](/saikiran_juttu.github.io/uploads/rtab_map.jpg)
 
 **RTAB-Map Demo:**
 
 <video controls width="100%" muted autoplay loop>
-  <source src="/uploads/RTAB_demo.mp4" type="video/mp4">
+  <source src="/saikiran_juttu.github.io/uploads/RTAB_demo.mp4" type="video/mp4">
 </video>
 
 **LIO-SAM Screenshot:**
 
-![LIO-SAM Visualization](/uploads/lio_sam.png)
+![LIO-SAM Visualization](/saikiran_juttu.github.io/uploads/lio_sam.png)
 
 **LIO-SAM SLAM Mapping:**
 
 <video controls width="100%" muted autoplay loop>
-  <source src="/uploads/lio_sam_demo.mp4" type="video/mp4">
+  <source src="/saikiran_juttu.github.io/uploads/lio_sam_demo.mp4" type="video/mp4">
 </video>
 
 ---
@@ -64,12 +64,12 @@ Developed **waypoint navigation and motion planning** pipelines for **Crazyflie 
 
 **Crazyflie in OptiTrack Arena:**
 
-![UAV Setup](/uploads/crazyflie_optitrack.jpg)
+![UAV Setup](/saikiran_juttu.github.io/uploads/crazyflie_optitrack.jpg)
 
 **DJI Tello Navigation Demo:**
 
 <video controls width="100%" muted autoplay loop>
-  <source src="/uploads/tello_landing.mp4" type="video/mp4">
+  <source src="/saikiran_juttu.github.io/uploads/tello_landing.mp4" type="video/mp4">
 </video>
 
 ---
@@ -84,10 +84,10 @@ Exploring integration of **Vision-Language Models (VLMs)** to:
 
 **VLM Output Example:**
 
-![VLM Navigation Semantic Output](/uploads/vlm_semantics.jpg)
+![VLM Navigation Semantic Output](/saikiran_juttu.github.io/uploads/vlm_semantics.jpg)
 
 **VLM Indoor Navigation Demo:**
 
 <video controls width="100%" muted autoplay loop>
-  <source src="/uploads/vlm_navigation.mp4" type="video/mp4">
+  <source src="/saikiran_juttu.github.io/uploads/vlm_navigation.mp4" type="video/mp4">
 </video>

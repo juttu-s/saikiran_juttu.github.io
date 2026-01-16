@@ -33,7 +33,7 @@ sections:
           parallax: false
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: 'My Research'
       subtitle: ''
       text: |-
         I’m a Robotics Graduate Student at Northeastern University with a passion for autonomous perception, embedded systems, and SLAM. 
@@ -42,7 +42,7 @@ sections:
 
         I enjoy blending embedded hardware with AI-driven autonomy to push the capabilities of mobile robotics.
 
-        Let's build intelligent robots together! 🤝
+        Let's build intelligent robots together! 
 #     design:
 #       columns: '1'
 #   - block: collection

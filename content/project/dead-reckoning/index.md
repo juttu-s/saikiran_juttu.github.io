@@ -19,7 +19,7 @@ This project involved real-world testing of **dead reckoning navigation** using 
 
 ---
 
-### 📍 Objective
+### Objective
 
 - Use IMU (accel, gyro, mag) for estimating yaw and velocity
 - Compare integrated dead reckoning trajectory with GPS
@@ -27,7 +27,7 @@ This project involved real-world testing of **dead reckoning navigation** using 
 
 ---
 
-### 🧪 Methodology
+### Methodology
 
 1. **Sensor Mounting & Data Collection**  
    - IMU mounted flat, aligned to vehicle axis  
@@ -56,7 +56,7 @@ This project involved real-world testing of **dead reckoning navigation** using 
 
 ---
 
-### 📊 Results
+### Results
 
 - Initial path tracking was highly accurate  
 - IMU-based dead reckoning remained within **2m** of GPS for **150–200 seconds**
@@ -65,7 +65,7 @@ This project involved real-world testing of **dead reckoning navigation** using 
 
 ---
 
-### 🔎 Key Insights
+### Key Insights
 
 - IMU is accurate for short-term dead reckoning  
 - Drift arises from gyroscope bias and sloped paths  
@@ -74,7 +74,7 @@ This project involved real-world testing of **dead reckoning navigation** using 
 
 ---
 
-### 📁 Resources
+### Resources
 
 - 📄 [Lab 5 Report (PDF)](/files/LAB%205%20report-1.pdf)
 - 🔗 [GitHub Repository](https://github.com/juttu-s/dead-reckoning-imu-gps)

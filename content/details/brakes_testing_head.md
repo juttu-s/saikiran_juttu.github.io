@@ -4,7 +4,7 @@ summary: "Full lifecycle mechanical design — from CAD & FEA to prototyping, te
 date: 2019-01-15
 tags: ["Mechanical Design", "FEA", "Braking System", "Catia", "ANSYS", "Prototyping", "SAE", "DFM", "Thermal Analysis", "Structural Mechanics"]
 image:
-  filename: /uploads/experience.jpg
+  filename: /saikiran_juttu.github.io/uploads/experience.jpg
   preview_only: true
 ---
 
@@ -18,7 +18,7 @@ image:
 - Built India’s **lightest ATV** for BAJA SAE 2019.  
 - Achieved **4th fastest ATV** at BAJA SAE Illinois 2017.  
 - Delivered robust braking under extreme off-road and endurance conditions.
-![](/uploads/experience.jpg)
+![](/saikiran_juttu.github.io/uploads/experience.jpg)
 ---
 
 ## Full Lifecycle Mechanical Design
@@ -41,10 +41,10 @@ Developed and validated a custom **floating brake caliper** to suit the geometry
 
 #### CAD Exploded View
 
-![Exploded view of caliper assembly](/uploads/calliper_assembly.jpg)
+![Exploded view of caliper assembly](/saikiran_juttu.github.io/uploads/calliper_assembly.jpg)
 
 #### ANSYS FEA Analysis 
-![FEA Stress Simulation in ANSYS](/uploads/caliper_ansys.jpg)
+![FEA Stress Simulation in ANSYS](/saikiran_juttu.github.io/uploads/caliper_ansys.jpg)
 
 ---
 
@@ -55,10 +55,10 @@ Developed and validated a custom **floating brake caliper** to suit the geometry
 - Conducted **transient thermal analysis** for heat dissipation during prolonged braking.  
 - Used vented profiles to reduce thermal hotspots and fade.  
 
-![Rear Rotor Thermal](/uploads/rear_rotor_thermal.jpg)  
+![Rear Rotor Thermal](/saikiran_juttu.github.io/uploads/rear_rotor_thermal.jpg)  
 *Rear Rotor — Thermal Simulation *
 
-![Rear Rotor Stress](/uploads/rear_rotor.jpg)  
+![Rear Rotor Stress](/saikiran_juttu.github.io/uploads/rear_rotor.jpg)  
 *Rear Rotor — Static Structural FEA *
 
 ---
@@ -68,10 +68,10 @@ Developed and validated a custom **floating brake caliper** to suit the geometry
 - Combined **aluminum core** with **SS420 stainless steel coating** for weight and heat resistance.  
 - Optimized spoke pattern for mechanical integrity with minimal mass.  
 
-![Front Rotor Thermal](/uploads/front_rotor_thermal.jpg)  
+![Front Rotor Thermal](/saikiran_juttu.github.io/uploads/front_rotor_thermal.jpg)  
 *Front Rotor — Thermal Analysis*
 
-![Front Rotor Stress](/uploads/Front_rotor.jpg)  
+![Front Rotor Stress](/saikiran_juttu.github.io/uploads/Front_rotor.jpg)  
 *Front Rotor — Structural Stress Analysis*
 
 ---
@@ -81,10 +81,10 @@ Developed and validated a custom **floating brake caliper** to suit the geometry
 - Designed and analyzed **pedal assembly** with custom mount.  
 - Validated force distribution using **FEA** and real-time **load cell logging**.  
 
-![Brake Pedal ANSYS](/uploads/Brake_pedal_ansys.png)  
+![Brake Pedal ANSYS](/saikiran_juttu.github.io/uploads/Brake_pedal_ansys.png)  
 *Brake Pedal — Stress Zones*
 
-![Pedal Mounting](/uploads/pedal_mounting.png)  
+![Pedal Mounting](/saikiran_juttu.github.io/uploads/pedal_mounting.png)  
 *Custom Bracket — Pedal Mount Geometry*
 
 ---
@@ -105,7 +105,7 @@ Developed and validated a custom **floating brake caliper** to suit the geometry
   - Pedal force vs stopping distance  
   - Response time  
 
-![Test Rig](/uploads/test.png)  
+![Test Rig](/saikiran_juttu.github.io/uploads/test.png)  
 *On-field brake performance testing with Arduino sensor rig*
 
 ---
