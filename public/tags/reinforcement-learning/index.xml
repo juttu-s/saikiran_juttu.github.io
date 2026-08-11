@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reinforcement Learning | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/reinforcement-learning/</link>
-      <atom:link href="http://localhost:1313/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <title>Reinforcement Learning | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Reinforcement Learning</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Reinforcement Learning</title>
-      <link>http://localhost:1313/tags/reinforcement-learning/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/</link>
     </image>
     
     <item>
       <title>Autonomous Race Driving with Action Mapping RL</title>
-      <link>http://localhost:1313/project/am-race-driving-rl/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</link>
       <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/am-race-driving-rl/</guid>
-      <description>&lt;h2 id=&#34;-autonomous-race-driving-with-action-mapping-rl&#34;&gt;🏎️ Autonomous Race Driving with Action Mapping RL&lt;/h2&gt;
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</guid>
+      <description>&lt;h2 id=&#34;autonomous-race-driving-with-action-mapping-rl&#34;&gt;Autonomous Race Driving with Action Mapping RL&lt;/h2&gt;
 &lt;p&gt;This project evaluates the impact of &lt;strong&gt;Action Mapping (AM)&lt;/strong&gt; on &lt;strong&gt;deep reinforcement learning (DRL)&lt;/strong&gt; algorithms for high-speed autonomous race driving. The primary goal was to enforce &lt;strong&gt;friction and vehicle dynamics constraints&lt;/strong&gt; while ensuring agents could learn to complete laps efficiently and safely.&lt;/p&gt;
 &lt;p&gt;We &lt;strong&gt;extended the GitHub framework from the AM-RL paper&lt;/strong&gt; (ISA Transactions 2024) that used TD3 + AM, and &lt;strong&gt;re-implemented the actor-critic models using DDPG and SAC&lt;/strong&gt; with Action Mapping. The experiments were conducted on &lt;strong&gt;Track A&lt;/strong&gt; in the custom race simulator.&lt;/p&gt;
 &lt;hr&gt;
@@ -98,10 +98,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;TD3 vs DDPG Lap 1 &amp;amp; 2&#34; srcset=&#34;
-               /project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp 400w,
-               /project/am-race-driving-rl/TD3_DDPG_hu16877567874459994854.webp 760w,
-               /project/am-race-driving-rl/TD3_DDPG_hu9699183390352886908.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp&#34;
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp 400w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu16877567874459994854.webp 760w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu9699183390352886908.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp&#34;
                width=&#34;601&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -140,10 +140,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SAC Lap 1 Intermediate Failures&#34; srcset=&#34;
-               /project/am-race-driving-rl/SAC_hu7060679015506459835.webp 400w,
-               /project/am-race-driving-rl/SAC_hu17451594598186353989.webp 760w,
-               /project/am-race-driving-rl/SAC_hu100650002741892404.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/am-race-driving-rl/SAC_hu7060679015506459835.webp&#34;
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu7060679015506459835.webp 400w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu17451594598186353989.webp 760w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu100650002741892404.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu7060679015506459835.webp&#34;
                width=&#34;655&#34;
                height=&#34;377&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

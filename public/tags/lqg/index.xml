@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LQG | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/lqg/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/lqg/index.xml" rel="self" type="application/rss+xml" />
+    <description>LQG</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>LQG</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/lqg/</link>
+    </image>
+    
+    <item>
+      <title>Control Strategies for Quadrotor Position and Altitude</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</link>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</guid>
+      <description>&lt;p&gt;This project presents a &lt;strong&gt;comprehensive comparative study of optimal control strategies&lt;/strong&gt; for &lt;strong&gt;quadrotor position and altitude control&lt;/strong&gt;. The goal was to evaluate how different controllers handle stability, tracking accuracy, and robustness when subjected to realistic flight conditions such as &lt;strong&gt;sensor noise&lt;/strong&gt; and &lt;strong&gt;process disturbances&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Model the quadrotor dynamics and design controllers for position and altitude regulation.&lt;/li&gt;
+&lt;li&gt;Implement and compare multiple optimal-control formulations on the same plant.&lt;/li&gt;
+&lt;li&gt;Assess stability, adaptability, and robustness under real-world disturbances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controllers-implemented&#34;&gt;Controllers Implemented&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Model Predictive Control (MPC)&lt;/strong&gt; — constraint-aware optimization over a receding horizon.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linear Quadratic Regulator (LQR)&lt;/strong&gt; — optimal state-feedback gain minimizing a quadratic cost.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linear Quadratic Gaussian (LQG)&lt;/strong&gt; — LQR combined with a Kalman estimator for noisy state feedback.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LQR-PI&lt;/strong&gt; — LQR augmented with integral action to eliminate steady-state error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;evaluation&#34;&gt;Evaluation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Each controller was tested in &lt;strong&gt;MATLAB / Simulink&lt;/strong&gt; on the quadrotor model.&lt;/li&gt;
+&lt;li&gt;Performance was evaluated on &lt;strong&gt;stability&lt;/strong&gt; and &lt;strong&gt;adaptability&lt;/strong&gt;, explicitly incorporating real-world factors such as &lt;strong&gt;sensor noise&lt;/strong&gt; and &lt;strong&gt;process disturbances&lt;/strong&gt; to ensure robust flight dynamics.&lt;/li&gt;
+&lt;li&gt;Compared tracking response, settling behavior, and disturbance rejection across the controllers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MATLAB&lt;/li&gt;
+&lt;li&gt;Simulink&lt;/li&gt;
+&lt;li&gt;Control System Toolbox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This study highlights the trade-offs between predictive, state-feedback, and estimator-based control for aerial robotics — informing controller selection for robust quadrotor flight in noisy, disturbance-prone environments.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

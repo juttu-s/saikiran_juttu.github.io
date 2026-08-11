@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Real-Time Systems | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/real-time-systems/</link>
-      <atom:link href="http://localhost:1313/tags/real-time-systems/index.xml" rel="self" type="application/rss+xml" />
+    <title>Real-Time Systems | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/real-time-systems/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/real-time-systems/index.xml" rel="self" type="application/rss+xml" />
     <description>Real-Time Systems</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Real-Time Systems</title>
-      <link>http://localhost:1313/tags/real-time-systems/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/real-time-systems/</link>
     </image>
     
     <item>
       <title>Real-Time 2D Object Recognition with Feature Matching</title>
-      <link>http://localhost:1313/project/object-recognition/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/object-recognition/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</guid>
       <description>&lt;p&gt;This project developed a &lt;strong&gt;real-time webcam-based system&lt;/strong&gt; to detect and classify 2D objects using image segmentation, shape features, and distance-based classifiers. The system supports capturing and labeling training data interactively and recognizes both scale- and rotation-invariant objects.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-workflow&#34;&gt;🧠 Workflow&lt;/h3&gt;
+&lt;h3 id=&#34;workflow&#34;&gt;Workflow&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Thresholding Input Frames&lt;/strong&gt;&lt;/p&gt;
@@ -70,23 +70,23 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extended-features&#34;&gt;🔧 Extended Features&lt;/h3&gt;
+&lt;h3 id=&#34;extended-features&#34;&gt;Extended Features&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Recognizes &lt;strong&gt;11 total object classes&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Handles &lt;strong&gt;multiple objects&lt;/strong&gt; simultaneously in a frame&lt;/li&gt;
 &lt;li&gt;Classifies objects even under &lt;strong&gt;rotations and scaling&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-demo-mode&#34;&gt;🔁 Demo Mode&lt;/h3&gt;
+&lt;h3 id=&#34;demo-mode&#34;&gt;Demo Mode&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Press &lt;code&gt;&#39;r&#39;&lt;/code&gt; to begin recording video&lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;&#39;p&#39;&lt;/code&gt; to stop and save to MP4&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/1AFoqLXxugcIa1uGtxgGTe1So_fgyTtBC/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Live System Demo&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-resources&#34;&gt;📁 Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/Project%203-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%203-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/real-time-object-classifier&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;

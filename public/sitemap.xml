@@ -2,412 +2,392 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/event/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/collaborative-exploration/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/publication/energy-aware-uav-ugv-exploration/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/jetson/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot-planning/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/orienteering-problem/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/publication_types/paper-conference/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/prm/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/publication_types/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/publication/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/uav-ugv/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/details/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/optitrack/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/jetson/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/perception/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/optitrack/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/perception/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/robotics-coop/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/ros2/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ros2/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/slam/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/slam/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/vlm/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/vlm/</loc>
-    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/action-mapping/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/action-mapping/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/autonomous-driving/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/autonomous-driving/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/am-race-driving-rl/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/ddpg/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ddpg/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/reinforcement-learning/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/sac/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/td3/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sac/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/bundle-adjustment/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/td3/</loc>
+    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dynamic-environments/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/orb-slam2/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ros/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/semantic-slam/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/yolo/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/control-systems/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lqg/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lqr/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/matlab/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mpc/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/quadrotor/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/simulink/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/epipolar-geometry/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/epipolar-geometry/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/gtsam/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gtsam/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/opencv/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/opencv/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/python/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/sparse-reconstruction/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/structure-from-motion/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/structure-from-motion/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/image-registration/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/image-registration/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/levenberg-marquardt/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/levenberg-marquardt/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/photo-mosaicking/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/kimera/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/kimera/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/kimera-vio/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/pose-estimation/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pose-estimation/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/visual-inertial-odometry/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/visual-inertial-odometry/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/automated-insect-leg-labeling/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/computer-vision/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/computer-vision/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/deeplabcut/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/deeplabcut/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/feature-detection/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/feature-detection/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/image-processing/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/image-processing/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/cnn/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/cnn/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/deep-learning/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/deep-learning/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/digit-recognition/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/digit-recognition/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/gazebo/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gazebo/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/grad-research-assistant/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/mnist/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mnist/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/multi-robot/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/prm/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/transfer-learning/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/pytorch/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/transfer-learning/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/feature-extraction/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/feature-extraction/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/object-recognition/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/object-recognition/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/object-recognition/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/real-time-systems/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/real-time-systems/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/augmented-reality/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/augmented-reality/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/camera-calibration/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/camera-calibration/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/calibration/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/virtual-projection/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/virtual-projection/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/dead-reckoning/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dead-reckoning/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/dead-reckoning/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/gps/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gps/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/imu/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/imu/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/navigation/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/navigation/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/ros/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sensor-fusion/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/sensor-fusion/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/get-started/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/academic/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo-blox/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/second-brain/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/second-brain/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/data-visualization/</loc>
-    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/teach-courses/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/experience/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/experience/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo-blox-builder/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/javascript/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/teaching/js/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/teaching/python/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/teaching/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/post/project-management/</loc>
-    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/article/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/large-language-models/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/ansys/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ansys/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/project/brakes_testing_head/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/braking-system/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/braking-system/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/catia/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/catia/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/dfm/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dfm/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/fea/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/fea/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/mechanical-design/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mechanical-design/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/prototyping/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/prototyping/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/sae/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sae/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/structural-mechanics/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/structural-mechanics/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/tags/thermal-analysis/</loc>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/thermal-analysis/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/article-journal/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/source-themes/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/paper-conference/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

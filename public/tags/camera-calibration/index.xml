@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Camera Calibration | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/camera-calibration/</link>
-      <atom:link href="http://localhost:1313/tags/camera-calibration/index.xml" rel="self" type="application/rss+xml" />
+    <title>Camera Calibration | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/camera-calibration/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/camera-calibration/index.xml" rel="self" type="application/rss+xml" />
     <description>Camera Calibration</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Camera Calibration</title>
-      <link>http://localhost:1313/tags/camera-calibration/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/camera-calibration/</link>
     </image>
     
     <item>
       <title>Camera Calibration and Augmented Reality</title>
-      <link>http://localhost:1313/project/calibration/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/calibration/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</guid>
       <description>&lt;p&gt;This project focused on calibrating a camera and using it to overlay &lt;strong&gt;virtual 3D objects in real-time video feeds&lt;/strong&gt; using OpenCV. It introduced concepts in camera intrinsics, pose estimation, and interactive augmented reality applications.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-project-highlights&#34;&gt;📌 Project Highlights&lt;/h3&gt;
+&lt;h3 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Corner Detection &amp;amp; Calibration&lt;/strong&gt;&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extra-features&#34;&gt;🧠 Extra Features&lt;/h3&gt;
+&lt;h3 id=&#34;extra-features&#34;&gt;Extra Features&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Harris corner detection to compare feature robustness&lt;/li&gt;
 &lt;li&gt;Live insertion of objects via webcam&lt;/li&gt;
@@ -55,7 +55,7 @@
 &lt;li&gt;Replaced the checkerboard region with a &lt;strong&gt;custom image overlay&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extension-tasks&#34;&gt;🔍 Extension Tasks&lt;/h3&gt;
+&lt;h3 id=&#34;extension-tasks&#34;&gt;Extension Tasks&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Compared calibrations of internal vs external webcams&lt;/li&gt;
 &lt;li&gt;Added keyboard control to insert virtual objects from pre-recorded videos&lt;/li&gt;
@@ -63,9 +63,9 @@
 &lt;li&gt;Created &lt;strong&gt;multi-object AR scenes&lt;/strong&gt; from multiple markers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-resources&#34;&gt;📁 Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/Project%204-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%204-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/103mUiSgL6q1pJ2LhHZq8z1r2gVORhIdA/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo Video&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/augmented-reality-calibration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

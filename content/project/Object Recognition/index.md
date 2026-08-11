@@ -10,7 +10,7 @@ tags:
 summary: Built a webcam-based 2D object recognition system using shape descriptors, feature vectors, and both Euclidean and KNN-based classification strategies.
 featured: true
 image:
-  filename: object_recognition.png  # Place a screenshot in static/img/
+  filename: featured.png
   preview_only: true
 ---
 

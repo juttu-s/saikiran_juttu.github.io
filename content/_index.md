@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: "Saikiran Juttu"
+title: ""
 date: 2022-10-24
 type: landing
 
@@ -36,9 +36,9 @@ sections:
       title: 'My Research'
       subtitle: ''
       text: |-
-        I’m a Robotics Graduate Student at Northeastern University with a passion for autonomous perception, embedded systems, and SLAM. 
+        I’m a Robotics Software Engineer and recent MS Robotics graduate from Northeastern University, with a passion for autonomous perception, embedded systems, and SLAM. 
 
-        I specialize in real-time robot control, multi-robot coordination, and sensor fusion. My experience spans from research in photomosaicking and semantic SLAM to engineering predictive maintenance robots and automating inspection workflows.
+        I specialize in real-time state estimation, multi-robot planning, and sensor fusion. My experience spans research in photomosaicking, sparse 3D reconstruction, and semantic SLAM to deploying ROS 2 autonomy stacks on embedded edge devices in GPS-denied environments.
 
         I enjoy blending embedded hardware with AI-driven autonomy to push the capabilities of mobile robotics.
 

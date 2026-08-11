@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bundle Adjustment | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/bundle-adjustment/</link>
-      <atom:link href="http://localhost:1313/tags/bundle-adjustment/index.xml" rel="self" type="application/rss+xml" />
+    <title>Bundle Adjustment | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/index.xml" rel="self" type="application/rss+xml" />
     <description>Bundle Adjustment</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 07 Nov 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Bundle Adjustment</title>
-      <link>http://localhost:1313/tags/bundle-adjustment/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/</link>
     </image>
     
     <item>
       <title>Sparse 3D Reconstruction and Bundle Adjustment</title>
-      <link>http://localhost:1313/project/sparse-reconstruction/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/sparse-reconstruction/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</guid>
       <description>&lt;p&gt;This project implements a full Structure from Motion (SfM) pipeline on a &lt;strong&gt;Buddha statue&lt;/strong&gt; using a sequence of &lt;strong&gt;24 grayscale images&lt;/strong&gt;. It combines feature detection, epipolar geometry, camera pose recovery, triangulation, and bundle adjustment.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;dataset&#34;&gt;Dataset&lt;/h3&gt;
@@ -90,10 +90,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Initial Trajectory&#34; srcset=&#34;
-               /project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp 400w,
-               /project/sparse-reconstruction/Initial_plot_hu6971695684859321629.webp 760w,
-               /project/sparse-reconstruction/Initial_plot_hu11908849571792030370.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp 400w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu6971695684859321629.webp 760w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu11908849571792030370.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -119,10 +119,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimized Trajectory&#34; srcset=&#34;
-               /project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp 400w,
-               /project/sparse-reconstruction/Optimized_plot_hu5432368712792554619.webp 760w,
-               /project/sparse-reconstruction/Optimized_plot_hu6617160073620067270.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp 400w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu5432368712792554619.webp 760w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu6617160073620067270.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

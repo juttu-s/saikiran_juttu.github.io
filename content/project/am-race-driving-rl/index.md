@@ -12,7 +12,7 @@ tags:
 summary: Evaluated DDPG and SAC with Action Mapping on a custom autonomous racing simulator using a friction-constrained vehicle model, comparing them to the TD3-AM benchmark from literature.
 featured: true
 image:
-  filename: am_rl_racing.png
+  filename: featured.png
   preview_only: true
 ---
 

@@ -10,7 +10,7 @@ tags:
 summary: Implemented Kimera VIO on both EuRoC MAV and a custom dataset to evaluate trajectory accuracy, runtime performance, and robustness under varying visual-inertial conditions.
 featured: true
 image:
-  filename: kimera_traj.png  # Save any Kimera trajectory image to static/img/
+  filename: featured.png
   preview_only: true
 ---
 
@@ -18,7 +18,7 @@ This project evaluates the **Kimera Visual-Inertial Odometry (VIO)** framework o
 
 ---
 
-### 🧠 Project Goals
+### Project Goals
 
 - Set up Kimera VIO in a ROS + Docker environment  
 - Run it on benchmark and custom datasets  
@@ -26,7 +26,7 @@ This project evaluates the **Kimera Visual-Inertial Odometry (VIO)** framework o
 
 ---
 
-### 🔍 Methodology
+### Methodology
 
 **VIO Front-End:**
 - Feature detection (Shi-Tomasi)
@@ -41,15 +41,15 @@ This project evaluates the **Kimera Visual-Inertial Odometry (VIO)** framework o
 
 ---
 
-### 🧪 Evaluation
+### Evaluation
 
-#### ✅ Dataset 1: EuRoC MAV
+#### Dataset 1: EuRoC MAV
 - Ran Kimera VIO on V1_01 to V1_03
 - Compared RMSE with VINS-Mono, OKVIS, MSCKF
 - Achieved best accuracy across all sequences
 - Average RMSE: 0.05–0.08
 
-#### 🧪 Dataset 2: Custom D455 Dataset
+#### Dataset 2: Custom D455 Dataset
 - Real-world indoor environment
 - Feature-sparse and dynamically lit scenes
 - Maintained smooth and consistent trajectory
@@ -57,7 +57,7 @@ This project evaluates the **Kimera Visual-Inertial Odometry (VIO)** framework o
 
 ---
 
-### ⚙️ Tools & Libraries
+### Tools & Libraries
 
 - **Kimera VIO** from MIT-SPARK Lab
 - **GTSAM** for factor graph optimization
@@ -66,7 +66,7 @@ This project evaluates the **Kimera Visual-Inertial Odometry (VIO)** framework o
 
 ---
 
-### 🧾 Resources
+### Resources
 
 - 📄 [Project Report (PDF)](/files/MR_Project_Report.pdf)
 - 🔗 [Kimera VIO GitHub](https://github.com/MIT-SPARK/Kimera-VIO)

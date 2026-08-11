@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenCV | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/opencv/</link>
-      <atom:link href="http://localhost:1313/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    <title>OpenCV | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/opencv/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
     <description>OpenCV</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 07 Nov 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>OpenCV</title>
-      <link>http://localhost:1313/tags/opencv/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/opencv/</link>
     </image>
     
     <item>
       <title>Sparse 3D Reconstruction and Bundle Adjustment</title>
-      <link>http://localhost:1313/project/sparse-reconstruction/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/sparse-reconstruction/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</guid>
       <description>&lt;p&gt;This project implements a full Structure from Motion (SfM) pipeline on a &lt;strong&gt;Buddha statue&lt;/strong&gt; using a sequence of &lt;strong&gt;24 grayscale images&lt;/strong&gt;. It combines feature detection, epipolar geometry, camera pose recovery, triangulation, and bundle adjustment.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;dataset&#34;&gt;Dataset&lt;/h3&gt;
@@ -90,10 +90,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Initial Trajectory&#34; srcset=&#34;
-               /project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp 400w,
-               /project/sparse-reconstruction/Initial_plot_hu6971695684859321629.webp 760w,
-               /project/sparse-reconstruction/Initial_plot_hu11908849571792030370.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp 400w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu6971695684859321629.webp 760w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu11908849571792030370.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -119,10 +119,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimized Trajectory&#34; srcset=&#34;
-               /project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp 400w,
-               /project/sparse-reconstruction/Optimized_plot_hu5432368712792554619.webp 760w,
-               /project/sparse-reconstruction/Optimized_plot_hu6617160073620067270.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp 400w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu5432368712792554619.webp 760w,
+               /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu6617160073620067270.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -153,42 +153,21 @@
     
     <item>
       <title>Photo Mosaicking of Low-Contrast Underwater Images</title>
-      <link>http://localhost:1313/project/photo-mosaicking/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/photo-mosaicking/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
       <description>&lt;p&gt;This project implements a full photo mosaicking and optimization pipeline using low-contrast underwater images from the &lt;strong&gt;Skerki Bank Roman shipwreck&lt;/strong&gt; dataset. The approach registers both sequential and non-sequential images using SIFT and RANSAC, computes affine transformations, and optimizes a global trajectory using GTSAM.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;pipeline-breakdown&#34;&gt;Pipeline Breakdown&lt;/h3&gt;
-&lt;h4 id=&#34;1-clahe-image-enhancement&#34;&gt;1️⃣ CLAHE Image Enhancement&lt;/h4&gt;
+&lt;h4 id=&#34;clahe-image-enhancement&#34;&gt;CLAHE Image Enhancement&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Applies histogram equalization to improve contrast and enhance keypoints.&lt;/li&gt;
 &lt;li&gt;OpenCV CLAHE was used on each grayscale frame.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;clahe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;createCLAHE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clipLimit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tileGridSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;clahe_image&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clahe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gray_image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/clahe_grid.png&#34; alt=&#34;CLAHE Enhanced Images&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;2-sift-feature-detection&#34;&gt;2️⃣ SIFT Feature Detection&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;sift-feature-detection&#34;&gt;SIFT Feature Detection&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Detected keypoints using tuned SIFT settings:
 &lt;ul&gt;
@@ -198,29 +177,8 @@
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sift&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SIFT_create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;kp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;desc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sift&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;detectAndCompute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/features_grid.png&#34; alt=&#34;Detected Keypoints&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;3-feature-matching--ransac-filtering&#34;&gt;3️⃣ Feature Matching + RANSAC Filtering&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;feature-matching--ransac-filtering&#34;&gt;Feature Matching + RANSAC Filtering&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Matched descriptors using Brute-Force Matcher + Lowe’s ratio test.&lt;/li&gt;
 &lt;li&gt;Applied &lt;code&gt;cv2.estimateAffine2D&lt;/code&gt; with RANSAC to compute and refine transformation.&lt;/li&gt;
@@ -228,29 +186,8 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;knnMatch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;des1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;des2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;good&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.75&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estimateAffine2D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pts1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pts2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RANSAC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/affine_grid.png&#34; alt=&#34;Affine Transformation Filtering&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;4-pose-graph-construction-gtsam&#34;&gt;4️⃣ Pose Graph Construction (GTSAM)&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;pose-graph-construction-gtsam&#34;&gt;Pose Graph Construction (GTSAM)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Built a factor graph using all non-repeating image pairs.&lt;/li&gt;
 &lt;li&gt;Relative poses (affine transforms) were added as edges.&lt;/li&gt;
@@ -275,16 +212,16 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Initial Trajectory&#34; srcset=&#34;
-               /project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
-               /project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
-               /project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
                width=&#34;571&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h4 id=&#34;5-global-bundle-adjustment&#34;&gt;5️⃣ Global Bundle Adjustment&lt;/h4&gt;
+&lt;h4 id=&#34;global-bundle-adjustment&#34;&gt;Global Bundle Adjustment&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Used GTSAM’s Levenberg-Marquardt optimizer to refine global poses.&lt;/li&gt;
 &lt;li&gt;Corrects drift and adjusts poses to minimize total residual error.&lt;/li&gt;
@@ -310,10 +247,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimized Trajectory&#34; srcset=&#34;
-               /project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
-               /project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
-               /project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
                width=&#34;580&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -342,11 +279,11 @@
 &lt;ul&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/photo-mosaicking-skerki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;📁 &lt;a href=&#34;https://drive.google.com/drive/folders/1AtvT65txGIgAG23NRs3EkvDET036a81O&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Skerki Dataset Reference (Google Drive)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-references&#34;&gt;📖 References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Pizarro &amp;amp; Singh (2003): &lt;em&gt;Toward large-area mosaicing for underwater scientific applications.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Ballard et al. (1998, 2000): &lt;em&gt;Roman shipwreck discovery using submersible tech.&lt;/em&gt;&lt;/li&gt;
@@ -356,12 +293,12 @@
     
     <item>
       <title>Real-Time 2D Object Recognition with Feature Matching</title>
-      <link>http://localhost:1313/project/object-recognition/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/object-recognition/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</guid>
       <description>&lt;p&gt;This project developed a &lt;strong&gt;real-time webcam-based system&lt;/strong&gt; to detect and classify 2D objects using image segmentation, shape features, and distance-based classifiers. The system supports capturing and labeling training data interactively and recognizes both scale- and rotation-invariant objects.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-workflow&#34;&gt;🧠 Workflow&lt;/h3&gt;
+&lt;h3 id=&#34;workflow&#34;&gt;Workflow&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Thresholding Input Frames&lt;/strong&gt;&lt;/p&gt;
@@ -412,23 +349,23 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extended-features&#34;&gt;🔧 Extended Features&lt;/h3&gt;
+&lt;h3 id=&#34;extended-features&#34;&gt;Extended Features&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Recognizes &lt;strong&gt;11 total object classes&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Handles &lt;strong&gt;multiple objects&lt;/strong&gt; simultaneously in a frame&lt;/li&gt;
 &lt;li&gt;Classifies objects even under &lt;strong&gt;rotations and scaling&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-demo-mode&#34;&gt;🔁 Demo Mode&lt;/h3&gt;
+&lt;h3 id=&#34;demo-mode&#34;&gt;Demo Mode&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Press &lt;code&gt;&#39;r&#39;&lt;/code&gt; to begin recording video&lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;&#39;p&#39;&lt;/code&gt; to stop and save to MP4&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/1AFoqLXxugcIa1uGtxgGTe1So_fgyTtBC/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Live System Demo&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-resources&#34;&gt;📁 Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/Project%203-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%203-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/real-time-object-classifier&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -438,12 +375,12 @@
     
     <item>
       <title>Camera Calibration and Augmented Reality</title>
-      <link>http://localhost:1313/project/calibration/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/calibration/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</guid>
       <description>&lt;p&gt;This project focused on calibrating a camera and using it to overlay &lt;strong&gt;virtual 3D objects in real-time video feeds&lt;/strong&gt; using OpenCV. It introduced concepts in camera intrinsics, pose estimation, and interactive augmented reality applications.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-project-highlights&#34;&gt;📌 Project Highlights&lt;/h3&gt;
+&lt;h3 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Corner Detection &amp;amp; Calibration&lt;/strong&gt;&lt;/p&gt;
@@ -471,7 +408,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extra-features&#34;&gt;🧠 Extra Features&lt;/h3&gt;
+&lt;h3 id=&#34;extra-features&#34;&gt;Extra Features&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Harris corner detection to compare feature robustness&lt;/li&gt;
 &lt;li&gt;Live insertion of objects via webcam&lt;/li&gt;
@@ -479,7 +416,7 @@
 &lt;li&gt;Replaced the checkerboard region with a &lt;strong&gt;custom image overlay&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-extension-tasks&#34;&gt;🔍 Extension Tasks&lt;/h3&gt;
+&lt;h3 id=&#34;extension-tasks&#34;&gt;Extension Tasks&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Compared calibrations of internal vs external webcams&lt;/li&gt;
 &lt;li&gt;Added keyboard control to insert virtual objects from pre-recorded videos&lt;/li&gt;
@@ -487,9 +424,9 @@
 &lt;li&gt;Created &lt;strong&gt;multi-object AR scenes&lt;/strong&gt; from multiple markers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-resources&#34;&gt;📁 Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/Project%204-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%204-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/103mUiSgL6q1pJ2LhHZq8z1r2gVORhIdA/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo Video&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/augmented-reality-calibration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

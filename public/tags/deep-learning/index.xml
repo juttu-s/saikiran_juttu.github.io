@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Learning | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/deep-learning/</link>
-      <atom:link href="http://localhost:1313/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <title>Deep Learning | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/deep-learning/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/tags/deep-learning/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/deep-learning/</link>
     </image>
     
     <item>
       <title>Digit Recognition &amp; Transfer Learning with CNNs</title>
-      <link>http://localhost:1313/project/digit-recognition/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/digit-recognition/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/digit-recognition/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/digit-recognition/</guid>
       <description>&lt;p&gt;This project focused on &lt;strong&gt;designing, training, and analyzing convolutional neural networks (CNNs)&lt;/strong&gt; for digit recognition and then &lt;strong&gt;applying transfer learning&lt;/strong&gt; to recognize Greek characters using PyTorch.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;cnn-for-digit-recognition-mnist&#34;&gt;CNN for Digit Recognition (MNIST)&lt;/h2&gt;
@@ -46,10 +46,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Sample MNIST Digits&#34; srcset=&#34;
-               /project/digit-recognition/firstsix_hu15902310905350978628.webp 400w,
-               /project/digit-recognition/firstsix_hu10625707504812272563.webp 760w,
-               /project/digit-recognition/firstsix_hu9923025005567100836.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/firstsix_hu15902310905350978628.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/firstsix_hu15902310905350978628.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/firstsix_hu10625707504812272563.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/firstsix_hu9923025005567100836.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/firstsix_hu15902310905350978628.webp&#34;
                width=&#34;708&#34;
                height=&#34;400&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -77,10 +77,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;CNN Diagram&#34; srcset=&#34;
-               /project/digit-recognition/NN_hu7544495459113416032.webp 400w,
-               /project/digit-recognition/NN_hu11458655653262536510.webp 760w,
-               /project/digit-recognition/NN_hu5398614519963812698.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/NN_hu7544495459113416032.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/NN_hu7544495459113416032.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/NN_hu11458655653262536510.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/NN_hu5398614519963812698.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/NN_hu7544495459113416032.webp&#34;
                width=&#34;760&#34;
                height=&#34;509&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -112,10 +112,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Loss Curve&#34; srcset=&#34;
-               /project/digit-recognition/loss_hu2647141672864762400.webp 400w,
-               /project/digit-recognition/loss_hu14298867483472384218.webp 760w,
-               /project/digit-recognition/loss_hu3418306977125921203.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/loss_hu2647141672864762400.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/loss_hu2647141672864762400.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/loss_hu14298867483472384218.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/loss_hu3418306977125921203.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/loss_hu2647141672864762400.webp&#34;
                width=&#34;760&#34;
                height=&#34;559&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -147,10 +147,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Filter Maps&#34; srcset=&#34;
-               /project/digit-recognition/filter_maps1_hu6510234662074493762.webp 400w,
-               /project/digit-recognition/filter_maps1_hu11416344688562476833.webp 760w,
-               /project/digit-recognition/filter_maps1_hu16678790348298768722.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/filter_maps1_hu6510234662074493762.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/filter_maps1_hu6510234662074493762.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/filter_maps1_hu11416344688562476833.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/filter_maps1_hu16678790348298768722.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/filter_maps1_hu6510234662074493762.webp&#34;
                width=&#34;638&#34;
                height=&#34;469&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -183,10 +183,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Greek Classification Output&#34; srcset=&#34;
-               /project/digit-recognition/greek_hu4305634218149458193.webp 400w,
-               /project/digit-recognition/greek_hu16620829909298196167.webp 760w,
-               /project/digit-recognition/greek_hu10198682355568399909.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/greek_hu4305634218149458193.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/greek_hu4305634218149458193.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/greek_hu16620829909298196167.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/greek_hu10198682355568399909.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/greek_hu4305634218149458193.webp&#34;
                width=&#34;652&#34;
                height=&#34;391&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -217,10 +217,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Greek Training Error Curve&#34; srcset=&#34;
-               /project/digit-recognition/greek_training_hu10070426372364170428.webp 400w,
-               /project/digit-recognition/greek_training_hu13936645240799545862.webp 760w,
-               /project/digit-recognition/greek_training_hu10173284984926363065.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/greek_training_hu10070426372364170428.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/greek_training_hu10070426372364170428.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/greek_training_hu13936645240799545862.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/greek_training_hu10173284984926363065.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/greek_training_hu10070426372364170428.webp&#34;
                width=&#34;640&#34;
                height=&#34;508&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -252,10 +252,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;live webcam&#34; srcset=&#34;
-               /project/digit-recognition/live_hu16096523079256018570.webp 400w,
-               /project/digit-recognition/live_hu4232723163901620511.webp 760w,
-               /project/digit-recognition/live_hu8695550706911073452.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/digit-recognition/live_hu16096523079256018570.webp&#34;
+               /saikiran_juttu.github.io/project/digit-recognition/live_hu16096523079256018570.webp 400w,
+               /saikiran_juttu.github.io/project/digit-recognition/live_hu4232723163901620511.webp 760w,
+               /saikiran_juttu.github.io/project/digit-recognition/live_hu8695550706911073452.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/digit-recognition/live_hu16096523079256018570.webp&#34;
                width=&#34;580&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

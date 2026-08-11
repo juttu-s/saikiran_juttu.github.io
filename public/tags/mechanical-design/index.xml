@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mechanical Design | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/mechanical-design/</link>
-      <atom:link href="http://localhost:1313/tags/mechanical-design/index.xml" rel="self" type="application/rss+xml" />
+    <title>Mechanical Design | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/mechanical-design/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/mechanical-design/index.xml" rel="self" type="application/rss+xml" />
     <description>Mechanical Design</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Mechanical Design</title>
-      <link>http://localhost:1313/tags/mechanical-design/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/mechanical-design/</link>
     </image>
     
     <item>
       <title>Brakes &amp; Testing Head — BAJA SAE Off-Road Racing</title>
-      <link>http://localhost:1313/project/brakes_testing_head/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/brakes_testing_head/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Role:&lt;/strong&gt; Brakes and Testing Head&lt;br&gt;
 &lt;strong&gt;Team:&lt;/strong&gt; Off-Road Racing Team — NIT Jalandhar&lt;br&gt;
@@ -44,7 +44,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/experience.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/experience.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -84,7 +84,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/calliper_assembly.jpg&#34; alt=&#34;Exploded view of caliper assembly&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/calliper_assembly.jpg&#34; alt=&#34;Exploded view of caliper assembly&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;ansys-fea-analysis&#34;&gt;ANSYS FEA Analysis&lt;/h4&gt;
@@ -106,7 +106,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/caliper_ansys.jpg&#34; alt=&#34;FEA Stress Simulation in ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/caliper_ansys.jpg&#34; alt=&#34;FEA Stress Simulation in ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -134,7 +134,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/rear_rotor_thermal.jpg&#34; alt=&#34;Rear Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor_thermal.jpg&#34; alt=&#34;Rear Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 *Rear Rotor — Thermal Simulation *&lt;/p&gt;
@@ -156,7 +156,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/rear_rotor.jpg&#34; alt=&#34;Rear Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor.jpg&#34; alt=&#34;Rear Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 *Rear Rotor — Static Structural FEA *&lt;/p&gt;
@@ -184,7 +184,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/front_rotor_thermal.jpg&#34; alt=&#34;Front Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/front_rotor_thermal.jpg&#34; alt=&#34;Front Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Front Rotor — Thermal Analysis&lt;/em&gt;&lt;/p&gt;
@@ -206,7 +206,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/Front_rotor.jpg&#34; alt=&#34;Front Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Front_rotor.jpg&#34; alt=&#34;Front Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Front Rotor — Structural Stress Analysis&lt;/em&gt;&lt;/p&gt;
@@ -234,7 +234,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/Brake_pedal_ansys.png&#34; alt=&#34;Brake Pedal ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Brake_pedal_ansys.png&#34; alt=&#34;Brake Pedal ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Brake Pedal — Stress Zones&lt;/em&gt;&lt;/p&gt;
@@ -256,7 +256,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/pedal_mounting.png&#34; alt=&#34;Pedal Mounting&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/pedal_mounting.png&#34; alt=&#34;Pedal Mounting&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Custom Bracket — Pedal Mount Geometry&lt;/em&gt;&lt;/p&gt;
@@ -297,7 +297,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/test.png&#34; alt=&#34;Test Rig&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/test.png&#34; alt=&#34;Test Rig&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;On-field brake performance testing with Arduino sensor rig&lt;/em&gt;&lt;/p&gt;

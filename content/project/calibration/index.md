@@ -10,7 +10,7 @@ tags:
 summary: Calibrated a camera using chessboard targets, estimated pose with solvePnP, and rendered real-time virtual objects onto scenes using OpenCV.
 featured: true
 image:
-  filename: augmented_reality.png  # Save a screenshot to static/img/
+  filename: featured.png
   preview_only: true
 ---
 

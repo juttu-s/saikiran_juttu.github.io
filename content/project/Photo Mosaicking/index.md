@@ -32,7 +32,6 @@ clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
 clahe_image = clahe.apply(gray_image)
 ```
 
-![CLAHE Enhanced Images](/img/clahe_grid.png)
 
 ---
 
@@ -46,7 +45,6 @@ sift = cv2.SIFT_create(...)
 kp, desc = sift.detectAndCompute(image, None)
 ```
 
-![Detected Keypoints](/img/features_grid.png)
 
 ---
 
@@ -61,7 +59,6 @@ good = [m for m, n in matches if m.distance < 0.75 * n.distance]
 H, mask = cv2.estimateAffine2D(pts1, pts2, method=cv2.RANSAC)
 ```
 
-![Affine Transformation Filtering](/img/affine_grid.png)
 
 ---
 

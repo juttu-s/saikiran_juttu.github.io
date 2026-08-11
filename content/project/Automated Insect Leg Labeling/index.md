@@ -10,7 +10,7 @@ tags:
 summary: Built an automated insect leg labeling pipeline using image preprocessing, Shi-Tomasi corner detection, and KMeans clustering to reduce manual labeling effort in DeepLabCut.
 featured: true
 image:
-  filename: leg_tracking.png
+  filename: featured.png
   preview_only: true
 ---
 

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SLAM | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/slam/</link>
-      <atom:link href="http://localhost:1313/tags/slam/index.xml" rel="self" type="application/rss+xml" />
+    <title>SLAM | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/slam/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/slam/index.xml" rel="self" type="application/rss+xml" />
     <description>SLAM</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>SLAM</title>
-      <link>http://localhost:1313/tags/slam/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/slam/</link>
     </image>
     
     <item>
       <title>Robotics Engineer Co-op</title>
-      <link>http://localhost:1313/project/robotics-coop/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/robotics-coop/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Worked at Northeastern University on:&lt;/p&gt;
 &lt;hr&gt;
@@ -41,7 +41,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/Robot.jpeg&#34; alt=&#34;Scout Mini Rover Setup&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Robot.jpeg&#34; alt=&#34;Scout Mini Rover Setup&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;slam-implementation&#34;&gt;SLAM Implementation&lt;/h3&gt;
@@ -53,31 +53,9 @@
 &lt;li&gt;SLAM Toolbox&lt;br&gt;
 In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;RTAB-Map Visualization:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/rtab_map.jpg&#34; alt=&#34;RTAB-Map Screenshot&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RTAB-Map Demo:&lt;/strong&gt;&lt;/p&gt;
 &lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
-  &lt;source src=&#34;http://localhost:1313/uploads/RTAB_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/RTAB_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;p&gt;&lt;strong&gt;LIO-SAM Screenshot:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
@@ -98,13 +76,9 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/lio_sam.png&#34; alt=&#34;LIO-SAM Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/lio_sam.png&#34; alt=&#34;LIO-SAM Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;LIO-SAM SLAM Mapping:&lt;/strong&gt;&lt;/p&gt;
-&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
-  &lt;source src=&#34;http://localhost:1313/uploads/lio_sam_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;uav-motion-planning&#34;&gt;UAV Motion Planning&lt;/h3&gt;
 &lt;p&gt;Developed &lt;strong&gt;waypoint navigation and motion planning&lt;/strong&gt; pipelines for &lt;strong&gt;Crazyflie and DJI Tello&lt;/strong&gt; using the &lt;strong&gt;OptiTrack motion capture system&lt;/strong&gt;.&lt;/p&gt;
@@ -113,32 +87,6 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;li&gt;Precision landing&lt;/li&gt;
 &lt;li&gt;Closed-loop control with state estimation&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Crazyflie in OptiTrack Arena:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/crazyflie_optitrack.jpg&#34; alt=&#34;UAV Setup&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DJI Tello Navigation Demo:&lt;/strong&gt;&lt;/p&gt;
-&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
-  &lt;source src=&#34;http://localhost:1313/uploads/tello_landing.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;semantic-perception-with-vlms&#34;&gt;Semantic Perception with VLMs&lt;/h3&gt;
 &lt;p&gt;Exploring integration of &lt;strong&gt;Vision-Language Models (VLMs)&lt;/strong&gt; to:&lt;/p&gt;
@@ -147,73 +95,62 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;li&gt;Reduce localization drift&lt;/li&gt;
 &lt;li&gt;Enable autonomous scene understanding&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;VLM Output Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/uploads/vlm_semantics.jpg&#34; alt=&#34;VLM Navigation Semantic Output&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;VLM Indoor Navigation Demo:&lt;/strong&gt;&lt;/p&gt;
-&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
-  &lt;source src=&#34;http://localhost:1313/uploads/vlm_navigation.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</guid>
+      <description>&lt;p&gt;This project implements &lt;strong&gt;SG-SLAM (Semantic Geometric SLAM)&lt;/strong&gt;, a system that fuses &lt;strong&gt;semantic object detection&lt;/strong&gt; with the geometric tracking pipeline of &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; to remain robust in &lt;strong&gt;dynamic environments&lt;/strong&gt;. Standard feature-based SLAM systems assume a static world, so moving objects (e.g., walking people) corrupt the map and degrade pose estimation. SG-SLAM removes these dynamic features before they ever reach the optimizer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Classical visual SLAM extracts and tracks features across frames under a &lt;strong&gt;static-scene assumption&lt;/strong&gt;. When people or vehicles move through the scene, their features inject incorrect correspondences into the tracking thread, biasing pose estimates and polluting the global map. SG-SLAM addresses this by adding a &lt;strong&gt;semantic layer&lt;/strong&gt; that identifies and rejects dynamic content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Semantic frontend:&lt;/strong&gt; Integrated a &lt;strong&gt;YOLO-based object detection network&lt;/strong&gt; into the &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; tracking thread to detect a priori dynamic classes (e.g., humans).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic feature filtering:&lt;/strong&gt; Features falling inside detected dynamic bounding boxes are discarded before pose estimation and map optimization, preventing them from corrupting the map.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geometric backend:&lt;/strong&gt; The remaining static features feed the standard ORB-SLAM2 tracking, local mapping, and loop-closure modules for consistent map optimization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stack:&lt;/strong&gt; Implemented in &lt;strong&gt;C++&lt;/strong&gt; within ORB-SLAM2, with the detection network in &lt;strong&gt;PyTorch&lt;/strong&gt;, integrated under &lt;strong&gt;ROS&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved a &lt;strong&gt;31% accuracy improvement&lt;/strong&gt; on the &lt;strong&gt;TUM RGB-D dynamic sequence&lt;/strong&gt; benchmarks.&lt;/li&gt;
+&lt;li&gt;Prevented dynamic objects from corrupting the map optimization, yielding cleaner reconstructions and more stable trajectories in scenes with moving people.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ORB-SLAM2 (C++)&lt;/li&gt;
+&lt;li&gt;YOLO object detection (PyTorch)&lt;/li&gt;
+&lt;li&gt;ROS&lt;/li&gt;
+&lt;li&gt;TUM RGB-D Dataset (dynamic sequences)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project demonstrates how a lightweight semantic layer can make geometric SLAM robust to real-world dynamics — a key requirement for deploying autonomous robots in environments shared with people.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Photo Mosaicking of Low-Contrast Underwater Images</title>
-      <link>http://localhost:1313/project/photo-mosaicking/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/photo-mosaicking/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
       <description>&lt;p&gt;This project implements a full photo mosaicking and optimization pipeline using low-contrast underwater images from the &lt;strong&gt;Skerki Bank Roman shipwreck&lt;/strong&gt; dataset. The approach registers both sequential and non-sequential images using SIFT and RANSAC, computes affine transformations, and optimizes a global trajectory using GTSAM.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;pipeline-breakdown&#34;&gt;Pipeline Breakdown&lt;/h3&gt;
-&lt;h4 id=&#34;1-clahe-image-enhancement&#34;&gt;1️⃣ CLAHE Image Enhancement&lt;/h4&gt;
+&lt;h4 id=&#34;clahe-image-enhancement&#34;&gt;CLAHE Image Enhancement&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Applies histogram equalization to improve contrast and enhance keypoints.&lt;/li&gt;
 &lt;li&gt;OpenCV CLAHE was used on each grayscale frame.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;clahe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;createCLAHE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clipLimit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tileGridSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;clahe_image&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clahe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gray_image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/clahe_grid.png&#34; alt=&#34;CLAHE Enhanced Images&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;2-sift-feature-detection&#34;&gt;2️⃣ SIFT Feature Detection&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;sift-feature-detection&#34;&gt;SIFT Feature Detection&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Detected keypoints using tuned SIFT settings:
 &lt;ul&gt;
@@ -223,29 +160,8 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sift&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SIFT_create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;kp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;desc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sift&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;detectAndCompute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/features_grid.png&#34; alt=&#34;Detected Keypoints&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;3-feature-matching--ransac-filtering&#34;&gt;3️⃣ Feature Matching + RANSAC Filtering&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;feature-matching--ransac-filtering&#34;&gt;Feature Matching + RANSAC Filtering&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Matched descriptors using Brute-Force Matcher + Lowe’s ratio test.&lt;/li&gt;
 &lt;li&gt;Applied &lt;code&gt;cv2.estimateAffine2D&lt;/code&gt; with RANSAC to compute and refine transformation.&lt;/li&gt;
@@ -253,29 +169,8 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;knnMatch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;des1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;des2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;good&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.75&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estimateAffine2D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pts1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pts2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cv2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RANSAC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/img/affine_grid.png&#34; alt=&#34;Affine Transformation Filtering&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;4-pose-graph-construction-gtsam&#34;&gt;4️⃣ Pose Graph Construction (GTSAM)&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;pose-graph-construction-gtsam&#34;&gt;Pose Graph Construction (GTSAM)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Built a factor graph using all non-repeating image pairs.&lt;/li&gt;
 &lt;li&gt;Relative poses (affine transforms) were added as edges.&lt;/li&gt;
@@ -300,16 +195,16 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Initial Trajectory&#34; srcset=&#34;
-               /project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
-               /project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
-               /project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
                width=&#34;571&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h4 id=&#34;5-global-bundle-adjustment&#34;&gt;5️⃣ Global Bundle Adjustment&lt;/h4&gt;
+&lt;h4 id=&#34;global-bundle-adjustment&#34;&gt;Global Bundle Adjustment&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Used GTSAM’s Levenberg-Marquardt optimizer to refine global poses.&lt;/li&gt;
 &lt;li&gt;Corrects drift and adjusts poses to minimize total residual error.&lt;/li&gt;
@@ -335,10 +230,10 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimized Trajectory&#34; srcset=&#34;
-               /project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
-               /project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
-               /project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
+               /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
                width=&#34;580&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -367,11 +262,11 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;ul&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/photo-mosaicking-skerki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;📁 &lt;a href=&#34;https://drive.google.com/drive/folders/1AtvT65txGIgAG23NRs3EkvDET036a81O&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Skerki Dataset Reference (Google Drive)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-references&#34;&gt;📖 References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Pizarro &amp;amp; Singh (2003): &lt;em&gt;Toward large-area mosaicing for underwater scientific applications.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Ballard et al. (1998, 2000): &lt;em&gt;Roman shipwreck discovery using submersible tech.&lt;/em&gt;&lt;/li&gt;
@@ -381,19 +276,19 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
     
     <item>
       <title>Kimera VIO on EuRoC and Custom Datasets</title>
-      <link>http://localhost:1313/project/kimera-vio/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/kimera-vio/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/</guid>
       <description>&lt;p&gt;This project evaluates the &lt;strong&gt;Kimera Visual-Inertial Odometry (VIO)&lt;/strong&gt; framework on two datasets — the &lt;strong&gt;EuRoC MAV benchmark&lt;/strong&gt; and a &lt;strong&gt;custom indoor dataset&lt;/strong&gt; — to assess its accuracy, runtime efficiency, and adaptability.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-project-goals&#34;&gt;🧠 Project Goals&lt;/h3&gt;
+&lt;h3 id=&#34;project-goals&#34;&gt;Project Goals&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Set up Kimera VIO in a ROS + Docker environment&lt;/li&gt;
 &lt;li&gt;Run it on benchmark and custom datasets&lt;/li&gt;
 &lt;li&gt;Evaluate using ATE RMSE, runtime, and qualitative analysis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-methodology&#34;&gt;🔍 Methodology&lt;/h3&gt;
+&lt;h3 id=&#34;methodology&#34;&gt;Methodology&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;VIO Front-End:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Feature detection (Shi-Tomasi)&lt;/li&gt;
@@ -408,15 +303,15 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;li&gt;Pose, velocity, and landmark estimation&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-evaluation&#34;&gt;🧪 Evaluation&lt;/h3&gt;
-&lt;h4 id=&#34;-dataset-1-euroc-mav&#34;&gt;✅ Dataset 1: EuRoC MAV&lt;/h4&gt;
+&lt;h3 id=&#34;evaluation&#34;&gt;Evaluation&lt;/h3&gt;
+&lt;h4 id=&#34;dataset-1-euroc-mav&#34;&gt;Dataset 1: EuRoC MAV&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Ran Kimera VIO on V1_01 to V1_03&lt;/li&gt;
 &lt;li&gt;Compared RMSE with VINS-Mono, OKVIS, MSCKF&lt;/li&gt;
 &lt;li&gt;Achieved best accuracy across all sequences&lt;/li&gt;
 &lt;li&gt;Average RMSE: 0.05–0.08&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;-dataset-2-custom-d455-dataset&#34;&gt;🧪 Dataset 2: Custom D455 Dataset&lt;/h4&gt;
+&lt;h4 id=&#34;dataset-2-custom-d455-dataset&#34;&gt;Dataset 2: Custom D455 Dataset&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Real-world indoor environment&lt;/li&gt;
 &lt;li&gt;Feature-sparse and dynamically lit scenes&lt;/li&gt;
@@ -424,7 +319,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;li&gt;Minor drift in Z axis corrected by loop closures&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-tools--libraries&#34;&gt;⚙️ Tools &amp;amp; Libraries&lt;/h3&gt;
+&lt;h3 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Kimera VIO&lt;/strong&gt; from MIT-SPARK Lab&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GTSAM&lt;/strong&gt; for factor graph optimization&lt;/li&gt;
@@ -432,9 +327,9 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;li&gt;&lt;strong&gt;Intel Realsense D455&lt;/strong&gt;, ROS, Docker&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-resources&#34;&gt;🧾 Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/files/MR_Project_Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/MR_Project_Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/MIT-SPARK/Kimera-VIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kimera VIO GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;

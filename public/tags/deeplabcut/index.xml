@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DeepLabCut | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/tags/deeplabcut/</link>
-      <atom:link href="http://localhost:1313/tags/deeplabcut/index.xml" rel="self" type="application/rss+xml" />
+    <title>DeepLabCut | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/deeplabcut/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/deeplabcut/index.xml" rel="self" type="application/rss+xml" />
     <description>DeepLabCut</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>DeepLabCut</title>
-      <link>http://localhost:1313/tags/deeplabcut/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/deeplabcut/</link>
     </image>
     
     <item>
       <title>Automated Insect Leg Labeling using DeepLabCut</title>
-      <link>http://localhost:1313/project/automated-insect-leg-labeling/</link>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/automated-insect-leg-labeling/</guid>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</guid>
       <description>&lt;p&gt;This project proposes a robust and scalable method for automating insect leg labeling using &lt;strong&gt;image processing, feature detection, and clustering&lt;/strong&gt;, enabling seamless integration with &lt;strong&gt;DeepLabCut&lt;/strong&gt; for behavioral analysis.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;methodology-overview&#34;&gt;Methodology Overview&lt;/h2&gt;
@@ -51,10 +51,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Canny Edge Result&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp 400w,
-               /project/automated-insect-leg-labeling/canny_hu15745542599272552929.webp 760w,
-               /project/automated-insect-leg-labeling/canny_hu3473078471050911037.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu15745542599272552929.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu3473078471050911037.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp&#34;
                width=&#34;555&#34;
                height=&#34;350&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -86,10 +86,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Shi-Tomasi Detection&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp 400w,
-               /project/automated-insect-leg-labeling/shi_tomasi_hu14103565545081466617.webp 760w,
-               /project/automated-insect-leg-labeling/shi_tomasi_hu4890327641649225453.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu14103565545081466617.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu4890327641649225453.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp&#34;
                width=&#34;555&#34;
                height=&#34;350&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -122,10 +122,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Skeleton Extraction&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp 400w,
-               /project/automated-insect-leg-labeling/skeleton_extraction_hu1654188756838549732.webp 760w,
-               /project/automated-insect-leg-labeling/skeleton_extraction_hu4799263873215453537.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu1654188756838549732.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu4799263873215453537.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp&#34;
                width=&#34;553&#34;
                height=&#34;355&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -151,10 +151,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Connected Components&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp 400w,
-               /project/automated-insect-leg-labeling/connected_components_hu12195037151038958192.webp 760w,
-               /project/automated-insect-leg-labeling/connected_components_hu4918036970471170597.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu12195037151038958192.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu4918036970471170597.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp&#34;
                width=&#34;545&#34;
                height=&#34;378&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -180,10 +180,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Body Template&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/template_hu11659726123555705027.webp 400w,
-               /project/automated-insect-leg-labeling/template_hu18209107862982516437.webp 760w,
-               /project/automated-insect-leg-labeling/template_hu2884419823242467532.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu18209107862982516437.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu2884419823242467532.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp&#34;
                width=&#34;499&#34;
                height=&#34;353&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -215,10 +215,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Detected Leg Features&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp 400w,
-               /project/automated-insect-leg-labeling/leg_features_hu18101909398949920466.webp 760w,
-               /project/automated-insect-leg-labeling/leg_features_hu14108854493791996505.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu18101909398949920466.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu14108854493791996505.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp&#34;
                width=&#34;489&#34;
                height=&#34;320&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -244,10 +244,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Feature Angles&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/angles_hu911305775039293742.webp 400w,
-               /project/automated-insect-leg-labeling/angles_hu16264059692635278634.webp 760w,
-               /project/automated-insect-leg-labeling/angles_hu12389778951175088630.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu16264059692635278634.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu12389778951175088630.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp&#34;
                width=&#34;496&#34;
                height=&#34;338&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -279,10 +279,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;KMeans Clustering&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp 400w,
-               /project/automated-insect-leg-labeling/kmeans_hu1537055730035741828.webp 760w,
-               /project/automated-insect-leg-labeling/kmeans_hu8003083638116927705.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu1537055730035741828.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu8003083638116927705.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp&#34;
                width=&#34;556&#34;
                height=&#34;406&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -315,10 +315,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;DLC Integration&#34; srcset=&#34;
-               /project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp 400w,
-               /project/automated-insect-leg-labeling/integration_hu5511305675759056958.webp 760w,
-               /project/automated-insect-leg-labeling/integration_hu10805202269737531730.webp 1200w&#34;
-               src=&#34;http://localhost:1313/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp&#34;
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp 400w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu5511305675759056958.webp 760w,
+               /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu10805202269737531730.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp&#34;
                width=&#34;671&#34;
                height=&#34;615&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

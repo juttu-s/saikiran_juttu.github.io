@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic Environments | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/dynamic-environments/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/dynamic-environments/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dynamic Environments</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Dynamic Environments</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/dynamic-environments/</link>
+    </image>
+    
+    <item>
+      <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</guid>
+      <description>&lt;p&gt;This project implements &lt;strong&gt;SG-SLAM (Semantic Geometric SLAM)&lt;/strong&gt;, a system that fuses &lt;strong&gt;semantic object detection&lt;/strong&gt; with the geometric tracking pipeline of &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; to remain robust in &lt;strong&gt;dynamic environments&lt;/strong&gt;. Standard feature-based SLAM systems assume a static world, so moving objects (e.g., walking people) corrupt the map and degrade pose estimation. SG-SLAM removes these dynamic features before they ever reach the optimizer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Classical visual SLAM extracts and tracks features across frames under a &lt;strong&gt;static-scene assumption&lt;/strong&gt;. When people or vehicles move through the scene, their features inject incorrect correspondences into the tracking thread, biasing pose estimates and polluting the global map. SG-SLAM addresses this by adding a &lt;strong&gt;semantic layer&lt;/strong&gt; that identifies and rejects dynamic content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Semantic frontend:&lt;/strong&gt; Integrated a &lt;strong&gt;YOLO-based object detection network&lt;/strong&gt; into the &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; tracking thread to detect a priori dynamic classes (e.g., humans).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic feature filtering:&lt;/strong&gt; Features falling inside detected dynamic bounding boxes are discarded before pose estimation and map optimization, preventing them from corrupting the map.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geometric backend:&lt;/strong&gt; The remaining static features feed the standard ORB-SLAM2 tracking, local mapping, and loop-closure modules for consistent map optimization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stack:&lt;/strong&gt; Implemented in &lt;strong&gt;C++&lt;/strong&gt; within ORB-SLAM2, with the detection network in &lt;strong&gt;PyTorch&lt;/strong&gt;, integrated under &lt;strong&gt;ROS&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved a &lt;strong&gt;31% accuracy improvement&lt;/strong&gt; on the &lt;strong&gt;TUM RGB-D dynamic sequence&lt;/strong&gt; benchmarks.&lt;/li&gt;
+&lt;li&gt;Prevented dynamic objects from corrupting the map optimization, yielding cleaner reconstructions and more stable trajectories in scenes with moving people.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ORB-SLAM2 (C++)&lt;/li&gt;
+&lt;li&gt;YOLO object detection (PyTorch)&lt;/li&gt;
+&lt;li&gt;ROS&lt;/li&gt;
+&lt;li&gt;TUM RGB-D Dataset (dynamic sequences)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project demonstrates how a lightweight semantic layer can make geometric SLAM robust to real-world dynamics — a key requirement for deploying autonomous robots in environments shared with people.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

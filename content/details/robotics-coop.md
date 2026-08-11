@@ -32,10 +32,6 @@ Implemented ROS 2-based **SLAM systems** using:
 - SLAM Toolbox  
 In C++/Python with Nav2 for improved localization in GPS-denied environments.
 
-**RTAB-Map Visualization:**
-
-![RTAB-Map Screenshot](/saikiran_juttu.github.io/uploads/rtab_map.jpg)
-
 **RTAB-Map Demo:**
 
 <video controls width="100%" muted autoplay loop>
@@ -45,12 +41,6 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.
 **LIO-SAM Screenshot:**
 
 ![LIO-SAM Visualization](/saikiran_juttu.github.io/uploads/lio_sam.png)
-
-**LIO-SAM SLAM Mapping:**
-
-<video controls width="100%" muted autoplay loop>
-  <source src="/saikiran_juttu.github.io/uploads/lio_sam_demo.mp4" type="video/mp4">
-</video>
 
 ---
 
@@ -62,16 +52,6 @@ Developed **waypoint navigation and motion planning** pipelines for **Crazyflie 
 - Precision landing
 - Closed-loop control with state estimation
 
-**Crazyflie in OptiTrack Arena:**
-
-![UAV Setup](/saikiran_juttu.github.io/uploads/crazyflie_optitrack.jpg)
-
-**DJI Tello Navigation Demo:**
-
-<video controls width="100%" muted autoplay loop>
-  <source src="/saikiran_juttu.github.io/uploads/tello_landing.mp4" type="video/mp4">
-</video>
-
 ---
 
 ### Semantic Perception with VLMs
@@ -81,13 +61,3 @@ Exploring integration of **Vision-Language Models (VLMs)** to:
 - Enhance indoor semantic navigation
 - Reduce localization drift
 - Enable autonomous scene understanding
-
-**VLM Output Example:**
-
-![VLM Navigation Semantic Output](/saikiran_juttu.github.io/uploads/vlm_semantics.jpg)
-
-**VLM Indoor Navigation Demo:**
-
-<video controls width="100%" muted autoplay loop>
-  <source src="/saikiran_juttu.github.io/uploads/vlm_navigation.mp4" type="video/mp4">
-</video>

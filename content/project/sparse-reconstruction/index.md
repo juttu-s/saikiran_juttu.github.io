@@ -11,7 +11,7 @@ tags:
 summary: Built a custom Structure-from-Motion pipeline using CLAHE, SIFT, triangulation, and GTSAM-based bundle adjustment on a 24-frame dataset of a Buddha sculpture.
 featured: true
 image:
-  filename: A_schematic_2D_digital_diagram_illustrates_sparse_.png
+  filename: featured.png
   preview_only: true
 ---
 

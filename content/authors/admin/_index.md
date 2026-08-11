@@ -7,7 +7,7 @@ status:
   icon: 🤖
 superuser: true
 highlight_name: true
-role: Robotics Graduate Student
+role: Robotics Software Engineer
 avatar:
   size: 10000  # You can increase this to 180 or 200 if you'd like
   shape: rectangle # Or use "rectangle" for a square image
@@ -26,10 +26,10 @@ profiles:
     url: https://www.linkedin.com/in/saikiran-juttu/
 
 interests:
-  - SLAM & Visual Odometry
-  - Embedded Systems
+  - SLAM & State Estimation
+  - Multi-Robot Planning
   - Robot Perception
-  - Multi-Robot Exploration
+  - Embedded Systems
 
 education:
   - area: MS Robotics
@@ -47,17 +47,31 @@ education:
       Courses: Mechatronics, CAD, Material Science, Industrial Automation, Machine Design, Operations Research, Electronics
 
 work:
-  - position: Graduate Research Assistant
-    company_name: Multi-Agent Robotics and Autonomy Laboratory
-    date_start: 2024-04-01
-    date_end: ""
+  - position: Robotics Research Intern
+    company_name: Northeastern University — Mechanical & Industrial Engineering
+    date_start: 2026-05-01
+    date_end: ''
     summary: |
-      
-      - Designing a heterogeneous UAV–UGV cooperative exploration framework in Gazebo (ROS/ROS2, C++), integrating exploration algorithms, path-planning strategies, sensor data fusion, and tracking controllers for multi-robot coordination.
-      - Developing a unified incremental PRM-based planner in C++/Python, improving exploration efficiency and scalability
-      - Designing and testing custom FPV drone hardware, tuning flight controllers and collecting flight data to improve performance in GPS-denied environments.
-      - Implemented vision-based object detection, IK solver, and motion planning in MATLAB, boosting robotic arm precision by 30%.
-      - Modeled a high-fidelity Simscape/MATLAB manipulator simulation and a physical robotic arm testbed, enabling remote-access experimentation and reducing hardware deployment time by 25%.
+      - Developing perception, planning, and control algorithms for heterogeneous multi-robot exploration in C++ and Python, under Prof. Yasin Yazicioglu.
+      - Validating algorithms across simulation benchmarks and hardware experiments to close the sim-to-real gap on field platforms.
+  - position: Robotics Engineer
+    company_name: Barn Owl AG
+    date_start: 2026-03-01
+    date_end: 2026-04-30
+    summary: |
+      - Built and containerized motion control features (in-place rotation, reverse driving) using the Stanley controller in Docker; validated end-to-end in simulation and field deployments on an autonomous agricultural platform.
+      - Integrated a BMS over CAN bus and designed electrical systems for IPC auto-ignition and Wake-on-LAN on Jetson AGX, enabling automated power sequencing and reducing manual intervention in field deployments.
+      - Deployed and configured field hardware; performed servo and rail calibration for precision automation.
+  - position: Graduate Research Assistant
+    company_name: Multi-Agent Robotics Laboratory
+    date_start: 2024-04-01
+    date_end: 2025-12-31
+    summary: |
+
+      - Architected a heterogeneous UAV–AGV system in ROS 2/C++, implementing a centralized Finite State Machine (FSM) coordinator to synchronize autonomous exploration, precise docking, and failure-recovery triggers.
+      - Engineered a multithreaded Dynamic Exploration Planner that solves the Orienteering Problem using GRASP metaheuristics, improving path-planning efficiency by 40% while computing obstacle-aware costs via Dijkstra's algorithm.
+      - Implemented battery-aware planning logic that dynamically adjusts solver constraints based on real-time flight metrics, ensuring safe UAV return while maximizing information gain.
+      - Designed and tested custom FPV drone hardware, tuning flight controllers with ArduPilot/PX4 to improve performance in GPS-denied environments.
       - [Click here for more details](/saikiran_juttu.github.io/details/grad-research-assistant)
 
   - position: Robotics Engineer Co-op
@@ -66,28 +80,37 @@ work:
     date_end: 2025-06-01
   
     summary: |
-      - Integrated 3D LiDAR and Intel RealSense sensors with the Scout Mini Rover via CAN protocol in ROS 2, deploying on embedded platforms (Jetson AGX Orin) to enable synchronized perception, sensor fusion, and reliable hardware–software communication.
-      - Implemented ROS 2-based SLAM solutions (RTAB-Map, LIO-SAM, VIO, SLAM Toolbox) in C++/Python, leveraging Nav2 to improve localization accuracy and enable robust autonomous navigation in GPS-denied environments.
-      - Developed waypoint navigation and motion planning pipelines for UAVs (Crazyflie, DJI Tello) using the OptiTrack motion capture system, automated takeoff, and precise landing systems.
-      - Exploring integration of Vision-Language Models (VLMs) with onboard perception to enhance semantic understanding and indoor navigation, targeting reduced localization errors and improved autonomy.
+      - Engineered a robust autonomy stack for the Scout Mini Rover using ROS 2, achieving time-synchronized sensor fusion of 3D LiDAR and Intel RealSense RGB-D data on an NVIDIA Jetson Orin.
+      - Implemented and tuned state-of-the-art SLAM solutions (Fast-LIO, LIO-SAM, VIO) in C++, optimizing backend parameters to reduce translation drift by 35% in GPS-denied environments.
+      - Configured Nav2 behavior trees and costmaps running at 20 Hz to enable dynamic obstacle avoidance and autonomous waypoint navigation with a 95% success rate in cluttered environments.
+      - Developed waypoint navigation pipelines for UAVs using the OptiTrack motion capture system, achieving fully automated takeoff, trajectory execution, and precision landing with sub-centimeter accuracy.
+      - Built a Dockerized deployment pipeline to standardize build environments, reducing device setup time by 80% and ensuring reproducibility across development and field units.
       - [Click here for more details](/saikiran_juttu.github.io/details/robotics-coop)
-  - position: Design Engineer
+  - position: Teaching Assistant
+    company_name: Northeastern University
+    date_start: 2024-09-01
+    date_end: 2025-04-30
+    summary: |
+      - Architected a remote Sim-to-Real workflow, creating a high-fidelity Simscape simulation that requires students to validate kinematic safety and control logic before unlocking remote execution on physical hardware.
+      - Engineered a modular perception-and-control stack for the PincherX-100, implementing a custom analytical Inverse Kinematics (IK) solver and ArUco-based extrinsic calibration to achieve ±2.5 mm precision.
+      - Established the standard laboratory framework for a MathWorks-funded, cost-optimized curriculum, deploying a structured software repository that empowered students to bridge theory with hands-on robot control.
+  - position: Mechanical Engineer
     company_name: Technip Energies
     date_start: 2021-02-01
     date_end: 2023-07-31
     summary: |
-      - Designed and optimized large-scale piping systems using Smart3D, Navisworks, SolidWorks, CATIA, gaining expertise in CAD modeling, system integration, and safety-compliant mechanical design.
-      - Developed a predictive Load Monitoring System with Python, reducing downtime by 20% and improving reliability.
+      - Designed and optimized large-scale piping systems using Smart3D, Navisworks, SolidWorks, and CATIA, gaining expertise in CAD modeling, system integration, and safety-compliant mechanical design.
+      - Engineered a predictive Load Monitoring System using signal processing on sensor data to estimate equipment fatigue life and reduce unplanned downtime.
+      - Collaborated with clients, vendors, and cross-functional teams to manage on-site integration and digitize workflows, implementing version control to ensure timely delivery of engineering assets.
       - Gained expertise in large-scale system engineering and validation through EPC projects, building a foundation for developing robust, safety-critical robotic systems.
   - position: Computer Vision Intern
     company_name: Robic Rufarm
     date_start: 2019-06-01
     date_end: 2019-08-01
     summary: |
-      - Built a real-time defect detection and classification system in Python/OpenCV, achieving 90% accuracy and significantly enhancing production throughput.
-      - Optimized live video analysis under variable lighting using image processing techniques, boosting detection accuracy to over 90% and reducing manual inspection time by 50%.
-      - Built automated edge length measuring device.
-      - Designed a pH sensing solution for aquaculture.
+      - Built a real-time defect detection pipeline using Python and OpenCV, applying morphological operations and contour detection to classify manufacturing defects.
+      - Optimized image processing algorithms for an edge device, increasing throughput by 75% while maintaining 90% detection accuracy.
+      - Built an automated edge-length measuring device and designed a pH sensing solution for aquaculture.
   - position: Brakes and Testing Head
     company_name: Off-Road Racing Team (NIT Jalandhar)
     date_start: 2017-01-01
@@ -100,25 +123,41 @@ work:
       - [Click here for more details](/saikiran_juttu.github.io/details/brakes_testing_head)
 
 skills:
-  - name: Technical Skills
+  - name: Languages & Middleware
     items:
+      - name: C++ (14/17)
+        percent: 88
       - name: Python
         percent: 90
-      - name: C++
+      - name: ROS 1 / ROS 2 (Nav2, Gazebo, TF2)
         percent: 85
-      - name: ROS/ROS2
-        percent: 80
-      - name: MATLAB/Simulink
+      - name: MATLAB / Simulink
         percent: 75
-      - name: OpenCV & PyTorch
+  - name: Algorithms & Math
+    items:
+      - name: Graph SLAM (GTSAM)
         percent: 85
-      - name: Git, Linux, TensorFlow
+      - name: Kalman Filtering (EKF/UKF)
         percent: 80
+      - name: Motion Planning (A*, RRT*)
+        percent: 82
+      - name: Projective Geometry (ICP, PnP)
+        percent: 80
+  - name: Libraries & Tools
+    items:
+      - name: OpenCV, PCL, Eigen, Ceres
+        percent: 85
+      - name: PyTorch, NumPy, SciPy
+        percent: 82
+      - name: Linux, Docker, Git
+        percent: 85
   - name: Hardware
     items:
-      - name: Arduino, Jetson, Raspberry Pi
+      - name: NVIDIA Jetson, Intel RealSense
         percent: 85
-      - name: PCB Design, 3D Printing
-        percent: 75
+      - name: 3D LiDAR (Velodyne/Ouster), IMU
+        percent: 80
+      - name: CAN Bus, ODrive Motor Controllers
+        percent: 78
 ---
-**Saikiran Juttu is a graduate student in Robotics at Northeastern University. His work focuses on autonomous systems with a specialization in real-time SLAM, robot perception, and control. He has hands-on experience developing robotics systems for academic research and industry, including multi-robot coordination, embedded vision systems, and intelligent path planning.**
+**Saikiran Juttu is a Robotics Software Engineer who recently earned his MS in Robotics from Northeastern University. He specializes in SLAM, state estimation, and multi-robot planning, with extensive experience deploying ROS 2 navigation stacks on embedded edge devices (NVIDIA Jetson). His work spans graph-based optimization (GTSAM), perception pipelines, and autonomy in GPS-denied environments, bridging academic research and industry-grade robotics systems.**

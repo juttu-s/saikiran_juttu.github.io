@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi-Robot Planning | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot-planning/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot-planning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Multi-Robot Planning</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Multi-Robot Planning</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot-planning/</link>
+    </image>
+    
+    <item>
+      <title>Energy-Aware Collaborative Exploration for a UAV–UGV Team</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/publication/energy-aware-uav-ugv-exploration/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/publication/energy-aware-uav-ugv-exploration/</guid>
+      <description>&lt;p&gt;This work was submitted to &lt;strong&gt;IEEE/RSJ IROS 2026&lt;/strong&gt;. It proposes a &lt;strong&gt;density-aware layered PRM&lt;/strong&gt; and a &lt;strong&gt;coupled orienteering formulation&lt;/strong&gt; for &lt;strong&gt;energy-bounded UAV–UGV collaborative exploration&lt;/strong&gt; with rendezvous constraints, validated through both simulation benchmarks and real-world experiments.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
