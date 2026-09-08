@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker | Saikiran Juttu | Robotics Portfolio</title>
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/docker/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <description>Docker</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Docker</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/docker/</link>
+    </image>
+    
+    <item>
+      <title>Kimera VIO on EuRoC and Custom Datasets</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/</guid>
+      <description>&lt;p&gt;An evaluation and deployment project rather than an algorithms one. &lt;a href=&#34;https://github.com/MIT-SPARK/Kimera-VIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kimera-VIO&lt;/a&gt; from MIT-SPARK was used as shipped; the work here was getting it running reproducibly, reproducing its published benchmark on EuRoC, and then pointing it at a sequence it had never seen — recorded on an Intel RealSense D455 in an ordinary office — to find out what breaks when you leave the benchmark behind.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-kimera-vio-is-doing&#34;&gt;What Kimera-VIO is doing&lt;/h2&gt;
+&lt;p&gt;Worth stating, because the interesting failure later only makes sense against it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Front end.&lt;/strong&gt; Shi-Tomasi corners on the left stereo image, tracked temporally with Lucas–Kanade optical flow, matched left-to-right and triangulated for depth, with outlier rejection on the resulting correspondences. IMU measurements between keyframes are preintegrated into a single relative-motion constraint and used for gravity alignment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back end.&lt;/strong&gt; A factor graph over position, orientation and velocity, with IMU factors and visual reprojection factors as edges, optimised incrementally by &lt;strong&gt;iSAM2&lt;/strong&gt; in GTSAM. Robust losses (Huber, Cauchy) absorb the outliers that survive the front end. Output is a pose trajectory, velocity estimates and a sparse landmark map.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Loop closure.&lt;/strong&gt; Kimera-RPGO detects loops and runs robust pose-graph optimisation over them to produce a globally consistent trajectory.&lt;/p&gt;
+&lt;h2 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h2&gt;
+&lt;p&gt;The deliverable that mattered most was a &lt;strong&gt;saved Docker image&lt;/strong&gt; with Kimera-VIO, ROS and every dependency preinstalled — distributed as a tarball so the whole pipeline comes up in three commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker load -i kimera-vio.tar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it kimera-vio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 visual.py data_pgo.csv     &lt;span class=&#34;c1&#34;&gt;# inside the container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Anyone who has built a VIO stack from source knows why this is worth doing. Kimera-VIO wants a specific GTSAM, which wants a specific Boost and Eigen, and the failure mode of getting it wrong is a pipeline that compiles and then silently estimates garbage. Pinning the whole environment means a result someone else can actually reproduce, and it makes &amp;ldquo;does this parameter change help?&amp;rdquo; a question you can answer in an afternoon instead of a week.&lt;/p&gt;
+&lt;p&gt;Stereo image pairs and IMU streams were synchronised and fed in through ROS.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;euroc-benchmark&#34;&gt;EuRoC benchmark&lt;/h2&gt;
+&lt;p&gt;Run on the &lt;strong&gt;EuRoC MAV&lt;/strong&gt; Vicon Room 1 sequences — &lt;code&gt;V1_01&lt;/code&gt;, &lt;code&gt;V1_02&lt;/code&gt; and &lt;code&gt;V1_03&lt;/code&gt;, spanning easy, medium and difficult, with motion-capture ground truth. That&amp;rsquo;s three of the dataset&amp;rsquo;s eleven sequences; the Machine Hall and Vicon Room 2 sets weren&amp;rsquo;t covered.&lt;/p&gt;
+&lt;p&gt;ATE RMSE in metres, reproducing the published comparison across VIO pipelines:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Sequence&lt;/th&gt;
+          &lt;th&gt;OKVIS&lt;/th&gt;
+          &lt;th&gt;MSCKF&lt;/th&gt;
+          &lt;th&gt;ROVIO&lt;/th&gt;
+          &lt;th&gt;VINS-Mono&lt;/th&gt;
+          &lt;th&gt;Kimera-VIO&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_01&lt;/td&gt;
+          &lt;td&gt;0.09&lt;/td&gt;
+          &lt;td&gt;0.34&lt;/td&gt;
+          &lt;td&gt;0.10&lt;/td&gt;
+          &lt;td&gt;0.08&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.05&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_02&lt;/td&gt;
+          &lt;td&gt;0.20&lt;/td&gt;
+          &lt;td&gt;0.20&lt;/td&gt;
+          &lt;td&gt;0.10&lt;/td&gt;
+          &lt;td&gt;0.11&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.08&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_03&lt;/td&gt;
+          &lt;td&gt;0.24&lt;/td&gt;
+          &lt;td&gt;0.67&lt;/td&gt;
+          &lt;td&gt;0.14&lt;/td&gt;
+          &lt;td&gt;0.18&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.07&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The pattern worth noting is the third row. Every other pipeline degrades on &lt;code&gt;V1_03&lt;/code&gt; — the difficult sequence, with faster and more aggressive motion — while Kimera-VIO holds at 0.07 m. Aggressive motion is &lt;em&gt;good&lt;/em&gt; for a visual-inertial system: it excites the IMU, which is what makes scale and gravity direction observable in the first place. Getting parameters into the range where that benchmark reproduces meant tuning IMU noise models, feature thresholds and optimiser tolerances. Throughput came out around &lt;strong&gt;25 FPS&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;custom-dataset&#34;&gt;Custom dataset&lt;/h2&gt;
+&lt;p&gt;Recorded with a &lt;strong&gt;RealSense D455&lt;/strong&gt; in a room of desks, monitors and the usual office clutter, walking an approximately oval path back to the starting point.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;The post-optimisation trajectory recovering the oval path walked during recording&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp 400w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu14690658229423064687.webp 760w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu16662803654171847119.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;576&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Trajectory after pose-graph optimisation. The plot renders the path in the x–y plane, so vertical motion isn&amp;rsquo;t shown.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There is &lt;strong&gt;no ground truth&lt;/strong&gt; for this sequence — no motion capture in an office — so everything here is qualitative. No ATE, no drift percentage, and any number attached to it would be invented. What it does show is loop closure working: the path returns to where it started rather than spiralling away.&lt;/p&gt;
+&lt;h3 id=&#34;starting-at-rest&#34;&gt;Starting at rest&lt;/h3&gt;
+&lt;p&gt;The most useful thing this sequence taught me was a failure at the very beginning of the recording, and it isn&amp;rsquo;t a bug — it&amp;rsquo;s a property of the problem.&lt;/p&gt;
+&lt;p&gt;Visual-inertial odometry recovers metric scale and gravity direction from the accelerometer. But an accelerometer at rest measures only gravity, and there is no way to separate &amp;ldquo;which way is down&amp;rdquo; from &amp;ldquo;how fast am I accelerating&amp;rdquo; without motion to disambiguate them. Start recording with the camera stationary and the initialiser has no excitation to work with; it converges on a poor estimate, and that error is baked into every pose that follows.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s exactly what happened — visible drift accumulated from the start of the trajectory, and it persisted until loop closure corrected it. It also explains the EuRoC pattern above: the &amp;ldquo;difficult&amp;rdquo; sequence is easier for VIO in this one specific respect. The practical lesson is that a data-collection protocol matters as much as a config file: move the camera through a few seconds of varied motion &lt;strong&gt;before&lt;/strong&gt; anything you care about, and the whole run improves.&lt;/p&gt;
+&lt;p&gt;Elsewhere in the sequence, low-texture regions produced feature sparsity and minor drift, which pose-graph optimisation largely absorbed.&lt;/p&gt;
+&lt;h2 id=&#34;limits-and-next-steps&#34;&gt;Limits and next steps&lt;/h2&gt;
+&lt;p&gt;Kimera-VIO&amp;rsquo;s weak points on this data were the ones its authors document: drift in low-texture regions, and sensitivity to outlier visual measurements. The obvious extensions, in order of how much they&amp;rsquo;d change the picture:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Metric-semantic mapping.&lt;/strong&gt; This used the VIO half of the Kimera suite only. Kimera-Semantics builds a semantically annotated mesh from the same pipeline, which is where the interesting downstream work is.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outdoor and larger scale&lt;/strong&gt;, to see where the factor graph stops being tractable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LiDAR as an additional modality&lt;/strong&gt;, for the feature-poor cases where vision alone degrades.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;Kimera-VIO (MIT-SPARK), GTSAM, ROS, Docker, Python, matplotlib. Datasets: EuRoC MAV V1_01–V1_03; self-collected RealSense D455 stereo + IMU.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

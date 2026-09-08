@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NCNN | Saikiran Juttu | Robotics Portfolio</title>
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ncnn/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/ncnn/index.xml" rel="self" type="application/rss+xml" />
+    <description>NCNN</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>NCNN</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ncnn/</link>
+    </image>
+    
+    <item>
+      <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</guid>
+      <description>&lt;p&gt;Feature-based visual SLAM assumes the world holds still. It doesn&amp;rsquo;t. When someone walks through the frame, their features get matched across keyframes like any other, and the optimiser dutifully fits a camera trajectory to a person who was never part of the scene geometry. On the TUM &lt;code&gt;fr3/walking_*&lt;/code&gt; sequences this is not a marginal degradation — ORB-SLAM2&amp;rsquo;s absolute trajectory error goes to roughly half a metre.&lt;/p&gt;
+&lt;p&gt;This project reimplements &lt;strong&gt;SG-SLAM&lt;/strong&gt; (&lt;a href=&#34;https://ieeexplore.ieee.org/document/10018238&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cheng, Sun, Zhang &amp;amp; Zhang, &lt;em&gt;IEEE TIM&lt;/em&gt; vol. 72, 2023&lt;/a&gt;), which addresses this by adding two parallel threads to ORB-SLAM2 — one for object detection, one for semantic mapping — and a feature-rejection stage in the tracking thread that consults both geometry and semantics before deciding what to keep.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SG-SLAM running on a live RGB-D stream: ORB features tracked on the static scene while a person walks through the frame, the keyframe graph, and the semantically labelled point cloud in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu10093939004686469362.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu15078296984376168334.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;422&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The three threads running together. Left: the live frame — note the green ORB features sit on desks, walls and shelving, not on the person. Bottom: the reconstructed point cloud with detected objects labelled and localised.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-not-just-mask-out-the-people&#34;&gt;Why not just mask out the people&lt;/h2&gt;
+&lt;p&gt;The obvious approach is to run a detector, draw boxes around every &lt;em&gt;a priori&lt;/em&gt; dynamic class, and discard whatever falls inside. That fails in both directions, and SG-SLAM&amp;rsquo;s design is a direct response to each failure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Things move that aren&amp;rsquo;t in a box.&lt;/strong&gt; A detector trained on 20 classes will miss a swinging door, a rolling cart, a shadow. Masking gives you no protection outside the boxes it drew.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things in boxes aren&amp;rsquo;t always moving.&lt;/strong&gt; A parked chair, an empty sofa, a person sitting perfectly still — all get classified dynamic, all get thrown away. In a cluttered indoor scene that can mean discarding the best-textured features you have.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-rejection-criterion&#34;&gt;The rejection criterion&lt;/h2&gt;
+&lt;p&gt;The mechanism that avoids both is worth reading closely, because it is subtler than a mask. Reproduced from the paper&amp;rsquo;s Algorithm 1:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Input:  Previous frame F1, current frame F2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Feature points P1 (previous), P2 (current)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Standard empirical threshold e_std
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Output: Set S of static feature points in the current frame
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1: P1 = CalcOpticalFlowPyrLK(F2, F1, P2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 2: Remove matched pairs at image edges or with large appearance variation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 3: F = FindFundamentalMat(P2, P1, 7-point method with RANSAC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 4: for each matched pair (p1, p2) in (P1, P2) do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 5:     if DynamicObjectsExist and IsInDynamicRegion(p2) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 6:         if CalcEpiLineDistance(p2, p1, F) * GetDynamicWeightValue(p2) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 7:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 8:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 9:     else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10:         if CalcEpiLineDistance(p2, p1, F) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13:     end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14: end for
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is &lt;strong&gt;one&lt;/strong&gt; threshold, &lt;code&gt;e_std&lt;/code&gt;, and it is compared against a point-to-epipolar-line distance in both branches. The difference is that inside a detected region (line 6) that distance is first &lt;strong&gt;multiplied&lt;/strong&gt; by the object class&amp;rsquo;s dynamic weight.&lt;/p&gt;
+&lt;p&gt;So semantics act as a per-class multiplier on the geometric residual, not as a veto. A high-weight class like a person has its residual inflated, so it gets rejected on much weaker geometric evidence than a low-weight class like a chair. But a genuinely stationary object still passes — its epipolar distance is near zero, and scaling near-zero by three is still near-zero. Meanwhile line 10 runs everywhere the detector saw nothing, so unmodelled motion is still caught geometrically.&lt;/p&gt;
+&lt;p&gt;Two implementation details that are easy to miss: the optical flow at line 1 runs &lt;strong&gt;backwards&lt;/strong&gt;, tracking the current frame&amp;rsquo;s points into the previous frame to reconstruct correspondences, and the fundamental matrix uses the &lt;strong&gt;seven-point&lt;/strong&gt; method inside RANSAC rather than the more common normalised eight-point variant.&lt;/p&gt;
+&lt;h2 id=&#34;detector&#34;&gt;Detector&lt;/h2&gt;
+&lt;p&gt;Detection runs an &lt;strong&gt;SSD with a MobileNetV3 backbone under NCNN&lt;/strong&gt;, Tencent&amp;rsquo;s mobile CPU inference framework. That choice is what makes the real-time claim plausible without a GPU in the loop — the whole point of SG-SLAM over heavier semantic-SLAM systems is that it targets mobile platforms. The tracking thread computes its geometric quantities, blocks on the detector&amp;rsquo;s 2-D result for that frame, then runs rejection and tracks; only surviving features reach local mapping, loop closing and full bundle adjustment, all of which are unmodified ORB-SLAM2.&lt;/p&gt;
+&lt;div style=&#34;display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start&#34;&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Detection overlay with bounding boxes and class confidences&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu10414967818364573976.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu7677053416326043211.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;226&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Detection on a live frame.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Semantic object map with per-object 3D coordinates in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13843709679552535452.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13383796692928516754.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;233&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Objects localised in 3-D with class labels.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The semantic mapping thread fuses the 2-D detections with per-keyframe point clouds generated from the depth images and camera poses, then extracts each object&amp;rsquo;s position and extent into a 3-D semantic object database. That database, a global OctoMap and the camera poses are all published over ROS for RViz — which is the real difference from plain ORB-SLAM2, whose output is a sparse cloud with no idea what anything is.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Benchmark figures below are the published results from Cheng et al., reproduced here rather than independently measured. Metric is &lt;strong&gt;ATE RMSE in metres&lt;/strong&gt; — these are error &lt;em&gt;reductions&lt;/em&gt;, not accuracy gains.&lt;/p&gt;
+&lt;h3 id=&#34;tum-rgb-d&#34;&gt;TUM RGB-D&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Sequence&lt;/th&gt;
+          &lt;th&gt;Dynamics&lt;/th&gt;
+          &lt;th&gt;ORB-SLAM2&lt;/th&gt;
+          &lt;th&gt;SG-SLAM&lt;/th&gt;
+          &lt;th&gt;Reduction&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4032&lt;/td&gt;
+          &lt;td&gt;0.0079&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;98.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_xyz&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.6826&lt;/td&gt;
+          &lt;td&gt;0.0171&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;97.50%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_rpy&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.5396&lt;/td&gt;
+          &lt;td&gt;0.0326&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.95%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_halfsphere&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4462&lt;/td&gt;
+          &lt;td&gt;0.0309&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.07%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/sitting_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;low&lt;/td&gt;
+          &lt;td&gt;0.0087&lt;/td&gt;
+          &lt;td&gt;0.0060&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;31.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;bonn-rgb-d-dynamic-9-sequences&#34;&gt;Bonn RGB-D Dynamic (9 sequences)&lt;/h3&gt;
+&lt;p&gt;Best and worst of the set: &lt;code&gt;synchronous2&lt;/code&gt; improves 1.4069 → 0.0164 m (&lt;strong&gt;98.83%&lt;/strong&gt;), while &lt;code&gt;synchronous&lt;/code&gt; — nominally the same scene, different take — only reaches 1.1411 → 0.3262 m (&lt;strong&gt;71.41%&lt;/strong&gt;). The &lt;code&gt;moving_nonobstructing_box&lt;/code&gt; pair land around 71–79%, the &lt;code&gt;crowd&lt;/code&gt; and &lt;code&gt;person_tracking&lt;/code&gt; sequences 93–97%.&lt;/p&gt;
+&lt;h3 id=&#34;reading-the-numbers-honestly&#34;&gt;Reading the numbers honestly&lt;/h3&gt;
+&lt;p&gt;Two things about this table are worth saying out loud, because they&amp;rsquo;re the parts a results summary usually hides.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The 31% on &lt;code&gt;sitting_static&lt;/code&gt; isn&amp;rsquo;t a weak result, it&amp;rsquo;s the control.&lt;/strong&gt; That sequence is low-dynamic — a person seated, barely moving. There is almost nothing for dynamic-feature rejection to remove, so the gain collapses to a third of what the walking sequences show. The rotational-drift table is starker still: 7.99% on the same sequence. That&amp;rsquo;s the expected shape of the result, and it&amp;rsquo;s evidence the mechanism is doing what it claims rather than just globally discarding features.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RMSE improves far more than the median does.&lt;/strong&gt; On &lt;code&gt;walking_static&lt;/code&gt; the ATE RMSE drops 98% while the RPE median improvements sit at 43–53%. The gain is concentrated in &lt;em&gt;catastrophic&lt;/em&gt; frames — the ones where a person crossing the view wrecks the pose estimate entirely — not in the typical frame. That&amp;rsquo;s the right thing for a SLAM system to fix, since a single badly-corrupted keyframe propagates into the map, but it does mean &amp;ldquo;98% better&amp;rdquo; describes the tail, not the average.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;where-it-breaks&#34;&gt;Where it breaks&lt;/h2&gt;
+&lt;p&gt;The failure mode falls straight out of Algorithm 1, and the paper is upfront about it: &lt;strong&gt;an object moving along the epipolar line direction is invisible to this test.&lt;/strong&gt; Its features produce a point-to-epipolar-line distance of approximately zero despite genuinely moving, so line 10 accepts them as static. The semantic branch doesn&amp;rsquo;t save you either — multiplying a near-zero residual by a dynamic weight still clears the threshold. In practice that means someone walking directly toward or away from the camera is much harder to reject than someone crossing the view.&lt;/p&gt;
+&lt;p&gt;The other open item is semantic map precision. Object extents come from thresholding a depth-derived point cloud inside a 2-D box, which is coarse — good enough to say &amp;ldquo;there is a monitor at roughly here&amp;rdquo;, not good enough for manipulation.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++ (ORB-SLAM2 core), Python, Ubuntu 18.04, ROS Melodic, NCNN, OpenCV, OctoMap, RViz. Evaluated on TUM RGB-D and the Bonn RGB-D Dynamic dataset.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
