@@ -203,6 +203,8 @@
       "h-5",
       "h-6",
       "h-[18px]",
+      "hb-attachment-large",
+      "hb-attachment-link",
       "hb-docs-link",
       "hb-scrollbar",
       "hb-sidebar-container",
@@ -524,8 +526,11 @@
       "key-insights",
       "key-takeaways",
       "key-techniques",
+      "libero-object",
+      "libero-spatial",
       "live-webcam-digit-recognition",
       "loss-functions",
+      "method",
       "methodology",
       "methodology-overview",
       "moon",
@@ -574,8 +579,10 @@
       "slam-implementation",
       "structural--thermal-analysis-fea",
       "sun",
+      "takeaway",
       "td3-vs-ddpg-lap-comparison",
       "techniques-used",
+      "the-eight-bugs",
       "tools",
       "tools--libraries",
       "tools--skills",
@@ -584,7 +591,8 @@
       "transfer-learning-to-greek-letters",
       "transfer-learning-training-error",
       "uav-motion-planning",
-      "workflow"
+      "workflow",
+      "working-under-a-single-gpu-budget"
     ]
   }
 }

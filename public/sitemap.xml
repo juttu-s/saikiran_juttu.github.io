@@ -2,6 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/imitation-learning/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/learning-for-robotics/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/libero/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lora/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/openvla/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/project/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/robot-manipulation/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/vision-language-action/</loc>
+    <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/collaborative-exploration/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,10 +79,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/publication/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -90,10 +134,6 @@
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/</loc>
-    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -118,10 +158,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ros/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -131,6 +167,10 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/semantic-slam/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/slam-and-visual-inertial-odometry/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -162,12 +202,20 @@
     <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/other-projects/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/quadrotor/</loc>
     <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/simulink/</loc>
     <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/3d-reconstruction-and-calibration/</loc>
+    <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/</loc>

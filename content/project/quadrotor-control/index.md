@@ -9,6 +9,8 @@ tags:
   - LQG
   - MATLAB
   - Simulink
+categories:
+  - Other Projects
 summary: A comparative study of MPC, LQR, LQG, and LQR-PI controllers for quadrotor position and altitude control, evaluating stability and robustness under sensor noise and disturbances.
 featured: true
 image:

@@ -8,6 +8,8 @@ tags:
   - Python
   - OpenCV
   - GTSAM
+categories:
+  - 3D Reconstruction and Calibration
 summary: Built a custom Structure-from-Motion pipeline using CLAHE, SIFT, triangulation, and GTSAM-based bundle adjustment on a 24-frame dataset of a Buddha sculpture.
 featured: true
 image:

@@ -7,6 +7,8 @@ tags:
   - SLAM
   - GTSAM
   - Pose Estimation
+categories:
+  - SLAM and Visual-Inertial Odometry
 summary: Implemented Kimera VIO on both EuRoC MAV and a custom dataset to evaluate trajectory accuracy, runtime performance, and robustness under varying visual-inertial conditions.
 featured: true
 image:

@@ -10,6 +10,8 @@ tags:
   - ROS
   - PyTorch
   - C++
+categories:
+  - SLAM and Visual-Inertial Odometry
 summary: Integrated a YOLO-based object detector into the ORB-SLAM2 frontend to filter dynamic features, improving tracking accuracy by 31% on the TUM RGB-D dynamic sequences.
 featured: true
 image:

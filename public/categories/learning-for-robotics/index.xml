@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning for Robotics | Saikiran Juttu | Robotics Portfolio</title>
+    <link>http://localhost:1313/saikiran_juttu.github.io/categories/learning-for-robotics/</link>
+      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/categories/learning-for-robotics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Learning for Robotics</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Learning for Robotics</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/categories/learning-for-robotics/</link>
+    </image>
+    
+    <item>
+      <title>Debugging OpenVLA on LIBERO — From 0% to 99% Success</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;vision-language-action (VLA)&lt;/strong&gt; model that &amp;ldquo;loads successfully&amp;rdquo; and a VLA model that &lt;em&gt;works&lt;/em&gt; are two very different things. This project benchmarks &lt;strong&gt;OpenVLA&lt;/strong&gt; and &lt;strong&gt;OpenVLA-OFT&lt;/strong&gt; on the &lt;strong&gt;LIBERO&lt;/strong&gt; manipulation benchmark, and documents the gap between those two states.&lt;/p&gt;
+&lt;p&gt;The headline result is not the final accuracy — it is that a naive but seemingly correct integration scored &lt;strong&gt;0% across 250 episodes&lt;/strong&gt;, and every point of recovery came from a specific, identifiable bug at the model–simulator boundary.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Code:&lt;/strong&gt; &lt;a href=&#34;https://github.com/juttu-s/vla-libero-bench&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/juttu-s/vla-libero-bench&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Each configuration was evaluated over &lt;strong&gt;250 episodes&lt;/strong&gt;, with 95% Wilson confidence intervals.&lt;/p&gt;
+&lt;h3 id=&#34;libero-spatial&#34;&gt;LIBERO-Spatial&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Configuration&lt;/th&gt;
+          &lt;th&gt;Success Rate&lt;/th&gt;
+          &lt;th&gt;95% CI&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base OpenVLA — naive integration&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.0%&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base OpenVLA — after bug fixes&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;51.6%&lt;/strong&gt; (129/250)&lt;/td&gt;
+          &lt;td&gt;45.4 – 57.7%&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OpenVLA-OFT&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;99.2%&lt;/strong&gt; (248/250)&lt;/td&gt;
+          &lt;td&gt;97.1 – 99.8%&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;libero-object&#34;&gt;LIBERO-Object&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Configuration&lt;/th&gt;
+          &lt;th&gt;Success Rate&lt;/th&gt;
+          &lt;th&gt;95% CI&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base model, zero-shot&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.0%&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Custom LoRA fine-tune&lt;/td&gt;
+          &lt;td&gt;collapsed&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Official fine-tuned checkpoint&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;88.8%&lt;/strong&gt; (222/250)&lt;/td&gt;
+          &lt;td&gt;84.3 – 92.1%&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The official checkpoint result reproduces the published figure, which validates the harness itself — a necessary control before trusting any of the other numbers.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-eight-bugs&#34;&gt;The Eight Bugs&lt;/h2&gt;
+&lt;p&gt;Each of these produced either silent failure or plausible-but-wrong behaviour. None raised an exception.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Attention mask mismatch&lt;/strong&gt; in &lt;code&gt;transformers&lt;/code&gt; — the installed attention backend disagreed with the mask layout the checkpoint expected. Resolved by pinning the &lt;strong&gt;SDPA&lt;/strong&gt; implementation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image orientation&lt;/strong&gt; — frames required a &lt;strong&gt;180° rotation&lt;/strong&gt;, not the vertical flip that the obvious reading of the simulator convention suggests. A vertical flip produces images that look approximately right, which is exactly why it survives inspection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inverted gripper convention&lt;/strong&gt; — the sign of the gripper channel is opposite between the training data and the simulation environment, so the policy opened when it intended to close.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Center-crop semantics&lt;/strong&gt; — the documented 90% crop is &lt;strong&gt;90% of &lt;em&gt;area&lt;/em&gt;&lt;/strong&gt;, not 90% per side. Getting this wrong shifts the effective field of view enough to break spatial grounding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gripper command duration&lt;/strong&gt; — single-step gripper commands are insufficient; the actuator needs &lt;strong&gt;temporal persistence with hysteresis&lt;/strong&gt; to actually complete a grasp.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dataset statistics merging&lt;/strong&gt; — normalization statistics from fine-tuning were only partially merged into the checkpoint, so actions were de-normalized against the wrong distribution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LIBERO package mapping&lt;/strong&gt; — a missing &lt;code&gt;__init__&lt;/code&gt; file caused the installed package to expose empty module mappings, silently resolving task suites to nothing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Headless reset hang&lt;/strong&gt; — exception handling inside environment reset deadlocked under headless OpenGL rendering rather than surfacing an error.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;method&#34;&gt;Method&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Models:&lt;/strong&gt; OpenVLA (7B, base and LoRA-fine-tuned) and OpenVLA-OFT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Benchmark:&lt;/strong&gt; LIBERO-Spatial and LIBERO-Object, 250 episodes per configuration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simulator:&lt;/strong&gt; MuJoCo with configurable OpenGL / EGL rendering backends&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagnostics:&lt;/strong&gt; Per-bug isolation scripts under &lt;code&gt;scripts/&lt;/code&gt;, with debug frame captures in &lt;code&gt;assets/&lt;/code&gt; to visually confirm preprocessing at each stage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reproducibility:&lt;/strong&gt; Pinned Conda environments under &lt;code&gt;env/&lt;/code&gt;, results as raw episode records under &lt;code&gt;results/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;working-under-a-single-gpu-budget&#34;&gt;Working Under a Single-GPU Budget&lt;/h2&gt;
+&lt;p&gt;The whole study ran on &lt;strong&gt;one 24 GB GPU&lt;/strong&gt;, which shaped the design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LoRA fine-tuning at &lt;strong&gt;batch size 2 with 8× gradient accumulation&lt;/strong&gt; to fit in memory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SDPA&lt;/strong&gt; attention instead of flash-attention, since no CUDA toolkit was available to build it&lt;/li&gt;
+&lt;li&gt;The custom LoRA run &lt;strong&gt;collapsed&lt;/strong&gt; — reported rather than hidden, because it marks the real boundary of what this hardware budget supports&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;takeaway&#34;&gt;Takeaway&lt;/h2&gt;
+&lt;p&gt;The 51.6% → 99.2% jump from OpenVLA to OpenVLA-OFT is a genuine architectural result. The 0% → 51.6% jump is not a result at all — it is the cost of integration, and it is invisible in every paper that reports only the final number. Publishing the bug list is the useful contribution here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Autonomous Race Driving with Action Mapping RL</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</guid>
+      <description>&lt;h2 id=&#34;autonomous-race-driving-with-action-mapping-rl&#34;&gt;Autonomous Race Driving with Action Mapping RL&lt;/h2&gt;
+&lt;p&gt;This project evaluates the impact of &lt;strong&gt;Action Mapping (AM)&lt;/strong&gt; on &lt;strong&gt;deep reinforcement learning (DRL)&lt;/strong&gt; algorithms for high-speed autonomous race driving. The primary goal was to enforce &lt;strong&gt;friction and vehicle dynamics constraints&lt;/strong&gt; while ensuring agents could learn to complete laps efficiently and safely.&lt;/p&gt;
+&lt;p&gt;We &lt;strong&gt;extended the GitHub framework from the AM-RL paper&lt;/strong&gt; (ISA Transactions 2024) that used TD3 + AM, and &lt;strong&gt;re-implemented the actor-critic models using DDPG and SAC&lt;/strong&gt; with Action Mapping. The experiments were conducted on &lt;strong&gt;Track A&lt;/strong&gt; in the custom race simulator.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand and replicate the Action Mapping Reinforcement Learning (AM-RL) framework&lt;/li&gt;
+&lt;li&gt;Implement DDPG and SAC as alternate agents within the same setup&lt;/li&gt;
+&lt;li&gt;Compare lap time, constraint satisfaction, and learning stability across methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;simulation--state-design&#34;&gt;Simulation &amp;amp; State Design&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Environment:&lt;/strong&gt; Custom Python-based simulator using bicycle model dynamics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Observations:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;12 future curvature points from the centerline&lt;/li&gt;
+&lt;li&gt;Velocity, yaw rate, orientation, steering angle, and track deviation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action Space:&lt;/strong&gt; Virtual actions ∈ [−1, 1]² → throttle &amp;amp; steering angle&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Constraints:&lt;/strong&gt; Friction cone and lateral acceleration safety bounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;neural-networks&#34;&gt;Neural Networks&lt;/h2&gt;
+&lt;h3 id=&#34;actor-networks&#34;&gt;Actor Networks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fully connected with 2 hidden layers (256–256 units)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Activation:&lt;/strong&gt; ReLU (hidden), Tanh (output)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; Unconstrained actions (steering, throttle) passed to AM module&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;critic-networks&#34;&gt;Critic Networks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Two Q-functions for SAC (double critic)&lt;/li&gt;
+&lt;li&gt;One Q-function for DDPG&lt;/li&gt;
+&lt;li&gt;Each accepts state-action pair and outputs scalar Q-value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;loss-functions&#34;&gt;Loss Functions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DDPG:&lt;/strong&gt; MSE loss on predicted Q-values&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SAC:&lt;/strong&gt; Adds entropy regularization and automatic temperature tuning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;action-mapping-am&#34;&gt;Action Mapping (AM)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;State-aware mapping transforms virtual actions to safe, real-world controls&lt;/li&gt;
+&lt;li&gt;Implemented as a lookup-based mapping based on track geometry and physics&lt;/li&gt;
+&lt;li&gt;Ensures compliance with dynamic tire-road constraints (Fₓ, Fᵧ within friction ellipse)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results-summary&#34;&gt;Results Summary&lt;/h2&gt;
+&lt;h3 id=&#34;ddpg-with-action-mapping-am&#34;&gt;DDPG with Action Mapping (AM)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Learned a stable and smooth racing policy&lt;/li&gt;
+&lt;li&gt;Consistently finished laps on Track A&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lap 1 Time:&lt;/strong&gt; 43.57s&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lap 2 Time:&lt;/strong&gt; 41.7s&lt;/li&gt;
+&lt;li&gt;Maintained safety constraints with no friction violations&lt;/li&gt;
+&lt;li&gt;Approached TD3-level performance from literature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;td3-vs-ddpg-lap-comparison&#34;&gt;TD3 vs DDPG Lap Comparison&lt;/h3&gt;
+&lt;p&gt;Below is a side-by-side comparison of &lt;strong&gt;TD3&lt;/strong&gt; (left) and &lt;strong&gt;DDPG&lt;/strong&gt; (right) for both Lap 1 and Lap 2 on Track A. Color encodes speed (m/s).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;TD3 vs DDPG Lap 1 &amp;amp; 2&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp 400w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu16877567874459994854.webp 760w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu9699183390352886908.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/am-race-driving-rl/TD3_DDPG_hu11255701520106207767.webp&#34;
+               width=&#34;601&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure: Lap 1 and Lap 2 performance comparison — TD3 has tighter trajectories and better cornering speed than DDPG.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sac-with-action-mapping-am&#34;&gt;SAC with Action Mapping (AM)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Frequently failed to complete laps (DNF)&lt;/li&gt;
+&lt;li&gt;Produced two common failure modes:
+&lt;ul&gt;
+&lt;li&gt;Prioritizing speed → unstable cornering and off-track behavior&lt;/li&gt;
+&lt;li&gt;Prioritizing stability → very slow but accurate turns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Final policies were inconsistent and fragile&lt;/li&gt;
+&lt;li&gt;Highly sensitive to reward scaling and actor update frequency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SAC Lap 1 Intermediate Failures&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu7060679015506459835.webp 400w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu17451594598186353989.webp 760w,
+               /saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu100650002741892404.webp 1200w&#34;
+               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/am-race-driving-rl/SAC_hu7060679015506459835.webp&#34;
+               width=&#34;655&#34;
+               height=&#34;377&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure: SAC Lap 1 — Left: high speed, low stability; Right: better track alignment, very low velocity.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-comparison-table&#34;&gt;Key Comparison Table&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Metric&lt;/th&gt;
+          &lt;th&gt;TD3-AM (paper)&lt;/th&gt;
+          &lt;th&gt;DDPG-AM (ours)&lt;/th&gt;
+          &lt;th&gt;SAC-AM (ours)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Best Lap Time (s)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;36.94&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;41.7&lt;/td&gt;
+          &lt;td&gt;DNF (unstable)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Constraint Violations&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;Some (off-track)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Convergence Speed&lt;/td&gt;
+          &lt;td&gt;Fast&lt;/td&gt;
+          &lt;td&gt;Moderate&lt;/td&gt;
+          &lt;td&gt;Slow&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stability&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;Very Low&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href=&#34;CS5180___Final_Report.pdf&#34;&gt;Final Report PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0019057824002143?via%3Dihub&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link to Original Paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/s-bray/CS5180-Final_Project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project demonstrates how &lt;strong&gt;Action Mapping serves as a universal safety wrapper&lt;/strong&gt; that can be applied across different DRL algorithms. Our experiments showed that DDPG performs competitively against TD3 in constrained driving, while SAC struggled to converge due to reward instability — emphasizing the importance of choosing the right policy architecture for safety-critical RL tasks.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

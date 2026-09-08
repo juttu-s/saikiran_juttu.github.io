@@ -8,6 +8,8 @@ tags:
   - CNN
   - MNIST
   - Transfer Learning
+categories:
+  - Other Projects
 summary: Built and analyzed a convolutional neural network (CNN) for handwritten digit recognition using MNIST, then applied transfer learning to recognize Greek letters and conducted real-time video-based classification.
 featured: true
 image:

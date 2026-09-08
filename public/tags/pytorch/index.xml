@@ -5,12 +5,115 @@
     <link>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</link>
       <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <description>PyTorch</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>PyTorch</title>
       <link>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</link>
     </image>
+    
+    <item>
+      <title>Debugging OpenVLA on LIBERO — From 0% to 99% Success</title>
+      <link>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;vision-language-action (VLA)&lt;/strong&gt; model that &amp;ldquo;loads successfully&amp;rdquo; and a VLA model that &lt;em&gt;works&lt;/em&gt; are two very different things. This project benchmarks &lt;strong&gt;OpenVLA&lt;/strong&gt; and &lt;strong&gt;OpenVLA-OFT&lt;/strong&gt; on the &lt;strong&gt;LIBERO&lt;/strong&gt; manipulation benchmark, and documents the gap between those two states.&lt;/p&gt;
+&lt;p&gt;The headline result is not the final accuracy — it is that a naive but seemingly correct integration scored &lt;strong&gt;0% across 250 episodes&lt;/strong&gt;, and every point of recovery came from a specific, identifiable bug at the model–simulator boundary.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Code:&lt;/strong&gt; &lt;a href=&#34;https://github.com/juttu-s/vla-libero-bench&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/juttu-s/vla-libero-bench&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Each configuration was evaluated over &lt;strong&gt;250 episodes&lt;/strong&gt;, with 95% Wilson confidence intervals.&lt;/p&gt;
+&lt;h3 id=&#34;libero-spatial&#34;&gt;LIBERO-Spatial&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Configuration&lt;/th&gt;
+          &lt;th&gt;Success Rate&lt;/th&gt;
+          &lt;th&gt;95% CI&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base OpenVLA — naive integration&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.0%&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base OpenVLA — after bug fixes&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;51.6%&lt;/strong&gt; (129/250)&lt;/td&gt;
+          &lt;td&gt;45.4 – 57.7%&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OpenVLA-OFT&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;99.2%&lt;/strong&gt; (248/250)&lt;/td&gt;
+          &lt;td&gt;97.1 – 99.8%&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;libero-object&#34;&gt;LIBERO-Object&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Configuration&lt;/th&gt;
+          &lt;th&gt;Success Rate&lt;/th&gt;
+          &lt;th&gt;95% CI&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base model, zero-shot&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.0%&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Custom LoRA fine-tune&lt;/td&gt;
+          &lt;td&gt;collapsed&lt;/td&gt;
+          &lt;td&gt;—&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Official fine-tuned checkpoint&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;88.8%&lt;/strong&gt; (222/250)&lt;/td&gt;
+          &lt;td&gt;84.3 – 92.1%&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The official checkpoint result reproduces the published figure, which validates the harness itself — a necessary control before trusting any of the other numbers.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-eight-bugs&#34;&gt;The Eight Bugs&lt;/h2&gt;
+&lt;p&gt;Each of these produced either silent failure or plausible-but-wrong behaviour. None raised an exception.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Attention mask mismatch&lt;/strong&gt; in &lt;code&gt;transformers&lt;/code&gt; — the installed attention backend disagreed with the mask layout the checkpoint expected. Resolved by pinning the &lt;strong&gt;SDPA&lt;/strong&gt; implementation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image orientation&lt;/strong&gt; — frames required a &lt;strong&gt;180° rotation&lt;/strong&gt;, not the vertical flip that the obvious reading of the simulator convention suggests. A vertical flip produces images that look approximately right, which is exactly why it survives inspection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inverted gripper convention&lt;/strong&gt; — the sign of the gripper channel is opposite between the training data and the simulation environment, so the policy opened when it intended to close.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Center-crop semantics&lt;/strong&gt; — the documented 90% crop is &lt;strong&gt;90% of &lt;em&gt;area&lt;/em&gt;&lt;/strong&gt;, not 90% per side. Getting this wrong shifts the effective field of view enough to break spatial grounding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gripper command duration&lt;/strong&gt; — single-step gripper commands are insufficient; the actuator needs &lt;strong&gt;temporal persistence with hysteresis&lt;/strong&gt; to actually complete a grasp.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dataset statistics merging&lt;/strong&gt; — normalization statistics from fine-tuning were only partially merged into the checkpoint, so actions were de-normalized against the wrong distribution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LIBERO package mapping&lt;/strong&gt; — a missing &lt;code&gt;__init__&lt;/code&gt; file caused the installed package to expose empty module mappings, silently resolving task suites to nothing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Headless reset hang&lt;/strong&gt; — exception handling inside environment reset deadlocked under headless OpenGL rendering rather than surfacing an error.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;method&#34;&gt;Method&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Models:&lt;/strong&gt; OpenVLA (7B, base and LoRA-fine-tuned) and OpenVLA-OFT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Benchmark:&lt;/strong&gt; LIBERO-Spatial and LIBERO-Object, 250 episodes per configuration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simulator:&lt;/strong&gt; MuJoCo with configurable OpenGL / EGL rendering backends&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagnostics:&lt;/strong&gt; Per-bug isolation scripts under &lt;code&gt;scripts/&lt;/code&gt;, with debug frame captures in &lt;code&gt;assets/&lt;/code&gt; to visually confirm preprocessing at each stage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reproducibility:&lt;/strong&gt; Pinned Conda environments under &lt;code&gt;env/&lt;/code&gt;, results as raw episode records under &lt;code&gt;results/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;working-under-a-single-gpu-budget&#34;&gt;Working Under a Single-GPU Budget&lt;/h2&gt;
+&lt;p&gt;The whole study ran on &lt;strong&gt;one 24 GB GPU&lt;/strong&gt;, which shaped the design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LoRA fine-tuning at &lt;strong&gt;batch size 2 with 8× gradient accumulation&lt;/strong&gt; to fit in memory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SDPA&lt;/strong&gt; attention instead of flash-attention, since no CUDA toolkit was available to build it&lt;/li&gt;
+&lt;li&gt;The custom LoRA run &lt;strong&gt;collapsed&lt;/strong&gt; — reported rather than hidden, because it marks the real boundary of what this hardware budget supports&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;takeaway&#34;&gt;Takeaway&lt;/h2&gt;
+&lt;p&gt;The 51.6% → 99.2% jump from OpenVLA to OpenVLA-OFT is a genuine architectural result. The 0% → 51.6% jump is not a result at all — it is the cost of integration, and it is invisible in every paper that reports only the final number. Publishing the bug list is the useful contribution here.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>

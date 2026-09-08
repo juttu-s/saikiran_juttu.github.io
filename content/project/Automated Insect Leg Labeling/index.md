@@ -7,6 +7,8 @@ tags:
   - Image Processing
   - Python
   - Feature Detection
+categories:
+  - Other Projects
 summary: Built an automated insect leg labeling pipeline using image preprocessing, Shi-Tomasi corner detection, and KMeans clustering to reduce manual labeling effort in DeepLabCut.
 featured: true
 image:

@@ -8,6 +8,8 @@ tags:
   - Sensor Fusion
   - ROS
   - Navigation
+categories:
+  - SLAM and Visual-Inertial Odometry
 summary: Fused IMU and GPS data to perform dead reckoning in a high-speed vehicle and evaluated accuracy through heading estimation, velocity integration, and trajectory reconstruction.
 featured: true
 image:

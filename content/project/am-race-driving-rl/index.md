@@ -9,6 +9,8 @@ tags:
   - SAC
   - TD3
   - Autonomous Driving
+categories:
+  - Learning for Robotics
 summary: Evaluated DDPG and SAC with Action Mapping on a custom autonomous racing simulator using a friction-constrained vehicle model, comparing them to the TD3-AM benchmark from literature.
 featured: true
 image:

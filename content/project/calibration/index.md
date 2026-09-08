@@ -7,6 +7,8 @@ tags:
   - Augmented Reality
   - Pose Estimation
   - Virtual Projection
+categories:
+  - 3D Reconstruction and Calibration
 summary: Calibrated a camera using chessboard targets, estimated pose with solvePnP, and rendered real-time virtual objects onto scenes using OpenCV.
 featured: true
 image:

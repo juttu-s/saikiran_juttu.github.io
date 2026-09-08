@@ -7,6 +7,8 @@ tags:
   - Feature Extraction
   - Real-Time Systems
   - Computer Vision
+categories:
+  - Other Projects
 summary: Built a webcam-based 2D object recognition system using shape descriptors, feature vectors, and both Euclidean and KNN-based classification strategies.
 featured: true
 image:
