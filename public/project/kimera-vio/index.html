@@ -3,7 +3,7 @@
 <!-- Last Published: September 8, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/saikiran_juttu.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=saikiran_juttu.github.io/livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Implemented Kimera VIO on both EuRoC MAV and a custom dataset to evaluate trajectory accuracy, runtime performance, and robustness under varying visual-inertial conditions." />
+  <meta name="description" content="Deployed Kimera-VIO in a reproducible Docker environment, reproduced its EuRoC V1 benchmark, then ran it on a self-collected RealSense D455 indoor sequence — where starting the camera at rest turned out to matter more than any parameter." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/" />
+  <link rel="alternate" hreflang="en-us" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/" />
+  <link rel="canonical" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/" />
 
   
   
@@ -172,7 +172,6 @@
   
   
     
-    
   
   
 
@@ -181,13 +180,13 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:url" content="http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/" />
+  <meta property="og:url" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/" />
   <meta property="og:title" content="Kimera VIO on EuRoC and Custom Datasets | Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:description" content="Implemented Kimera VIO on both EuRoC MAV and a custom dataset to evaluate trajectory accuracy, runtime performance, and robustness under varying visual-inertial conditions." /><meta property="og:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Deployed Kimera-VIO in a reproducible Docker environment, reproduced its EuRoC V1 benchmark, then ran it on a self-collected RealSense D455 indoor sequence — where starting the camera at rest turned out to matter more than any parameter." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/featured.png" />
+    <meta property="twitter:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -217,9 +216,13 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/"
+    "@id": "https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/"
   },
   "headline": "Kimera VIO on EuRoC and Custom Datasets",
+  
+  "image": [
+    "https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/featured.png"
+  ],
   
   "datePublished": "2024-04-26T00:00:00Z",
   "dateModified": "2024-04-26T00:00:00Z",
@@ -234,10 +237,10 @@
     "name": "Northeastern University",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
+      "url": "https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
     }
   },
-  "description": "Implemented Kimera VIO on both EuRoC MAV and a custom dataset to evaluate trajectory accuracy, runtime performance, and robustness under varying visual-inertial conditions."
+  "description": "Deployed Kimera-VIO in a reproducible Docker environment, reproduced its EuRoC V1 benchmark, then ran it on a self-collected RealSense D455 indoor sequence — where starting the camera at rest turned out to matter more than any parameter."
 }
 </script>
 
@@ -324,23 +327,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     
       
       
@@ -414,6 +400,27 @@
         
       
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -617,8 +624,8 @@
   
   <script
     defer
-    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -854,22 +861,6 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/sg-slam/"
-    
-  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/quadrotor-control/"
-    
-  >Control Strategies for Quadrotor Position and Altitude
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/sparse-reconstruction/"
     
   >Sparse 3D Reconstruction and Bundle Adjustment
@@ -893,9 +884,39 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#"
+                href="#what-kimera-vio-is-doing"
                 class="hb-docs-link"
-              ></a>
+              >What Kimera-VIO is doing</a>
+            </li>
+          <li>
+              <a
+                href="#reproducibility"
+                class="hb-docs-link"
+              >Reproducibility</a>
+            </li>
+          <li>
+              <a
+                href="#euroc-benchmark"
+                class="hb-docs-link"
+              >EuRoC benchmark</a>
+            </li>
+          <li>
+              <a
+                href="#custom-dataset"
+                class="hb-docs-link"
+              >Custom dataset</a>
+            </li>
+          <li>
+              <a
+                href="#limits-and-next-steps"
+                class="hb-docs-link"
+              >Limits and next steps</a>
+            </li>
+          <li>
+              <a
+                href="#stack"
+                class="hb-docs-link"
+              >Stack</a>
             </li>
           </ul>
   
@@ -903,9 +924,25 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/sg-slam/"
+    
+  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/"
     
   >Automated Insect Leg Labeling using DeepLabCut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    
+  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
     </a>
               
             </li><li class="flex flex-col "><a
@@ -935,9 +972,9 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    href="/saikiran_juttu.github.io/project/quadrotor-control/"
     
-  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
+  >Control Strategies for Quadrotor Position and Altitude
     </a>
               
             </li></ul>
@@ -1034,25 +1071,25 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#project-goals">Project Goals</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-kimera-vio-is-doing">What Kimera-VIO is doing</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#methodology">Methodology</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reproducibility">Reproducibility</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#evaluation">Evaluation</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#euroc-benchmark">EuRoC benchmark</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#dataset-1-euroc-mav">Dataset 1: EuRoC MAV</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#custom-dataset">Custom dataset</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#dataset-2-custom-d455-dataset">Dataset 2: Custom D455 Dataset</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#starting-at-rest">Starting at rest</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tools--libraries">Tools &amp; Libraries</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#limits-and-next-steps">Limits and next steps</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#resources">Resources</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#stack">Stack</a>
       </li></ul>
 
   
@@ -1094,7 +1131,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          2 min read
+          5 min read
         </span>
         
         </div>
@@ -1104,6 +1141,48 @@
 
 
 
+
+<div class="">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/juttu-s/kimera-vio-eval" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
         </div>
@@ -1119,61 +1198,109 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>This project evaluates the <strong>Kimera Visual-Inertial Odometry (VIO)</strong> framework on two datasets — the <strong>EuRoC MAV benchmark</strong> and a <strong>custom indoor dataset</strong> — to assess its accuracy, runtime efficiency, and adaptability.</p>
+        <p>An evaluation and deployment project rather than an algorithms one. <a href="https://github.com/MIT-SPARK/Kimera-VIO" target="_blank" rel="noopener">Kimera-VIO</a> from MIT-SPARK was used as shipped; the work here was getting it running reproducibly, reproducing its published benchmark on EuRoC, and then pointing it at a sequence it had never seen — recorded on an Intel RealSense D455 in an ordinary office — to find out what breaks when you leave the benchmark behind.</p>
 <hr>
-<h3 id="project-goals">Project Goals</h3>
-<ul>
-<li>Set up Kimera VIO in a ROS + Docker environment</li>
-<li>Run it on benchmark and custom datasets</li>
-<li>Evaluate using ATE RMSE, runtime, and qualitative analysis</li>
-</ul>
+<h2 id="what-kimera-vio-is-doing">What Kimera-VIO is doing</h2>
+<p>Worth stating, because the interesting failure later only makes sense against it.</p>
+<p><strong>Front end.</strong> Shi-Tomasi corners on the left stereo image, tracked temporally with Lucas–Kanade optical flow, matched left-to-right and triangulated for depth, with outlier rejection on the resulting correspondences. IMU measurements between keyframes are preintegrated into a single relative-motion constraint and used for gravity alignment.</p>
+<p><strong>Back end.</strong> A factor graph over position, orientation and velocity, with IMU factors and visual reprojection factors as edges, optimised incrementally by <strong>iSAM2</strong> in GTSAM. Robust losses (Huber, Cauchy) absorb the outliers that survive the front end. Output is a pose trajectory, velocity estimates and a sparse landmark map.</p>
+<p><strong>Loop closure.</strong> Kimera-RPGO detects loops and runs robust pose-graph optimisation over them to produce a globally consistent trajectory.</p>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>The deliverable that mattered most was a <strong>saved Docker image</strong> with Kimera-VIO, ROS and every dependency preinstalled — distributed as a tarball so the whole pipeline comes up in three commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker load -i kimera-vio.tar
+</span></span><span class="line"><span class="cl">docker run -it kimera-vio
+</span></span><span class="line"><span class="cl">python3 visual.py data_pgo.csv     <span class="c1"># inside the container</span>
+</span></span></code></pre></div><p>Anyone who has built a VIO stack from source knows why this is worth doing. Kimera-VIO wants a specific GTSAM, which wants a specific Boost and Eigen, and the failure mode of getting it wrong is a pipeline that compiles and then silently estimates garbage. Pinning the whole environment means a result someone else can actually reproduce, and it makes &ldquo;does this parameter change help?&rdquo; a question you can answer in an afternoon instead of a week.</p>
+<p>Stereo image pairs and IMU streams were synchronised and fed in through ROS.</p>
 <hr>
-<h3 id="methodology">Methodology</h3>
-<p><strong>VIO Front-End:</strong></p>
+<h2 id="euroc-benchmark">EuRoC benchmark</h2>
+<p>Run on the <strong>EuRoC MAV</strong> Vicon Room 1 sequences — <code>V1_01</code>, <code>V1_02</code> and <code>V1_03</code>, spanning easy, medium and difficult, with motion-capture ground truth. That&rsquo;s three of the dataset&rsquo;s eleven sequences; the Machine Hall and Vicon Room 2 sets weren&rsquo;t covered.</p>
+<p>ATE RMSE in metres, reproducing the published comparison across VIO pipelines:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Sequence</th>
+          <th>OKVIS</th>
+          <th>MSCKF</th>
+          <th>ROVIO</th>
+          <th>VINS-Mono</th>
+          <th>Kimera-VIO</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>V1_01</td>
+          <td>0.09</td>
+          <td>0.34</td>
+          <td>0.10</td>
+          <td>0.08</td>
+          <td><strong>0.05</strong></td>
+      </tr>
+      <tr>
+          <td>V1_02</td>
+          <td>0.20</td>
+          <td>0.20</td>
+          <td>0.10</td>
+          <td>0.11</td>
+          <td><strong>0.08</strong></td>
+      </tr>
+      <tr>
+          <td>V1_03</td>
+          <td>0.24</td>
+          <td>0.67</td>
+          <td>0.14</td>
+          <td>0.18</td>
+          <td><strong>0.07</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>The pattern worth noting is the third row. Every other pipeline degrades on <code>V1_03</code> — the difficult sequence, with faster and more aggressive motion — while Kimera-VIO holds at 0.07 m. Aggressive motion is <em>good</em> for a visual-inertial system: it excites the IMU, which is what makes scale and gravity direction observable in the first place. Getting parameters into the range where that benchmark reproduces meant tuning IMU noise models, feature thresholds and optimiser tolerances. Throughput came out around <strong>25 FPS</strong>.</p>
+<h2 id="custom-dataset">Custom dataset</h2>
+<p>Recorded with a <strong>RealSense D455</strong> in a room of desks, monitors and the usual office clutter, walking an approximately oval path back to the starting point.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="The post-optimisation trajectory recovering the oval path walked during recording" srcset="
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp 400w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu14690658229423064687.webp 760w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu16662803654171847119.webp 1200w"
+               src="/saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp"
+               width="760"
+               height="576"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>Trajectory after pose-graph optimisation. The plot renders the path in the x–y plane, so vertical motion isn&rsquo;t shown.</em></p>
+<p>There is <strong>no ground truth</strong> for this sequence — no motion capture in an office — so everything here is qualitative. No ATE, no drift percentage, and any number attached to it would be invented. What it does show is loop closure working: the path returns to where it started rather than spiralling away.</p>
+<h3 id="starting-at-rest">Starting at rest</h3>
+<p>The most useful thing this sequence taught me was a failure at the very beginning of the recording, and it isn&rsquo;t a bug — it&rsquo;s a property of the problem.</p>
+<p>Visual-inertial odometry recovers metric scale and gravity direction from the accelerometer. But an accelerometer at rest measures only gravity, and there is no way to separate &ldquo;which way is down&rdquo; from &ldquo;how fast am I accelerating&rdquo; without motion to disambiguate them. Start recording with the camera stationary and the initialiser has no excitation to work with; it converges on a poor estimate, and that error is baked into every pose that follows.</p>
+<p>That&rsquo;s exactly what happened — visible drift accumulated from the start of the trajectory, and it persisted until loop closure corrected it. It also explains the EuRoC pattern above: the &ldquo;difficult&rdquo; sequence is easier for VIO in this one specific respect. The practical lesson is that a data-collection protocol matters as much as a config file: move the camera through a few seconds of varied motion <strong>before</strong> anything you care about, and the whole run improves.</p>
+<p>Elsewhere in the sequence, low-texture regions produced feature sparsity and minor drift, which pose-graph optimisation largely absorbed.</p>
+<h2 id="limits-and-next-steps">Limits and next steps</h2>
+<p>Kimera-VIO&rsquo;s weak points on this data were the ones its authors document: drift in low-texture regions, and sensitivity to outlier visual measurements. The obvious extensions, in order of how much they&rsquo;d change the picture:</p>
 <ul>
-<li>Feature detection (Shi-Tomasi)</li>
-<li>Optical flow tracking (Lucas-Kanade)</li>
-<li>Depth estimation via stereo matching</li>
-<li>Outlier filtering for robust constraints</li>
+<li><strong>Metric-semantic mapping.</strong> This used the VIO half of the Kimera suite only. Kimera-Semantics builds a semantically annotated mesh from the same pipeline, which is where the interesting downstream work is.</li>
+<li><strong>Outdoor and larger scale</strong>, to see where the factor graph stops being tractable.</li>
+<li><strong>LiDAR as an additional modality</strong>, for the feature-poor cases where vision alone degrades.</li>
 </ul>
-<p><strong>VIO Back-End:</strong></p>
-<ul>
-<li>Factor graph construction (GTSAM)</li>
-<li>iSAM2 for incremental optimization</li>
-<li>Pose, velocity, and landmark estimation</li>
-</ul>
-<hr>
-<h3 id="evaluation">Evaluation</h3>
-<h4 id="dataset-1-euroc-mav">Dataset 1: EuRoC MAV</h4>
-<ul>
-<li>Ran Kimera VIO on V1_01 to V1_03</li>
-<li>Compared RMSE with VINS-Mono, OKVIS, MSCKF</li>
-<li>Achieved best accuracy across all sequences</li>
-<li>Average RMSE: 0.05–0.08</li>
-</ul>
-<h4 id="dataset-2-custom-d455-dataset">Dataset 2: Custom D455 Dataset</h4>
-<ul>
-<li>Real-world indoor environment</li>
-<li>Feature-sparse and dynamically lit scenes</li>
-<li>Maintained smooth and consistent trajectory</li>
-<li>Minor drift in Z axis corrected by loop closures</li>
-</ul>
-<hr>
-<h3 id="tools--libraries">Tools &amp; Libraries</h3>
-<ul>
-<li><strong>Kimera VIO</strong> from MIT-SPARK Lab</li>
-<li><strong>GTSAM</strong> for factor graph optimization</li>
-<li><strong>Open3D</strong>, <strong>Matplotlib</strong> for visualization</li>
-<li><strong>Intel Realsense D455</strong>, ROS, Docker</li>
-</ul>
-<hr>
-<h3 id="resources">Resources</h3>
-<ul>
-<li>📄 <a href="/files/MR_Project_Report.pdf">Project Report (PDF)</a></li>
-<li>🔗 <a href="https://github.com/MIT-SPARK/Kimera-VIO" target="_blank" rel="noopener">Kimera VIO GitHub</a></li>
-</ul>
-<hr>
-<p>Kimera VIO proved to be a robust, modular SLAM framework capable of producing accurate trajectories under both structured (EuRoC) and challenging (custom indoor) conditions. Loop closure and factor graph smoothing allowed it to adapt well even with limited visual features.</p>
+<h2 id="stack">Stack</h2>
+<p>Kimera-VIO (MIT-SPARK), GTSAM, ROS, Docker, Python, matplotlib. Datasets: EuRoC MAV V1_01–V1_03; self-collected RealSense D455 stereo + IMU.</p>
 
       </div>
 
@@ -1200,7 +1327,11 @@
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/gtsam/">GTSAM</a>
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/pose-estimation/">Pose Estimation</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/docker/">Docker</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/ros/">ROS</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/realsense/">RealSense</a>
   
 </div>
 
@@ -1218,7 +1349,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;text=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;text=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1236,7 +1367,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;t=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;t=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1256,7 +1387,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Kimera%20VIO%20on%20EuRoC%20and%20Custom%20Datasets&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F"
+    href="mailto:?subject=Kimera%20VIO%20on%20EuRoC%20and%20Custom%20Datasets&amp;body=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1274,7 +1405,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;title=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F&amp;title=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1292,7 +1423,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets%20http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F"
+    href="whatsapp://send?text=Kimera&#43;VIO&#43;on&#43;EuRoC&#43;and&#43;Custom&#43;Datasets%20https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fkimera-vio%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1342,7 +1473,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:1313/saikiran_juttu.github.io/" class="no-underline">
+      <a href="https://juttu-s.github.io/saikiran_juttu.github.io/" class="no-underline">
       Saikiran Juttu
       </a>
     </div>
@@ -1447,15 +1578,15 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/">
+        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/sg-slam/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Automated Insect Leg Labeling using DeepLabCut</span
+            >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Apr 15, 2024
+                Apr 19, 2024
               
             </span>
           </span>

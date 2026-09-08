@@ -2,75 +2,190 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Augmented Reality | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/augmented-reality/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/augmented-reality/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/augmented-reality/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/augmented-reality/index.xml" rel="self" type="application/rss+xml" />
     <description>Augmented Reality</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Augmented Reality</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/augmented-reality/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/augmented-reality/</link>
     </image>
     
     <item>
       <title>Camera Calibration and Augmented Reality</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</guid>
-      <description>&lt;p&gt;This project focused on calibrating a camera and using it to overlay &lt;strong&gt;virtual 3D objects in real-time video feeds&lt;/strong&gt; using OpenCV. It introduced concepts in camera intrinsics, pose estimation, and interactive augmented reality applications.&lt;/p&gt;
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/</guid>
+      <description>&lt;p&gt;Everything in marker-based AR rests on one number: how well you know the camera. This project works through that chain end to end in C++/OpenCV — detect a calibration target, solve for intrinsics, recover live pose, and project virtual geometry that stays locked to the target as the camera moves.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;A green wireframe object rendered over a chessboard with rainbow corner polylines and RGB origin axes&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6246078329211090082.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6792843897147638943.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp&#34;
+               width=&#34;474&#34;
+               height=&#34;411&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The virtual object holding its pose against the board.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Corner Detection &amp;amp; Calibration&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Detected checkerboard corners using OpenCV&lt;/li&gt;
-&lt;li&gt;Saved 3D-2D point correspondences&lt;/li&gt;
-&lt;li&gt;Performed calibration with &lt;code&gt;cv2.calibrateCamera()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Achieved reprojection error ≈ 0.544&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pose Estimation &amp;amp; Projection&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Used &lt;code&gt;solvePnP()&lt;/code&gt; to compute pose&lt;/li&gt;
-&lt;li&gt;Visualized 3D axes on the image using &lt;code&gt;projectPoints&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Render Virtual Objects&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Designed a 15-point &amp;ldquo;C&amp;rdquo; shape object in world space&lt;/li&gt;
-&lt;li&gt;Rendered its projection on camera view&lt;/li&gt;
-&lt;li&gt;Preserved 3D orientation as the camera moved&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;calibration&#34;&gt;Calibration&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;9×6 chessboard giving 54 interior corners&lt;/strong&gt;, detected on a live stream with sub-pixel refinement. Pressing &lt;code&gt;s&lt;/code&gt; banks the current frame&amp;rsquo;s corner locations along with their corresponding 3-D world points; &lt;code&gt;cv::calibrateCamera&lt;/code&gt; then solves for intrinsics and distortion. Fewer than five frames and it refuses — the parameters aren&amp;rsquo;t determined.&lt;/p&gt;
+&lt;p&gt;Recovered intrinsics for the laptop camera, from an initial guess of nothing more than a principal point at the image centre:&lt;/p&gt;
+$$K = \begin{bmatrix} 611.41 &amp; 0 &amp; 311.84 \\ 0 &amp; 613.70 &amp; 236.82 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$$&lt;p&gt;&lt;strong&gt;Final reprojection error: 0.545 px.&lt;/strong&gt; Intrinsics and distortion coefficients are written out as OpenCV YAML so later runs skip calibration entirely.&lt;/p&gt;
+&lt;h3 id=&#34;two-cameras-one-surprise&#34;&gt;Two cameras, one surprise&lt;/h3&gt;
+&lt;p&gt;Running the same procedure on an external USB webcam gave a notably better fit:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Camera&lt;/th&gt;
+          &lt;th&gt;fx, fy&lt;/th&gt;
+          &lt;th&gt;cx, cy&lt;/th&gt;
+          &lt;th&gt;Reprojection error&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Laptop integrated&lt;/td&gt;
+          &lt;td&gt;611.41, 613.70&lt;/td&gt;
+          &lt;td&gt;311.84, 236.82&lt;/td&gt;
+          &lt;td&gt;0.545 px&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;External USB webcam&lt;/td&gt;
+          &lt;td&gt;690.48, 693.37&lt;/td&gt;
+          &lt;td&gt;344.83, 239.23&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.150 px&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The webcam calibrates about &lt;strong&gt;3.6× better&lt;/strong&gt; — and the interesting part is that it does so while having &lt;em&gt;substantially larger&lt;/em&gt; distortion coefficients (k1 = −0.446 against −0.215, k3 = −4.44 against −1.76). More distortion, better fit. Those aren&amp;rsquo;t contradictory: the reprojection error measures how well the &lt;em&gt;model&lt;/em&gt; explains the observations, not how mild the lens is. A strongly distorted lens whose distortion is well-described by the radial polynomial will beat a milder lens whose residual behaviour the model can&amp;rsquo;t represent. Cheap wide optics can calibrate beautifully; the question is whether the model matches the physics.&lt;/p&gt;
+&lt;h2 id=&#34;pose&#34;&gt;Pose&lt;/h2&gt;
+&lt;p&gt;With intrinsics fixed, &lt;code&gt;solvePnP&lt;/code&gt; returns rotation and translation per frame. The sanity check is nicer than eyeballing an overlay — translate the camera to the right and watch the numbers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.378, 6.753, 40.531]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.627, 6.719, 40.485]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.759, 6.711, 40.504]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [8.070, 6.713, 40.486]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;X climbs monotonically, 7.378 → 8.070, while Y holds near 6.71 and Z near 40.49. That&amp;rsquo;s exactly right for pure lateral motion, and it&amp;rsquo;s a check on the physical meaning of the solution rather than on whether the render happens to look plausible.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Projected 3D axes anchored at the board origin with all 54 corners detected and linked&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu3207897690070648796.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu17627915606788624727.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp&#34;
+               width=&#34;633&#34;
+               height=&#34;388&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Detected corners and the projected 3-D axes at the board origin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cv::projectPoints&lt;/code&gt; then puts 3-D world points back onto the image plane — the board corners, RGB axes at the origin, and a virtual object defined as &lt;strong&gt;15 points forming an inverted C&lt;/strong&gt;, connected by lines drawn between their projections.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;extra-features&#34;&gt;Extra Features&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Harris corner detection to compare feature robustness&lt;/li&gt;
-&lt;li&gt;Live insertion of objects via webcam&lt;/li&gt;
-&lt;li&gt;Support for &lt;strong&gt;multiple checkerboards&lt;/strong&gt; in one scene&lt;/li&gt;
-&lt;li&gt;Replaced the checkerboard region with a &lt;strong&gt;custom image overlay&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;extension-tasks&#34;&gt;Extension Tasks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Compared calibrations of internal vs external webcams&lt;/li&gt;
-&lt;li&gt;Added keyboard control to insert virtual objects from pre-recorded videos&lt;/li&gt;
-&lt;li&gt;Used different board sizes (9x6, 6x6) in the same frame&lt;/li&gt;
-&lt;li&gt;Created &lt;strong&gt;multi-object AR scenes&lt;/strong&gt; from multiple markers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%204-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/103mUiSgL6q1pJ2LhHZq8z1r2gVORhIdA/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo Video&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/augmented-reality-calibration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This project was an exciting blend of &lt;strong&gt;computer vision theory and practical AR rendering&lt;/strong&gt; using OpenCV. It forms a solid foundation for advanced applications in robotics, pose tracking, and mixed-reality interfaces.&lt;/p&gt;
+&lt;h2 id=&#34;extensions&#34;&gt;Extensions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Making the marker stop looking like a marker.&lt;/strong&gt; The strongest result here: find the board&amp;rsquo;s four extreme corners, warp an arbitrary image into that quadrilateral, and render the virtual object on top of the warped result. The chessboard is still doing all the pose work underneath, but it&amp;rsquo;s no longer visible — which is the difference between a calibration demo and something you&amp;rsquo;d actually want in a scene.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;An arbitrary image warped over the chessboard region with the virtual object drawn on top&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu16920568668342420622.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu14363001692669884525.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp&#34;
+               width=&#34;491&#34;
+               height=&#34;395&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The board&amp;rsquo;s squares fully replaced, virtual geometry still tracking correctly.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two boards at once.&lt;/strong&gt; A (9,6) and a (6,6) board handled in a single frame, each solved for pose independently and each rendered with its own coloured pyramid. It degrades gracefully — remove one board and the other keeps tracking.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Two checkerboards of different sizes tracked simultaneously, each with its own coloured wireframe pyramid&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu10299970603627648674.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu7114270305068571192.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp&#34;
+               width=&#34;656&#34;
+               height=&#34;445&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Independent pose solutions for two different board geometries in one frame.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pre-recorded video mode.&lt;/strong&gt; Pressing &lt;code&gt;p&lt;/code&gt; runs the whole pipeline over recorded footage instead of the live feed, inserting virtual objects into video after the fact.&lt;/p&gt;
+&lt;h2 id=&#34;toward-markerless&#34;&gt;Toward markerless&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;cv::cornerHarris&lt;/code&gt; was added to explore features that don&amp;rsquo;t require a known target, swept over threshold, block size, aperture size and the Harris free parameter &lt;em&gt;k&lt;/em&gt;. Raising the threshold from 150 to 200 visibly thins the detections, dropping the finer corners first.&lt;/p&gt;
+&lt;p&gt;Detection is where this stopped, and it&amp;rsquo;s worth being precise about that: &lt;strong&gt;the markerless pipeline was designed, not built.&lt;/strong&gt; Going from Harris corners to a pose estimate needs frame-to-frame correspondence — SIFT or SURF descriptors matched across frames, then a transformation recovered from the matches, then projection using that pose. That&amp;rsquo;s the natural continuation and it isn&amp;rsquo;t implemented here.&lt;/p&gt;
+&lt;h2 id=&#34;a-note-on-the-target&#34;&gt;A note on the target&lt;/h2&gt;
+&lt;p&gt;The chessboard in these figures is being &lt;strong&gt;displayed on a phone screen&lt;/strong&gt; rather than printed. Convenient, and it never creases — but it&amp;rsquo;s a glossy emissive surface, which introduces specular highlights and probably accounts for some of the laptop camera&amp;rsquo;s worse reprojection error. A matte printed target on rigid backing is the better choice if the calibration itself is what matters.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++, OpenCV 4, CMake, on Windows and Ubuntu. &lt;code&gt;calibrateCamera&lt;/code&gt;, &lt;code&gt;solvePnP&lt;/code&gt;, &lt;code&gt;projectPoints&lt;/code&gt;, &lt;code&gt;cornerHarris&lt;/code&gt;; intrinsics persisted as OpenCV YAML. Two cameras: a laptop integrated camera and an external USB webcam.&lt;/p&gt;
 </description>
     </item>
     

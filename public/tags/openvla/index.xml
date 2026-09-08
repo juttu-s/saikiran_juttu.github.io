@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OpenVLA | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/openvla/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/openvla/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/openvla/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/openvla/index.xml" rel="self" type="application/rss+xml" />
     <description>OpenVLA</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>OpenVLA</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/openvla/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/openvla/</link>
     </image>
     
     <item>
       <title>Debugging OpenVLA on LIBERO — From 0% to 99% Success</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/vla-libero-bench/</link>
       <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/vla-libero-bench/</guid>
       <description>&lt;p&gt;A &lt;strong&gt;vision-language-action (VLA)&lt;/strong&gt; model that &amp;ldquo;loads successfully&amp;rdquo; and a VLA model that &lt;em&gt;works&lt;/em&gt; are two very different things. This project benchmarks &lt;strong&gt;OpenVLA&lt;/strong&gt; and &lt;strong&gt;OpenVLA-OFT&lt;/strong&gt; on the &lt;strong&gt;LIBERO&lt;/strong&gt; manipulation benchmark, and documents the gap between those two states.&lt;/p&gt;
 &lt;p&gt;The headline result is not the final accuracy — it is that a naive but seemingly correct integration scored &lt;strong&gt;0% across 250 episodes&lt;/strong&gt;, and every point of recovery came from a specific, identifiable bug at the model–simulator boundary.&lt;/p&gt;
 &lt;blockquote&gt;

@@ -2,136 +2,495 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ROS | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/ros/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/ros/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ros/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/ros/index.xml" rel="self" type="application/rss+xml" />
     <description>ROS</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>ROS</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/ros/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ros/</link>
     </image>
     
     <item>
-      <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</link>
-      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</guid>
-      <description>&lt;p&gt;This project implements &lt;strong&gt;SG-SLAM (Semantic Geometric SLAM)&lt;/strong&gt;, a system that fuses &lt;strong&gt;semantic object detection&lt;/strong&gt; with the geometric tracking pipeline of &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; to remain robust in &lt;strong&gt;dynamic environments&lt;/strong&gt;. Standard feature-based SLAM systems assume a static world, so moving objects (e.g., walking people) corrupt the map and degrade pose estimation. SG-SLAM removes these dynamic features before they ever reach the optimizer.&lt;/p&gt;
+      <title>Kimera VIO on EuRoC and Custom Datasets</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/</guid>
+      <description>&lt;p&gt;An evaluation and deployment project rather than an algorithms one. &lt;a href=&#34;https://github.com/MIT-SPARK/Kimera-VIO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kimera-VIO&lt;/a&gt; from MIT-SPARK was used as shipped; the work here was getting it running reproducibly, reproducing its published benchmark on EuRoC, and then pointing it at a sequence it had never seen — recorded on an Intel RealSense D455 in an ordinary office — to find out what breaks when you leave the benchmark behind.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;Classical visual SLAM extracts and tracks features across frames under a &lt;strong&gt;static-scene assumption&lt;/strong&gt;. When people or vehicles move through the scene, their features inject incorrect correspondences into the tracking thread, biasing pose estimates and polluting the global map. SG-SLAM addresses this by adding a &lt;strong&gt;semantic layer&lt;/strong&gt; that identifies and rejects dynamic content.&lt;/p&gt;
+&lt;h2 id=&#34;what-kimera-vio-is-doing&#34;&gt;What Kimera-VIO is doing&lt;/h2&gt;
+&lt;p&gt;Worth stating, because the interesting failure later only makes sense against it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Front end.&lt;/strong&gt; Shi-Tomasi corners on the left stereo image, tracked temporally with Lucas–Kanade optical flow, matched left-to-right and triangulated for depth, with outlier rejection on the resulting correspondences. IMU measurements between keyframes are preintegrated into a single relative-motion constraint and used for gravity alignment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back end.&lt;/strong&gt; A factor graph over position, orientation and velocity, with IMU factors and visual reprojection factors as edges, optimised incrementally by &lt;strong&gt;iSAM2&lt;/strong&gt; in GTSAM. Robust losses (Huber, Cauchy) absorb the outliers that survive the front end. Output is a pose trajectory, velocity estimates and a sparse landmark map.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Loop closure.&lt;/strong&gt; Kimera-RPGO detects loops and runs robust pose-graph optimisation over them to produce a globally consistent trajectory.&lt;/p&gt;
+&lt;h2 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h2&gt;
+&lt;p&gt;The deliverable that mattered most was a &lt;strong&gt;saved Docker image&lt;/strong&gt; with Kimera-VIO, ROS and every dependency preinstalled — distributed as a tarball so the whole pipeline comes up in three commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker load -i kimera-vio.tar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it kimera-vio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 visual.py data_pgo.csv     &lt;span class=&#34;c1&#34;&gt;# inside the container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Anyone who has built a VIO stack from source knows why this is worth doing. Kimera-VIO wants a specific GTSAM, which wants a specific Boost and Eigen, and the failure mode of getting it wrong is a pipeline that compiles and then silently estimates garbage. Pinning the whole environment means a result someone else can actually reproduce, and it makes &amp;ldquo;does this parameter change help?&amp;rdquo; a question you can answer in an afternoon instead of a week.&lt;/p&gt;
+&lt;p&gt;Stereo image pairs and IMU streams were synchronised and fed in through ROS.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;h2 id=&#34;euroc-benchmark&#34;&gt;EuRoC benchmark&lt;/h2&gt;
+&lt;p&gt;Run on the &lt;strong&gt;EuRoC MAV&lt;/strong&gt; Vicon Room 1 sequences — &lt;code&gt;V1_01&lt;/code&gt;, &lt;code&gt;V1_02&lt;/code&gt; and &lt;code&gt;V1_03&lt;/code&gt;, spanning easy, medium and difficult, with motion-capture ground truth. That&amp;rsquo;s three of the dataset&amp;rsquo;s eleven sequences; the Machine Hall and Vicon Room 2 sets weren&amp;rsquo;t covered.&lt;/p&gt;
+&lt;p&gt;ATE RMSE in metres, reproducing the published comparison across VIO pipelines:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Sequence&lt;/th&gt;
+          &lt;th&gt;OKVIS&lt;/th&gt;
+          &lt;th&gt;MSCKF&lt;/th&gt;
+          &lt;th&gt;ROVIO&lt;/th&gt;
+          &lt;th&gt;VINS-Mono&lt;/th&gt;
+          &lt;th&gt;Kimera-VIO&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_01&lt;/td&gt;
+          &lt;td&gt;0.09&lt;/td&gt;
+          &lt;td&gt;0.34&lt;/td&gt;
+          &lt;td&gt;0.10&lt;/td&gt;
+          &lt;td&gt;0.08&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.05&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_02&lt;/td&gt;
+          &lt;td&gt;0.20&lt;/td&gt;
+          &lt;td&gt;0.20&lt;/td&gt;
+          &lt;td&gt;0.10&lt;/td&gt;
+          &lt;td&gt;0.11&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.08&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;V1_03&lt;/td&gt;
+          &lt;td&gt;0.24&lt;/td&gt;
+          &lt;td&gt;0.67&lt;/td&gt;
+          &lt;td&gt;0.14&lt;/td&gt;
+          &lt;td&gt;0.18&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.07&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The pattern worth noting is the third row. Every other pipeline degrades on &lt;code&gt;V1_03&lt;/code&gt; — the difficult sequence, with faster and more aggressive motion — while Kimera-VIO holds at 0.07 m. Aggressive motion is &lt;em&gt;good&lt;/em&gt; for a visual-inertial system: it excites the IMU, which is what makes scale and gravity direction observable in the first place. Getting parameters into the range where that benchmark reproduces meant tuning IMU noise models, feature thresholds and optimiser tolerances. Throughput came out around &lt;strong&gt;25 FPS&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;custom-dataset&#34;&gt;Custom dataset&lt;/h2&gt;
+&lt;p&gt;Recorded with a &lt;strong&gt;RealSense D455&lt;/strong&gt; in a room of desks, monitors and the usual office clutter, walking an approximately oval path back to the starting point.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;The post-optimisation trajectory recovering the oval path walked during recording&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp 400w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu14690658229423064687.webp 760w,
+               /saikiran_juttu.github.io/project/kimera-vio/trajectory_hu16662803654171847119.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/kimera-vio/trajectory_hu18271531692901669461.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;576&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Trajectory after pose-graph optimisation. The plot renders the path in the x–y plane, so vertical motion isn&amp;rsquo;t shown.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There is &lt;strong&gt;no ground truth&lt;/strong&gt; for this sequence — no motion capture in an office — so everything here is qualitative. No ATE, no drift percentage, and any number attached to it would be invented. What it does show is loop closure working: the path returns to where it started rather than spiralling away.&lt;/p&gt;
+&lt;h3 id=&#34;starting-at-rest&#34;&gt;Starting at rest&lt;/h3&gt;
+&lt;p&gt;The most useful thing this sequence taught me was a failure at the very beginning of the recording, and it isn&amp;rsquo;t a bug — it&amp;rsquo;s a property of the problem.&lt;/p&gt;
+&lt;p&gt;Visual-inertial odometry recovers metric scale and gravity direction from the accelerometer. But an accelerometer at rest measures only gravity, and there is no way to separate &amp;ldquo;which way is down&amp;rdquo; from &amp;ldquo;how fast am I accelerating&amp;rdquo; without motion to disambiguate them. Start recording with the camera stationary and the initialiser has no excitation to work with; it converges on a poor estimate, and that error is baked into every pose that follows.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s exactly what happened — visible drift accumulated from the start of the trajectory, and it persisted until loop closure corrected it. It also explains the EuRoC pattern above: the &amp;ldquo;difficult&amp;rdquo; sequence is easier for VIO in this one specific respect. The practical lesson is that a data-collection protocol matters as much as a config file: move the camera through a few seconds of varied motion &lt;strong&gt;before&lt;/strong&gt; anything you care about, and the whole run improves.&lt;/p&gt;
+&lt;p&gt;Elsewhere in the sequence, low-texture regions produced feature sparsity and minor drift, which pose-graph optimisation largely absorbed.&lt;/p&gt;
+&lt;h2 id=&#34;limits-and-next-steps&#34;&gt;Limits and next steps&lt;/h2&gt;
+&lt;p&gt;Kimera-VIO&amp;rsquo;s weak points on this data were the ones its authors document: drift in low-texture regions, and sensitivity to outlier visual measurements. The obvious extensions, in order of how much they&amp;rsquo;d change the picture:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Semantic frontend:&lt;/strong&gt; Integrated a &lt;strong&gt;YOLO-based object detection network&lt;/strong&gt; into the &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; tracking thread to detect a priori dynamic classes (e.g., humans).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dynamic feature filtering:&lt;/strong&gt; Features falling inside detected dynamic bounding boxes are discarded before pose estimation and map optimization, preventing them from corrupting the map.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Geometric backend:&lt;/strong&gt; The remaining static features feed the standard ORB-SLAM2 tracking, local mapping, and loop-closure modules for consistent map optimization.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stack:&lt;/strong&gt; Implemented in &lt;strong&gt;C++&lt;/strong&gt; within ORB-SLAM2, with the detection network in &lt;strong&gt;PyTorch&lt;/strong&gt;, integrated under &lt;strong&gt;ROS&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Metric-semantic mapping.&lt;/strong&gt; This used the VIO half of the Kimera suite only. Kimera-Semantics builds a semantically annotated mesh from the same pipeline, which is where the interesting downstream work is.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outdoor and larger scale&lt;/strong&gt;, to see where the factor graph stops being tractable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LiDAR as an additional modality&lt;/strong&gt;, for the feature-poor cases where vision alone degrades.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;Kimera-VIO (MIT-SPARK), GTSAM, ROS, Docker, Python, matplotlib. Datasets: EuRoC MAV V1_01–V1_03; self-collected RealSense D455 stereo + IMU.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</guid>
+      <description>&lt;p&gt;Feature-based visual SLAM assumes the world holds still. It doesn&amp;rsquo;t. When someone walks through the frame, their features get matched across keyframes like any other, and the optimiser dutifully fits a camera trajectory to a person who was never part of the scene geometry. On the TUM &lt;code&gt;fr3/walking_*&lt;/code&gt; sequences this is not a marginal degradation — ORB-SLAM2&amp;rsquo;s absolute trajectory error goes to roughly half a metre.&lt;/p&gt;
+&lt;p&gt;This project reimplements &lt;strong&gt;SG-SLAM&lt;/strong&gt; (&lt;a href=&#34;https://ieeexplore.ieee.org/document/10018238&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cheng, Sun, Zhang &amp;amp; Zhang, &lt;em&gt;IEEE TIM&lt;/em&gt; vol. 72, 2023&lt;/a&gt;), which addresses this by adding two parallel threads to ORB-SLAM2 — one for object detection, one for semantic mapping — and a feature-rejection stage in the tracking thread that consults both geometry and semantics before deciding what to keep.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SG-SLAM running on a live RGB-D stream: ORB features tracked on the static scene while a person walks through the frame, the keyframe graph, and the semantically labelled point cloud in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu10093939004686469362.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu15078296984376168334.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;422&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The three threads running together. Left: the live frame — note the green ORB features sit on desks, walls and shelving, not on the person. Bottom: the reconstructed point cloud with detected objects labelled and localised.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-not-just-mask-out-the-people&#34;&gt;Why not just mask out the people&lt;/h2&gt;
+&lt;p&gt;The obvious approach is to run a detector, draw boxes around every &lt;em&gt;a priori&lt;/em&gt; dynamic class, and discard whatever falls inside. That fails in both directions, and SG-SLAM&amp;rsquo;s design is a direct response to each failure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Things move that aren&amp;rsquo;t in a box.&lt;/strong&gt; A detector trained on 20 classes will miss a swinging door, a rolling cart, a shadow. Masking gives you no protection outside the boxes it drew.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things in boxes aren&amp;rsquo;t always moving.&lt;/strong&gt; A parked chair, an empty sofa, a person sitting perfectly still — all get classified dynamic, all get thrown away. In a cluttered indoor scene that can mean discarding the best-textured features you have.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-rejection-criterion&#34;&gt;The rejection criterion&lt;/h2&gt;
+&lt;p&gt;The mechanism that avoids both is worth reading closely, because it is subtler than a mask. Reproduced from the paper&amp;rsquo;s Algorithm 1:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Input:  Previous frame F1, current frame F2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Feature points P1 (previous), P2 (current)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Standard empirical threshold e_std
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Output: Set S of static feature points in the current frame
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1: P1 = CalcOpticalFlowPyrLK(F2, F1, P2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 2: Remove matched pairs at image edges or with large appearance variation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 3: F = FindFundamentalMat(P2, P1, 7-point method with RANSAC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 4: for each matched pair (p1, p2) in (P1, P2) do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 5:     if DynamicObjectsExist and IsInDynamicRegion(p2) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 6:         if CalcEpiLineDistance(p2, p1, F) * GetDynamicWeightValue(p2) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 7:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 8:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 9:     else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10:         if CalcEpiLineDistance(p2, p1, F) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13:     end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14: end for
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is &lt;strong&gt;one&lt;/strong&gt; threshold, &lt;code&gt;e_std&lt;/code&gt;, and it is compared against a point-to-epipolar-line distance in both branches. The difference is that inside a detected region (line 6) that distance is first &lt;strong&gt;multiplied&lt;/strong&gt; by the object class&amp;rsquo;s dynamic weight.&lt;/p&gt;
+&lt;p&gt;So semantics act as a per-class multiplier on the geometric residual, not as a veto. A high-weight class like a person has its residual inflated, so it gets rejected on much weaker geometric evidence than a low-weight class like a chair. But a genuinely stationary object still passes — its epipolar distance is near zero, and scaling near-zero by three is still near-zero. Meanwhile line 10 runs everywhere the detector saw nothing, so unmodelled motion is still caught geometrically.&lt;/p&gt;
+&lt;p&gt;Two implementation details that are easy to miss: the optical flow at line 1 runs &lt;strong&gt;backwards&lt;/strong&gt;, tracking the current frame&amp;rsquo;s points into the previous frame to reconstruct correspondences, and the fundamental matrix uses the &lt;strong&gt;seven-point&lt;/strong&gt; method inside RANSAC rather than the more common normalised eight-point variant.&lt;/p&gt;
+&lt;h2 id=&#34;detector&#34;&gt;Detector&lt;/h2&gt;
+&lt;p&gt;Detection runs an &lt;strong&gt;SSD with a MobileNetV3 backbone under NCNN&lt;/strong&gt;, Tencent&amp;rsquo;s mobile CPU inference framework. That choice is what makes the real-time claim plausible without a GPU in the loop — the whole point of SG-SLAM over heavier semantic-SLAM systems is that it targets mobile platforms. The tracking thread computes its geometric quantities, blocks on the detector&amp;rsquo;s 2-D result for that frame, then runs rejection and tracks; only surviving features reach local mapping, loop closing and full bundle adjustment, all of which are unmodified ORB-SLAM2.&lt;/p&gt;
+&lt;div style=&#34;display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start&#34;&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Detection overlay with bounding boxes and class confidences&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu10414967818364573976.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu7677053416326043211.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;226&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Detection on a live frame.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Semantic object map with per-object 3D coordinates in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13843709679552535452.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13383796692928516754.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;233&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Objects localised in 3-D with class labels.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The semantic mapping thread fuses the 2-D detections with per-keyframe point clouds generated from the depth images and camera poses, then extracts each object&amp;rsquo;s position and extent into a 3-D semantic object database. That database, a global OctoMap and the camera poses are all published over ROS for RViz — which is the real difference from plain ORB-SLAM2, whose output is a sparse cloud with no idea what anything is.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Achieved a &lt;strong&gt;31% accuracy improvement&lt;/strong&gt; on the &lt;strong&gt;TUM RGB-D dynamic sequence&lt;/strong&gt; benchmarks.&lt;/li&gt;
-&lt;li&gt;Prevented dynamic objects from corrupting the map optimization, yielding cleaner reconstructions and more stable trajectories in scenes with moving people.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Benchmark figures below are the published results from Cheng et al., reproduced here rather than independently measured. Metric is &lt;strong&gt;ATE RMSE in metres&lt;/strong&gt; — these are error &lt;em&gt;reductions&lt;/em&gt;, not accuracy gains.&lt;/p&gt;
+&lt;h3 id=&#34;tum-rgb-d&#34;&gt;TUM RGB-D&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Sequence&lt;/th&gt;
+          &lt;th&gt;Dynamics&lt;/th&gt;
+          &lt;th&gt;ORB-SLAM2&lt;/th&gt;
+          &lt;th&gt;SG-SLAM&lt;/th&gt;
+          &lt;th&gt;Reduction&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4032&lt;/td&gt;
+          &lt;td&gt;0.0079&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;98.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_xyz&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.6826&lt;/td&gt;
+          &lt;td&gt;0.0171&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;97.50%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_rpy&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.5396&lt;/td&gt;
+          &lt;td&gt;0.0326&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.95%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_halfsphere&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4462&lt;/td&gt;
+          &lt;td&gt;0.0309&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.07%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/sitting_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;low&lt;/td&gt;
+          &lt;td&gt;0.0087&lt;/td&gt;
+          &lt;td&gt;0.0060&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;31.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;bonn-rgb-d-dynamic-9-sequences&#34;&gt;Bonn RGB-D Dynamic (9 sequences)&lt;/h3&gt;
+&lt;p&gt;Best and worst of the set: &lt;code&gt;synchronous2&lt;/code&gt; improves 1.4069 → 0.0164 m (&lt;strong&gt;98.83%&lt;/strong&gt;), while &lt;code&gt;synchronous&lt;/code&gt; — nominally the same scene, different take — only reaches 1.1411 → 0.3262 m (&lt;strong&gt;71.41%&lt;/strong&gt;). The &lt;code&gt;moving_nonobstructing_box&lt;/code&gt; pair land around 71–79%, the &lt;code&gt;crowd&lt;/code&gt; and &lt;code&gt;person_tracking&lt;/code&gt; sequences 93–97%.&lt;/p&gt;
+&lt;h3 id=&#34;reading-the-numbers-honestly&#34;&gt;Reading the numbers honestly&lt;/h3&gt;
+&lt;p&gt;Two things about this table are worth saying out loud, because they&amp;rsquo;re the parts a results summary usually hides.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The 31% on &lt;code&gt;sitting_static&lt;/code&gt; isn&amp;rsquo;t a weak result, it&amp;rsquo;s the control.&lt;/strong&gt; That sequence is low-dynamic — a person seated, barely moving. There is almost nothing for dynamic-feature rejection to remove, so the gain collapses to a third of what the walking sequences show. The rotational-drift table is starker still: 7.99% on the same sequence. That&amp;rsquo;s the expected shape of the result, and it&amp;rsquo;s evidence the mechanism is doing what it claims rather than just globally discarding features.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RMSE improves far more than the median does.&lt;/strong&gt; On &lt;code&gt;walking_static&lt;/code&gt; the ATE RMSE drops 98% while the RPE median improvements sit at 43–53%. The gain is concentrated in &lt;em&gt;catastrophic&lt;/em&gt; frames — the ones where a person crossing the view wrecks the pose estimate entirely — not in the typical frame. That&amp;rsquo;s the right thing for a SLAM system to fix, since a single badly-corrupted keyframe propagates into the map, but it does mean &amp;ldquo;98% better&amp;rdquo; describes the tail, not the average.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ORB-SLAM2 (C++)&lt;/li&gt;
-&lt;li&gt;YOLO object detection (PyTorch)&lt;/li&gt;
-&lt;li&gt;ROS&lt;/li&gt;
-&lt;li&gt;TUM RGB-D Dataset (dynamic sequences)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This project demonstrates how a lightweight semantic layer can make geometric SLAM robust to real-world dynamics — a key requirement for deploying autonomous robots in environments shared with people.&lt;/p&gt;
+&lt;h2 id=&#34;where-it-breaks&#34;&gt;Where it breaks&lt;/h2&gt;
+&lt;p&gt;The failure mode falls straight out of Algorithm 1, and the paper is upfront about it: &lt;strong&gt;an object moving along the epipolar line direction is invisible to this test.&lt;/strong&gt; Its features produce a point-to-epipolar-line distance of approximately zero despite genuinely moving, so line 10 accepts them as static. The semantic branch doesn&amp;rsquo;t save you either — multiplying a near-zero residual by a dynamic weight still clears the threshold. In practice that means someone walking directly toward or away from the camera is much harder to reject than someone crossing the view.&lt;/p&gt;
+&lt;p&gt;The other open item is semantic map precision. Object extents come from thresholding a depth-derived point cloud inside a 2-D box, which is coarse — good enough to say &amp;ldquo;there is a monitor at roughly here&amp;rdquo;, not good enough for manipulation.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++ (ORB-SLAM2 core), Python, Ubuntu 18.04, ROS Melodic, NCNN, OpenCV, OctoMap, RViz. Evaluated on TUM RGB-D and the Bonn RGB-D Dynamic dataset.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Dead Reckoning with IMU &amp; GPS in Vehicle Navigation</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</link>
-      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</guid>
-      <description>&lt;p&gt;This project involved real-world testing of &lt;strong&gt;dead reckoning navigation&lt;/strong&gt; using an &lt;strong&gt;IMU (VectorNav 100)&lt;/strong&gt; and GPS data mounted in a car. We collected and fused sensor data to estimate vehicle trajectory and compared it against ground truth GPS tracks.&lt;/p&gt;
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/dead-reckoning/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/dead-reckoning/</guid>
+      <description>&lt;p&gt;Take away the GPS fix and a vehicle has to work out where it is from acceleration and rotation alone. This project does that end to end on real data — instrument a car, calibrate the magnetometer properly, fuse a heading estimate, integrate forward velocity, and reconstruct the trajectory — then compares the result against GPS to find out how long dead reckoning actually survives.&lt;/p&gt;
+&lt;p&gt;The short answer: &lt;strong&gt;about three minutes.&lt;/strong&gt; After that it is off by the length of a city block.&lt;/p&gt;
+&lt;p&gt;Coursework for &lt;strong&gt;EECE5554: Robotics Sensing and Navigation&lt;/strong&gt; at Northeastern.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;objective&#34;&gt;Objective&lt;/h3&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;VectorNav VN-100&lt;/strong&gt; IMU mounted inside the vehicle in a custom holder, deliberately aligned so its &lt;strong&gt;x-axis points along the vehicle&amp;rsquo;s forward direction&lt;/strong&gt; and the unit sits level. That alignment is doing real work later — it&amp;rsquo;s what lets &lt;code&gt;accel_x&lt;/code&gt; be treated as forward acceleration and &lt;code&gt;accel_y&lt;/code&gt; as lateral without a rotation. A magnetic-mount GPS puck went on the roof, both feeding one laptop over ROS.&lt;/p&gt;
+&lt;p&gt;Two datasets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Use IMU (accel, gyro, mag) for estimating yaw and velocity&lt;/li&gt;
-&lt;li&gt;Compare integrated dead reckoning trajectory with GPS&lt;/li&gt;
-&lt;li&gt;Apply calibration and filtering for high-speed vehicle navigation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;methodology&#34;&gt;Methodology&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Sensor Mounting &amp;amp; Data Collection&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IMU mounted flat, aligned to vehicle axis&lt;/li&gt;
-&lt;li&gt;GPS puck on roof&lt;/li&gt;
-&lt;li&gt;ROS bagged data over a 2–3 km drive around Boston&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Magnetometer Calibration&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applied hard &amp;amp; soft iron corrections using ellipse fitting&lt;/li&gt;
-&lt;li&gt;Centered &amp;amp; scaled magnetometer output&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Yaw Estimation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Used complementary filter combining:
-&lt;ul&gt;
-&lt;li&gt;Low-pass filtered magnetometer (0.5 Hz cutoff)&lt;/li&gt;
-&lt;li&gt;High-pass filtered gyro data (0.1 Hz cutoff)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Fusion coefficient α = 0.98&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Velocity Estimation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Acceleration filtered with high-pass Butterworth&lt;/li&gt;
-&lt;li&gt;Integrated over time&lt;/li&gt;
-&lt;li&gt;Clamped negative values to zero and capped outliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Trajectory Reconstruction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrated filtered heading + velocity&lt;/li&gt;
-&lt;li&gt;Rotated &amp;amp; scaled to align IMU trajectory with GPS path&lt;/li&gt;
-&lt;li&gt;Best match scale: 2.25, rotation correction: 14–25°&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Initial path tracking was highly accurate&lt;/li&gt;
-&lt;li&gt;IMU-based dead reckoning remained within &lt;strong&gt;2m&lt;/strong&gt; of GPS for &lt;strong&gt;150–200 seconds&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Final drift reached nearly &lt;strong&gt;400 meters&lt;/strong&gt; after extended driving&lt;/li&gt;
-&lt;li&gt;GPS helps correct IMU drift over long durations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Circles&lt;/strong&gt; — five laps of the Ruggles station circle, recorded purely to excite the magnetometer through a full 360° of heading. This is calibration data, not navigation data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Driving&lt;/strong&gt; — a 2–3 km route around Boston with at least ten turns, roughly 1300 s, routed to avoid tunnels and underpasses so the GPS reference stays continuous.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;key-insights&#34;&gt;Key Insights&lt;/h3&gt;
+&lt;h2 id=&#34;magnetometer-calibration&#34;&gt;Magnetometer calibration&lt;/h2&gt;
+&lt;p&gt;An uncalibrated magnetometer driven in a circle should trace a circle. It doesn&amp;rsquo;t, and the two ways it fails are visually distinguishable from the same scatter plot:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Magnetometer X-Y scatter before and after calibration — the measured ring offset from the origin, the calibrated ring centred on it&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu6564607695943048432.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu4157646788420770913.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu17823870522234568360.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu6564607695943048432.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;573&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Five laps of the Ruggles circle. Orange is raw, blue is corrected.&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;IMU is accurate for short-term dead reckoning&lt;/li&gt;
-&lt;li&gt;Drift arises from gyroscope bias and sloped paths&lt;/li&gt;
-&lt;li&gt;Regular GPS re-calibration is essential for long-term navigation&lt;/li&gt;
-&lt;li&gt;Complementary filter effectively combines noisy sensors&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The ring is off-centre&lt;/strong&gt; → &lt;strong&gt;hard iron&lt;/strong&gt; distortion. A constant field offset from permanent magnets, ferrous structure or current-carrying conductors near the sensor. The raw ring here sits up and to the right of the origin, biased by roughly 0.27 G in x and 0.22 G in y. Correction is a per-axis bias subtraction that recentres the cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The ring is deformed&lt;/strong&gt; → &lt;strong&gt;soft iron&lt;/strong&gt; distortion. Non-uniform scaling and rotation from nearby ferrous material. You can see it in both rings as a distinct kink near the +x side — the shape isn&amp;rsquo;t circular and no amount of translation fixes that. Correction is a matrix that scales and rotates the data back toward a circle.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;p&gt;The parameters come from a least-squares ellipse fit to the circle-driving data, applied as bias subtraction followed by the correction matrix. Being able to read &lt;em&gt;which&lt;/em&gt; distortion you have off the plot before fixing either is the useful part of this exercise — the two have different causes and different remedies, and the geometry tells you which you&amp;rsquo;re looking at.&lt;/p&gt;
+&lt;h2 id=&#34;heading&#34;&gt;Heading&lt;/h2&gt;
+&lt;p&gt;Neither heading source is usable alone. The magnetometer gives absolute heading but is noisy and sensitive to the vehicle&amp;rsquo;s own electrical and magnetic environment. The gyro is clean over short intervals but integrates its bias without bound — the raw integrated yaw here climbs to about &lt;strong&gt;+405°&lt;/strong&gt; by t ≈ 560 s and plateaus near 300°, which is meaningless as an absolute heading.&lt;/p&gt;
+&lt;p&gt;A complementary filter takes the half of each signal that&amp;rsquo;s trustworthy:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/LAB%205%20report-1.pdf&#34;&gt;Lab 5 Report (PDF)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/dead-reckoning-imu-gps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0.5 Hz low-pass&lt;/strong&gt; on magnetometer yaw — keeps the slow-moving absolute reference, discards the noise&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0.1 Hz high-pass&lt;/strong&gt; on gyro yaw — keeps short-term rate fidelity, discards the drift&lt;/li&gt;
+&lt;li&gt;blended with coefficient &lt;strong&gt;0.98&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Four-panel comparison: low-passed magnetometer yaw, high-passed gyro yaw, complementary filter output, and the VN-100&amp;rsquo;s own onboard heading estimate&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu16052623581733354419.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu9034352427183490476.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu864362406907695216.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu16052623581733354419.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;372&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The two filtered branches, the fused output, and the VN-100&amp;rsquo;s internal estimate for comparison.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;This project demonstrates real-world dead reckoning with consumer-grade sensors and sets the foundation for more robust SLAM and localization strategies in mobile robotics or autonomous vehicles.&lt;/p&gt;
+&lt;h2 id=&#34;forward-velocity-and-the-number-that-gave-the-game-away&#34;&gt;Forward velocity, and the number that gave the game away&lt;/h2&gt;
+&lt;p&gt;Integrating raw accelerometer output produces nonsense. The raw forward-velocity trace peaks around &lt;strong&gt;+35 m/s&lt;/strong&gt; and dips to &lt;strong&gt;−15 m/s&lt;/strong&gt; — the car did neither. That&amp;rsquo;s accelerometer bias being integrated into an unbounded ramp, plus road vibration and the gravity component that any unnoticed slope injects into the forward axis.&lt;/p&gt;
+&lt;p&gt;Two corrections bring it into physical range: a high-pass filter on forward acceleration to strip the low-frequency bias, then clamps — negative velocities to zero, plus an upper bound. That gets the adjusted trace to a plausible &lt;strong&gt;0–11 m/s&lt;/strong&gt;, against GPS-derived velocity peaking at 12.7 m/s.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Raw integrated forward velocity against the filtered and clamped version&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu6766549600153078957.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu2268536860800196880.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu229241971526026250.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu6766549600153078957.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;398&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Blue: integrate the raw signal and the car reaches 35 m/s and reverses. Orange: after high-pass filtering and clamping.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then aligning the dead-reckoned track to GPS required scaling the IMU distances by &lt;strong&gt;2.25×&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;That factor is the most informative number in the whole project, and it isn&amp;rsquo;t a calibration constant — it&amp;rsquo;s a symptom. A 2.25× scale error means the integrated velocity was systematically &lt;strong&gt;less than half&lt;/strong&gt; the true speed, and both corrections above are implicated. The high-pass filter that removed accelerometer bias also removed genuine low-frequency acceleration, because a car accelerating gently from a light and a slowly-drifting bias occupy the same part of the spectrum. And clamping negative velocity to zero doesn&amp;rsquo;t just discard drift — it &lt;strong&gt;rectifies&lt;/strong&gt; the signal, converting every real deceleration the drifting integrator pushed below zero into &amp;ldquo;stationary&amp;rdquo;. Distance travelled comes out short in both cases.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The filter that fixed the drift destroyed the scale.&lt;/strong&gt; Getting both would need the bias estimated as a state rather than filtered out — which is the argument for a Kalman filter over hand-tuned Butterworths, and the direction I&amp;rsquo;d take this next.&lt;/p&gt;
+&lt;h2 id=&#34;trajectory&#34;&gt;Trajectory&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Dead-reckoned trajectory beside the GPS ground track, both in Easting/Northing metres&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu12573546119952805973.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu11079378006867108752.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu14489892853533858604.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu12573546119952805973.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;347&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Dead-reckoned track (left) against GPS (right). The shape survives; the extent doesn&amp;rsquo;t.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Projecting forward velocity onto the fused heading and integrating gives the track above, aligned to GPS by matching start coordinates and the first straight segment.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The two agree to within about &lt;strong&gt;2 m for the first 150–200 s&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;After that they diverge, reaching roughly &lt;strong&gt;400 m&lt;/strong&gt; of displacement error by the end of the ~2–3 km route&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dead reckoning worked best exactly where you&amp;rsquo;d expect — early, on straight, level road. It degraded with each successive turn, and the two causes are &lt;strong&gt;gyro bias instability&lt;/strong&gt; feeding heading error into every subsequent position update, and &lt;strong&gt;unanticipated road slopes&lt;/strong&gt; tilting gravity onto the forward axis where it gets integrated as acceleration.&lt;/p&gt;
+&lt;p&gt;One honest wrinkle in the alignment: the IMU track was rotated 14° and the GPS track 25°, in opposite service of making the first straight segments agree. Rotating &lt;em&gt;both&lt;/em&gt; by &lt;em&gt;different&lt;/em&gt; amounts means the result no longer references true north — a single rotation of the difference would have been the defensible choice.&lt;/p&gt;
+&lt;h2 id=&#34;the-takeaway&#34;&gt;The takeaway&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s a usable operating envelope here and it&amp;rsquo;s narrow. Roughly &lt;strong&gt;150–200 seconds of GPS outage&lt;/strong&gt; is survivable at 2 m accuracy, which is enough to cross a tunnel or an urban canyon. It is nowhere near enough to navigate on, and the failure is not graceful — error grows superlinearly as heading error compounds. Any real system needs periodic absolute fixes, and the interesting engineering question is how sparse those fixes can be, not whether you need them.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;ROS (rosbag, sensor nodes), Python, SciPy (&lt;code&gt;butter&lt;/code&gt;/&lt;code&gt;filtfilt&lt;/code&gt;, least-squares fitting), matplotlib, UTM projection. Hardware: VectorNav VN-100, magnetic-mount GPS puck, Northeastern&amp;rsquo;s instrumented &amp;ldquo;nuance&amp;rdquo; vehicle.&lt;/p&gt;
 </description>
     </item>
     

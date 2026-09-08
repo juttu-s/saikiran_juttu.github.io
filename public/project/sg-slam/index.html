@@ -3,7 +3,7 @@
 <!-- Last Published: September 8, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/saikiran_juttu.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=saikiran_juttu.github.io/livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Integrated a YOLO-based object detector into the ORB-SLAM2 frontend to filter dynamic features, improving tracking accuracy by 31% on the TUM RGB-D dynamic sequences." />
+  <meta name="description" content="Reimplemented SG-SLAM — an RGB-D SLAM system that filters dynamic features by scaling their epipolar residual with a per-class semantic weight — and reproduced its benchmark against ORB-SLAM2 on 14 TUM and Bonn sequences." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/" />
+  <link rel="alternate" hreflang="en-us" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/" />
+  <link rel="canonical" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/" />
 
   
   
@@ -172,7 +172,6 @@
   
   
     
-    
   
   
 
@@ -181,21 +180,21 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:url" content="http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/" />
+  <meta property="og:url" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/" />
   <meta property="og:title" content="Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes | Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:description" content="Integrated a YOLO-based object detector into the ORB-SLAM2 frontend to filter dynamic features, improving tracking accuracy by 31% on the TUM RGB-D dynamic sequences." /><meta property="og:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Reimplemented SG-SLAM — an RGB-D SLAM system that filters dynamic features by scaling their epipolar residual with a per-class semantic weight — and reproduced its benchmark against ORB-SLAM2 on 14 TUM and Bonn sequences." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/featured.png" />
+    <meta property="twitter:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-03-15T00:00:00&#43;00:00"
+        content="2024-04-19T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-03-15T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-04-19T00:00:00&#43;00:00">
   
 
   
@@ -217,12 +216,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/"
+    "@id": "https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/"
   },
   "headline": "Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes",
   
-  "datePublished": "2025-03-15T00:00:00Z",
-  "dateModified": "2025-03-15T00:00:00Z",
+  "image": [
+    "https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/featured.png"
+  ],
+  
+  "datePublished": "2024-04-19T00:00:00Z",
+  "dateModified": "2024-04-19T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -234,10 +237,10 @@
     "name": "Northeastern University",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
+      "url": "https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
     }
   },
-  "description": "Integrated a YOLO-based object detector into the ORB-SLAM2 frontend to filter dynamic features, improving tracking accuracy by 31% on the TUM RGB-D dynamic sequences."
+  "description": "Reimplemented SG-SLAM — an RGB-D SLAM system that filters dynamic features by scaling their epipolar residual with a per-class semantic weight — and reproduced its benchmark against ORB-SLAM2 on 14 TUM and Bonn sequences."
 }
 </script>
 
@@ -324,23 +327,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     
       
       
@@ -414,6 +400,27 @@
         
       
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -617,8 +624,8 @@
   
   <script
     defer
-    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -851,49 +858,6 @@
   >Autonomous Race Driving with Action Mapping RL
     </a>
               
-            </li><li class="flex flex-col open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/saikiran_juttu.github.io/project/sg-slam/"
-    
-  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
-    </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#motivation"
-                class="hb-docs-link"
-              >Motivation</a>
-            </li>
-          <li>
-              <a
-                href="#approach"
-                class="hb-docs-link"
-              >Approach</a>
-            </li>
-          <li>
-              <a
-                href="#results"
-                class="hb-docs-link"
-              >Results</a>
-            </li>
-          <li>
-              <a
-                href="#tools--libraries"
-                class="hb-docs-link"
-              >Tools &amp;amp; Libraries</a>
-            </li>
-          </ul>
-  
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/quadrotor-control/"
-    
-  >Control Strategies for Quadrotor Position and Altitude
-    </a>
-              
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
@@ -918,12 +882,67 @@
   >Kimera VIO on EuRoC and Custom Datasets
     </a>
               
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/saikiran_juttu.github.io/project/sg-slam/"
+    
+  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#why-not-just-mask-out-the-people"
+                class="hb-docs-link"
+              >Why not just mask out the people</a>
+            </li>
+          <li>
+              <a
+                href="#the-rejection-criterion"
+                class="hb-docs-link"
+              >The rejection criterion</a>
+            </li>
+          <li>
+              <a
+                href="#detector"
+                class="hb-docs-link"
+              >Detector</a>
+            </li>
+          <li>
+              <a
+                href="#results"
+                class="hb-docs-link"
+              >Results</a>
+            </li>
+          <li>
+              <a
+                href="#where-it-breaks"
+                class="hb-docs-link"
+              >Where it breaks</a>
+            </li>
+          <li>
+              <a
+                href="#stack"
+                class="hb-docs-link"
+              >Stack</a>
+            </li>
+          </ul>
+  
+              
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/"
     
   >Automated Insect Leg Labeling using DeepLabCut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    
+  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
     </a>
               
             </li><li class="flex flex-col "><a
@@ -953,9 +972,9 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    href="/saikiran_juttu.github.io/project/quadrotor-control/"
     
-  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
+  >Control Strategies for Quadrotor Position and Altitude
     </a>
               
             </li></ul>
@@ -1052,16 +1071,31 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#motivation">Motivation</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-not-just-mask-out-the-people">Why not just mask out the people</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#approach">Approach</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-rejection-criterion">The rejection criterion</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#detector">Detector</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#results">Results</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tools--libraries">Tools &amp; Libraries</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tum-rgb-d">TUM RGB-D</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#bonn-rgb-d-dynamic-9-sequences">Bonn RGB-D Dynamic (9 sequences)</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-the-numbers-honestly">Reading the numbers honestly</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#where-it-breaks">Where it breaks</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#stack">Stack</a>
       </li></ul>
 
   
@@ -1097,13 +1131,13 @@
       <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</h1>
 
       <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Mar 15, 2025</span>
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Apr 19, 2024</span>
         
 
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          2 min read
+          6 min read
         </span>
         
         </div>
@@ -1113,6 +1147,48 @@
 
 
 
+
+<div class="">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/juttu-s/sg-slam-reproduction" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
         </div>
@@ -1128,41 +1204,206 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>This project implements <strong>SG-SLAM (Semantic Geometric SLAM)</strong>, a system that fuses <strong>semantic object detection</strong> with the geometric tracking pipeline of <strong>ORB-SLAM2</strong> to remain robust in <strong>dynamic environments</strong>. Standard feature-based SLAM systems assume a static world, so moving objects (e.g., walking people) corrupt the map and degrade pose estimation. SG-SLAM removes these dynamic features before they ever reach the optimizer.</p>
+        <p>Feature-based visual SLAM assumes the world holds still. It doesn&rsquo;t. When someone walks through the frame, their features get matched across keyframes like any other, and the optimiser dutifully fits a camera trajectory to a person who was never part of the scene geometry. On the TUM <code>fr3/walking_*</code> sequences this is not a marginal degradation — ORB-SLAM2&rsquo;s absolute trajectory error goes to roughly half a metre.</p>
+<p>This project reimplements <strong>SG-SLAM</strong> (<a href="https://ieeexplore.ieee.org/document/10018238" target="_blank" rel="noopener">Cheng, Sun, Zhang &amp; Zhang, <em>IEEE TIM</em> vol. 72, 2023</a>), which addresses this by adding two parallel threads to ORB-SLAM2 — one for object detection, one for semantic mapping — and a feature-rejection stage in the tracking thread that consults both geometry and semantics before deciding what to keep.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="SG-SLAM running on a live RGB-D stream: ORB features tracked on the static scene while a person walks through the frame, the keyframe graph, and the semantically labelled point cloud in RViz" srcset="
+               /saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu10093939004686469362.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu15078296984376168334.webp 1200w"
+               src="/saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp"
+               width="760"
+               height="422"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>The three threads running together. Left: the live frame — note the green ORB features sit on desks, walls and shelving, not on the person. Bottom: the reconstructed point cloud with detected objects labelled and localised.</em></p>
 <hr>
-<h2 id="motivation">Motivation</h2>
-<p>Classical visual SLAM extracts and tracks features across frames under a <strong>static-scene assumption</strong>. When people or vehicles move through the scene, their features inject incorrect correspondences into the tracking thread, biasing pose estimates and polluting the global map. SG-SLAM addresses this by adding a <strong>semantic layer</strong> that identifies and rejects dynamic content.</p>
-<hr>
-<h2 id="approach">Approach</h2>
+<h2 id="why-not-just-mask-out-the-people">Why not just mask out the people</h2>
+<p>The obvious approach is to run a detector, draw boxes around every <em>a priori</em> dynamic class, and discard whatever falls inside. That fails in both directions, and SG-SLAM&rsquo;s design is a direct response to each failure:</p>
 <ul>
-<li><strong>Semantic frontend:</strong> Integrated a <strong>YOLO-based object detection network</strong> into the <strong>ORB-SLAM2</strong> tracking thread to detect a priori dynamic classes (e.g., humans).</li>
-<li><strong>Dynamic feature filtering:</strong> Features falling inside detected dynamic bounding boxes are discarded before pose estimation and map optimization, preventing them from corrupting the map.</li>
-<li><strong>Geometric backend:</strong> The remaining static features feed the standard ORB-SLAM2 tracking, local mapping, and loop-closure modules for consistent map optimization.</li>
-<li><strong>Stack:</strong> Implemented in <strong>C++</strong> within ORB-SLAM2, with the detection network in <strong>PyTorch</strong>, integrated under <strong>ROS</strong>.</li>
+<li><strong>Things move that aren&rsquo;t in a box.</strong> A detector trained on 20 classes will miss a swinging door, a rolling cart, a shadow. Masking gives you no protection outside the boxes it drew.</li>
+<li><strong>Things in boxes aren&rsquo;t always moving.</strong> A parked chair, an empty sofa, a person sitting perfectly still — all get classified dynamic, all get thrown away. In a cluttered indoor scene that can mean discarding the best-textured features you have.</li>
 </ul>
+<h2 id="the-rejection-criterion">The rejection criterion</h2>
+<p>The mechanism that avoids both is worth reading closely, because it is subtler than a mask. Reproduced from the paper&rsquo;s Algorithm 1:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Input:  Previous frame F1, current frame F2
+</span></span><span class="line"><span class="cl">        Feature points P1 (previous), P2 (current)
+</span></span><span class="line"><span class="cl">        Standard empirical threshold e_std
+</span></span><span class="line"><span class="cl">Output: Set S of static feature points in the current frame
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> 1: P1 = CalcOpticalFlowPyrLK(F2, F1, P2)
+</span></span><span class="line"><span class="cl"> 2: Remove matched pairs at image edges or with large appearance variation
+</span></span><span class="line"><span class="cl"> 3: F = FindFundamentalMat(P2, P1, 7-point method with RANSAC)
+</span></span><span class="line"><span class="cl"> 4: for each matched pair (p1, p2) in (P1, P2) do
+</span></span><span class="line"><span class="cl"> 5:     if DynamicObjectsExist and IsInDynamicRegion(p2) then
+</span></span><span class="line"><span class="cl"> 6:         if CalcEpiLineDistance(p2, p1, F) * GetDynamicWeightValue(p2) &lt; e_std then
+</span></span><span class="line"><span class="cl"> 7:             append p2 to S
+</span></span><span class="line"><span class="cl"> 8:         end if
+</span></span><span class="line"><span class="cl"> 9:     else
+</span></span><span class="line"><span class="cl">10:         if CalcEpiLineDistance(p2, p1, F) &lt; e_std then
+</span></span><span class="line"><span class="cl">11:             append p2 to S
+</span></span><span class="line"><span class="cl">12:         end if
+</span></span><span class="line"><span class="cl">13:     end if
+</span></span><span class="line"><span class="cl">14: end for
+</span></span></code></pre></div><p>There is <strong>one</strong> threshold, <code>e_std</code>, and it is compared against a point-to-epipolar-line distance in both branches. The difference is that inside a detected region (line 6) that distance is first <strong>multiplied</strong> by the object class&rsquo;s dynamic weight.</p>
+<p>So semantics act as a per-class multiplier on the geometric residual, not as a veto. A high-weight class like a person has its residual inflated, so it gets rejected on much weaker geometric evidence than a low-weight class like a chair. But a genuinely stationary object still passes — its epipolar distance is near zero, and scaling near-zero by three is still near-zero. Meanwhile line 10 runs everywhere the detector saw nothing, so unmodelled motion is still caught geometrically.</p>
+<p>Two implementation details that are easy to miss: the optical flow at line 1 runs <strong>backwards</strong>, tracking the current frame&rsquo;s points into the previous frame to reconstruct correspondences, and the fundamental matrix uses the <strong>seven-point</strong> method inside RANSAC rather than the more common normalised eight-point variant.</p>
+<h2 id="detector">Detector</h2>
+<p>Detection runs an <strong>SSD with a MobileNetV3 backbone under NCNN</strong>, Tencent&rsquo;s mobile CPU inference framework. That choice is what makes the real-time claim plausible without a GPU in the loop — the whole point of SG-SLAM over heavier semantic-SLAM systems is that it targets mobile platforms. The tracking thread computes its geometric quantities, blocks on the detector&rsquo;s 2-D result for that frame, then runs rejection and tracks; only surviving features reach local mapping, loop closing and full bundle adjustment, all of which are unmodified ORB-SLAM2.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start">
+<div>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Detection overlay with bounding boxes and class confidences" srcset="
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu10414967818364573976.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu7677053416326043211.webp 1200w"
+               src="/saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp"
+               width="368"
+               height="226"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>Detection on a live frame.</em></p>
+</div>
+<div>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Semantic object map with per-object 3D coordinates in RViz" srcset="
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13843709679552535452.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13383796692928516754.webp 1200w"
+               src="/saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp"
+               width="368"
+               height="233"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>Objects localised in 3-D with class labels.</em></p>
+</div>
+</div>
+<p>The semantic mapping thread fuses the 2-D detections with per-keyframe point clouds generated from the depth images and camera poses, then extracts each object&rsquo;s position and extent into a 3-D semantic object database. That database, a global OctoMap and the camera poses are all published over ROS for RViz — which is the real difference from plain ORB-SLAM2, whose output is a sparse cloud with no idea what anything is.</p>
 <hr>
 <h2 id="results">Results</h2>
-<ul>
-<li>Achieved a <strong>31% accuracy improvement</strong> on the <strong>TUM RGB-D dynamic sequence</strong> benchmarks.</li>
-<li>Prevented dynamic objects from corrupting the map optimization, yielding cleaner reconstructions and more stable trajectories in scenes with moving people.</li>
-</ul>
+<p>Benchmark figures below are the published results from Cheng et al., reproduced here rather than independently measured. Metric is <strong>ATE RMSE in metres</strong> — these are error <em>reductions</em>, not accuracy gains.</p>
+<h3 id="tum-rgb-d">TUM RGB-D</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Sequence</th>
+          <th>Dynamics</th>
+          <th>ORB-SLAM2</th>
+          <th>SG-SLAM</th>
+          <th>Reduction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>fr3/walking_static</code></td>
+          <td>high</td>
+          <td>0.4032</td>
+          <td>0.0079</td>
+          <td><strong>98.03%</strong></td>
+      </tr>
+      <tr>
+          <td><code>fr3/walking_xyz</code></td>
+          <td>high</td>
+          <td>0.6826</td>
+          <td>0.0171</td>
+          <td><strong>97.50%</strong></td>
+      </tr>
+      <tr>
+          <td><code>fr3/walking_rpy</code></td>
+          <td>high</td>
+          <td>0.5396</td>
+          <td>0.0326</td>
+          <td><strong>93.95%</strong></td>
+      </tr>
+      <tr>
+          <td><code>fr3/walking_halfsphere</code></td>
+          <td>high</td>
+          <td>0.4462</td>
+          <td>0.0309</td>
+          <td><strong>93.07%</strong></td>
+      </tr>
+      <tr>
+          <td><code>fr3/sitting_static</code></td>
+          <td>low</td>
+          <td>0.0087</td>
+          <td>0.0060</td>
+          <td><strong>31.03%</strong></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="bonn-rgb-d-dynamic-9-sequences">Bonn RGB-D Dynamic (9 sequences)</h3>
+<p>Best and worst of the set: <code>synchronous2</code> improves 1.4069 → 0.0164 m (<strong>98.83%</strong>), while <code>synchronous</code> — nominally the same scene, different take — only reaches 1.1411 → 0.3262 m (<strong>71.41%</strong>). The <code>moving_nonobstructing_box</code> pair land around 71–79%, the <code>crowd</code> and <code>person_tracking</code> sequences 93–97%.</p>
+<h3 id="reading-the-numbers-honestly">Reading the numbers honestly</h3>
+<p>Two things about this table are worth saying out loud, because they&rsquo;re the parts a results summary usually hides.</p>
+<p><strong>The 31% on <code>sitting_static</code> isn&rsquo;t a weak result, it&rsquo;s the control.</strong> That sequence is low-dynamic — a person seated, barely moving. There is almost nothing for dynamic-feature rejection to remove, so the gain collapses to a third of what the walking sequences show. The rotational-drift table is starker still: 7.99% on the same sequence. That&rsquo;s the expected shape of the result, and it&rsquo;s evidence the mechanism is doing what it claims rather than just globally discarding features.</p>
+<p><strong>RMSE improves far more than the median does.</strong> On <code>walking_static</code> the ATE RMSE drops 98% while the RPE median improvements sit at 43–53%. The gain is concentrated in <em>catastrophic</em> frames — the ones where a person crossing the view wrecks the pose estimate entirely — not in the typical frame. That&rsquo;s the right thing for a SLAM system to fix, since a single badly-corrupted keyframe propagates into the map, but it does mean &ldquo;98% better&rdquo; describes the tail, not the average.</p>
 <hr>
-<h2 id="tools--libraries">Tools &amp; Libraries</h2>
-<ul>
-<li>ORB-SLAM2 (C++)</li>
-<li>YOLO object detection (PyTorch)</li>
-<li>ROS</li>
-<li>TUM RGB-D Dataset (dynamic sequences)</li>
-</ul>
-<hr>
-<p>This project demonstrates how a lightweight semantic layer can make geometric SLAM robust to real-world dynamics — a key requirement for deploying autonomous robots in environments shared with people.</p>
+<h2 id="where-it-breaks">Where it breaks</h2>
+<p>The failure mode falls straight out of Algorithm 1, and the paper is upfront about it: <strong>an object moving along the epipolar line direction is invisible to this test.</strong> Its features produce a point-to-epipolar-line distance of approximately zero despite genuinely moving, so line 10 accepts them as static. The semantic branch doesn&rsquo;t save you either — multiplying a near-zero residual by a dynamic weight still clears the threshold. In practice that means someone walking directly toward or away from the camera is much harder to reject than someone crossing the view.</p>
+<p>The other open item is semantic map precision. Object extents come from thresholding a depth-derived point cloud inside a 2-D box, which is coarse — good enough to say &ldquo;there is a monitor at roughly here&rdquo;, not good enough for manipulation.</p>
+<h2 id="stack">Stack</h2>
+<p>C++ (ORB-SLAM2 core), Python, Ubuntu 18.04, ROS Melodic, NCNN, OpenCV, OctoMap, RViz. Evaluated on TUM RGB-D and the Bonn RGB-D Dynamic dataset.</p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-15T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-04-19T00:00:00.000Z">
     <span>Last updated on</span>
-    Mar 15, 2025</time>
+    Apr 19, 2024</time>
 
       <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
         
@@ -1180,13 +1421,13 @@
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/orb-slam2/">ORB-SLAM2</a>
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/yolo/">YOLO</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/ncnn/">NCNN</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/mobilenet-ssd/">MobileNet-SSD</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/dynamic-environments/">Dynamic Environments</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/ros/">ROS</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/pytorch/">PyTorch</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>
   
@@ -1206,7 +1447,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;text=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;text=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1224,7 +1465,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;t=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;t=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1244,7 +1485,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Semantic%20Geometric%20SLAM%20%28SG-SLAM%29%20in%20Dynamic%20Scenes&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F"
+    href="mailto:?subject=Semantic%20Geometric%20SLAM%20%28SG-SLAM%29%20in%20Dynamic%20Scenes&amp;body=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1262,7 +1503,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;title=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F&amp;title=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1280,7 +1521,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes%20http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F"
+    href="whatsapp://send?text=Semantic&#43;Geometric&#43;SLAM&#43;%28SG-SLAM%29&#43;in&#43;Dynamic&#43;Scenes%20https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fsg-slam%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1330,7 +1571,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:1313/saikiran_juttu.github.io/" class="no-underline">
+      <a href="https://juttu-s.github.io/saikiran_juttu.github.io/" class="no-underline">
       Saikiran Juttu
       </a>
     </div>
@@ -1416,17 +1657,17 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/saikiran_juttu.github.io/project/am-race-driving-rl/">
+        <a class="group flex no-underline" href="/saikiran_juttu.github.io/project/kimera-vio/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Autonomous Race Driving with Action Mapping RL</span>
+            >Kimera VIO on EuRoC and Custom Datasets</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Apr 10, 2025
+                Apr 26, 2024
               
             </span>
           </span>
@@ -1435,15 +1676,15 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/quadrotor-control/">
+        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Control Strategies for Quadrotor Position and Altitude</span
+            >Automated Insect Leg Labeling using DeepLabCut</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Dec 10, 2024
+                Apr 15, 2024
               
             </span>
           </span>

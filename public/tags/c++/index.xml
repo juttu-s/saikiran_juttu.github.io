@@ -2,49 +2,505 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/c&#43;&#43;/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/c&#43;&#43;/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <description>C&#43;&#43;</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>C&#43;&#43;</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/c&#43;&#43;/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/c&#43;&#43;/</link>
     </image>
     
     <item>
       <title>Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</link>
-      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</guid>
-      <description>&lt;p&gt;This project implements &lt;strong&gt;SG-SLAM (Semantic Geometric SLAM)&lt;/strong&gt;, a system that fuses &lt;strong&gt;semantic object detection&lt;/strong&gt; with the geometric tracking pipeline of &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; to remain robust in &lt;strong&gt;dynamic environments&lt;/strong&gt;. Standard feature-based SLAM systems assume a static world, so moving objects (e.g., walking people) corrupt the map and degrade pose estimation. SG-SLAM removes these dynamic features before they ever reach the optimizer.&lt;/p&gt;
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</guid>
+      <description>&lt;p&gt;Feature-based visual SLAM assumes the world holds still. It doesn&amp;rsquo;t. When someone walks through the frame, their features get matched across keyframes like any other, and the optimiser dutifully fits a camera trajectory to a person who was never part of the scene geometry. On the TUM &lt;code&gt;fr3/walking_*&lt;/code&gt; sequences this is not a marginal degradation — ORB-SLAM2&amp;rsquo;s absolute trajectory error goes to roughly half a metre.&lt;/p&gt;
+&lt;p&gt;This project reimplements &lt;strong&gt;SG-SLAM&lt;/strong&gt; (&lt;a href=&#34;https://ieeexplore.ieee.org/document/10018238&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cheng, Sun, Zhang &amp;amp; Zhang, &lt;em&gt;IEEE TIM&lt;/em&gt; vol. 72, 2023&lt;/a&gt;), which addresses this by adding two parallel threads to ORB-SLAM2 — one for object detection, one for semantic mapping — and a feature-rejection stage in the tracking thread that consults both geometry and semantics before deciding what to keep.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;SG-SLAM running on a live RGB-D stream: ORB features tracked on the static scene while a person walks through the frame, the keyframe graph, and the semantically labelled point cloud in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu10093939004686469362.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/system_hu15078296984376168334.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/system_hu9625658651780549619.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;422&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The three threads running together. Left: the live frame — note the green ORB features sit on desks, walls and shelving, not on the person. Bottom: the reconstructed point cloud with detected objects labelled and localised.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;Classical visual SLAM extracts and tracks features across frames under a &lt;strong&gt;static-scene assumption&lt;/strong&gt;. When people or vehicles move through the scene, their features inject incorrect correspondences into the tracking thread, biasing pose estimates and polluting the global map. SG-SLAM addresses this by adding a &lt;strong&gt;semantic layer&lt;/strong&gt; that identifies and rejects dynamic content.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;h2 id=&#34;why-not-just-mask-out-the-people&#34;&gt;Why not just mask out the people&lt;/h2&gt;
+&lt;p&gt;The obvious approach is to run a detector, draw boxes around every &lt;em&gt;a priori&lt;/em&gt; dynamic class, and discard whatever falls inside. That fails in both directions, and SG-SLAM&amp;rsquo;s design is a direct response to each failure:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Semantic frontend:&lt;/strong&gt; Integrated a &lt;strong&gt;YOLO-based object detection network&lt;/strong&gt; into the &lt;strong&gt;ORB-SLAM2&lt;/strong&gt; tracking thread to detect a priori dynamic classes (e.g., humans).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dynamic feature filtering:&lt;/strong&gt; Features falling inside detected dynamic bounding boxes are discarded before pose estimation and map optimization, preventing them from corrupting the map.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Geometric backend:&lt;/strong&gt; The remaining static features feed the standard ORB-SLAM2 tracking, local mapping, and loop-closure modules for consistent map optimization.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stack:&lt;/strong&gt; Implemented in &lt;strong&gt;C++&lt;/strong&gt; within ORB-SLAM2, with the detection network in &lt;strong&gt;PyTorch&lt;/strong&gt;, integrated under &lt;strong&gt;ROS&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things move that aren&amp;rsquo;t in a box.&lt;/strong&gt; A detector trained on 20 classes will miss a swinging door, a rolling cart, a shadow. Masking gives you no protection outside the boxes it drew.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things in boxes aren&amp;rsquo;t always moving.&lt;/strong&gt; A parked chair, an empty sofa, a person sitting perfectly still — all get classified dynamic, all get thrown away. In a cluttered indoor scene that can mean discarding the best-textured features you have.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;the-rejection-criterion&#34;&gt;The rejection criterion&lt;/h2&gt;
+&lt;p&gt;The mechanism that avoids both is worth reading closely, because it is subtler than a mask. Reproduced from the paper&amp;rsquo;s Algorithm 1:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Input:  Previous frame F1, current frame F2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Feature points P1 (previous), P2 (current)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Standard empirical threshold e_std
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Output: Set S of static feature points in the current frame
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1: P1 = CalcOpticalFlowPyrLK(F2, F1, P2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 2: Remove matched pairs at image edges or with large appearance variation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 3: F = FindFundamentalMat(P2, P1, 7-point method with RANSAC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 4: for each matched pair (p1, p2) in (P1, P2) do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 5:     if DynamicObjectsExist and IsInDynamicRegion(p2) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 6:         if CalcEpiLineDistance(p2, p1, F) * GetDynamicWeightValue(p2) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 7:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 8:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 9:     else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10:         if CalcEpiLineDistance(p2, p1, F) &amp;lt; e_std then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11:             append p2 to S
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12:         end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13:     end if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14: end for
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is &lt;strong&gt;one&lt;/strong&gt; threshold, &lt;code&gt;e_std&lt;/code&gt;, and it is compared against a point-to-epipolar-line distance in both branches. The difference is that inside a detected region (line 6) that distance is first &lt;strong&gt;multiplied&lt;/strong&gt; by the object class&amp;rsquo;s dynamic weight.&lt;/p&gt;
+&lt;p&gt;So semantics act as a per-class multiplier on the geometric residual, not as a veto. A high-weight class like a person has its residual inflated, so it gets rejected on much weaker geometric evidence than a low-weight class like a chair. But a genuinely stationary object still passes — its epipolar distance is near zero, and scaling near-zero by three is still near-zero. Meanwhile line 10 runs everywhere the detector saw nothing, so unmodelled motion is still caught geometrically.&lt;/p&gt;
+&lt;p&gt;Two implementation details that are easy to miss: the optical flow at line 1 runs &lt;strong&gt;backwards&lt;/strong&gt;, tracking the current frame&amp;rsquo;s points into the previous frame to reconstruct correspondences, and the fundamental matrix uses the &lt;strong&gt;seven-point&lt;/strong&gt; method inside RANSAC rather than the more common normalised eight-point variant.&lt;/p&gt;
+&lt;h2 id=&#34;detector&#34;&gt;Detector&lt;/h2&gt;
+&lt;p&gt;Detection runs an &lt;strong&gt;SSD with a MobileNetV3 backbone under NCNN&lt;/strong&gt;, Tencent&amp;rsquo;s mobile CPU inference framework. That choice is what makes the real-time claim plausible without a GPU in the loop — the whole point of SG-SLAM over heavier semantic-SLAM systems is that it targets mobile platforms. The tracking thread computes its geometric quantities, blocks on the detector&amp;rsquo;s 2-D result for that frame, then runs rejection and tracks; only surviving features reach local mapping, loop closing and full bundle adjustment, all of which are unmodified ORB-SLAM2.&lt;/p&gt;
+&lt;div style=&#34;display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start&#34;&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Detection overlay with bounding boxes and class confidences&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu10414967818364573976.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/detection_hu7677053416326043211.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/detection_hu9192830305904395551.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;226&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Detection on a live frame.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Semantic object map with per-object 3D coordinates in RViz&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp 400w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13843709679552535452.webp 760w,
+               /saikiran_juttu.github.io/project/sg-slam/semantic-map_hu13383796692928516754.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sg-slam/semantic-map_hu10489737656378413939.webp&#34;
+               width=&#34;368&#34;
+               height=&#34;233&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Objects localised in 3-D with class labels.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The semantic mapping thread fuses the 2-D detections with per-keyframe point clouds generated from the depth images and camera poses, then extracts each object&amp;rsquo;s position and extent into a 3-D semantic object database. That database, a global OctoMap and the camera poses are all published over ROS for RViz — which is the real difference from plain ORB-SLAM2, whose output is a sparse cloud with no idea what anything is.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Achieved a &lt;strong&gt;31% accuracy improvement&lt;/strong&gt; on the &lt;strong&gt;TUM RGB-D dynamic sequence&lt;/strong&gt; benchmarks.&lt;/li&gt;
-&lt;li&gt;Prevented dynamic objects from corrupting the map optimization, yielding cleaner reconstructions and more stable trajectories in scenes with moving people.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Benchmark figures below are the published results from Cheng et al., reproduced here rather than independently measured. Metric is &lt;strong&gt;ATE RMSE in metres&lt;/strong&gt; — these are error &lt;em&gt;reductions&lt;/em&gt;, not accuracy gains.&lt;/p&gt;
+&lt;h3 id=&#34;tum-rgb-d&#34;&gt;TUM RGB-D&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Sequence&lt;/th&gt;
+          &lt;th&gt;Dynamics&lt;/th&gt;
+          &lt;th&gt;ORB-SLAM2&lt;/th&gt;
+          &lt;th&gt;SG-SLAM&lt;/th&gt;
+          &lt;th&gt;Reduction&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4032&lt;/td&gt;
+          &lt;td&gt;0.0079&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;98.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_xyz&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.6826&lt;/td&gt;
+          &lt;td&gt;0.0171&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;97.50%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_rpy&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.5396&lt;/td&gt;
+          &lt;td&gt;0.0326&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.95%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/walking_halfsphere&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;high&lt;/td&gt;
+          &lt;td&gt;0.4462&lt;/td&gt;
+          &lt;td&gt;0.0309&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;93.07%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;fr3/sitting_static&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;low&lt;/td&gt;
+          &lt;td&gt;0.0087&lt;/td&gt;
+          &lt;td&gt;0.0060&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;31.03%&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;bonn-rgb-d-dynamic-9-sequences&#34;&gt;Bonn RGB-D Dynamic (9 sequences)&lt;/h3&gt;
+&lt;p&gt;Best and worst of the set: &lt;code&gt;synchronous2&lt;/code&gt; improves 1.4069 → 0.0164 m (&lt;strong&gt;98.83%&lt;/strong&gt;), while &lt;code&gt;synchronous&lt;/code&gt; — nominally the same scene, different take — only reaches 1.1411 → 0.3262 m (&lt;strong&gt;71.41%&lt;/strong&gt;). The &lt;code&gt;moving_nonobstructing_box&lt;/code&gt; pair land around 71–79%, the &lt;code&gt;crowd&lt;/code&gt; and &lt;code&gt;person_tracking&lt;/code&gt; sequences 93–97%.&lt;/p&gt;
+&lt;h3 id=&#34;reading-the-numbers-honestly&#34;&gt;Reading the numbers honestly&lt;/h3&gt;
+&lt;p&gt;Two things about this table are worth saying out loud, because they&amp;rsquo;re the parts a results summary usually hides.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The 31% on &lt;code&gt;sitting_static&lt;/code&gt; isn&amp;rsquo;t a weak result, it&amp;rsquo;s the control.&lt;/strong&gt; That sequence is low-dynamic — a person seated, barely moving. There is almost nothing for dynamic-feature rejection to remove, so the gain collapses to a third of what the walking sequences show. The rotational-drift table is starker still: 7.99% on the same sequence. That&amp;rsquo;s the expected shape of the result, and it&amp;rsquo;s evidence the mechanism is doing what it claims rather than just globally discarding features.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RMSE improves far more than the median does.&lt;/strong&gt; On &lt;code&gt;walking_static&lt;/code&gt; the ATE RMSE drops 98% while the RPE median improvements sit at 43–53%. The gain is concentrated in &lt;em&gt;catastrophic&lt;/em&gt; frames — the ones where a person crossing the view wrecks the pose estimate entirely — not in the typical frame. That&amp;rsquo;s the right thing for a SLAM system to fix, since a single badly-corrupted keyframe propagates into the map, but it does mean &amp;ldquo;98% better&amp;rdquo; describes the tail, not the average.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ORB-SLAM2 (C++)&lt;/li&gt;
-&lt;li&gt;YOLO object detection (PyTorch)&lt;/li&gt;
-&lt;li&gt;ROS&lt;/li&gt;
-&lt;li&gt;TUM RGB-D Dataset (dynamic sequences)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;where-it-breaks&#34;&gt;Where it breaks&lt;/h2&gt;
+&lt;p&gt;The failure mode falls straight out of Algorithm 1, and the paper is upfront about it: &lt;strong&gt;an object moving along the epipolar line direction is invisible to this test.&lt;/strong&gt; Its features produce a point-to-epipolar-line distance of approximately zero despite genuinely moving, so line 10 accepts them as static. The semantic branch doesn&amp;rsquo;t save you either — multiplying a near-zero residual by a dynamic weight still clears the threshold. In practice that means someone walking directly toward or away from the camera is much harder to reject than someone crossing the view.&lt;/p&gt;
+&lt;p&gt;The other open item is semantic map precision. Object extents come from thresholding a depth-derived point cloud inside a 2-D box, which is coarse — good enough to say &amp;ldquo;there is a monitor at roughly here&amp;rdquo;, not good enough for manipulation.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++ (ORB-SLAM2 core), Python, Ubuntu 18.04, ROS Melodic, NCNN, OpenCV, OctoMap, RViz. Evaluated on TUM RGB-D and the Bonn RGB-D Dynamic dataset.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Real-Time 2D Object Recognition with Feature Matching</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/object-recognition/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/object-recognition/</guid>
+      <description>&lt;p&gt;Recognise objects on a tabletop from a live webcam, using classical computer vision and nothing else — no learned features, no pretrained backbone. Camera overhead, dark objects on a white surface, everything computed per frame in C++.&lt;/p&gt;
+&lt;p&gt;The constraint that made this interesting: most of the pipeline had to be written from scratch. Two of the first four stages were required to be; three ended up that way. The only OpenCV algorithm doing real work is connected-component labelling.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;A watch and a pen segmented with oriented bounding boxes, axis-of-least-central-moment arrows, and live feature values overlaid&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu1285270646848479672.webp 400w,
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu4246342232475753791.webp 760w,
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu5357358603646478662.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/object-recognition/features-annotated_hu1285270646848479672.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Two objects at once. Blue boxes are the oriented bounding boxes, red arrows the axis of least central moment, cyan text the live feature values.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;This project demonstrates how a lightweight semantic layer can make geometric SLAM robust to real-world dynamics — a key requirement for deploying autonomous robots in environments shared with people.&lt;/p&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+&lt;h3 id=&#34;thresholding-without-otsu&#34;&gt;Thresholding, without Otsu&lt;/h3&gt;
+&lt;p&gt;Rather than call a threshold function, the threshold is found by &lt;strong&gt;2-means clustering on sampled pixel values&lt;/strong&gt;. Sample the frame, converge two centroids — one settles on the dark object population, one on the light background — and put the threshold at their midpoint.&lt;/p&gt;
+&lt;p&gt;The appeal is that it&amp;rsquo;s &lt;em&gt;adaptive by construction&lt;/em&gt;. As the lighting shifts, both centroids move and the threshold tracks them, without a hand-tuned constant anywhere. It&amp;rsquo;s a genuinely better fit for a live feed than a fixed cut, and it&amp;rsquo;s about fifteen lines of code.&lt;/p&gt;
+&lt;h3 id=&#34;morphological-cleanup&#34;&gt;Morphological cleanup&lt;/h3&gt;
+&lt;p&gt;The thresholded feed had holes in it — printed text and specular highlights on dark objects read as background. So: &lt;strong&gt;dilation first to close the gaps, then erosion to remove the speckle&lt;/strong&gt; the dilation amplified. Written by hand rather than called, and the ordering was driven by looking at the actual defect rather than reaching for a default.&lt;/p&gt;
+&lt;h3 id=&#34;segmentation&#34;&gt;Segmentation&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;cv::connectedComponentsWithStats&lt;/code&gt; labels the regions; components below a size threshold are dropped as noise. Survivors get distinct colours for display.&lt;/p&gt;
+&lt;h3 id=&#34;features-from-moments-up&#34;&gt;Features, from moments up&lt;/h3&gt;
+&lt;p&gt;Raw and central moments computed directly, then five descriptors per region:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;What it captures&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Centroid (x, y)&lt;/td&gt;
+          &lt;td&gt;Region position&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;θ&lt;/td&gt;
+          &lt;td&gt;Angle of the axis of least central moment — the object&amp;rsquo;s orientation&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Percent filled&lt;/td&gt;
+          &lt;td&gt;Region area ÷ oriented bounding box area&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bounding box ratio&lt;/td&gt;
+          &lt;td&gt;Oriented box aspect ratio&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Stored to CSV alongside a label typed at capture time, which makes the training set inspectable — you can open it and see why the classifier does what it does.&lt;/p&gt;
+&lt;h2 id=&#34;classification&#34;&gt;Classification&lt;/h2&gt;
+&lt;p&gt;Two classifiers over the same features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nearest neighbour&lt;/strong&gt; on cumulative scaled Euclidean distance — closest labelled example wins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;k-NN with k = 4&lt;/strong&gt; — take the four nearest, majority vote.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The k-NN version is the more robust of the two, and the reason is visible in the failure mode of the first. Nearest neighbour commits to a single best match, so when two classes differ only marginally in feature space, one noisy frame is enough to flip the decision. Requiring agreement among four neighbours means a single outlier can&amp;rsquo;t carry the vote.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;11 object classes&lt;/strong&gt;, roughly 30 labelled samples captured at varying positions and orientations: watch, pen, mobile, spoon, bracelet, earbuds box, pendrive, statue, controller, star, clutch. Over 15 trials across five classes, classification accuracy ran &lt;strong&gt;93.33–100%&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The more informative result is how well the shape features separate the classes:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;Range across the 11 classes&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Percent filled&lt;/td&gt;
+          &lt;td&gt;0.34 (bracelet — a hollow loop) → 0.97 (phone — a filled rectangle)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bounding box ratio&lt;/td&gt;
+          &lt;td&gt;1.04 (near-square box) → 8.88 (pen)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Those two numbers do most of the discriminating, and they&amp;rsquo;re both scale- and rotation-invariant, which is the whole reason for computing orientation first and measuring the box &lt;em&gt;after&lt;/em&gt; aligning to it. Deliberately including several elongated objects — pen at 8.88, watch strap at 5.31, spoon at 3.99 — was what stress-tested it; anything can separate a pen from a phone, but separating a pen from a watch strap needs the percent-filled term to pull its weight.&lt;/p&gt;
+&lt;p&gt;An extension pushed it to &lt;strong&gt;multiple objects simultaneously&lt;/strong&gt;, segmenting and classifying every region in the frame rather than assuming one object at a time.&lt;/p&gt;
+&lt;h2 id=&#34;honest-limitations&#34;&gt;Honest limitations&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The feature vector includes absolute centroid position.&lt;/strong&gt; Centroid x and y range from 165 to 484 px across the dataset, and feeding those into a scaled-Euclidean distance means &lt;em&gt;where the object sits in frame&lt;/em&gt; contributes to the class decision — in a system whose stated goal is translation invariance. The three shape descriptors are the invariant ones and are doing the real work; the centroid terms are a liability I&amp;rsquo;d drop.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lighting drives everything.&lt;/strong&gt; The 2-means threshold adapts, but it can only adapt to a bimodal scene. Introduce a shadow gradient across the white surface, or a mid-grey object, and the two-cluster assumption stops holding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No timing was measured.&lt;/strong&gt; The system runs interactively on a live feed, but there&amp;rsquo;s no frame-rate figure behind that, so I won&amp;rsquo;t claim one.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++, OpenCV 4, CMake. Thresholding, morphology and the entire moment/feature pipeline hand-written; &lt;code&gt;connectedComponentsWithStats&lt;/code&gt; for labelling. Training data self-collected via an in-app capture-and-label mode, with recording built in for demos.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Camera Calibration and Augmented Reality</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/</guid>
+      <description>&lt;p&gt;Everything in marker-based AR rests on one number: how well you know the camera. This project works through that chain end to end in C++/OpenCV — detect a calibration target, solve for intrinsics, recover live pose, and project virtual geometry that stays locked to the target as the camera moves.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;A green wireframe object rendered over a chessboard with rainbow corner polylines and RGB origin axes&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6246078329211090082.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6792843897147638943.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp&#34;
+               width=&#34;474&#34;
+               height=&#34;411&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The virtual object holding its pose against the board.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;calibration&#34;&gt;Calibration&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;9×6 chessboard giving 54 interior corners&lt;/strong&gt;, detected on a live stream with sub-pixel refinement. Pressing &lt;code&gt;s&lt;/code&gt; banks the current frame&amp;rsquo;s corner locations along with their corresponding 3-D world points; &lt;code&gt;cv::calibrateCamera&lt;/code&gt; then solves for intrinsics and distortion. Fewer than five frames and it refuses — the parameters aren&amp;rsquo;t determined.&lt;/p&gt;
+&lt;p&gt;Recovered intrinsics for the laptop camera, from an initial guess of nothing more than a principal point at the image centre:&lt;/p&gt;
+$$K = \begin{bmatrix} 611.41 &amp; 0 &amp; 311.84 \\ 0 &amp; 613.70 &amp; 236.82 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$$&lt;p&gt;&lt;strong&gt;Final reprojection error: 0.545 px.&lt;/strong&gt; Intrinsics and distortion coefficients are written out as OpenCV YAML so later runs skip calibration entirely.&lt;/p&gt;
+&lt;h3 id=&#34;two-cameras-one-surprise&#34;&gt;Two cameras, one surprise&lt;/h3&gt;
+&lt;p&gt;Running the same procedure on an external USB webcam gave a notably better fit:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Camera&lt;/th&gt;
+          &lt;th&gt;fx, fy&lt;/th&gt;
+          &lt;th&gt;cx, cy&lt;/th&gt;
+          &lt;th&gt;Reprojection error&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Laptop integrated&lt;/td&gt;
+          &lt;td&gt;611.41, 613.70&lt;/td&gt;
+          &lt;td&gt;311.84, 236.82&lt;/td&gt;
+          &lt;td&gt;0.545 px&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;External USB webcam&lt;/td&gt;
+          &lt;td&gt;690.48, 693.37&lt;/td&gt;
+          &lt;td&gt;344.83, 239.23&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.150 px&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The webcam calibrates about &lt;strong&gt;3.6× better&lt;/strong&gt; — and the interesting part is that it does so while having &lt;em&gt;substantially larger&lt;/em&gt; distortion coefficients (k1 = −0.446 against −0.215, k3 = −4.44 against −1.76). More distortion, better fit. Those aren&amp;rsquo;t contradictory: the reprojection error measures how well the &lt;em&gt;model&lt;/em&gt; explains the observations, not how mild the lens is. A strongly distorted lens whose distortion is well-described by the radial polynomial will beat a milder lens whose residual behaviour the model can&amp;rsquo;t represent. Cheap wide optics can calibrate beautifully; the question is whether the model matches the physics.&lt;/p&gt;
+&lt;h2 id=&#34;pose&#34;&gt;Pose&lt;/h2&gt;
+&lt;p&gt;With intrinsics fixed, &lt;code&gt;solvePnP&lt;/code&gt; returns rotation and translation per frame. The sanity check is nicer than eyeballing an overlay — translate the camera to the right and watch the numbers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.378, 6.753, 40.531]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.627, 6.719, 40.485]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [7.759, 6.711, 40.504]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tvec  [8.070, 6.713, 40.486]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;X climbs monotonically, 7.378 → 8.070, while Y holds near 6.71 and Z near 40.49. That&amp;rsquo;s exactly right for pure lateral motion, and it&amp;rsquo;s a check on the physical meaning of the solution rather than on whether the render happens to look plausible.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Projected 3D axes anchored at the board origin with all 54 corners detected and linked&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu3207897690070648796.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu17627915606788624727.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp&#34;
+               width=&#34;633&#34;
+               height=&#34;388&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Detected corners and the projected 3-D axes at the board origin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cv::projectPoints&lt;/code&gt; then puts 3-D world points back onto the image plane — the board corners, RGB axes at the origin, and a virtual object defined as &lt;strong&gt;15 points forming an inverted C&lt;/strong&gt;, connected by lines drawn between their projections.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;extensions&#34;&gt;Extensions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Making the marker stop looking like a marker.&lt;/strong&gt; The strongest result here: find the board&amp;rsquo;s four extreme corners, warp an arbitrary image into that quadrilateral, and render the virtual object on top of the warped result. The chessboard is still doing all the pose work underneath, but it&amp;rsquo;s no longer visible — which is the difference between a calibration demo and something you&amp;rsquo;d actually want in a scene.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;An arbitrary image warped over the chessboard region with the virtual object drawn on top&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu16920568668342420622.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu14363001692669884525.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp&#34;
+               width=&#34;491&#34;
+               height=&#34;395&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The board&amp;rsquo;s squares fully replaced, virtual geometry still tracking correctly.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two boards at once.&lt;/strong&gt; A (9,6) and a (6,6) board handled in a single frame, each solved for pose independently and each rendered with its own coloured pyramid. It degrades gracefully — remove one board and the other keeps tracking.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Two checkerboards of different sizes tracked simultaneously, each with its own coloured wireframe pyramid&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu10299970603627648674.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu7114270305068571192.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp&#34;
+               width=&#34;656&#34;
+               height=&#34;445&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Independent pose solutions for two different board geometries in one frame.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pre-recorded video mode.&lt;/strong&gt; Pressing &lt;code&gt;p&lt;/code&gt; runs the whole pipeline over recorded footage instead of the live feed, inserting virtual objects into video after the fact.&lt;/p&gt;
+&lt;h2 id=&#34;toward-markerless&#34;&gt;Toward markerless&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;cv::cornerHarris&lt;/code&gt; was added to explore features that don&amp;rsquo;t require a known target, swept over threshold, block size, aperture size and the Harris free parameter &lt;em&gt;k&lt;/em&gt;. Raising the threshold from 150 to 200 visibly thins the detections, dropping the finer corners first.&lt;/p&gt;
+&lt;p&gt;Detection is where this stopped, and it&amp;rsquo;s worth being precise about that: &lt;strong&gt;the markerless pipeline was designed, not built.&lt;/strong&gt; Going from Harris corners to a pose estimate needs frame-to-frame correspondence — SIFT or SURF descriptors matched across frames, then a transformation recovered from the matches, then projection using that pose. That&amp;rsquo;s the natural continuation and it isn&amp;rsquo;t implemented here.&lt;/p&gt;
+&lt;h2 id=&#34;a-note-on-the-target&#34;&gt;A note on the target&lt;/h2&gt;
+&lt;p&gt;The chessboard in these figures is being &lt;strong&gt;displayed on a phone screen&lt;/strong&gt; rather than printed. Convenient, and it never creases — but it&amp;rsquo;s a glossy emissive surface, which introduces specular highlights and probably accounts for some of the laptop camera&amp;rsquo;s worse reprojection error. A matte printed target on rigid backing is the better choice if the calibration itself is what matters.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++, OpenCV 4, CMake, on Windows and Ubuntu. &lt;code&gt;calibrateCamera&lt;/code&gt;, &lt;code&gt;solvePnP&lt;/code&gt;, &lt;code&gt;projectPoints&lt;/code&gt;, &lt;code&gt;cornerHarris&lt;/code&gt;; intrinsics persisted as OpenCV YAML. Two cameras: a laptop integrated camera and an external USB webcam.&lt;/p&gt;
 </description>
     </item>
     

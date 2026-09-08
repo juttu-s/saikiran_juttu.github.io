@@ -13,6 +13,7 @@ categories:
   - 3D Reconstruction and Calibration
 summary: A comprehensive feature-matching and mosaicking pipeline for underwater images using CLAHE, SIFT, RANSAC, affine transformation, and GTSAM-based pose graph optimization.
 featured: true
+url_code: 'https://github.com/juttu-s/Photo-Mosaicking-of-Low-Contrast-Underwater-Images'
 image:
   filename: featured.png
   preview_only: true

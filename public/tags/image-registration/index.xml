@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image Registration | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/image-registration/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/image-registration/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-registration/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-registration/index.xml" rel="self" type="application/rss+xml" />
     <description>Image Registration</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 05 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Image Registration</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/image-registration/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-registration/</link>
     </image>
     
     <item>
       <title>Photo Mosaicking of Low-Contrast Underwater Images</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/photo-mosaicking/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
       <description>&lt;p&gt;This project implements a full photo mosaicking and optimization pipeline using low-contrast underwater images from the &lt;strong&gt;Skerki Bank Roman shipwreck&lt;/strong&gt; dataset. The approach registers both sequential and non-sequential images using SIFT and RANSAC, computes affine transformations, and optimizes a global trajectory using GTSAM.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;pipeline-breakdown&#34;&gt;Pipeline Breakdown&lt;/h3&gt;
@@ -76,7 +76,7 @@
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
                width=&#34;571&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -111,7 +111,7 @@
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
                width=&#34;580&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -140,8 +140,8 @@
 &lt;ul&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/photo-mosaicking-skerki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;📁 &lt;a href=&#34;https://drive.google.com/drive/folders/1AtvT65txGIgAG23NRs3EkvDET036a81O&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Skerki Dataset Reference (Google Drive)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;

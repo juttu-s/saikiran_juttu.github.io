@@ -12,6 +12,7 @@ categories:
   - 3D Reconstruction and Calibration
 summary: Built a custom Structure-from-Motion pipeline using CLAHE, SIFT, triangulation, and GTSAM-based bundle adjustment on a 24-frame dataset of a Buddha sculpture.
 featured: true
+url_code: 'https://github.com/juttu-s/Sparse-3D-Reconstruction'
 image:
   filename: featured.png
   preview_only: true

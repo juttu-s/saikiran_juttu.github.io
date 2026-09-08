@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/python/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/python/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 07 Nov 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Python</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/python/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/python/</link>
     </image>
     
     <item>
       <title>Sparse 3D Reconstruction and Bundle Adjustment</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/</guid>
       <description>&lt;p&gt;This project implements a full Structure from Motion (SfM) pipeline on a &lt;strong&gt;Buddha statue&lt;/strong&gt; using a sequence of &lt;strong&gt;24 grayscale images&lt;/strong&gt;. It combines feature detection, epipolar geometry, camera pose recovery, triangulation, and bundle adjustment.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;dataset&#34;&gt;Dataset&lt;/h3&gt;
@@ -93,7 +93,7 @@
                /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp 400w,
                /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu6971695684859321629.webp 760w,
                /saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu11908849571792030370.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Initial_plot_hu12090084634136375331.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -122,7 +122,7 @@
                /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp 400w,
                /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu5432368712792554619.webp 760w,
                /saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu6617160073620067270.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/Optimized_plot_hu1365288965832748826.webp&#34;
                width=&#34;760&#34;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -153,9 +153,9 @@
     
     <item>
       <title>Photo Mosaicking of Low-Contrast Underwater Images</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/photo-mosaicking/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/photo-mosaicking/</guid>
       <description>&lt;p&gt;This project implements a full photo mosaicking and optimization pipeline using low-contrast underwater images from the &lt;strong&gt;Skerki Bank Roman shipwreck&lt;/strong&gt; dataset. The approach registers both sequential and non-sequential images using SIFT and RANSAC, computes affine transformations, and optimizes a global trajectory using GTSAM.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;pipeline-breakdown&#34;&gt;Pipeline Breakdown&lt;/h3&gt;
@@ -215,7 +215,7 @@
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp 400w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3546410195309766098.webp 760w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu3825931163024726418.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_before_hu6875028771095386571.webp&#34;
                width=&#34;571&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -250,7 +250,7 @@
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp 400w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu14280678253068865284.webp 760w,
                /saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu13790384701387224375.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/photo-mosaicking/plot_after_hu16779151673749428898.webp&#34;
                width=&#34;580&#34;
                height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -279,8 +279,8 @@
 &lt;ul&gt;
 &lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/photo-mosaicking-skerki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;📁 &lt;a href=&#34;https://drive.google.com/drive/folders/1AtvT65txGIgAG23NRs3EkvDET036a81O&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Skerki Dataset Reference (Google Drive)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📓 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/files/Part1_and_2.ipynb&#34;&gt;Project Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📓 &lt;a href=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/files/Part_3.ipynb&#34;&gt;Extended Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
@@ -293,9 +293,9 @@
     
     <item>
       <title>Automated Insect Leg Labeling using DeepLabCut</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</guid>
       <description>&lt;p&gt;This project proposes a robust and scalable method for automating insect leg labeling using &lt;strong&gt;image processing, feature detection, and clustering&lt;/strong&gt;, enabling seamless integration with &lt;strong&gt;DeepLabCut&lt;/strong&gt; for behavioral analysis.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;methodology-overview&#34;&gt;Methodology Overview&lt;/h2&gt;
@@ -333,7 +333,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu15745542599272552929.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu3473078471050911037.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/canny_hu11275747406885085122.webp&#34;
                width=&#34;555&#34;
                height=&#34;350&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -368,7 +368,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu14103565545081466617.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu4890327641649225453.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/shi_tomasi_hu3655572418342755069.webp&#34;
                width=&#34;555&#34;
                height=&#34;350&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -404,7 +404,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu1654188756838549732.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu4799263873215453537.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/skeleton_extraction_hu7723478630954022702.webp&#34;
                width=&#34;553&#34;
                height=&#34;355&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -433,7 +433,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu12195037151038958192.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu4918036970471170597.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/connected_components_hu7217986797033856015.webp&#34;
                width=&#34;545&#34;
                height=&#34;378&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -462,7 +462,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu18209107862982516437.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu2884419823242467532.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/template_hu11659726123555705027.webp&#34;
                width=&#34;499&#34;
                height=&#34;353&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -497,7 +497,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu18101909398949920466.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu14108854493791996505.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/leg_features_hu7341448728120080587.webp&#34;
                width=&#34;489&#34;
                height=&#34;320&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -526,7 +526,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu16264059692635278634.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu12389778951175088630.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/angles_hu911305775039293742.webp&#34;
                width=&#34;496&#34;
                height=&#34;338&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -561,7 +561,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu1537055730035741828.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu8003083638116927705.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/kmeans_hu2991777993052901984.webp&#34;
                width=&#34;556&#34;
                height=&#34;406&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -597,7 +597,7 @@
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp 400w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu5511305675759056958.webp 760w,
                /saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu10805202269737531730.webp 1200w&#34;
-               src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/integration_hu13320621738235640093.webp&#34;
                width=&#34;671&#34;
                height=&#34;615&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

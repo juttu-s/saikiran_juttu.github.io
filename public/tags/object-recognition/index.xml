@@ -2,95 +2,127 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Object Recognition | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/object-recognition/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/object-recognition/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/object-recognition/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/object-recognition/index.xml" rel="self" type="application/rss+xml" />
     <description>Object Recognition</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Object Recognition</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/object-recognition/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/object-recognition/</link>
     </image>
     
     <item>
       <title>Real-Time 2D Object Recognition with Feature Matching</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/object-recognition/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</guid>
-      <description>&lt;p&gt;This project developed a &lt;strong&gt;real-time webcam-based system&lt;/strong&gt; to detect and classify 2D objects using image segmentation, shape features, and distance-based classifiers. The system supports capturing and labeling training data interactively and recognizes both scale- and rotation-invariant objects.&lt;/p&gt;
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/object-recognition/</guid>
+      <description>&lt;p&gt;Recognise objects on a tabletop from a live webcam, using classical computer vision and nothing else — no learned features, no pretrained backbone. Camera overhead, dark objects on a white surface, everything computed per frame in C++.&lt;/p&gt;
+&lt;p&gt;The constraint that made this interesting: most of the pipeline had to be written from scratch. Two of the first four stages were required to be; three ended up that way. The only OpenCV algorithm doing real work is connected-component labelling.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;A watch and a pen segmented with oriented bounding boxes, axis-of-least-central-moment arrows, and live feature values overlaid&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu1285270646848479672.webp 400w,
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu4246342232475753791.webp 760w,
+               /saikiran_juttu.github.io/project/object-recognition/features-annotated_hu5357358603646478662.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/object-recognition/features-annotated_hu1285270646848479672.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Two objects at once. Blue boxes are the oriented bounding boxes, red arrows the axis of least central moment, cyan text the live feature values.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;workflow&#34;&gt;Workflow&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Thresholding Input Frames&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+&lt;h3 id=&#34;thresholding-without-otsu&#34;&gt;Thresholding, without Otsu&lt;/h3&gt;
+&lt;p&gt;Rather than call a threshold function, the threshold is found by &lt;strong&gt;2-means clustering on sampled pixel values&lt;/strong&gt;. Sample the frame, converge two centroids — one settles on the dark object population, one on the light background — and put the threshold at their midpoint.&lt;/p&gt;
+&lt;p&gt;The appeal is that it&amp;rsquo;s &lt;em&gt;adaptive by construction&lt;/em&gt;. As the lighting shifts, both centroids move and the threshold tracks them, without a hand-tuned constant anywhere. It&amp;rsquo;s a genuinely better fit for a live feed than a fixed cut, and it&amp;rsquo;s about fifteen lines of code.&lt;/p&gt;
+&lt;h3 id=&#34;morphological-cleanup&#34;&gt;Morphological cleanup&lt;/h3&gt;
+&lt;p&gt;The thresholded feed had holes in it — printed text and specular highlights on dark objects read as background. So: &lt;strong&gt;dilation first to close the gaps, then erosion to remove the speckle&lt;/strong&gt; the dilation amplified. Written by hand rather than called, and the ordering was driven by looking at the actual defect rather than reaching for a default.&lt;/p&gt;
+&lt;h3 id=&#34;segmentation&#34;&gt;Segmentation&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;cv::connectedComponentsWithStats&lt;/code&gt; labels the regions; components below a size threshold are dropped as noise. Survivors get distinct colours for display.&lt;/p&gt;
+&lt;h3 id=&#34;features-from-moments-up&#34;&gt;Features, from moments up&lt;/h3&gt;
+&lt;p&gt;Raw and central moments computed directly, then five descriptors per region:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;What it captures&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Centroid (x, y)&lt;/td&gt;
+          &lt;td&gt;Region position&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;θ&lt;/td&gt;
+          &lt;td&gt;Angle of the axis of least central moment — the object&amp;rsquo;s orientation&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Percent filled&lt;/td&gt;
+          &lt;td&gt;Region area ÷ oriented bounding box area&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bounding box ratio&lt;/td&gt;
+          &lt;td&gt;Oriented box aspect ratio&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Stored to CSV alongside a label typed at capture time, which makes the training set inspectable — you can open it and see why the classifier does what it does.&lt;/p&gt;
+&lt;h2 id=&#34;classification&#34;&gt;Classification&lt;/h2&gt;
+&lt;p&gt;Two classifiers over the same features:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Dynamic thresholding via simplified K-means clustering&lt;/li&gt;
-&lt;li&gt;Binary image separates object from background&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nearest neighbour&lt;/strong&gt; on cumulative scaled Euclidean distance — closest labelled example wins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;k-NN with k = 4&lt;/strong&gt; — take the four nearest, majority vote.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Morphological Filtering&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Used dilation and erosion to clean noise and fill holes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Connected Components &amp;amp; Region Segmentation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Identified distinct objects&lt;/li&gt;
-&lt;li&gt;Filtered out small noisy components&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Feature Extraction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Centroids, central moments, bounding box, percent fill&lt;/li&gt;
-&lt;li&gt;Orientation angle from least central moment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Training Interface&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Press &lt;code&gt;&#39;n&#39;&lt;/code&gt; to label new objects and save features to CSV&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Classification (2 Methods)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Baseline:&lt;/strong&gt; Scaled Euclidean distance&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;KNN (k=4):&lt;/strong&gt; Chosen label from majority of 4 nearest neighbors&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Confusion Matrix Evaluation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Achieved 93–100% accuracy on 5 classes&lt;/li&gt;
-&lt;li&gt;Evaluated with multiple images per class under varied conditions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;The k-NN version is the more robust of the two, and the reason is visible in the failure mode of the first. Nearest neighbour commits to a single best match, so when two classes differ only marginally in feature space, one noisy frame is enough to flip the decision. Requiring agreement among four neighbours means a single outlier can&amp;rsquo;t carry the vote.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;extended-features&#34;&gt;Extended Features&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Recognizes &lt;strong&gt;11 total object classes&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Handles &lt;strong&gt;multiple objects&lt;/strong&gt; simultaneously in a frame&lt;/li&gt;
-&lt;li&gt;Classifies objects even under &lt;strong&gt;rotations and scaling&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;demo-mode&#34;&gt;Demo Mode&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Press &lt;code&gt;&#39;r&#39;&lt;/code&gt; to begin recording video&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;&#39;p&#39;&lt;/code&gt; to stop and save to MP4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🎥 &lt;a href=&#34;https://drive.google.com/file/d/1AFoqLXxugcIa1uGtxgGTe1So_fgyTtBC/view?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Live System Demo&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/Project%203-Report.pdf&#34;&gt;Project Report (PDF)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/real-time-object-classifier&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This project combines classic computer vision with real-time systems and demonstrates how simple shape-based features can provide surprisingly effective results when paired with robust classification logic.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;11 object classes&lt;/strong&gt;, roughly 30 labelled samples captured at varying positions and orientations: watch, pen, mobile, spoon, bracelet, earbuds box, pendrive, statue, controller, star, clutch. Over 15 trials across five classes, classification accuracy ran &lt;strong&gt;93.33–100%&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The more informative result is how well the shape features separate the classes:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;Range across the 11 classes&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Percent filled&lt;/td&gt;
+          &lt;td&gt;0.34 (bracelet — a hollow loop) → 0.97 (phone — a filled rectangle)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bounding box ratio&lt;/td&gt;
+          &lt;td&gt;1.04 (near-square box) → 8.88 (pen)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Those two numbers do most of the discriminating, and they&amp;rsquo;re both scale- and rotation-invariant, which is the whole reason for computing orientation first and measuring the box &lt;em&gt;after&lt;/em&gt; aligning to it. Deliberately including several elongated objects — pen at 8.88, watch strap at 5.31, spoon at 3.99 — was what stress-tested it; anything can separate a pen from a phone, but separating a pen from a watch strap needs the percent-filled term to pull its weight.&lt;/p&gt;
+&lt;p&gt;An extension pushed it to &lt;strong&gt;multiple objects simultaneously&lt;/strong&gt;, segmenting and classifying every region in the frame rather than assuming one object at a time.&lt;/p&gt;
+&lt;h2 id=&#34;honest-limitations&#34;&gt;Honest limitations&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The feature vector includes absolute centroid position.&lt;/strong&gt; Centroid x and y range from 165 to 484 px across the dataset, and feeding those into a scaled-Euclidean distance means &lt;em&gt;where the object sits in frame&lt;/em&gt; contributes to the class decision — in a system whose stated goal is translation invariance. The three shape descriptors are the invariant ones and are doing the real work; the centroid terms are a liability I&amp;rsquo;d drop.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lighting drives everything.&lt;/strong&gt; The 2-means threshold adapts, but it can only adapt to a bimodal scene. Introduce a shadow gradient across the white surface, or a mid-grey object, and the two-cluster assumption stops holding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No timing was measured.&lt;/strong&gt; The system runs interactively on a live feed, but there&amp;rsquo;s no frame-rate figure behind that, so I won&amp;rsquo;t claim one.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++, OpenCV 4, CMake. Thresholding, morphology and the entire moment/feature pipeline hand-written; &lt;code&gt;connectedComponentsWithStats&lt;/code&gt; for labelling. Training data self-collected via an in-app capture-and-label mode, with recording built in for demos.&lt;/p&gt;
 </description>
     </item>
     

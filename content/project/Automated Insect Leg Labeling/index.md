@@ -11,6 +11,7 @@ categories:
   - Other Projects
 summary: Built an automated insect leg labeling pipeline using image preprocessing, Shi-Tomasi corner detection, and KMeans clustering to reduce manual labeling effort in DeepLabCut.
 featured: true
+url_code: 'https://github.com/juttu-s/Pattern-Recognition-and-Computer-Vision/tree/main/Automated%20Insect%20Leg%20Labeling'
 image:
   filename: featured.png
   preview_only: true

@@ -3,7 +3,7 @@
 <!-- Last Published: September 8, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/saikiran_juttu.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=saikiran_juttu.github.io/livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Calibrated a camera using chessboard targets, estimated pose with solvePnP, and rendered real-time virtual objects onto scenes using OpenCV." />
+  <meta name="description" content="Calibrated two cameras to sub-pixel reprojection error, estimated live pose with solvePnP, and rendered virtual geometry onto a chessboard — then warped an image over the board so the marker stopped looking like a marker." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/saikiran_juttu.github.io/project/calibration/" />
+  <link rel="alternate" hreflang="en-us" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="http://localhost:1313/saikiran_juttu.github.io/project/calibration/" />
+  <link rel="canonical" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/" />
 
   
   
@@ -172,7 +172,6 @@
   
   
     
-    
   
   
 
@@ -181,13 +180,13 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:url" content="http://localhost:1313/saikiran_juttu.github.io/project/calibration/" />
+  <meta property="og:url" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/" />
   <meta property="og:title" content="Camera Calibration and Augmented Reality | Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:description" content="Calibrated a camera using chessboard targets, estimated pose with solvePnP, and rendered real-time virtual objects onto scenes using OpenCV." /><meta property="og:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Calibrated two cameras to sub-pixel reprojection error, estimated live pose with solvePnP, and rendered virtual geometry onto a chessboard — then warped an image over the board so the marker stopped looking like a marker." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/featured.png" />
+    <meta property="twitter:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -217,9 +216,13 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/saikiran_juttu.github.io/project/calibration/"
+    "@id": "https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/"
   },
   "headline": "Camera Calibration and Augmented Reality",
+  
+  "image": [
+    "https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/featured.png"
+  ],
   
   "datePublished": "2024-03-18T00:00:00Z",
   "dateModified": "2024-03-18T00:00:00Z",
@@ -234,10 +237,10 @@
     "name": "Northeastern University",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
+      "url": "https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
     }
   },
-  "description": "Calibrated a camera using chessboard targets, estimated pose with solvePnP, and rendered real-time virtual objects onto scenes using OpenCV."
+  "description": "Calibrated two cameras to sub-pixel reprojection error, estimated live pose with solvePnP, and rendered virtual geometry onto a chessboard — then warped an image over the board so the marker stopped looking like a marker."
 }
 </script>
 
@@ -324,23 +327,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     
       
       
@@ -414,6 +400,27 @@
         
       
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -617,8 +624,8 @@
   
   <script
     defer
-    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -854,22 +861,6 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/sg-slam/"
-    
-  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/quadrotor-control/"
-    
-  >Control Strategies for Quadrotor Position and Altitude
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/sparse-reconstruction/"
     
   >Sparse 3D Reconstruction and Bundle Adjustment
@@ -894,9 +885,25 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/sg-slam/"
+    
+  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/"
     
   >Automated Insect Leg Labeling using DeepLabCut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    
+  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
     </a>
               
             </li><li class="flex flex-col "><a
@@ -925,9 +932,39 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#"
+                href="#calibration"
                 class="hb-docs-link"
-              ></a>
+              >Calibration</a>
+            </li>
+          <li>
+              <a
+                href="#pose"
+                class="hb-docs-link"
+              >Pose</a>
+            </li>
+          <li>
+              <a
+                href="#extensions"
+                class="hb-docs-link"
+              >Extensions</a>
+            </li>
+          <li>
+              <a
+                href="#toward-markerless"
+                class="hb-docs-link"
+              >Toward markerless</a>
+            </li>
+          <li>
+              <a
+                href="#a-note-on-the-target"
+                class="hb-docs-link"
+              >A note on the target</a>
+            </li>
+          <li>
+              <a
+                href="#stack"
+                class="hb-docs-link"
+              >Stack</a>
             </li>
           </ul>
   
@@ -935,9 +972,9 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    href="/saikiran_juttu.github.io/project/quadrotor-control/"
     
-  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
+  >Control Strategies for Quadrotor Position and Altitude
     </a>
               
             </li></ul>
@@ -1034,16 +1071,25 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#project-highlights">Project Highlights</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#calibration">Calibration</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#extra-features">Extra Features</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#two-cameras-one-surprise">Two cameras, one surprise</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#extension-tasks">Extension Tasks</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#pose">Pose</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#resources">Resources</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#extensions">Extensions</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#toward-markerless">Toward markerless</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-note-on-the-target">A note on the target</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#stack">Stack</a>
       </li></ul>
 
   
@@ -1085,7 +1131,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          1 min read
+          4 min read
         </span>
         
         </div>
@@ -1095,6 +1141,48 @@
 
 
 
+
+<div class="">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/juttu-s/Pattern-Recognition-and-Computer-Vision/tree/main/Calibration-and-Augmented-Reality." target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
         </div>
@@ -1110,60 +1198,175 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>This project focused on calibrating a camera and using it to overlay <strong>virtual 3D objects in real-time video feeds</strong> using OpenCV. It introduced concepts in camera intrinsics, pose estimation, and interactive augmented reality applications.</p>
+        <p>Everything in marker-based AR rests on one number: how well you know the camera. This project works through that chain end to end in C++/OpenCV — detect a calibration target, solve for intrinsics, recover live pose, and project virtual geometry that stays locked to the target as the camera moves.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="A green wireframe object rendered over a chessboard with rainbow corner polylines and RGB origin axes" srcset="
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6246078329211090082.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/virtual-object_hu6792843897147638943.webp 1200w"
+               src="/saikiran_juttu.github.io/project/calibration/virtual-object_hu5133569573855807652.webp"
+               width="474"
+               height="411"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>The virtual object holding its pose against the board.</em></p>
 <hr>
-<h3 id="project-highlights">Project Highlights</h3>
-<ol>
-<li>
-<p><strong>Corner Detection &amp; Calibration</strong></p>
-<ul>
-<li>Detected checkerboard corners using OpenCV</li>
-<li>Saved 3D-2D point correspondences</li>
-<li>Performed calibration with <code>cv2.calibrateCamera()</code></li>
-<li>Achieved reprojection error ≈ 0.544</li>
-</ul>
-</li>
-<li>
-<p><strong>Pose Estimation &amp; Projection</strong></p>
-<ul>
-<li>Used <code>solvePnP()</code> to compute pose</li>
-<li>Visualized 3D axes on the image using <code>projectPoints</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Render Virtual Objects</strong></p>
-<ul>
-<li>Designed a 15-point &ldquo;C&rdquo; shape object in world space</li>
-<li>Rendered its projection on camera view</li>
-<li>Preserved 3D orientation as the camera moved</li>
-</ul>
-</li>
-</ol>
+<h2 id="calibration">Calibration</h2>
+<p>A <strong>9×6 chessboard giving 54 interior corners</strong>, detected on a live stream with sub-pixel refinement. Pressing <code>s</code> banks the current frame&rsquo;s corner locations along with their corresponding 3-D world points; <code>cv::calibrateCamera</code> then solves for intrinsics and distortion. Fewer than five frames and it refuses — the parameters aren&rsquo;t determined.</p>
+<p>Recovered intrinsics for the laptop camera, from an initial guess of nothing more than a principal point at the image centre:</p>
+$$K = \begin{bmatrix} 611.41 & 0 & 311.84 \\ 0 & 613.70 & 236.82 \\ 0 & 0 & 1 \end{bmatrix}$$<p><strong>Final reprojection error: 0.545 px.</strong> Intrinsics and distortion coefficients are written out as OpenCV YAML so later runs skip calibration entirely.</p>
+<h3 id="two-cameras-one-surprise">Two cameras, one surprise</h3>
+<p>Running the same procedure on an external USB webcam gave a notably better fit:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Camera</th>
+          <th>fx, fy</th>
+          <th>cx, cy</th>
+          <th>Reprojection error</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Laptop integrated</td>
+          <td>611.41, 613.70</td>
+          <td>311.84, 236.82</td>
+          <td>0.545 px</td>
+      </tr>
+      <tr>
+          <td>External USB webcam</td>
+          <td>690.48, 693.37</td>
+          <td>344.83, 239.23</td>
+          <td><strong>0.150 px</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>The webcam calibrates about <strong>3.6× better</strong> — and the interesting part is that it does so while having <em>substantially larger</em> distortion coefficients (k1 = −0.446 against −0.215, k3 = −4.44 against −1.76). More distortion, better fit. Those aren&rsquo;t contradictory: the reprojection error measures how well the <em>model</em> explains the observations, not how mild the lens is. A strongly distorted lens whose distortion is well-described by the radial polynomial will beat a milder lens whose residual behaviour the model can&rsquo;t represent. Cheap wide optics can calibrate beautifully; the question is whether the model matches the physics.</p>
+<h2 id="pose">Pose</h2>
+<p>With intrinsics fixed, <code>solvePnP</code> returns rotation and translation per frame. The sanity check is nicer than eyeballing an overlay — translate the camera to the right and watch the numbers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">tvec  [7.378, 6.753, 40.531]
+</span></span><span class="line"><span class="cl">tvec  [7.627, 6.719, 40.485]
+</span></span><span class="line"><span class="cl">tvec  [7.759, 6.711, 40.504]
+</span></span><span class="line"><span class="cl">tvec  [8.070, 6.713, 40.486]
+</span></span></code></pre></div><p>X climbs monotonically, 7.378 → 8.070, while Y holds near 6.71 and Z near 40.49. That&rsquo;s exactly right for pure lateral motion, and it&rsquo;s a check on the physical meaning of the solution rather than on whether the render happens to look plausible.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Projected 3D axes anchored at the board origin with all 54 corners detected and linked" srcset="
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu3207897690070648796.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/projected-axes_hu17627915606788624727.webp 1200w"
+               src="/saikiran_juttu.github.io/project/calibration/projected-axes_hu14538787005341851264.webp"
+               width="633"
+               height="388"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>Detected corners and the projected 3-D axes at the board origin.</em></p>
+<p><code>cv::projectPoints</code> then puts 3-D world points back onto the image plane — the board corners, RGB axes at the origin, and a virtual object defined as <strong>15 points forming an inverted C</strong>, connected by lines drawn between their projections.</p>
 <hr>
-<h3 id="extra-features">Extra Features</h3>
-<ul>
-<li>Harris corner detection to compare feature robustness</li>
-<li>Live insertion of objects via webcam</li>
-<li>Support for <strong>multiple checkerboards</strong> in one scene</li>
-<li>Replaced the checkerboard region with a <strong>custom image overlay</strong></li>
-</ul>
-<hr>
-<h3 id="extension-tasks">Extension Tasks</h3>
-<ul>
-<li>Compared calibrations of internal vs external webcams</li>
-<li>Added keyboard control to insert virtual objects from pre-recorded videos</li>
-<li>Used different board sizes (9x6, 6x6) in the same frame</li>
-<li>Created <strong>multi-object AR scenes</strong> from multiple markers</li>
-</ul>
-<hr>
-<h3 id="resources">Resources</h3>
-<ul>
-<li>📄 <a href="/files/Project%204-Report.pdf">Project Report (PDF)</a></li>
-<li>🎥 <a href="https://drive.google.com/file/d/103mUiSgL6q1pJ2LhHZq8z1r2gVORhIdA/view?usp=sharing" target="_blank" rel="noopener">Demo Video</a></li>
-<li>🔗 <a href="https://github.com/juttu-s/augmented-reality-calibration" target="_blank" rel="noopener">GitHub Repository</a></li>
-</ul>
-<hr>
-<p>This project was an exciting blend of <strong>computer vision theory and practical AR rendering</strong> using OpenCV. It forms a solid foundation for advanced applications in robotics, pose tracking, and mixed-reality interfaces.</p>
+<h2 id="extensions">Extensions</h2>
+<p><strong>Making the marker stop looking like a marker.</strong> The strongest result here: find the board&rsquo;s four extreme corners, warp an arbitrary image into that quadrilateral, and render the virtual object on top of the warped result. The chessboard is still doing all the pose work underneath, but it&rsquo;s no longer visible — which is the difference between a calibration demo and something you&rsquo;d actually want in a scene.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="An arbitrary image warped over the chessboard region with the virtual object drawn on top" srcset="
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu16920568668342420622.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/target-overlay_hu14363001692669884525.webp 1200w"
+               src="/saikiran_juttu.github.io/project/calibration/target-overlay_hu10769559096996454137.webp"
+               width="491"
+               height="395"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>The board&rsquo;s squares fully replaced, virtual geometry still tracking correctly.</em></p>
+<p><strong>Two boards at once.</strong> A (9,6) and a (6,6) board handled in a single frame, each solved for pose independently and each rendered with its own coloured pyramid. It degrades gracefully — remove one board and the other keeps tracking.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Two checkerboards of different sizes tracked simultaneously, each with its own coloured wireframe pyramid" srcset="
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp 400w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu10299970603627648674.webp 760w,
+               /saikiran_juttu.github.io/project/calibration/multi-board_hu7114270305068571192.webp 1200w"
+               src="/saikiran_juttu.github.io/project/calibration/multi-board_hu16617972295414141342.webp"
+               width="656"
+               height="445"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>Independent pose solutions for two different board geometries in one frame.</em></p>
+<p><strong>Pre-recorded video mode.</strong> Pressing <code>p</code> runs the whole pipeline over recorded footage instead of the live feed, inserting virtual objects into video after the fact.</p>
+<h2 id="toward-markerless">Toward markerless</h2>
+<p><code>cv::cornerHarris</code> was added to explore features that don&rsquo;t require a known target, swept over threshold, block size, aperture size and the Harris free parameter <em>k</em>. Raising the threshold from 150 to 200 visibly thins the detections, dropping the finer corners first.</p>
+<p>Detection is where this stopped, and it&rsquo;s worth being precise about that: <strong>the markerless pipeline was designed, not built.</strong> Going from Harris corners to a pose estimate needs frame-to-frame correspondence — SIFT or SURF descriptors matched across frames, then a transformation recovered from the matches, then projection using that pose. That&rsquo;s the natural continuation and it isn&rsquo;t implemented here.</p>
+<h2 id="a-note-on-the-target">A note on the target</h2>
+<p>The chessboard in these figures is being <strong>displayed on a phone screen</strong> rather than printed. Convenient, and it never creases — but it&rsquo;s a glossy emissive surface, which introduces specular highlights and probably accounts for some of the laptop camera&rsquo;s worse reprojection error. A matte printed target on rigid backing is the better choice if the calibration itself is what matters.</p>
+<h2 id="stack">Stack</h2>
+<p>C++, OpenCV 4, CMake, on Windows and Ubuntu. <code>calibrateCamera</code>, <code>solvePnP</code>, <code>projectPoints</code>, <code>cornerHarris</code>; intrinsics persisted as OpenCV YAML. Two cameras: a laptop integrated camera and an external USB webcam.</p>
 
       </div>
 
@@ -1186,11 +1389,13 @@
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/opencv/">OpenCV</a>
   
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>
+  
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/augmented-reality/">Augmented Reality</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/pose-estimation/">Pose Estimation</a>
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/virtual-projection/">Virtual Projection</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/homography/">Homography</a>
   
 </div>
 
@@ -1208,7 +1413,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;text=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;text=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1226,7 +1431,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;t=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;t=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1246,7 +1451,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Camera%20Calibration%20and%20Augmented%20Reality&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F"
+    href="mailto:?subject=Camera%20Calibration%20and%20Augmented%20Reality&amp;body=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1264,7 +1469,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;title=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F&amp;title=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1282,7 +1487,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality%20http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F"
+    href="whatsapp://send?text=Camera&#43;Calibration&#43;and&#43;Augmented&#43;Reality%20https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fcalibration%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1332,7 +1537,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:1313/saikiran_juttu.github.io/" class="no-underline">
+      <a href="https://juttu-s.github.io/saikiran_juttu.github.io/" class="no-underline">
       Saikiran Juttu
       </a>
     </div>
@@ -1437,15 +1642,15 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/dead-reckoning/">
+        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/quadrotor-control/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation</span
+            >Control Strategies for Quadrotor Position and Altitude</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Mar 15, 2024
+                Dec 5, 2023
               
             </span>
           </span>

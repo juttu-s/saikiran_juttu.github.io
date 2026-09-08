@@ -2,100 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dead Reckoning | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/dead-reckoning/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/dead-reckoning/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/dead-reckoning/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/dead-reckoning/index.xml" rel="self" type="application/rss+xml" />
     <description>Dead Reckoning</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 09 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Dead Reckoning</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/dead-reckoning/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/dead-reckoning/</link>
     </image>
     
     <item>
       <title>Dead Reckoning with IMU &amp; GPS in Vehicle Navigation</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</link>
-      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</guid>
-      <description>&lt;p&gt;This project involved real-world testing of &lt;strong&gt;dead reckoning navigation&lt;/strong&gt; using an &lt;strong&gt;IMU (VectorNav 100)&lt;/strong&gt; and GPS data mounted in a car. We collected and fused sensor data to estimate vehicle trajectory and compared it against ground truth GPS tracks.&lt;/p&gt;
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/dead-reckoning/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/dead-reckoning/</guid>
+      <description>&lt;p&gt;Take away the GPS fix and a vehicle has to work out where it is from acceleration and rotation alone. This project does that end to end on real data — instrument a car, calibrate the magnetometer properly, fuse a heading estimate, integrate forward velocity, and reconstruct the trajectory — then compares the result against GPS to find out how long dead reckoning actually survives.&lt;/p&gt;
+&lt;p&gt;The short answer: &lt;strong&gt;about three minutes.&lt;/strong&gt; After that it is off by the length of a city block.&lt;/p&gt;
+&lt;p&gt;Coursework for &lt;strong&gt;EECE5554: Robotics Sensing and Navigation&lt;/strong&gt; at Northeastern.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;objective&#34;&gt;Objective&lt;/h3&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;VectorNav VN-100&lt;/strong&gt; IMU mounted inside the vehicle in a custom holder, deliberately aligned so its &lt;strong&gt;x-axis points along the vehicle&amp;rsquo;s forward direction&lt;/strong&gt; and the unit sits level. That alignment is doing real work later — it&amp;rsquo;s what lets &lt;code&gt;accel_x&lt;/code&gt; be treated as forward acceleration and &lt;code&gt;accel_y&lt;/code&gt; as lateral without a rotation. A magnetic-mount GPS puck went on the roof, both feeding one laptop over ROS.&lt;/p&gt;
+&lt;p&gt;Two datasets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Use IMU (accel, gyro, mag) for estimating yaw and velocity&lt;/li&gt;
-&lt;li&gt;Compare integrated dead reckoning trajectory with GPS&lt;/li&gt;
-&lt;li&gt;Apply calibration and filtering for high-speed vehicle navigation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;methodology&#34;&gt;Methodology&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Sensor Mounting &amp;amp; Data Collection&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IMU mounted flat, aligned to vehicle axis&lt;/li&gt;
-&lt;li&gt;GPS puck on roof&lt;/li&gt;
-&lt;li&gt;ROS bagged data over a 2–3 km drive around Boston&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Magnetometer Calibration&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Applied hard &amp;amp; soft iron corrections using ellipse fitting&lt;/li&gt;
-&lt;li&gt;Centered &amp;amp; scaled magnetometer output&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Yaw Estimation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Used complementary filter combining:
-&lt;ul&gt;
-&lt;li&gt;Low-pass filtered magnetometer (0.5 Hz cutoff)&lt;/li&gt;
-&lt;li&gt;High-pass filtered gyro data (0.1 Hz cutoff)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Fusion coefficient α = 0.98&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Velocity Estimation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Acceleration filtered with high-pass Butterworth&lt;/li&gt;
-&lt;li&gt;Integrated over time&lt;/li&gt;
-&lt;li&gt;Clamped negative values to zero and capped outliers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Trajectory Reconstruction&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Integrated filtered heading + velocity&lt;/li&gt;
-&lt;li&gt;Rotated &amp;amp; scaled to align IMU trajectory with GPS path&lt;/li&gt;
-&lt;li&gt;Best match scale: 2.25, rotation correction: 14–25°&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Initial path tracking was highly accurate&lt;/li&gt;
-&lt;li&gt;IMU-based dead reckoning remained within &lt;strong&gt;2m&lt;/strong&gt; of GPS for &lt;strong&gt;150–200 seconds&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Final drift reached nearly &lt;strong&gt;400 meters&lt;/strong&gt; after extended driving&lt;/li&gt;
-&lt;li&gt;GPS helps correct IMU drift over long durations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Circles&lt;/strong&gt; — five laps of the Ruggles station circle, recorded purely to excite the magnetometer through a full 360° of heading. This is calibration data, not navigation data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Driving&lt;/strong&gt; — a 2–3 km route around Boston with at least ten turns, roughly 1300 s, routed to avoid tunnels and underpasses so the GPS reference stays continuous.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;key-insights&#34;&gt;Key Insights&lt;/h3&gt;
+&lt;h2 id=&#34;magnetometer-calibration&#34;&gt;Magnetometer calibration&lt;/h2&gt;
+&lt;p&gt;An uncalibrated magnetometer driven in a circle should trace a circle. It doesn&amp;rsquo;t, and the two ways it fails are visually distinguishable from the same scatter plot:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Magnetometer X-Y scatter before and after calibration — the measured ring offset from the origin, the calibrated ring centred on it&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu6564607695943048432.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu4157646788420770913.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu17823870522234568360.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/magnetometer-calibration_hu6564607695943048432.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;573&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Five laps of the Ruggles circle. Orange is raw, blue is corrected.&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;IMU is accurate for short-term dead reckoning&lt;/li&gt;
-&lt;li&gt;Drift arises from gyroscope bias and sloped paths&lt;/li&gt;
-&lt;li&gt;Regular GPS re-calibration is essential for long-term navigation&lt;/li&gt;
-&lt;li&gt;Complementary filter effectively combines noisy sensors&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The ring is off-centre&lt;/strong&gt; → &lt;strong&gt;hard iron&lt;/strong&gt; distortion. A constant field offset from permanent magnets, ferrous structure or current-carrying conductors near the sensor. The raw ring here sits up and to the right of the origin, biased by roughly 0.27 G in x and 0.22 G in y. Correction is a per-axis bias subtraction that recentres the cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The ring is deformed&lt;/strong&gt; → &lt;strong&gt;soft iron&lt;/strong&gt; distortion. Non-uniform scaling and rotation from nearby ferrous material. You can see it in both rings as a distinct kink near the +x side — the shape isn&amp;rsquo;t circular and no amount of translation fixes that. Correction is a matrix that scales and rotates the data back toward a circle.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;p&gt;The parameters come from a least-squares ellipse fit to the circle-driving data, applied as bias subtraction followed by the correction matrix. Being able to read &lt;em&gt;which&lt;/em&gt; distortion you have off the plot before fixing either is the useful part of this exercise — the two have different causes and different remedies, and the geometry tells you which you&amp;rsquo;re looking at.&lt;/p&gt;
+&lt;h2 id=&#34;heading&#34;&gt;Heading&lt;/h2&gt;
+&lt;p&gt;Neither heading source is usable alone. The magnetometer gives absolute heading but is noisy and sensitive to the vehicle&amp;rsquo;s own electrical and magnetic environment. The gyro is clean over short intervals but integrates its bias without bound — the raw integrated yaw here climbs to about &lt;strong&gt;+405°&lt;/strong&gt; by t ≈ 560 s and plateaus near 300°, which is meaningless as an absolute heading.&lt;/p&gt;
+&lt;p&gt;A complementary filter takes the half of each signal that&amp;rsquo;s trustworthy:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href=&#34;http://localhost:1313/saikiran_juttu.github.io/files/LAB%205%20report-1.pdf&#34;&gt;Lab 5 Report (PDF)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🔗 &lt;a href=&#34;https://github.com/juttu-s/dead-reckoning-imu-gps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0.5 Hz low-pass&lt;/strong&gt; on magnetometer yaw — keeps the slow-moving absolute reference, discards the noise&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0.1 Hz high-pass&lt;/strong&gt; on gyro yaw — keeps short-term rate fidelity, discards the drift&lt;/li&gt;
+&lt;li&gt;blended with coefficient &lt;strong&gt;0.98&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Four-panel comparison: low-passed magnetometer yaw, high-passed gyro yaw, complementary filter output, and the VN-100&amp;rsquo;s own onboard heading estimate&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu16052623581733354419.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu9034352427183490476.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu864362406907695216.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/heading-fusion_hu16052623581733354419.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;372&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;The two filtered branches, the fused output, and the VN-100&amp;rsquo;s internal estimate for comparison.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;This project demonstrates real-world dead reckoning with consumer-grade sensors and sets the foundation for more robust SLAM and localization strategies in mobile robotics or autonomous vehicles.&lt;/p&gt;
+&lt;h2 id=&#34;forward-velocity-and-the-number-that-gave-the-game-away&#34;&gt;Forward velocity, and the number that gave the game away&lt;/h2&gt;
+&lt;p&gt;Integrating raw accelerometer output produces nonsense. The raw forward-velocity trace peaks around &lt;strong&gt;+35 m/s&lt;/strong&gt; and dips to &lt;strong&gt;−15 m/s&lt;/strong&gt; — the car did neither. That&amp;rsquo;s accelerometer bias being integrated into an unbounded ramp, plus road vibration and the gravity component that any unnoticed slope injects into the forward axis.&lt;/p&gt;
+&lt;p&gt;Two corrections bring it into physical range: a high-pass filter on forward acceleration to strip the low-frequency bias, then clamps — negative velocities to zero, plus an upper bound. That gets the adjusted trace to a plausible &lt;strong&gt;0–11 m/s&lt;/strong&gt;, against GPS-derived velocity peaking at 12.7 m/s.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Raw integrated forward velocity against the filtered and clamped version&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu6766549600153078957.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu2268536860800196880.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu229241971526026250.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/forward-velocity_hu6766549600153078957.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;398&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Blue: integrate the raw signal and the car reaches 35 m/s and reverses. Orange: after high-pass filtering and clamping.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then aligning the dead-reckoned track to GPS required scaling the IMU distances by &lt;strong&gt;2.25×&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;That factor is the most informative number in the whole project, and it isn&amp;rsquo;t a calibration constant — it&amp;rsquo;s a symptom. A 2.25× scale error means the integrated velocity was systematically &lt;strong&gt;less than half&lt;/strong&gt; the true speed, and both corrections above are implicated. The high-pass filter that removed accelerometer bias also removed genuine low-frequency acceleration, because a car accelerating gently from a light and a slowly-drifting bias occupy the same part of the spectrum. And clamping negative velocity to zero doesn&amp;rsquo;t just discard drift — it &lt;strong&gt;rectifies&lt;/strong&gt; the signal, converting every real deceleration the drifting integrator pushed below zero into &amp;ldquo;stationary&amp;rdquo;. Distance travelled comes out short in both cases.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The filter that fixed the drift destroyed the scale.&lt;/strong&gt; Getting both would need the bias estimated as a state rather than filtered out — which is the argument for a Kalman filter over hand-tuned Butterworths, and the direction I&amp;rsquo;d take this next.&lt;/p&gt;
+&lt;h2 id=&#34;trajectory&#34;&gt;Trajectory&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Dead-reckoned trajectory beside the GPS ground track, both in Easting/Northing metres&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu12573546119952805973.webp 400w,
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu11079378006867108752.webp 760w,
+               /saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu14489892853533858604.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/dead-reckoning/trajectories_hu12573546119952805973.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;347&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Dead-reckoned track (left) against GPS (right). The shape survives; the extent doesn&amp;rsquo;t.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Projecting forward velocity onto the fused heading and integrating gives the track above, aligned to GPS by matching start coordinates and the first straight segment.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The two agree to within about &lt;strong&gt;2 m for the first 150–200 s&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;After that they diverge, reaching roughly &lt;strong&gt;400 m&lt;/strong&gt; of displacement error by the end of the ~2–3 km route&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dead reckoning worked best exactly where you&amp;rsquo;d expect — early, on straight, level road. It degraded with each successive turn, and the two causes are &lt;strong&gt;gyro bias instability&lt;/strong&gt; feeding heading error into every subsequent position update, and &lt;strong&gt;unanticipated road slopes&lt;/strong&gt; tilting gravity onto the forward axis where it gets integrated as acceleration.&lt;/p&gt;
+&lt;p&gt;One honest wrinkle in the alignment: the IMU track was rotated 14° and the GPS track 25°, in opposite service of making the first straight segments agree. Rotating &lt;em&gt;both&lt;/em&gt; by &lt;em&gt;different&lt;/em&gt; amounts means the result no longer references true north — a single rotation of the difference would have been the defensible choice.&lt;/p&gt;
+&lt;h2 id=&#34;the-takeaway&#34;&gt;The takeaway&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s a usable operating envelope here and it&amp;rsquo;s narrow. Roughly &lt;strong&gt;150–200 seconds of GPS outage&lt;/strong&gt; is survivable at 2 m accuracy, which is enough to cross a tunnel or an urban canyon. It is nowhere near enough to navigate on, and the failure is not graceful — error grows superlinearly as heading error compounds. Any real system needs periodic absolute fixes, and the interesting engineering question is how sparse those fixes can be, not whether you need them.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;ROS (rosbag, sensor nodes), Python, SciPy (&lt;code&gt;butter&lt;/code&gt;/&lt;code&gt;filtfilt&lt;/code&gt;, least-squares fitting), matplotlib, UTM projection. Hardware: VectorNav VN-100, magnetic-mount GPS puck, Northeastern&amp;rsquo;s instrumented &amp;ldquo;nuance&amp;rdquo; vehicle.&lt;/p&gt;
 </description>
     </item>
     

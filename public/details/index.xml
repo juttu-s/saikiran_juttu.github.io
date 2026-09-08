@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Details | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/details/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/details/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/details/index.xml" rel="self" type="application/rss+xml" />
     <description>Details</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Details</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/details/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/</link>
     </image>
     
     <item>
       <title>Robotics Engineer Co-op</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/robotics-coop/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/robotics-coop/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Worked at Northeastern University on:&lt;/p&gt;
 &lt;hr&gt;
@@ -41,7 +41,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Robot.jpeg&#34; alt=&#34;Scout Mini Rover Setup&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Robot.jpeg&#34; alt=&#34;Scout Mini Rover Setup&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;slam-implementation&#34;&gt;SLAM Implementation&lt;/h3&gt;
@@ -55,7 +55,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;RTAB-Map Demo:&lt;/strong&gt;&lt;/p&gt;
 &lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
-  &lt;source src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/RTAB_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/RTAB_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;p&gt;&lt;strong&gt;LIO-SAM Screenshot:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
@@ -76,7 +76,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/lio_sam.png&#34; alt=&#34;LIO-SAM Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/lio_sam.png&#34; alt=&#34;LIO-SAM Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -100,9 +100,9 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
     
     <item>
       <title>Graduate Research Assistant</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Worked at the Multi-Agent Robotics and Autonomy Lab on:&lt;/p&gt;
 &lt;ul&gt;
@@ -117,9 +117,9 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
     
     <item>
       <title>Brakes &amp; Testing Head — BAJA SAE Off-Road Racing</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/brakes_testing_head/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/brakes_testing_head/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Role:&lt;/strong&gt; Brakes and Testing Head&lt;br&gt;
 &lt;strong&gt;Team:&lt;/strong&gt; Off-Road Racing Team — NIT Jalandhar&lt;br&gt;
@@ -147,7 +147,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/experience.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/experience.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -187,7 +187,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/calliper_assembly.jpg&#34; alt=&#34;Exploded view of caliper assembly&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/calliper_assembly.jpg&#34; alt=&#34;Exploded view of caliper assembly&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;ansys-fea-analysis&#34;&gt;ANSYS FEA Analysis&lt;/h4&gt;
@@ -209,7 +209,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/caliper_ansys.jpg&#34; alt=&#34;FEA Stress Simulation in ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/caliper_ansys.jpg&#34; alt=&#34;FEA Stress Simulation in ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -237,7 +237,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor_thermal.jpg&#34; alt=&#34;Rear Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor_thermal.jpg&#34; alt=&#34;Rear Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 *Rear Rotor — Thermal Simulation *&lt;/p&gt;
@@ -259,7 +259,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor.jpg&#34; alt=&#34;Rear Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/rear_rotor.jpg&#34; alt=&#34;Rear Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 *Rear Rotor — Static Structural FEA *&lt;/p&gt;
@@ -287,7 +287,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/front_rotor_thermal.jpg&#34; alt=&#34;Front Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/front_rotor_thermal.jpg&#34; alt=&#34;Front Rotor Thermal&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Front Rotor — Thermal Analysis&lt;/em&gt;&lt;/p&gt;
@@ -309,7 +309,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Front_rotor.jpg&#34; alt=&#34;Front Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Front_rotor.jpg&#34; alt=&#34;Front Rotor Stress&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Front Rotor — Structural Stress Analysis&lt;/em&gt;&lt;/p&gt;
@@ -337,7 +337,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Brake_pedal_ansys.png&#34; alt=&#34;Brake Pedal ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/Brake_pedal_ansys.png&#34; alt=&#34;Brake Pedal ANSYS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Brake Pedal — Stress Zones&lt;/em&gt;&lt;/p&gt;
@@ -359,7 +359,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/pedal_mounting.png&#34; alt=&#34;Pedal Mounting&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/pedal_mounting.png&#34; alt=&#34;Pedal Mounting&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;Custom Bracket — Pedal Mount Geometry&lt;/em&gt;&lt;/p&gt;
@@ -400,7 +400,7 @@ In C++/Python with Nav2 for improved localization in GPS-denied environments.&lt
 
 &lt;figure  &gt;
   &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;http://localhost:1313/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/test.png&#34; alt=&#34;Test Rig&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/test.png&#34; alt=&#34;Test Rig&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;br&gt;
 &lt;em&gt;On-field brake performance testing with Arduino sensor rig&lt;/em&gt;&lt;/p&gt;

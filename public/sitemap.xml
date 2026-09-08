@@ -2,439 +2,455 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/categories/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/vla-libero-bench/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/vla-libero-bench/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/imitation-learning/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/imitation-learning/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/learning-for-robotics/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/categories/learning-for-robotics/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/libero/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/libero/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lora/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/lora/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/openvla/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/openvla/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pytorch/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/pytorch/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/robot-manipulation/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/robot-manipulation/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/vision-language-action/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/vision-language-action/</loc>
     <lastmod>2026-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/collaborative-exploration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/collaborative-exploration/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/publication/energy-aware-uav-ugv-exploration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/publication/energy-aware-uav-ugv-exploration/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot-planning/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/multi-robot-planning/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/orienteering-problem/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/orienteering-problem/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/publication_types/paper-conference/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/publication_types/paper-conference/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/prm/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/prm/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/publication_types/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/publication_types/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/publication/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/publication/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/uav-ugv/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/uav-ugv/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/details/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/details/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/jetson/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/jetson/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/optitrack/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/optitrack/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/perception/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/perception/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/details/robotics-coop/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/details/robotics-coop/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ros2/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ros2/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/slam/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/slam/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/vlm/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/vlm/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/action-mapping/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/action-mapping/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/autonomous-driving/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/autonomous-driving/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/am-race-driving-rl/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/am-race-driving-rl/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ddpg/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ddpg/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/reinforcement-learning/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/reinforcement-learning/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sac/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/sac/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/td3/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/td3/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/c&#43;&#43;/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dynamic-environments/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/orb-slam2/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ros/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/sg-slam/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/semantic-slam/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/slam-and-visual-inertial-odometry/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/yolo/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/control-systems/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lqg/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/lqr/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/matlab/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mpc/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/other-projects/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/quadrotor/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/simulink/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/categories/3d-reconstruction-and-calibration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/categories/3d-reconstruction-and-calibration/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/bundle-adjustment/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/bundle-adjustment/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/epipolar-geometry/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/epipolar-geometry/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gtsam/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gtsam/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/opencv/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/opencv/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/python/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/python/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/sparse-reconstruction/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/sparse-reconstruction/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/structure-from-motion/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/structure-from-motion/</loc>
     <lastmod>2024-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/image-registration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-registration/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/levenberg-marquardt/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/levenberg-marquardt/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/photo-mosaicking/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/photo-mosaicking/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/projects/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/kimera/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/docker/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/kimera-vio/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/kimera/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/pose-estimation/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/kimera-vio/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/visual-inertial-odometry/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/realsense/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ros/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/categories/slam-and-visual-inertial-odometry/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/visual-inertial-odometry/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/dynamic-environments/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/mobilenet-ssd/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ncnn/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/orb-slam2/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/sg-slam/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/semantic-slam/</loc>
+    <lastmod>2024-04-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/automated-insect-leg-labeling/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/computer-vision/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/computer-vision/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/deeplabcut/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/deeplabcut/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/feature-detection/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/feature-detection/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/image-processing/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-processing/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/cnn/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/categories/other-projects/</loc>
+    <lastmod>2024-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/complementary-filter/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/dead-reckoning/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/dead-reckoning/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gps/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/imu/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/magnetometer-calibration/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/sensor-fusion/</loc>
+    <lastmod>2024-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/cnn/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/deep-learning/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/deep-learning/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/digit-recognition/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/digit-recognition/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gazebo/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mnist/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/mnist/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/multi-robot/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/multi-robot/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/transfer-learning/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/transfer-learning/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/feature-extraction/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/image-moments/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/object-recognition/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/object-recognition/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/object-recognition/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/object-recognition/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/real-time-systems/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/real-time-systems/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/augmented-reality/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/augmented-reality/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/camera-calibration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/camera-calibration/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/calibration/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/calibration/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/virtual-projection/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/homography/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dead-reckoning/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/pose-estimation/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/project/dead-reckoning/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/gps/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/control-systems/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/imu/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/kalman-filter/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/navigation/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/lqg/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sensor-fusion/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/lqr/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/experience/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/matlab/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/quadrotor/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/simulink/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/experience/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/ansys/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/ansys/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/details/brakes_testing_head/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/details/brakes_testing_head/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/braking-system/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/braking-system/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/catia/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/catia/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/dfm/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/dfm/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/fea/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/fea/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/mechanical-design/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/mechanical-design/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/prototyping/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/prototyping/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/sae/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/sae/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/structural-mechanics/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/structural-mechanics/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/saikiran_juttu.github.io/tags/thermal-analysis/</loc>
+    <loc>https://juttu-s.github.io/saikiran_juttu.github.io/tags/thermal-analysis/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

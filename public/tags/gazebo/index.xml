@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gazebo | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/gazebo/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/gazebo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/index.xml" rel="self" type="application/rss+xml" />
     <description>Gazebo</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Gazebo</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/gazebo/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/</link>
     </image>
     
     <item>
       <title>Graduate Research Assistant</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/details/grad-research-assistant/</guid>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Worked at the Multi-Agent Robotics and Autonomy Lab on:&lt;/p&gt;
 &lt;ul&gt;

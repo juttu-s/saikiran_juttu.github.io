@@ -3,7 +3,7 @@
 <!-- Last Published: September 8, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/saikiran_juttu.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=saikiran_juttu.github.io/livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="A comparative study of MPC, LQR, LQG, and LQR-PI controllers for quadrotor position and altitude control, evaluating stability and robustness under sensor noise and disturbances." />
+  <meta name="description" content="A comparative study of LQR, LQR-PI and LQG regulation on a 12-state quadrotor linearised about hover — including what the LQR-PI settling-time gain actually costs in actuator authority." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/" />
+  <link rel="alternate" hreflang="en-us" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/saikiran_juttu.github.io/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/" />
+  <link rel="canonical" href="https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/" />
 
   
   
@@ -172,7 +172,6 @@
   
   
     
-    
   
   
 
@@ -181,21 +180,21 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:url" content="http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/" />
+  <meta property="og:url" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/" />
   <meta property="og:title" content="Control Strategies for Quadrotor Position and Altitude | Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:description" content="A comparative study of MPC, LQR, LQG, and LQR-PI controllers for quadrotor position and altitude control, evaluating stability and robustness under sensor noise and disturbances." /><meta property="og:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A comparative study of LQR, LQR-PI and LQG regulation on a 12-state quadrotor linearised about hover — including what the LQR-PI settling-time gain actually costs in actuator authority." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/featured.png" />
+    <meta property="twitter:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2024-12-10T00:00:00&#43;00:00"
+        content="2023-12-05T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-12-10T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2023-12-05T00:00:00&#43;00:00">
   
 
   
@@ -217,12 +216,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/"
+    "@id": "https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/"
   },
   "headline": "Control Strategies for Quadrotor Position and Altitude",
   
-  "datePublished": "2024-12-10T00:00:00Z",
-  "dateModified": "2024-12-10T00:00:00Z",
+  "image": [
+    "https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/featured.png"
+  ],
+  
+  "datePublished": "2023-12-05T00:00:00Z",
+  "dateModified": "2023-12-05T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -234,10 +237,10 @@
     "name": "Northeastern University",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
+      "url": "https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu17980401698969639728.png"
     }
   },
-  "description": "A comparative study of MPC, LQR, LQG, and LQR-PI controllers for quadrotor position and altitude control, evaluating stability and robustness under sensor noise and disturbances."
+  "description": "A comparative study of LQR, LQR-PI and LQG regulation on a 12-state quadrotor linearised about hover — including what the LQR-PI settling-time gain actually costs in actuator authority."
 }
 </script>
 
@@ -324,23 +327,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     
       
       
@@ -414,6 +400,27 @@
         
       
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -617,8 +624,8 @@
   
   <script
     defer
-    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/saikiran_juttu.github.io/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -854,49 +861,6 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/sg-slam/"
-    
-  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
-    </a>
-              
-            </li><li class="flex flex-col open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/saikiran_juttu.github.io/project/quadrotor-control/"
-    
-  >Control Strategies for Quadrotor Position and Altitude
-    </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#objectives"
-                class="hb-docs-link"
-              >Objectives</a>
-            </li>
-          <li>
-              <a
-                href="#controllers-implemented"
-                class="hb-docs-link"
-              >Controllers Implemented</a>
-            </li>
-          <li>
-              <a
-                href="#evaluation"
-                class="hb-docs-link"
-              >Evaluation</a>
-            </li>
-          <li>
-              <a
-                href="#tools--libraries"
-                class="hb-docs-link"
-              >Tools &amp;amp; Libraries</a>
-            </li>
-          </ul>
-  
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/sparse-reconstruction/"
     
   >Sparse 3D Reconstruction and Bundle Adjustment
@@ -921,9 +885,25 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/sg-slam/"
+    
+  >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/saikiran_juttu.github.io/project/automated-insect-leg-labeling/"
     
   >Automated Insect Leg Labeling using DeepLabCut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+    
+  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
     </a>
               
             </li><li class="flex flex-col "><a
@@ -950,13 +930,58 @@
   >Camera Calibration and Augmented Reality
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/saikiran_juttu.github.io/project/dead-reckoning/"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/saikiran_juttu.github.io/project/quadrotor-control/"
     
-  >Dead Reckoning with IMU &amp; GPS in Vehicle Navigation
+  >Control Strategies for Quadrotor Position and Altitude
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#plant"
+                class="hb-docs-link"
+              >Plant</a>
+            </li>
+          <li>
+              <a
+                href="#controllers"
+                class="hb-docs-link"
+              >Controllers</a>
+            </li>
+          <li>
+              <a
+                href="#test"
+                class="hb-docs-link"
+              >Test</a>
+            </li>
+          <li>
+              <a
+                href="#what-the-settling-time-cost"
+                class="hb-docs-link"
+              >What the settling time cost</a>
+            </li>
+          <li>
+              <a
+                href="#the-test-couldnt-show-what-lqr-pi-is-for"
+                class="hb-docs-link"
+              >The test couldn&amp;rsquo;t show what LQR-PI is for</a>
+            </li>
+          <li>
+              <a
+                href="#what-id-do-differently"
+                class="hb-docs-link"
+              >What I&amp;rsquo;d do differently</a>
+            </li>
+          <li>
+              <a
+                href="#stack"
+                class="hb-docs-link"
+              >Stack</a>
+            </li>
+          </ul>
+  
               
             </li></ul>
       </div></li>
@@ -1052,16 +1077,31 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#objectives">Objectives</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#plant">Plant</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#controllers-implemented">Controllers Implemented</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#linearisation">Linearisation</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#evaluation">Evaluation</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#controllers">Controllers</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tools--libraries">Tools &amp; Libraries</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#test">Test</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#re-deriving-it">Re-deriving it</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-the-settling-time-cost">What the settling time cost</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-test-couldnt-show-what-lqr-pi-is-for">The test couldn’t show what LQR-PI is for</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-id-do-differently">What I’d do differently</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#stack">Stack</a>
       </li></ul>
 
   
@@ -1097,13 +1137,13 @@
       <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Control Strategies for Quadrotor Position and Altitude</h1>
 
       <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Dec 10, 2024</span>
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Dec 5, 2023</span>
         
 
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          1 min read
+          7 min read
         </span>
         
         </div>
@@ -1113,6 +1153,48 @@
 
 
 
+
+<div class="">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/juttu-s/Quadrotor_controllers" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
         </div>
@@ -1128,45 +1210,203 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>This project presents a <strong>comprehensive comparative study of optimal control strategies</strong> for <strong>quadrotor position and altitude control</strong>. The goal was to evaluate how different controllers handle stability, tracking accuracy, and robustness when subjected to realistic flight conditions such as <strong>sensor noise</strong> and <strong>process disturbances</strong>.</p>
+        <p>Three optimal-control formulations on the same quadrotor plant, compared on the same test, in MATLAB and Simulink. The interesting part turned out not to be which controller settles fastest — it was reading the control-effort axes afterwards and realising what the fastest one was spending to get there.</p>
+<p>Coursework for <strong>ME5659: Control Systems Engineering</strong> at Northeastern.</p>
 <hr>
-<h2 id="objectives">Objectives</h2>
-<ul>
-<li>Model the quadrotor dynamics and design controllers for position and altitude regulation.</li>
-<li>Implement and compare multiple optimal-control formulations on the same plant.</li>
-<li>Assess stability, adaptability, and robustness under real-world disturbances.</li>
-</ul>
+<h2 id="plant">Plant</h2>
+<p>A 6-DOF rigid body from the Newton–Euler equations, following <a href="https://www.diva-portal.org/smash/get/diva2:860649/FULLTEXT01.pdf" target="_blank" rel="noopener">Sabatino (2015)</a>:</p>
+$$m(\omega_B \wedge v_B + \dot{v}_B) = f_B, \qquad I\dot{\omega}_B + \omega_B \wedge (I\omega_B) = m_B$$<p>Four rotors give four control inputs — one collective thrust and three body torques:</p>
+$$u = [f_t \quad \tau_x \quad \tau_y \quad \tau_z]^\mathsf{T}, \qquad \tau_x = bl(\Omega_3^2 - \Omega_1^2)$$<p>Simulation constants: <strong>m = 0.2 kg</strong>, <strong>Ix = Iy = 0.1</strong>, <strong>Iz = 0.15 kg·m²</strong>, sample time <strong>0.01 s</strong>. Inertia is treated as diagonal, which assumes the body frame&rsquo;s origin and axes coincide with the barycentre and principal axes.</p>
+<h3 id="linearisation">Linearisation</h3>
+<p>Three stacked simplifications get from the nonlinear model to something <code>lqr()</code> will accept:</p>
+<ol>
+<li><strong>Euler rates identified with body rates</strong> — $[\dot\phi \; \dot\theta \; \dot\psi]^\mathsf{T} = [p \; q \; r]^\mathsf{T}$, valid for small angles.</li>
+<li><strong>Small oscillations</strong> — sines replaced by their arguments, cosines by unity.</li>
+<li><strong>Hover equilibrium</strong> — $\bar{u} = [mg \; 0 \; 0 \; 0]^\mathsf{T}$, the thrust that exactly cancels weight.</li>
+</ol>
+<p>What comes out is fully decoupled: three double-integrator chains on attitude, three on position, with gravity coupling pitch into $\dot{u}$ and roll into $\dot{v}$. Twelve states, four inputs, and with $C = I_{12}$ (all states assumed measurable) both the controllability and observability matrices come back full rank 12.</p>
+<p>The honest caveat on all of this: validity is bounded by the small-angle assumption and never quantified. A wind-disturbance matrix $D \in \mathbb{R}^{12 \times 6}$ is derived from the rotor and body-force channels — and then never exercised, since every simulation runs with <code>D = zeros</code>.</p>
 <hr>
-<h2 id="controllers-implemented">Controllers Implemented</h2>
-<ul>
-<li><strong>Model Predictive Control (MPC)</strong> — constraint-aware optimization over a receding horizon.</li>
-<li><strong>Linear Quadratic Regulator (LQR)</strong> — optimal state-feedback gain minimizing a quadratic cost.</li>
-<li><strong>Linear Quadratic Gaussian (LQG)</strong> — LQR combined with a Kalman estimator for noisy state feedback.</li>
-<li><strong>LQR-PI</strong> — LQR augmented with integral action to eliminate steady-state error.</li>
-</ul>
+<h2 id="controllers">Controllers</h2>
+<p><strong>LQR</strong> — state feedback minimising $\int (x^\mathsf{T}Qx + u^\mathsf{T}Ru)\,dt$. Weights were left at $Q = I_{12}$, $R = I_4$; no weight tuning was performed, so all three controllers share the same underlying gain.</p>
+<p><strong>LQR-PI</strong> — PI action in the forward path, LQR state feedback around it, with an explicit injection point for unmodelled dynamics between the PI output and the plant. Integral action is what kills the steady-state error LQR leaves behind. Final hand-tune: <code>Kp = [500, 2, 200, 1]</code>, <code>Ki = [1, 1, 1, 1]</code>.</p>
+<p><strong>LQG</strong> — LQR plus a Kalman estimator, for the case where states are inferred rather than measured. Process noise covariance $10^{-3}$ on the six rate/velocity states, measurement noise $10^{-4}$.</p>
+<h2 id="test">Test</h2>
+<p>Not a step response — a <strong>regulation-to-origin decay</strong>. The quadrotor starts displaced at (x, y, z) = <strong>(5.5, 6, 7.5) m</strong> with zero attitude and zero rates, reference at the origin, and each controller drives it home.</p>
+<p>The study&rsquo;s summary comparison:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Controller</th>
+          <th>Max overshoot</th>
+          <th>Settling time</th>
+          <th>Parameter sensitivity</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>LQR</td>
+          <td>12%</td>
+          <td>2.5 s</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td>LQR-PI</td>
+          <td>5%</td>
+          <td>1.8 s</td>
+          <td>Moderate</td>
+      </tr>
+      <tr>
+          <td>LQG</td>
+          <td>3%</td>
+          <td>1.2 s</td>
+          <td>Low</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="re-deriving-it">Re-deriving it</h3>
+<p>Rebuilding the plant from the constants above and re-solving the LQR reproduces the original run exactly where it can be checked. Both the controllability and observability matrices come back rank 12; the open-loop eigenvalues are all zero — marginally stable, six pure integrator pairs, which is what you expect from a decoupled double-integrator model and worth noting because it means the plant is <em>not</em> asymptotically stable before feedback. Closing the loop puts every eigenvalue at Re ≤ −1.0. And the initial control effort comes out at</p>
+$$u(0) = [-7.5,\; -6.0,\; 5.5,\; 0]$$<p>matching the report&rsquo;s printed console output digit for digit — good evidence the model, weights and initial condition are transcribed correctly.</p>
+<p>What doesn&rsquo;t reproduce is the table. With $Q = I_{12}$, $R = I_4$ and that initial condition, the position channels decay <strong>monotonically with no overshoot at all</strong>, settling to 2% in about <strong>4.4 s</strong> — not 12% overshoot in 2.5 s. The response plots in the report agree with the re-derivation rather than with its own summary table: all three position traces are smooth monotone decays reaching zero around 4–5 s.</p>
+<p>So I&rsquo;d treat the overshoot and settling-time figures as unreliable, and the ordinal sensitivity ranking as qualitative judgement rather than measurement. What follows below is the part that <em>is</em> visible in the data.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="LQR-PI response: position decay, body moments, thrust and power perturbation" srcset="
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu2407646783812282393.webp 400w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu6685818478649532550.webp 760w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu13583573080454341919.webp 1200w"
+               src="/saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu2407646783812282393.webp"
+               width="760"
+               height="380"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>LQR-PI. Positions decay cleanly — but look at the vertical axes in the right two columns.</em></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="LQR response on the same test and the same layout" srcset="
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu8600440175981309337.webp 400w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu15163642574668778384.webp 760w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu10311598550682387049.webp 1200w"
+               src="/saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu8600440175981309337.webp"
+               width="760"
+               height="380"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>LQR, same test, same panel layout. Same position traces, wildly different actuator numbers.</em></p>
 <hr>
-<h2 id="evaluation">Evaluation</h2>
-<ul>
-<li>Each controller was tested in <strong>MATLAB / Simulink</strong> on the quadrotor model.</li>
-<li>Performance was evaluated on <strong>stability</strong> and <strong>adaptability</strong>, explicitly incorporating real-world factors such as <strong>sensor noise</strong> and <strong>process disturbances</strong> to ensure robust flight dynamics.</li>
-<li>Compared tracking response, settling behavior, and disturbance rejection across the controllers.</li>
-</ul>
+<h2 id="what-the-settling-time-cost">What the settling time cost</h2>
+<p>Put those two figures side by side and the position columns are nearly indistinguishable — both controllers bring x, y and z to zero inside about five seconds with no visible overshoot. The difference is entirely in the actuator channels:</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>LQR</th>
+          <th>LQR-PI</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Thrust perturbation, peak</td>
+          <td>≈ −6</td>
+          <td>≈ −3500</td>
+      </tr>
+      <tr>
+          <td>Pitch moment, peak</td>
+          <td>≈ +4</td>
+          <td>≈ +1000</td>
+      </tr>
+      <tr>
+          <td>Power perturbation, peak</td>
+          <td>≈ 1.5</td>
+          <td>≈ 10</td>
+      </tr>
+  </tbody>
+</table>
+<p>LQR-PI pays roughly <strong>500×</strong> the peak thrust perturbation for a position response that is visually indistinguishable. That is a direct consequence of <code>Kp = [500, 2, 200, 1]</code> — the aggressive entries sit on exactly the thrust and pitch-torque channels where the blow-up appears. And unlike the settling times, this one is unambiguous: it&rsquo;s printed on the axes of the report&rsquo;s own figures.</p>
+<p>On a real airframe those commands are far outside what any rotor can deliver, so the controller would saturate immediately and whatever settling-time advantage it has on paper would evaporate.</p>
+<p>This is the part of the exercise that actually taught me something: a settling-time comparison with unbounded actuators isn&rsquo;t a comparison of controllers, it&rsquo;s a comparison of how hard each one is willing to push. Judge on overshoot and settling time alone and LQR-PI looks like a free improvement — plot the control effort and it obviously isn&rsquo;t. Actuator limits belong <em>in</em> the problem formulation, which is the argument for constrained optimal control rather than a discovery you make afterwards in the plots.</p>
+<p>Two further limits worth stating plainly. <strong>Yaw was never exercised</strong> — the yaw moment sits on a $\times 10^{-15}$ axis in both runs, i.e. numerically zero, because initial yaw is zero and the linearised yaw channel is fully decoupled. And the <strong>LQG run had noise switched off</strong> (<code>NL = 0</code>), so that row shows the estimator in the loop but does not demonstrate the noise rejection that is the entire reason to prefer LQG. This is a simulation-only study; there was no hardware.</p>
 <hr>
-<h2 id="tools--libraries">Tools &amp; Libraries</h2>
-<ul>
-<li>MATLAB</li>
-<li>Simulink</li>
-<li>Control System Toolbox</li>
-</ul>
-<hr>
-<p>This study highlights the trade-offs between predictive, state-feedback, and estimator-based control for aerial robotics — informing controller selection for robust quadrotor flight in noisy, disturbance-prone environments.</p>
+<h2 id="the-test-couldnt-show-what-lqr-pi-is-for">The test couldn&rsquo;t show what LQR-PI is for</h2>
+<p>Rebuilding the three loops to check the numbers turned up something the study missed
+entirely, and it&rsquo;s the most useful thing I took away from the project.</p>
+<p>On this test, <strong>plain LQR already drives the state to zero.</strong> Final position error comes out
+around 10⁻⁴ m, which is numerical integration error, not a control deficiency. There is no
+steady-state error, no persistent disturbance, no model mismatch. So integral action has
+nothing to remove — and adding it can only contribute phase lag. Re-running with proper
+integral action confirms exactly that: settling gets <em>worse</em> (5.9 s against LQR&rsquo;s 4.4 s) and
+overshoot appears where there was none.</p>
+<p>Which means the standard justification for LQR-PI — that it eliminates steady-state error — is
+true, but <strong>the test cannot demonstrate it.</strong> A regulation-to-origin decay on an undisturbed
+linear model is precisely the case where PI has no work to do.</p>
+<p>The fix is to disturb it. Adding a constant wind force of 0.3 N and 0.2 N — using the
+disturbance matrix the report derives and then never exercises — separates them immediately:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Controller</th>
+          <th>Steady-state position error under constant wind</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>LQR</td>
+          <td><strong>1.24 m</strong></td>
+      </tr>
+      <tr>
+          <td>LQR-PI</td>
+          <td><strong>0.00 m</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>That&rsquo;s the comparison the study should have run. It costs one extra term in the simulation, it
+uses a matrix already derived on page 13, and it turns &ldquo;LQR-PI settles 0.7 s faster&rdquo; — a claim
+that doesn&rsquo;t survive re-derivation — into a difference that is unambiguous and large.</p>
+<h2 id="what-id-do-differently">What I&rsquo;d do differently</h2>
+<p>Drop the linearisation. The plant is meaningfully nonlinear away from hover, and the natural next step is <strong>nonlinear model-predictive control</strong> on the full model — which also gets you actuator constraints in the formulation rather than discovered afterwards in the plots, and lets you track a planned trajectory through a set of waypoints instead of regulating to a single point. Tuning $Q$ and $R$ rather than leaving them at identity would be the cheaper first improvement.</p>
+<h2 id="stack">Stack</h2>
+<p>MATLAB (<code>ss</code>, <code>ctrb</code>, <code>obsv</code>, <code>lqr</code>), Simulink, three models for the three controllers.</p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-12-10T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2023-12-05T00:00:00.000Z">
     <span>Last updated on</span>
-    Dec 10, 2024</time>
+    Dec 5, 2023</time>
 
       <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
         
@@ -1182,11 +1422,11 @@
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/quadrotor/">Quadrotor</a>
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/mpc/">MPC</a>
-  
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/lqr/">LQR</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/lqg/">LQG</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/kalman-filter/">Kalman Filter</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/matlab/">MATLAB</a>
   
@@ -1208,7 +1448,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;text=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;text=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1226,7 +1466,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;t=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;t=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1246,7 +1486,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Control%20Strategies%20for%20Quadrotor%20Position%20and%20Altitude&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F"
+    href="mailto:?subject=Control%20Strategies%20for%20Quadrotor%20Position%20and%20Altitude&amp;body=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1264,7 +1504,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;title=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F&amp;title=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1282,7 +1522,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude%20http%3A%2F%2Flocalhost%3A1313%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F"
+    href="whatsapp://send?text=Control&#43;Strategies&#43;for&#43;Quadrotor&#43;Position&#43;and&#43;Altitude%20https%3A%2F%2Fjuttu-s.github.io%2Fsaikiran_juttu.github.io%2Fproject%2Fquadrotor-control%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1332,7 +1572,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:1313/saikiran_juttu.github.io/" class="no-underline">
+      <a href="https://juttu-s.github.io/saikiran_juttu.github.io/" class="no-underline">
       Saikiran Juttu
       </a>
     </div>
@@ -1418,17 +1658,17 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/saikiran_juttu.github.io/project/sg-slam/">
+        <a class="group flex no-underline" href="/saikiran_juttu.github.io/project/calibration/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Semantic Geometric SLAM (SG-SLAM) in Dynamic Scenes</span>
+            >Camera Calibration and Augmented Reality</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Mar 15, 2025
+                Mar 18, 2024
               
             </span>
           </span>
@@ -1436,23 +1676,6 @@
       
     </div>
     <div class="">
-      
-        <a class="group flex text-right no-underline" href="/saikiran_juttu.github.io/project/sparse-reconstruction/">
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Sparse 3D Reconstruction and Bundle Adjustment</span
-            >
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Nov 7, 2024
-              
-            </span>
-          </span>
-          <span
-            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline">&rarr;</span></span>
-        </a>
       
     </div>
   </div>

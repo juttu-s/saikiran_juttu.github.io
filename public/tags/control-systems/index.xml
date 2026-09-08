@@ -2,53 +2,211 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Control Systems | Saikiran Juttu | Robotics Portfolio</title>
-    <link>http://localhost:1313/saikiran_juttu.github.io/tags/control-systems/</link>
-      <atom:link href="http://localhost:1313/saikiran_juttu.github.io/tags/control-systems/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/control-systems/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/control-systems/index.xml" rel="self" type="application/rss+xml" />
     <description>Control Systems</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Control Systems</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/tags/control-systems/</link>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/control-systems/</link>
     </image>
     
     <item>
       <title>Control Strategies for Quadrotor Position and Altitude</title>
-      <link>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</link>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/saikiran_juttu.github.io/project/quadrotor-control/</guid>
-      <description>&lt;p&gt;This project presents a &lt;strong&gt;comprehensive comparative study of optimal control strategies&lt;/strong&gt; for &lt;strong&gt;quadrotor position and altitude control&lt;/strong&gt;. The goal was to evaluate how different controllers handle stability, tracking accuracy, and robustness when subjected to realistic flight conditions such as &lt;strong&gt;sensor noise&lt;/strong&gt; and &lt;strong&gt;process disturbances&lt;/strong&gt;.&lt;/p&gt;
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/quadrotor-control/</guid>
+      <description>&lt;p&gt;Three optimal-control formulations on the same quadrotor plant, compared on the same test, in MATLAB and Simulink. The interesting part turned out not to be which controller settles fastest — it was reading the control-effort axes afterwards and realising what the fastest one was spending to get there.&lt;/p&gt;
+&lt;p&gt;Coursework for &lt;strong&gt;ME5659: Control Systems Engineering&lt;/strong&gt; at Northeastern.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Model the quadrotor dynamics and design controllers for position and altitude regulation.&lt;/li&gt;
-&lt;li&gt;Implement and compare multiple optimal-control formulations on the same plant.&lt;/li&gt;
-&lt;li&gt;Assess stability, adaptability, and robustness under real-world disturbances.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;plant&#34;&gt;Plant&lt;/h2&gt;
+&lt;p&gt;A 6-DOF rigid body from the Newton–Euler equations, following &lt;a href=&#34;https://www.diva-portal.org/smash/get/diva2:860649/FULLTEXT01.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabatino (2015)&lt;/a&gt;:&lt;/p&gt;
+$$m(\omega_B \wedge v_B + \dot{v}_B) = f_B, \qquad I\dot{\omega}_B + \omega_B \wedge (I\omega_B) = m_B$$&lt;p&gt;Four rotors give four control inputs — one collective thrust and three body torques:&lt;/p&gt;
+$$u = [f_t \quad \tau_x \quad \tau_y \quad \tau_z]^\mathsf{T}, \qquad \tau_x = bl(\Omega_3^2 - \Omega_1^2)$$&lt;p&gt;Simulation constants: &lt;strong&gt;m = 0.2 kg&lt;/strong&gt;, &lt;strong&gt;Ix = Iy = 0.1&lt;/strong&gt;, &lt;strong&gt;Iz = 0.15 kg·m²&lt;/strong&gt;, sample time &lt;strong&gt;0.01 s&lt;/strong&gt;. Inertia is treated as diagonal, which assumes the body frame&amp;rsquo;s origin and axes coincide with the barycentre and principal axes.&lt;/p&gt;
+&lt;h3 id=&#34;linearisation&#34;&gt;Linearisation&lt;/h3&gt;
+&lt;p&gt;Three stacked simplifications get from the nonlinear model to something &lt;code&gt;lqr()&lt;/code&gt; will accept:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Euler rates identified with body rates&lt;/strong&gt; — $[\dot\phi \; \dot\theta \; \dot\psi]^\mathsf{T} = [p \; q \; r]^\mathsf{T}$, valid for small angles.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small oscillations&lt;/strong&gt; — sines replaced by their arguments, cosines by unity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hover equilibrium&lt;/strong&gt; — $\bar{u} = [mg \; 0 \; 0 \; 0]^\mathsf{T}$, the thrust that exactly cancels weight.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;What comes out is fully decoupled: three double-integrator chains on attitude, three on position, with gravity coupling pitch into $\dot{u}$ and roll into $\dot{v}$. Twelve states, four inputs, and with $C = I_{12}$ (all states assumed measurable) both the controllability and observability matrices come back full rank 12.&lt;/p&gt;
+&lt;p&gt;The honest caveat on all of this: validity is bounded by the small-angle assumption and never quantified. A wind-disturbance matrix $D \in \mathbb{R}^{12 \times 6}$ is derived from the rotor and body-force channels — and then never exercised, since every simulation runs with &lt;code&gt;D = zeros&lt;/code&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;controllers-implemented&#34;&gt;Controllers Implemented&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Model Predictive Control (MPC)&lt;/strong&gt; — constraint-aware optimization over a receding horizon.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Linear Quadratic Regulator (LQR)&lt;/strong&gt; — optimal state-feedback gain minimizing a quadratic cost.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Linear Quadratic Gaussian (LQG)&lt;/strong&gt; — LQR combined with a Kalman estimator for noisy state feedback.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LQR-PI&lt;/strong&gt; — LQR augmented with integral action to eliminate steady-state error.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;LQR&lt;/strong&gt; — state feedback minimising $\int (x^\mathsf{T}Qx + u^\mathsf{T}Ru)\,dt$. Weights were left at $Q = I_{12}$, $R = I_4$; no weight tuning was performed, so all three controllers share the same underlying gain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LQR-PI&lt;/strong&gt; — PI action in the forward path, LQR state feedback around it, with an explicit injection point for unmodelled dynamics between the PI output and the plant. Integral action is what kills the steady-state error LQR leaves behind. Final hand-tune: &lt;code&gt;Kp = [500, 2, 200, 1]&lt;/code&gt;, &lt;code&gt;Ki = [1, 1, 1, 1]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LQG&lt;/strong&gt; — LQR plus a Kalman estimator, for the case where states are inferred rather than measured. Process noise covariance $10^{-3}$ on the six rate/velocity states, measurement noise $10^{-4}$.&lt;/p&gt;
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;p&gt;Not a step response — a &lt;strong&gt;regulation-to-origin decay&lt;/strong&gt;. The quadrotor starts displaced at (x, y, z) = &lt;strong&gt;(5.5, 6, 7.5) m&lt;/strong&gt; with zero attitude and zero rates, reference at the origin, and each controller drives it home.&lt;/p&gt;
+&lt;p&gt;The study&amp;rsquo;s summary comparison:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Controller&lt;/th&gt;
+          &lt;th&gt;Max overshoot&lt;/th&gt;
+          &lt;th&gt;Settling time&lt;/th&gt;
+          &lt;th&gt;Parameter sensitivity&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LQR&lt;/td&gt;
+          &lt;td&gt;12%&lt;/td&gt;
+          &lt;td&gt;2.5 s&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LQR-PI&lt;/td&gt;
+          &lt;td&gt;5%&lt;/td&gt;
+          &lt;td&gt;1.8 s&lt;/td&gt;
+          &lt;td&gt;Moderate&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LQG&lt;/td&gt;
+          &lt;td&gt;3%&lt;/td&gt;
+          &lt;td&gt;1.2 s&lt;/td&gt;
+          &lt;td&gt;Low&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;re-deriving-it&#34;&gt;Re-deriving it&lt;/h3&gt;
+&lt;p&gt;Rebuilding the plant from the constants above and re-solving the LQR reproduces the original run exactly where it can be checked. Both the controllability and observability matrices come back rank 12; the open-loop eigenvalues are all zero — marginally stable, six pure integrator pairs, which is what you expect from a decoupled double-integrator model and worth noting because it means the plant is &lt;em&gt;not&lt;/em&gt; asymptotically stable before feedback. Closing the loop puts every eigenvalue at Re ≤ −1.0. And the initial control effort comes out at&lt;/p&gt;
+$$u(0) = [-7.5,\; -6.0,\; 5.5,\; 0]$$&lt;p&gt;matching the report&amp;rsquo;s printed console output digit for digit — good evidence the model, weights and initial condition are transcribed correctly.&lt;/p&gt;
+&lt;p&gt;What doesn&amp;rsquo;t reproduce is the table. With $Q = I_{12}$, $R = I_4$ and that initial condition, the position channels decay &lt;strong&gt;monotonically with no overshoot at all&lt;/strong&gt;, settling to 2% in about &lt;strong&gt;4.4 s&lt;/strong&gt; — not 12% overshoot in 2.5 s. The response plots in the report agree with the re-derivation rather than with its own summary table: all three position traces are smooth monotone decays reaching zero around 4–5 s.&lt;/p&gt;
+&lt;p&gt;So I&amp;rsquo;d treat the overshoot and settling-time figures as unreliable, and the ordinal sensitivity ranking as qualitative judgement rather than measurement. What follows below is the part that &lt;em&gt;is&lt;/em&gt; visible in the data.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;LQR-PI response: position decay, body moments, thrust and power perturbation&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu2407646783812282393.webp 400w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu6685818478649532550.webp 760w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu13583573080454341919.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/quadrotor-control/lqr-pi-response_hu2407646783812282393.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;LQR-PI. Positions decay cleanly — but look at the vertical axes in the right two columns.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;LQR response on the same test and the same layout&#34; srcset=&#34;
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu8600440175981309337.webp 400w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu15163642574668778384.webp 760w,
+               /saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu10311598550682387049.webp 1200w&#34;
+               src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/project/quadrotor-control/lqr-response_hu8600440175981309337.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;LQR, same test, same panel layout. Same position traces, wildly different actuator numbers.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;evaluation&#34;&gt;Evaluation&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Each controller was tested in &lt;strong&gt;MATLAB / Simulink&lt;/strong&gt; on the quadrotor model.&lt;/li&gt;
-&lt;li&gt;Performance was evaluated on &lt;strong&gt;stability&lt;/strong&gt; and &lt;strong&gt;adaptability&lt;/strong&gt;, explicitly incorporating real-world factors such as &lt;strong&gt;sensor noise&lt;/strong&gt; and &lt;strong&gt;process disturbances&lt;/strong&gt; to ensure robust flight dynamics.&lt;/li&gt;
-&lt;li&gt;Compared tracking response, settling behavior, and disturbance rejection across the controllers.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;what-the-settling-time-cost&#34;&gt;What the settling time cost&lt;/h2&gt;
+&lt;p&gt;Put those two figures side by side and the position columns are nearly indistinguishable — both controllers bring x, y and z to zero inside about five seconds with no visible overshoot. The difference is entirely in the actuator channels:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;LQR&lt;/th&gt;
+          &lt;th&gt;LQR-PI&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Thrust perturbation, peak&lt;/td&gt;
+          &lt;td&gt;≈ −6&lt;/td&gt;
+          &lt;td&gt;≈ −3500&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pitch moment, peak&lt;/td&gt;
+          &lt;td&gt;≈ +4&lt;/td&gt;
+          &lt;td&gt;≈ +1000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Power perturbation, peak&lt;/td&gt;
+          &lt;td&gt;≈ 1.5&lt;/td&gt;
+          &lt;td&gt;≈ 10&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;LQR-PI pays roughly &lt;strong&gt;500×&lt;/strong&gt; the peak thrust perturbation for a position response that is visually indistinguishable. That is a direct consequence of &lt;code&gt;Kp = [500, 2, 200, 1]&lt;/code&gt; — the aggressive entries sit on exactly the thrust and pitch-torque channels where the blow-up appears. And unlike the settling times, this one is unambiguous: it&amp;rsquo;s printed on the axes of the report&amp;rsquo;s own figures.&lt;/p&gt;
+&lt;p&gt;On a real airframe those commands are far outside what any rotor can deliver, so the controller would saturate immediately and whatever settling-time advantage it has on paper would evaporate.&lt;/p&gt;
+&lt;p&gt;This is the part of the exercise that actually taught me something: a settling-time comparison with unbounded actuators isn&amp;rsquo;t a comparison of controllers, it&amp;rsquo;s a comparison of how hard each one is willing to push. Judge on overshoot and settling time alone and LQR-PI looks like a free improvement — plot the control effort and it obviously isn&amp;rsquo;t. Actuator limits belong &lt;em&gt;in&lt;/em&gt; the problem formulation, which is the argument for constrained optimal control rather than a discovery you make afterwards in the plots.&lt;/p&gt;
+&lt;p&gt;Two further limits worth stating plainly. &lt;strong&gt;Yaw was never exercised&lt;/strong&gt; — the yaw moment sits on a $\times 10^{-15}$ axis in both runs, i.e. numerically zero, because initial yaw is zero and the linearised yaw channel is fully decoupled. And the &lt;strong&gt;LQG run had noise switched off&lt;/strong&gt; (&lt;code&gt;NL = 0&lt;/code&gt;), so that row shows the estimator in the loop but does not demonstrate the noise rejection that is the entire reason to prefer LQG. This is a simulation-only study; there was no hardware.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;tools--libraries&#34;&gt;Tools &amp;amp; Libraries&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;MATLAB&lt;/li&gt;
-&lt;li&gt;Simulink&lt;/li&gt;
-&lt;li&gt;Control System Toolbox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This study highlights the trade-offs between predictive, state-feedback, and estimator-based control for aerial robotics — informing controller selection for robust quadrotor flight in noisy, disturbance-prone environments.&lt;/p&gt;
+&lt;h2 id=&#34;the-test-couldnt-show-what-lqr-pi-is-for&#34;&gt;The test couldn&amp;rsquo;t show what LQR-PI is for&lt;/h2&gt;
+&lt;p&gt;Rebuilding the three loops to check the numbers turned up something the study missed
+entirely, and it&amp;rsquo;s the most useful thing I took away from the project.&lt;/p&gt;
+&lt;p&gt;On this test, &lt;strong&gt;plain LQR already drives the state to zero.&lt;/strong&gt; Final position error comes out
+around 10⁻⁴ m, which is numerical integration error, not a control deficiency. There is no
+steady-state error, no persistent disturbance, no model mismatch. So integral action has
+nothing to remove — and adding it can only contribute phase lag. Re-running with proper
+integral action confirms exactly that: settling gets &lt;em&gt;worse&lt;/em&gt; (5.9 s against LQR&amp;rsquo;s 4.4 s) and
+overshoot appears where there was none.&lt;/p&gt;
+&lt;p&gt;Which means the standard justification for LQR-PI — that it eliminates steady-state error — is
+true, but &lt;strong&gt;the test cannot demonstrate it.&lt;/strong&gt; A regulation-to-origin decay on an undisturbed
+linear model is precisely the case where PI has no work to do.&lt;/p&gt;
+&lt;p&gt;The fix is to disturb it. Adding a constant wind force of 0.3 N and 0.2 N — using the
+disturbance matrix the report derives and then never exercises — separates them immediately:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Controller&lt;/th&gt;
+          &lt;th&gt;Steady-state position error under constant wind&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LQR&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;1.24 m&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LQR-PI&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.00 m&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;That&amp;rsquo;s the comparison the study should have run. It costs one extra term in the simulation, it
+uses a matrix already derived on page 13, and it turns &amp;ldquo;LQR-PI settles 0.7 s faster&amp;rdquo; — a claim
+that doesn&amp;rsquo;t survive re-derivation — into a difference that is unambiguous and large.&lt;/p&gt;
+&lt;h2 id=&#34;what-id-do-differently&#34;&gt;What I&amp;rsquo;d do differently&lt;/h2&gt;
+&lt;p&gt;Drop the linearisation. The plant is meaningfully nonlinear away from hover, and the natural next step is &lt;strong&gt;nonlinear model-predictive control&lt;/strong&gt; on the full model — which also gets you actuator constraints in the formulation rather than discovered afterwards in the plots, and lets you track a planned trajectory through a set of waypoints instead of regulating to a single point. Tuning $Q$ and $R$ rather than leaving them at identity would be the cheaper first improvement.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;MATLAB (&lt;code&gt;ss&lt;/code&gt;, &lt;code&gt;ctrb&lt;/code&gt;, &lt;code&gt;obsv&lt;/code&gt;, &lt;code&gt;lqr&lt;/code&gt;), Simulink, three models for the three controllers.&lt;/p&gt;
 </description>
     </item>
     
