@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simscape | Saikiran Juttu | Robotics Portfolio</title>
+    <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/simscape/</link>
+      <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/simscape/index.xml" rel="self" type="application/rss+xml" />
+    <description>Simscape</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Simscape</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/simscape/</link>
+    </image>
+    
+    <item>
+      <title>Teaching Assistant — Robot Mechanics &amp; Control</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/teaching-assistant/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/teaching-assistant/</guid>
+      <description>&lt;h2 id=&#34;the-lab&#34;&gt;The lab&lt;/h2&gt;
+&lt;p&gt;Northeastern, Sep 2024 – Apr 2025. A MathWorks-funded, cost-optimised robotics
+curriculum built around the &lt;strong&gt;PincherX-100&lt;/strong&gt; — a four-DOF arm with Dynamixel
+servos, cheap enough to put a cell in front of every student group.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/px100_lab_cell.png&#34; alt=&#34;Annotated PincherX-100 workstation: overhead camera, side-view camera, marked workspace, payload and control computer&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;One lab cell. Overhead camera for marker-based pose estimation, side camera for
+recording runs, and a marked workspace the arm has to localise targets within.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The teaching problem with a shared robot cell is that students have to write
+code that drives real motors, and a sign error in an IK solver drives the
+gripper into the table. So the framework is built in two tiers: everything runs
+in simulation first, and the same student code moves to hardware unchanged.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;analytical-ik&#34;&gt;Analytical IK&lt;/h2&gt;
+&lt;p&gt;Rather than hand students a numerical solver, the arm&amp;rsquo;s kinematics are solved
+in closed form — the geometry is simple enough that it&amp;rsquo;s tractable by hand,
+which is the point of the exercise.&lt;/p&gt;
+&lt;p&gt;Strip the fixed wrist-to-end-effector transform off the target pose, then:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;theta1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;atan2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;                                  &lt;span class=&#34;c&#34;&gt;% waist, from the base projection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;^&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z_eff&lt;/span&gt;^&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L2&lt;/span&gt;^&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L3&lt;/span&gt;^&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;       &lt;span class=&#34;c&#34;&gt;% law of cosines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Target is out of reach — no IK solution.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;theta3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;atan2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;^&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;                        &lt;span class=&#34;c&#34;&gt;% elbow-up branch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;atan2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z_eff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;beta&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;atan2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;L3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theta3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theta3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;theta2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;beta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;theta234&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;atan2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T_04&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T_04&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;                &lt;span class=&#34;c&#34;&gt;% wrist from the rotation block&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;theta4&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;theta234&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;theta2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;theta3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Link lengths &lt;code&gt;L2 = 0.1059&lt;/code&gt;, &lt;code&gt;L3 = 0.1&lt;/code&gt;, shoulder height &lt;code&gt;0.0931&lt;/code&gt; m. Two things
+worth noting pedagogically: the &lt;code&gt;abs(D) &amp;gt; 1&lt;/code&gt; check means an unreachable target
+fails loudly with a message rather than returning a complex angle that silently
+becomes garbage downstream, and the elbow-up branch is selected explicitly —
+students have to decide which of the two solutions they want rather than
+discovering the arm occasionally folds the other way.&lt;/p&gt;
+&lt;h2 id=&#34;the-safety-gate&#34;&gt;The safety gate&lt;/h2&gt;
+&lt;p&gt;This is the piece that makes remote hardware execution viable. Every commanded
+configuration goes through &lt;code&gt;set_joint_pos&lt;/code&gt;, which refuses it on two grounds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Joint limits&lt;/strong&gt; — each of the four angles checked against the URDF&amp;rsquo;s range.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Table collision&lt;/strong&gt; — forward kinematics is run to &lt;code&gt;px100/ee_gripper_link&lt;/code&gt; and
+the resulting world-frame &lt;em&gt;z&lt;/em&gt; is compared against a floor threshold.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The second check is the important one. Joint limits alone don&amp;rsquo;t protect
+anything — every individual joint can be in range while the arm as a whole is
+below the table. Running FK on the commanded pose before sending it to the
+servos catches the combination, and it means a student&amp;rsquo;s broken IK produces a
+refusal instead of a repair ticket.&lt;/p&gt;
+&lt;h2 id=&#34;perception&#34;&gt;Perception&lt;/h2&gt;
+&lt;p&gt;Target positions come from markers rather than hardcoded coordinates, so the
+arm has to actually localise the object. Calibrated overhead camera, with
+intrinsics measured for the cell:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Focal length&lt;/td&gt;
+          &lt;td&gt;1216.56, 1216.90 px&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Principal point&lt;/td&gt;
+          &lt;td&gt;645.49, 363.51 px&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Radial distortion&lt;/td&gt;
+          &lt;td&gt;−0.4428, 0.2414&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Resolution&lt;/td&gt;
+          &lt;td&gt;1280 × 720&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Markers are assigned by role — ID 0 is the base frame, ID 1 sits on the object
+to pick, IDs 2–5 are candidate drop locations. The base marker is what makes
+the whole thing work: detections arrive in camera coordinates, and composing
+through the base tag puts the target in the robot&amp;rsquo;s frame without anyone
+measuring where the camera is. Tag sizes differ deliberately (2 cm for base and
+drop, 1 cm for the pick marker) so a small marker can sit on top of a small
+object without occluding it.&lt;/p&gt;
+&lt;p&gt;Combined with the IK above, the cell reaches &lt;strong&gt;±2.5 mm&lt;/strong&gt; end-effector precision.&lt;/p&gt;
+&lt;h2 id=&#34;motor-control&#34;&gt;Motor control&lt;/h2&gt;
+&lt;p&gt;Students also get underneath the position controller. &lt;code&gt;set_dynamixel_pid&lt;/code&gt; writes
+straight to the Dynamixel control table — addresses 80, 82 and 84 for the D, I
+and P gains — and &lt;code&gt;pid_checking.m&lt;/code&gt; is a step-response harness: command the waist
+joint from 0 to 1 rad, log actual position against time, change a gain, run it
+again.&lt;/p&gt;
+&lt;p&gt;Reading an encoder trace that overshoots and oscillates, then watching it settle
+after raising D, is a more durable lesson about PID than a Bode plot. Gripper
+control is similarly concrete: open and closed are literally encoder counts
+2573 and 2048.&lt;/p&gt;
+&lt;h2 id=&#34;sim-to-real&#34;&gt;Sim-to-real&lt;/h2&gt;
+&lt;p&gt;The two entry points are deliberately near-identical:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;Simulation&lt;/th&gt;
+          &lt;th&gt;Hardware&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Script&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Visual.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;pick_place.m&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Target poses&lt;/td&gt;
+          &lt;td&gt;set in-script&lt;/td&gt;
+          &lt;td&gt;detected from markers&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Obstacles&lt;/td&gt;
+          &lt;td&gt;toggleable&lt;/td&gt;
+          &lt;td&gt;the real table&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Output&lt;/td&gt;
+          &lt;td&gt;Simscape animation&lt;/td&gt;
+          &lt;td&gt;recorded video of the run&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Both drive the same &lt;code&gt;ikpincher100&lt;/code&gt;, the same &lt;code&gt;set_joint_pos&lt;/code&gt; safety gate, and
+the same URDF — &lt;code&gt;px100.urdf&lt;/code&gt; with eight STL meshes, imported through
+&lt;code&gt;importrobot&lt;/code&gt; for simulation and shipped alongside a Simscape model
+(&lt;code&gt;px100_simple.slx&lt;/code&gt;) for the dynamics exercises. The simulation path adds
+approach waypoints above the pick and drop poses, so students meet the idea
+that a straight line between two valid poses is not necessarily a valid path.&lt;/p&gt;
+&lt;p&gt;Library loading is handled per-platform (Windows, Linux, macOS) in
+&lt;code&gt;init_robot.m&lt;/code&gt;, which sounds trivial and is the kind of thing that otherwise
+eats the first hour of every lab session.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-the-framework-ships&#34;&gt;What the framework ships&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;File&lt;/th&gt;
+          &lt;th&gt;Role&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;init_robot.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Dynamixel SDK bringup, URDF import, robot struct&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;ikpincher100.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Closed-form inverse kinematics&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;set_joint_pos.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Joint-limit and table-collision safety gate&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;get_joint_pos.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Bulk encoder read, counts → radians&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;get_pick_and_place_position.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Marker detection and base-frame transform&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;pick_place.m&lt;/code&gt; / &lt;code&gt;Visual.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hardware and simulation task entry points&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;pid_checking.m&lt;/code&gt;, &lt;code&gt;set_dynamixel_pid.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Servo gain tuning exercise&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;closeGripper.m&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Gripper open/close&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;px100.urdf&lt;/code&gt;, &lt;code&gt;*.stl&lt;/code&gt;, &lt;code&gt;px100_simple.slx&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Robot model and Simscape dynamics&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

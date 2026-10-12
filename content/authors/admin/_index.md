@@ -94,6 +94,7 @@ work:
       - Architected a remote Sim-to-Real workflow, creating a high-fidelity Simscape simulation that requires students to validate kinematic safety and control logic before unlocking remote execution on physical hardware.
       - Engineered a modular perception-and-control stack for the PincherX-100, implementing a custom analytical Inverse Kinematics (IK) solver and ArUco-based extrinsic calibration to achieve ±2.5 mm precision.
       - Established the standard laboratory framework for a MathWorks-funded, cost-optimized curriculum, deploying a structured software repository that empowered students to bridge theory with hands-on robot control.
+      - [Click here for more details](/saikiran_juttu.github.io/details/teaching-assistant)
   - position: Mechanical Engineer
     company_name: Technip Energies
     date_start: 2021-02-01

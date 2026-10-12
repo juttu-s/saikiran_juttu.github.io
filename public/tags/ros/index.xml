@@ -494,5 +494,94 @@
 </description>
     </item>
     
+    <item>
+      <title>Graduate Research Assistant</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/</guid>
+      <description>&lt;h2 id=&#34;energy-aware-collaborative-exploration-for-a-uavugv-team&#34;&gt;Energy-Aware Collaborative Exploration for a UAV–UGV Team&lt;/h2&gt;
+&lt;p&gt;Multi-Agent Robotics and Autonomy Lab, Northeastern University.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Er, Juttu, Yazıcıoğlu — submitted to &lt;strong&gt;IROS 2026&lt;/strong&gt;.
+&lt;a href=&#34;https://arxiv.org/abs/2603.22507&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2603.22507&lt;/a&gt; ·
+&lt;a href=&#34;https://github.com/juttu-s/uav-ugv-collaborative-exploration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;video controls width=&#34;100%&#34; muted autoplay loop&gt;
+  &lt;source src=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/uploads/uav_ugv_exploration.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;p&gt;&lt;em&gt;Hardware run at 10× speed, terminating once the team passes 95% coverage. The
+&lt;a href=&#34;https://github.com/juttu-s/uav-ugv-collaborative-exploration/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;full-resolution video&lt;/a&gt;
+is attached to the release.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
+&lt;p&gt;A quadrotor has maybe fifteen minutes of flight time. That is the binding
+constraint on aerial exploration, and the usual fix — fly back to a fixed
+charging station — wastes an increasing fraction of each tour on transit as the
+frontier moves away.&lt;/p&gt;
+&lt;p&gt;So the ground robot becomes the charging station. The UAV flies a sequence of
+&lt;strong&gt;energy-bounded tours&lt;/strong&gt;, each ending in a rendezvous where it lands on a
+platform mounted on the UGV and recharges. The UGV explores the ground in the
+meantime, so the recharge leg is not dead time for the team.&lt;/p&gt;
+&lt;p&gt;The pairing is genuinely complementary in both directions: the UGV drives
+through passages the UAV cannot fly, and the UAV reaches elevated structure the
+UGV cannot climb. In the test arenas neither robot alone achieves full coverage.&lt;/p&gt;
+&lt;h2 id=&#34;planning&#34;&gt;Planning&lt;/h2&gt;
+&lt;p&gt;Exploration targets are sampled into a &lt;strong&gt;density-aware layered PRM&lt;/strong&gt; spanning
+air and ground, and each pair of tours comes from solving &lt;strong&gt;coupled orienteering
+problems&lt;/strong&gt; — maximise information gain subject to a shared rendezvous time
+budget.&lt;/p&gt;
+&lt;p&gt;The coupling lives in one line. Candidate aerial targets are scored&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;score = info_gain · exp(−λ · t_ugv_path)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;so the UAV&amp;rsquo;s goal is its information gain &lt;strong&gt;discounted by how far the UGV has to
+drive to get underneath it&lt;/strong&gt;. A target rich in unexplored volume but far from
+any drivable ground is worth less than a mediocre one the UGV can already reach,
+because the rendezvous has to be feasible or the tour strands the drone. Four
+hard gates sit on top: a candidate is rejected if its gain is ≤ 10, if it has no
+ground twin, if the vertical corridor between the aerial node and its twin is
+not collision-free, or if that twin is unreachable in the ground graph.&lt;/p&gt;
+&lt;p&gt;The orienteering problems are solved with &lt;strong&gt;GRASP with path relinking&lt;/strong&gt; —
+randomised greedy insertion by score-to-time ratio, 2-opt and swap-insert local
+search, then path relinking between elite solutions. Every move is validated
+against the roadmap, with infinite time-matrix entries for non-edges, so no tour
+can shortcut off a collision-checked edge.&lt;/p&gt;
+&lt;h2 id=&#34;coordination&#34;&gt;Coordination&lt;/h2&gt;
+&lt;p&gt;A 20 Hz state machine runs the mission: initial takeoff, a 360° scan to seed the
+map, then plan → execute → rendezvous → recharge until the planner latches
+completion at 97% coverage. Both tours execute &lt;strong&gt;simultaneously&lt;/strong&gt; — the UAV gets
+its whole path at once, the UGV gets waypoints dispatched one at a time through
+&lt;code&gt;move_base&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Three details that only show up once it runs on hardware:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Landing alignment.&lt;/strong&gt; Each UGV waypoint is given a yaw pointing at the next one,
+for smooth navigation — except the last, which instead inherits the &lt;em&gt;UAV&amp;rsquo;s&lt;/em&gt; final
+orientation. That is what squares the landing platform up with the descending
+drone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Touchdown debouncing.&lt;/strong&gt; Touchdown is confirmed only after the UAV holds below
+0.75 m for two consecutive seconds. A single noisy altitude sample would
+otherwise end a tour early, mid-descent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Replanning has to be joint.&lt;/strong&gt; If the UAV replans around an obstacle during
+execution, the coordinator cancels the UGV&amp;rsquo;s active goal and recomputes &lt;em&gt;both&lt;/em&gt;
+tours. The tours are coupled through a shared rendezvous — replanning one in
+isolation silently breaks the guarantee that the drone can reach the ground
+robot before its budget runs out.&lt;/p&gt;
+&lt;h2 id=&#34;shared-mapping&#34;&gt;Shared mapping&lt;/h2&gt;
+&lt;p&gt;Mapping is bidirectional, planning is not: the UGV contributes Velodyne scans
+and odometry, and the planner runs in the UAV&amp;rsquo;s process, projecting the aerial
+roadmap down to the ground and publishing both tours. There is no second planner
+on the rover.&lt;/p&gt;
+&lt;p&gt;One necessary piece of bookkeeping: the UGV&amp;rsquo;s own footprint is erased from the
+occupancy map before its scans are injected. Without that the rover carves a
+moving phantom obstacle through the roadmap it is itself driving on.&lt;/p&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;p&gt;C++ / ROS Noetic / Gazebo 11, OctoMap for occupancy mapping, &lt;code&gt;gmapping&lt;/code&gt; for the
+2D ground map, &lt;code&gt;move_base&lt;/code&gt; with TEB for UGV navigation, B-spline trajectory
+generation and time-optimal reparameterisation on the UAV side. The UAV
+autonomy stack extends
+&lt;a href=&#34;https://github.com/Zhefan-Xu/CERLAB-UAV-Autonomy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CERLAB-UAV-Autonomy&lt;/a&gt; (CMU);
+the UGV packages derive from the AgileX &lt;code&gt;scout_ros&lt;/code&gt; family.&lt;/p&gt;
+&lt;p&gt;Benchmarks compare the method against a single-UAV ablation and a sequential
+baseline, selected as drop-in planner variants at configure time.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

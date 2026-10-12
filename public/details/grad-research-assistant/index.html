@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: September 8, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: October 12, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="Multi-robot coordination, exploration planning, drone hardware testing, and MATLAB simulation." />
+  <meta name="description" content="Energy-aware UAV–UGV collaborative exploration: coupled orienteering over a layered PRM, with the ground robot as a mobile charging station." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/" />
@@ -186,7 +186,7 @@
   <meta property="og:site_name" content="Saikiran Juttu | Robotics Portfolio" />
   <meta property="og:url" content="https://juttu-s.github.io/saikiran_juttu.github.io/details/grad-research-assistant/" />
   <meta property="og:title" content="Graduate Research Assistant | Saikiran Juttu | Robotics Portfolio" />
-  <meta property="og:description" content="Multi-robot coordination, exploration planning, drone hardware testing, and MATLAB simulation." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
+  <meta property="og:description" content="Energy-aware UAV–UGV collaborative exploration: coupled orienteering over a layered PRM, with the ground robot as a mobile charging station." /><meta property="og:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" />
     <meta property="twitter:image" content="https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -283,80 +283,86 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
   
   
@@ -934,6 +940,14 @@
   >Robotics Engineer Co-op
     </a>
               
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/saikiran_juttu.github.io/details/teaching-assistant/"
+    
+  >Teaching Assistant — Robot Mechanics &amp; Control
+    </a>
+              
             </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
@@ -944,9 +958,39 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#overview"
+                href="#energy-aware-collaborative-exploration-for-a-uavugv-team"
                 class="hb-docs-link"
-              >Overview</a>
+              >Energy-Aware Collaborative Exploration for a UAV–UGV Team</a>
+            </li>
+          <li>
+              <a
+                href="#the-problem"
+                class="hb-docs-link"
+              >The problem</a>
+            </li>
+          <li>
+              <a
+                href="#planning"
+                class="hb-docs-link"
+              >Planning</a>
+            </li>
+          <li>
+              <a
+                href="#coordination"
+                class="hb-docs-link"
+              >Coordination</a>
+            </li>
+          <li>
+              <a
+                href="#shared-mapping"
+                class="hb-docs-link"
+              >Shared mapping</a>
+            </li>
+          <li>
+              <a
+                href="#stack"
+                class="hb-docs-link"
+              >Stack</a>
             </li>
           </ul>
   
@@ -997,7 +1041,22 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#overview">Overview</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#energy-aware-collaborative-exploration-for-a-uavugv-team">Energy-Aware Collaborative Exploration for a UAV–UGV Team</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-problem">The problem</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#planning">Planning</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#coordination">Coordination</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#shared-mapping">Shared mapping</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#stack">Stack</a>
       </li></ul>
 
   
@@ -1039,7 +1098,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          1 min read
+          4 min read
         </span>
         
         </div>
@@ -1049,6 +1108,55 @@
 
 
 
+
+<div class="">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-large" href="https://arxiv.org/abs/2603.22507" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/juttu-s/uav-ugv-collaborative-exploration" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
         </div>
@@ -1064,15 +1172,87 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h2 id="overview">Overview</h2>
-<p>Worked at the Multi-Agent Robotics and Autonomy Lab on:</p>
-<ul>
-<li>UAV–UGV exploration in Gazebo (ROS2, C++)</li>
-<li>Incremental PRM planner (C++/Python)</li>
-<li>Custom drone hardware for GPS-denied flight</li>
-<li>MATLAB vision-based IK solver &amp; motion planning</li>
-<li>Simscape robotic arm with real+sim integration</li>
-</ul>
+        <h2 id="energy-aware-collaborative-exploration-for-a-uavugv-team">Energy-Aware Collaborative Exploration for a UAV–UGV Team</h2>
+<p>Multi-Agent Robotics and Autonomy Lab, Northeastern University.</p>
+<blockquote>
+<p>Er, Juttu, Yazıcıoğlu — submitted to <strong>IROS 2026</strong>.
+<a href="https://arxiv.org/abs/2603.22507" target="_blank" rel="noopener">arXiv:2603.22507</a> ·
+<a href="https://github.com/juttu-s/uav-ugv-collaborative-exploration" target="_blank" rel="noopener">code</a></p>
+</blockquote>
+<video controls width="100%" muted autoplay loop>
+  <source src="/saikiran_juttu.github.io/uploads/uav_ugv_exploration.mp4" type="video/mp4">
+</video>
+<p><em>Hardware run at 10× speed, terminating once the team passes 95% coverage. The
+<a href="https://github.com/juttu-s/uav-ugv-collaborative-exploration/releases/latest" target="_blank" rel="noopener">full-resolution video</a>
+is attached to the release.</em></p>
+<hr>
+<h2 id="the-problem">The problem</h2>
+<p>A quadrotor has maybe fifteen minutes of flight time. That is the binding
+constraint on aerial exploration, and the usual fix — fly back to a fixed
+charging station — wastes an increasing fraction of each tour on transit as the
+frontier moves away.</p>
+<p>So the ground robot becomes the charging station. The UAV flies a sequence of
+<strong>energy-bounded tours</strong>, each ending in a rendezvous where it lands on a
+platform mounted on the UGV and recharges. The UGV explores the ground in the
+meantime, so the recharge leg is not dead time for the team.</p>
+<p>The pairing is genuinely complementary in both directions: the UGV drives
+through passages the UAV cannot fly, and the UAV reaches elevated structure the
+UGV cannot climb. In the test arenas neither robot alone achieves full coverage.</p>
+<h2 id="planning">Planning</h2>
+<p>Exploration targets are sampled into a <strong>density-aware layered PRM</strong> spanning
+air and ground, and each pair of tours comes from solving <strong>coupled orienteering
+problems</strong> — maximise information gain subject to a shared rendezvous time
+budget.</p>
+<p>The coupling lives in one line. Candidate aerial targets are scored</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">score = info_gain · exp(−λ · t_ugv_path)
+</span></span></code></pre></div><p>so the UAV&rsquo;s goal is its information gain <strong>discounted by how far the UGV has to
+drive to get underneath it</strong>. A target rich in unexplored volume but far from
+any drivable ground is worth less than a mediocre one the UGV can already reach,
+because the rendezvous has to be feasible or the tour strands the drone. Four
+hard gates sit on top: a candidate is rejected if its gain is ≤ 10, if it has no
+ground twin, if the vertical corridor between the aerial node and its twin is
+not collision-free, or if that twin is unreachable in the ground graph.</p>
+<p>The orienteering problems are solved with <strong>GRASP with path relinking</strong> —
+randomised greedy insertion by score-to-time ratio, 2-opt and swap-insert local
+search, then path relinking between elite solutions. Every move is validated
+against the roadmap, with infinite time-matrix entries for non-edges, so no tour
+can shortcut off a collision-checked edge.</p>
+<h2 id="coordination">Coordination</h2>
+<p>A 20 Hz state machine runs the mission: initial takeoff, a 360° scan to seed the
+map, then plan → execute → rendezvous → recharge until the planner latches
+completion at 97% coverage. Both tours execute <strong>simultaneously</strong> — the UAV gets
+its whole path at once, the UGV gets waypoints dispatched one at a time through
+<code>move_base</code>.</p>
+<p>Three details that only show up once it runs on hardware:</p>
+<p><strong>Landing alignment.</strong> Each UGV waypoint is given a yaw pointing at the next one,
+for smooth navigation — except the last, which instead inherits the <em>UAV&rsquo;s</em> final
+orientation. That is what squares the landing platform up with the descending
+drone.</p>
+<p><strong>Touchdown debouncing.</strong> Touchdown is confirmed only after the UAV holds below
+0.75 m for two consecutive seconds. A single noisy altitude sample would
+otherwise end a tour early, mid-descent.</p>
+<p><strong>Replanning has to be joint.</strong> If the UAV replans around an obstacle during
+execution, the coordinator cancels the UGV&rsquo;s active goal and recomputes <em>both</em>
+tours. The tours are coupled through a shared rendezvous — replanning one in
+isolation silently breaks the guarantee that the drone can reach the ground
+robot before its budget runs out.</p>
+<h2 id="shared-mapping">Shared mapping</h2>
+<p>Mapping is bidirectional, planning is not: the UGV contributes Velodyne scans
+and odometry, and the planner runs in the UAV&rsquo;s process, projecting the aerial
+roadmap down to the ground and publishing both tours. There is no second planner
+on the rover.</p>
+<p>One necessary piece of bookkeeping: the UGV&rsquo;s own footprint is erased from the
+occupancy map before its scans are injected. Without that the rover carves a
+moving phantom obstacle through the roadmap it is itself driving on.</p>
+<h2 id="stack">Stack</h2>
+<p>C++ / ROS Noetic / Gazebo 11, OctoMap for occupancy mapping, <code>gmapping</code> for the
+2D ground map, <code>move_base</code> with TEB for UGV navigation, B-spline trajectory
+generation and time-optimal reparameterisation on the UAV side. The UAV
+autonomy stack extends
+<a href="https://github.com/Zhefan-Xu/CERLAB-UAV-Autonomy" target="_blank" rel="noopener">CERLAB-UAV-Autonomy</a> (CMU);
+the UGV packages derive from the AgileX <code>scout_ros</code> family.</p>
+<p>Benchmarks compare the method against a single-UAV ablation and a sequential
+baseline, selected as drop-in planner variants at configure time.</p>
 
       </div>
 
@@ -1091,13 +1271,17 @@
 
 <div class="flex justify-center">
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/ros2/">ROS2</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/ros/">ROS</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/gazebo/">Gazebo</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/prm/">PRM</a>
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/multi-robot/">Multi-Robot</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/orienteering-problem/">Orienteering Problem</a>
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/saikiran_juttu.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>
   
 </div>
 
@@ -1325,17 +1509,17 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/saikiran_juttu.github.io/details/robotics-coop/">
+        <a class="group flex no-underline" href="/saikiran_juttu.github.io/details/teaching-assistant/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Robotics Engineer Co-op</span>
+            >Teaching Assistant — Robot Mechanics &amp; Control</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                May 1, 2025
+                Sep 1, 2024
               
             </span>
           </span>
