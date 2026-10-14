@@ -5,8 +5,9 @@ title: 'Energy-Aware Collaborative Exploration for a UAV–UGV Team'
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
+  - Cahit Ikbal Er
   - admin
-  - et al.
+  - Yasin Yazıcıoğlu
 
 date: '2026-03-01T00:00:00Z'
 doi: ''
@@ -23,7 +24,7 @@ publication_types: ['paper-conference']
 publication: 'Submitted to *IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*, 2026'
 publication_short: 'Submitted to *IROS 2026*'
 
-abstract: We address energy-bounded collaborative exploration for a heterogeneous UAV–UGV team operating in GPS-denied environments. We propose a density-aware layered Probabilistic Roadmap (PRM) together with a coupled orienteering formulation that jointly plans information-gathering routes for both agents under energy budgets and rendezvous (docking) constraints, allowing the UGV to serve as a mobile recharging and transport base for the UAV. The approach maximizes information gain while guaranteeing safe return and rendezvous, and is validated through simulation benchmarks and real-world experiments.
+abstract: We present an energy-aware collaborative exploration framework for a UAV–UGV team operating in unknown environments, where the UAV's energy constraint is modeled as a maximum flight-time limit. The UAV executes a sequence of energy-bounded exploration tours, while the UGV simultaneously explores on the ground and serves as a mobile charging station. Rendezvous is enforced under a shared time budget so that the vehicles meet at the end of each tour before the UAV reaches its flight-time limit. We construct a sparsely coupled air–ground roadmap using a density-aware layered probabilistic roadmap (PRM) and formulate tour selection over the roadmap as coupled orienteering problems (OPs) to maximize information gain subject to the rendezvous constraint. The resulting tours are constructed over collision-validated roadmap edges. We validate our method through simulation studies, benchmark comparisons, and real-world experiments.
 
 # Summary. An optional shortened abstract.
 summary: A density-aware layered PRM and coupled orienteering formulation for energy-bounded UAV–UGV collaborative exploration with rendezvous constraints, validated in simulation and real-world experiments.
@@ -43,11 +44,11 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
-url_code: ''
+url_pdf: 'https://arxiv.org/abs/2603.22507'
+url_code: 'https://github.com/juttu-s/uav-ugv-collaborative-exploration'
 url_dataset: ''
 url_poster: ''
-url_project: ''
+url_project: '/saikiran_juttu.github.io/details/grad-research-assistant/'
 url_slides: ''
 url_source: ''
 url_video: ''

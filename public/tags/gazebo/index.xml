@@ -5,12 +5,24 @@
     <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/</link>
       <atom:link href="https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/index.xml" rel="self" type="application/rss+xml" />
     <description>Gazebo</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://juttu-s.github.io/saikiran_juttu.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Gazebo</title>
       <link>https://juttu-s.github.io/saikiran_juttu.github.io/tags/gazebo/</link>
     </image>
+    
+    <item>
+      <title>Energy-Aware Collaborative Exploration for a UAV–UGV Team</title>
+      <link>https://juttu-s.github.io/saikiran_juttu.github.io/project/uav-ugv-collaborative-exploration/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://juttu-s.github.io/saikiran_juttu.github.io/project/uav-ugv-collaborative-exploration/</guid>
+      <description>&lt;p&gt;Research with the Multi-Agent Robotics and Autonomy Lab, Northeastern University —
+C. I. Er, S. Juttu, Y. Yazıcıoğlu, &lt;a href=&#34;https://arxiv.org/abs/2603.22507&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2603.22507&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full write-up — problem, planner, coordinator, shared mapping and a hardware run —
+is on the &lt;a href=&#34;https://juttu-s.github.io/saikiran_juttu.github.io/saikiran_juttu.github.io/details/grad-research-assistant/&#34;&gt;Graduate Research Assistant&lt;/a&gt; page.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Graduate Research Assistant</title>

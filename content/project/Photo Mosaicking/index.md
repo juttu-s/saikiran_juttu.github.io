@@ -112,7 +112,7 @@ result = optimizer.optimize()
 
 ### 📁 Related Files
 
-- 🔗 [GitHub Repository](https://github.com/juttu-s/photo-mosaicking-skerki)
+- 🔗 [GitHub Repository](https://github.com/juttu-s/Photo-Mosaicking-of-Low-Contrast-Underwater-Images)
 - 📁 [Skerki Dataset Reference (Google Drive)](https://drive.google.com/drive/folders/1AtvT65txGIgAG23NRs3EkvDET036a81O)
 - 📓 [Project Notebook](/files/Part1_and_2.ipynb)
 - 📓 [Extended Analysis](/files/Part_3.ipynb)

@@ -9,6 +9,20 @@ design:
 sections:
   - block: collection
     content:
+      title: Multi-Robot Planning
+      text: Energy-aware collaborative exploration for a heterogeneous UAV–UGV team — research with the Multi-Agent Robotics and Autonomy Lab at Northeastern.
+      count: 0
+      filters:
+        folders:
+          - project
+        category: Multi-Robot Planning
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 3
+
+  - block: collection
+    content:
       title: SLAM & Visual-Inertial Odometry
       text: Semantic and geometric SLAM, visual-inertial state estimation, and IMU/GNSS fusion — built in C++ and evaluated on benchmark and self-collected datasets.
       count: 0
